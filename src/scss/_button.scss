@@ -110,3 +110,15 @@
               }
        }
 }
+
+
+.check-circle{
+       height: 18px;
+       width: 18px;
+       display: inline-block;
+       border-radius: 50%;
+       border: #575D61 solid 1px; 
+       vertical-align: baseline;
+       padding: 3px;
+       background-clip: content-box;
+}

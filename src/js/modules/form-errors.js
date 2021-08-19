@@ -10,10 +10,9 @@
     item.parentNode.append(errm); 
     setTimeout(() => {
          errm.remove( ); 
+         item.style.marginBottom=(marginb)+'px';
     }, 3000);
-}
-
-
+} 
 
 (function( ){
     const forms = document.querySelectorAll('.tab-content__form');

@@ -1,5 +1,5 @@
 const header = document.querySelector(".header");
-const body = document.querySelector("body");
+const body = document.querySelector("body"); 
 
 let scrollPos = 0;
 window.addEventListener("load", function () {
@@ -17,19 +17,20 @@ window.addEventListener("load", function () {
     } else {
       header.classList.remove("header-shadow");
     }
-  });
-  // body = document.body;
+  }); 
   html = document.querySelector("html");
   openedNav = document.querySelector(".nav-wrap");
   headerNav = document.querySelector(".header-nav");
   let ii = 0;
-  document
-    .querySelector(".header .menu-btn")
-    .addEventListener("click", function (e) {
+   const navbtn =document.querySelector(".header .menu-btn");
+   if(navbtn){
+    navbtn.addEventListener("click", function (e) {
       header.classList.toggle("menu-open");
       document.querySelector("body").classList.toggle("overflow");
       e.preventDefault();
     });
+
+   }
 
   const elems = document.querySelectorAll(".header .menu > .has-sub-menu");
 
@@ -50,28 +51,31 @@ window.addEventListener("load", function () {
 
 
 
-
-function promobar() {
-  const xhr = new XMLHttpRequest();
+(function(){
   const promoText = document.querySelector('#promo-place-text');
   const promoCode = document.querySelector('#promo-place-code');
+  function promobar() {
+    const xhr = new XMLHttpRequest(); 
+    xhr.open('GET', 'https://www.pikperfect.com/get-discount');
+    xhr.responseType = 'json';
+    xhr.addEventListener('load', function () {
+      if (xhr.status < 400) {
+        promoCode.innerHTML = 'Code:' + xhr.response.code;
+        promoText.innerHTML = ' ' + xhr.response.text;
+        promoText.classList.remove('promobar-hide');
+        setTimeout(() => {
+          promoCode.classList.remove('promobar-hide');
+        }, 600);
+      }
+    })
+    xhr.send();
+  }
+  if(promoText){
+      promobar(); 
+  }
 
-  xhr.open('GET', 'https://www.pikperfect.com/get-discount');
-  xhr.responseType = 'json';
-  xhr.addEventListener('load', function () {
-    if (xhr.status < 400) {
-      promoCode.innerHTML = 'Code:' + xhr.response.code;
-      promoText.innerHTML = ' ' + xhr.response.text;
-      promoText.classList.remove('promobar-hide');
-      setTimeout(() => {
-        promoCode.classList.remove('promobar-hide');
-      }, 600);
-    }
-  })
-  xhr.send();
-}
+}());
 
-promobar(); 
 // promobar
 
 (function () {

@@ -40,7 +40,7 @@ const getFiles = function (dir, files_){
     }
     return files_;
 };
-
+ 
 console.log(chalk.green('images build min to:'+newSize+' px'));
  
 const images = getFiles(baseFolder);

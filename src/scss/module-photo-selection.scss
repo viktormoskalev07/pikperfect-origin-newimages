@@ -1,0 +1,28 @@
+@import "media-mixins";
+@import "variables.scss"; 
+
+ 
+
+.photoselect {
+     &__header{
+        padding: 34px 2px;
+     }
+     &__top{
+         @include tablet{
+             width: 100%;
+             display: inline-flex;
+             
+         }
+     }
+     &__left, &__right{
+         width: 50%;
+     }
+     &__right{
+         text-align: right;
+     }
+     &__info{
+         background-color: transparent;
+         border:none;
+     }
+
+}

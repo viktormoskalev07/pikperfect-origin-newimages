@@ -38,6 +38,9 @@ const mediaQuery2 = window.matchMedia('(max-width: 480px)').matches;
  
   addScript('//code.jquery.com/jquery-1.11.2.min.js' , 6000).addEventListener('load',()=>{ 
     addScript('js/jqueryWorksHere.js' , 0);
+    if(document.querySelector('#workonlyhere')){
+      addScript('js/workonlyhere.js' , 0);
+    }
  })  
 // lazy-video 
          @@include('lazy-video.js')    

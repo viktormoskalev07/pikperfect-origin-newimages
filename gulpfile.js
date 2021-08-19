@@ -28,7 +28,7 @@ var gulp = require('gulp'),
           js: ['node_modules/swiper/js/swiper.min.js',
           'src/js/*.js'
           ],//В стилях и скриптах нам понадобятся только main файлы
-          style: 'src/scss/main.scss',
+          style: 'src/scss/*.scss',
           img: 'src/images/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
           fonts: 'src/fonts/**/*.*'
         },
