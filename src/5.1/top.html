@@ -1,7 +1,7 @@
 
     <div class="photoselect__top">
         <div class="photoselect__left">
-          <p class="photoselect__name">
+          <h1 class="photoselect__name">
             Photo Selection: Our Safari 2021 <button class="photoselect__info" title="info"><svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <defs>
@@ -24,19 +24,19 @@
                 <line class="b" y1="4" transform="translate(12 12)" />
                 <line class="b" x2="0.01" transform="translate(12 8)" />
               </svg> </button>
-          </p>
+          </h1>
           <div class="photoselect__sort">
                 <strong>Sort by</strong>
                 <label > 
-                    <input type="checkbox">
-                    <span class="check-circle"> </span>
-                    <span class="photoselect__check-text">Date</span>
+                    <input class="radio-hide" name="sort" value="sortdate" type="radio">
+                    <span class="radio-circle"> </span>
+                    <span class="photoselect__radio-text">Date</span>
                 </label>
 
                 <label > 
-                    <input type="checkbox">
-                    <span class="check-circle"> </span>
-                    <span class="photoselect__check-text">Name</span>
+                  <input class="radio-hide" name="sort" value="sortname" type="radio">
+                    <span class="radio-circle"> </span>
+                    <span class="photoselect__radio-text">Name</span>
                 </label> 
           </div>
         </div>

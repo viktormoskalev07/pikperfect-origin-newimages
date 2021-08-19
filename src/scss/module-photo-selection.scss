@@ -10,8 +10,7 @@
      &__top{
          @include tablet{
              width: 100%;
-             display: inline-flex;
-             
+             display: inline-flex; 
          }
      }
      &__left, &__right{
@@ -24,5 +23,134 @@
          background-color: transparent;
          border:none;
      }
+     &__buttons{ 
+         border-bottom: 1px solid #575D61;  
+         &__wrap{
+             display: flex;
+             align-items: center;
+             justify-content: flex-start;
+         }  
+     }
+           
+     &__tab-button{
+             margin-right: 25px;
+            padding: 20px ;
+            font: normal normal 600 18px/26px "Open Sans";
+            background-color: #575D6133;
+            color: #2F353A;
+            border:transparent;
+            min-width: 200px;
+    }
+    &__approve-button{
+        margin-left: auto;  
+    }
+ 
+    &__card{
+        cursor: pointer; 
+        position: relative;
+        max-width: 470px;
+        height: 0;
+        padding-bottom:(266/414)*100%;
+        margin-bottom: 30px; 
+        &:hover{
+            .photoselect__overlay{
+                opacity: 0;
+            }
+        }
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__add , &__zoom , &__favorite{
+        position: absolute; 
+        height: 30px;
+        width: 30px;
+        border-radius: 50%; 
+        border:transparent;
+        padding: 0;
+        background-color: #ffffffcc;
+        svg{
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    }
+    &__add{ 
+        top: 20px;  
+        right: 20px;
+        svg{ 
+            .c{
+                stroke:rgb(0, 0, 0);stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;
+                fill: none;
+            }
+        }
+    }
+    &__zoom{ 
+        right: 20px; 
+        bottom: 20px; 
+        svg{
+            .b{  
+                stroke: #2f353a;
+                stroke-width: 2px;
+            }
+        }
+    }
+    &__favorite{ 
+        right: 70px; 
+        bottom: 20px; 
+        svg{
+            .c{  
+                fill:transparent;
+                stroke:#2f353a;
+                stroke-width: 2px; 
+            } 
+        }
+        &.checked{
+            background-color: #deb299;
+            svg{
+                .c{
+                    fill:#fff;
+                    stroke: #fff;
+                    stroke-width: 1px;
+                }
+            }
+        }
+ 
+    }
+    &__overlay{
+        background-color: #fff;
+        opacity: 0.7;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
 
+}
+
+
+.selected{ 
+    .photoselect{ 
+        &__add{ 
+            background-color: #47c48a;
+            svg{
+                .c{
+                    stroke: white;
+                }
+            }
+        }
+        &__overlay{
+            opacity: 0;
+        }
+    }
 }

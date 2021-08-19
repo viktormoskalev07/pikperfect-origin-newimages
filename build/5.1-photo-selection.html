@@ -38,7 +38,7 @@
 
     <div class="photoselect__top">
         <div class="photoselect__left">
-          <p class="photoselect__name">
+          <h1 class="photoselect__name">
             Photo Selection: Our Safari 2021 <button class="photoselect__info" title="info"><svg
                 xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <defs>
@@ -61,19 +61,19 @@
                 <line class="b" y1="4" transform="translate(12 12)" />
                 <line class="b" x2="0.01" transform="translate(12 8)" />
               </svg> </button>
-          </p>
+          </h1>
           <div class="photoselect__sort">
                 <strong>Sort by</strong>
                 <label > 
-                    <input type="checkbox">
-                    <span class="check-circle"> </span>
-                    <span class="photoselect__check-text">Date</span>
+                    <input class="radio-hide" name="sort" value="sortdate" type="radio">
+                    <span class="radio-circle"> </span>
+                    <span class="photoselect__radio-text">Date</span>
                 </label>
 
                 <label > 
-                    <input type="checkbox">
-                    <span class="check-circle"> </span>
-                    <span class="photoselect__check-text">Name</span>
+                  <input class="radio-hide" name="sort" value="sortname" type="radio">
+                    <span class="radio-circle"> </span>
+                    <span class="photoselect__radio-text">Name</span>
                 </label> 
           </div>
         </div>
@@ -88,5 +88,1623 @@
   
       </div>
   
+
   </div>
+  <div class="photoselect__buttons">
+    <div class="container">
+        <div class="photoselect__buttons__wrap"> 
+            <button class="photoselect__tab-button">
+                SELECTED PHOTOS
+            </button>
+            <button class="photoselect__tab-button">
+                ALL PHOTOS
+            </button>
+            <button class="button photoselect__approve-button">APPROVE</button>
+        </div>
+    </div>
+</div>
+  <div class="container">
+    <div id="photoselect-parent" class="row  "> 
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+        
+          <div class="col-md-6 col-xl-4 ">
+    <div data-type="card" class="photoselect__card deselected">
+
+        <figure class="photoselect__img">
+            <img data-type="image" loading=“lazy” src="images/5.1/1.jpg" alt="placeholder">
+        </figure>
+        <button data-type="add" title="add" class="photoselect__add ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                <g transform="translate(3 3)">
+                    <path class="c" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)" />
+                </g>
+            </svg>
+        </button>
+        <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                <circle class="a" cx="15" cy="15" r="15" />
+                <g transform="translate(3 4)"> 
+                    <path class="c"
+                        d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z"
+                        transform="translate(3 3)" />
+                </g>
+            </svg>
+        </button>
+
+        <button data-type="zoom" title="zoom" class="photoselect__zoom ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g transform="translate(0.766 0.766)">
+                    <circle class="b" cx="6.967" cy="6.967" r="6.967" transform="translate(3.065 3.065)" />
+                    <line class="b" x1="3.331" y1="3.33" transform="translate(15.734 15.734)" />
+                </g>
+            </svg>
+        </button>
+        <div class="photoselect__overlay"></div>
+    </div>
+</div>
+         
+  </div>
+  </div>
+  
+
+
 </section>
+
+
+<footer class="footer">
+<button class="photoselect_go-top" title="go top"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.a,.b{fill:none;}.b{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><rect class="a" width="30" height="30"/><g transform="translate(1 1)"><line class="b" y1="24" transform="translate(14 2)"/><path class="b" d="M5,14l9-9,9,9" transform="translate(0 -3)"/></g></svg></button>
+  
+</footer>
+
+
+
+<script src='js/5.1photoselect.js'></script>
+</body>
+</html>

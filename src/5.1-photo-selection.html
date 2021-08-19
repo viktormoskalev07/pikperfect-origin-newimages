@@ -16,5 +16,29 @@ desc:"Photo Selection.",
   <div class="container">
 
 @@include("5.1/top.html")
+
   </div>
+  @@include("5.1/buttons.html")
+  <div class="container">
+    <div id="photoselect-parent" class="row  "> 
+        @@for (var i = 0; i <44; i++) {
+          @@include("5.1/card.html")
+        } 
+  </div>
+  </div>
+  
+
+
 </section>
+
+
+<footer class="footer">
+<button class="photoselect_go-top" title="go top"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.a,.b{fill:none;}.b{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><rect class="a" width="30" height="30"/><g transform="translate(1 1)"><line class="b" y1="24" transform="translate(14 2)"/><path class="b" d="M5,14l9-9,9,9" transform="translate(0 -3)"/></g></svg></button>
+  
+</footer>
+
+
+
+<script src='js/5.1photoselect.js'></script>
+</body>
+</html>

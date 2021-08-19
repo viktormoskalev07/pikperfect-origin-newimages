@@ -112,7 +112,7 @@
 }
 
 
-.check-circle{
+.radio-circle{
        height: 18px;
        width: 18px;
        display: inline-block;
@@ -121,4 +121,11 @@
        vertical-align: baseline;
        padding: 3px;
        background-clip: content-box;
+}
+.radio-hide:checked + .radio-circle {
+       border-color: $primary;
+       background-color:$primary; 
+}
+.radio-hide{
+       display: none;
 }
