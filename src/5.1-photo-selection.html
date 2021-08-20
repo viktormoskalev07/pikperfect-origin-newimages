@@ -3,42 +3,57 @@ title:"Photo Selection ",
 desc:"Photo Selection.",
 })
 <link rel="stylesheet" href="css/module-photo-selection.css">
-<header class='photoselect__header'>
-  <div class="container">
-    <a href="index.html" class="logo">
-      <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
-    </a>
-  </div>
-</header>
+<div class="footer-to-bottom">
+  <header id="header" class='photoselect__header'>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
+      </a>
+    </div>
+  </header>
 
 
-<section class="photoselect__section">
-  <div class="container">
 
-@@include("5.1/top.html")
+  <main>
 
-  </div>
-  @@include("5.1/buttons.html")
-  <div class="container">
-    <div id="photoselect-parent" class="row  "> 
-        @@for (var i = 0; i <44; i++) {
-          @@include("5.1/card.html")
-        } 
-  </div>
-  </div>
-  
+    <section class="photoselect__section">
+      <div class="container">
 
+        @@include("5.1/top.html")
 
-</section>
-
-
-<footer class="footer">
-<button class="photoselect_go-top" title="go top"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><defs><style>.a,.b{fill:none;}.b{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><rect class="a" width="30" height="30"/><g transform="translate(1 1)"><line class="b" y1="24" transform="translate(14 2)"/><path class="b" d="M5,14l9-9,9,9" transform="translate(0 -3)"/></g></svg></button>
-  
-</footer>
+      </div>
+      @@include("5.1/buttons.html")
+      <div class="container">
+        <div id="photoselect-parent" class="row  ">
+          @@for (var i = 1; i <14; i++) { @@include("5.1/card.html",{ img:${i} }) } </div> </div> </section> <div
+            style="display: none;" class="photoselect__zoom__container">
+            <figure class="photoselect__zoom__img">
+            </figure>
+            <button title="close" class="photoselect__zoom__close">x</button>
+        </div>
 
 
+  </main>
+
+
+
+  <footer class="footer">
+    <div class="photoselect__go-top__container">
+      <a href="#header" class="photoselect__go-top" title="go top"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
+          height="30" viewBox="0 0 30 30">
+          <rect class="a" width="30" height="30" />
+          <g transform="translate(1 1)">
+            <line class="b" y1="24" transform="translate(14 2)" />
+            <path class="b" d="M5,14l9-9,9,9" transform="translate(0 -3)" />
+          </g>
+        </svg></a>
+
+    </div> 
+  </footer>
+
+</div>
 
 <script src='js/5.1photoselect.js'></script>
 </body>
+
 </html>
