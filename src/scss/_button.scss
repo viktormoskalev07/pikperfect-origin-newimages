@@ -95,6 +95,14 @@
                      color: #fff;
               }
        }
+       &__gray-pink{
+              background: #797981;
+              &:hover{
+                     background: #ffffff;
+                     color: #5A6865;
+                     border: 1px solid transparent;
+              }
+       }
        &__khaki{
               background: rgba($color: #5A6865, $alpha: .7);            
               &:hover{

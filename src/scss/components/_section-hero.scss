@@ -346,6 +346,20 @@
 				color: #2E3031;
 			}
 		}
+		&_gray-pink{
+			background-color: rgba($color: 	#938C93, $alpha: .7);	
+			color: #ffffff;
+			h1{
+				color: #ffffff;
+			}
+			@include tabtoslide{
+				padding: 0 2%;
+				.entered-text{
+					max-width: 350px;
+					margin: 0 auto 48px;
+				}
+			}
+		}
 		&_khaki{
 			background-color: rgba($color: 	#647670, $alpha: .7);	
 			color: #fff;
