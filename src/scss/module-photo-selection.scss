@@ -1,5 +1,6 @@
 @import "media-mixins";
 @import "variables.scss"; 
+@import "components/section-stock.scss";
 html{
     scroll-behavior: smooth;
 }
@@ -9,112 +10,141 @@ html{
    &__section *{
         transition:  0.4s;
     }
-     &__header{
-        padding: 42px 2px;
+        &__header{
+        padding: 48px 2px 42px;
         .logo{ 
             img{
                 width: 120px;
                 @include mobile-sm{
                     width: 150px;
                 }
-                 
-
+                @include tablet{
+                    width: 195px;
+                }
             } 
         }
-     }
-
-     &__top{
-         @include tablet{
-             width: 100%;
-             display: inline-flex; 
-         }
-     }
-     &__left, &__right{
-         @include tablet{
-              width: 50%;
-         }
-        
-     }
-     &__left{
-         padding-right: 30px;
-     }
-     &__right{
+    }
+    &__container{
+        @include tablet{
+            .col-xl-4{
+                padding: 0 5px;
+            }
+            max-width: 1295px !important;
+        }
+    }
+    &__top{
+        @include tablet{
+            width: 100%;
+            display: inline-flex; 
+        }
+    }
+    &__left, &__right{
+        @include tablet{
+            width: 50%;
+        }
+    }
+    &__left{
+        padding-right: 30px;
+    }
+    &__right{
         @include tablet{
             text-align: right;
             padding-left: 30px;
-       }
-      
-     }
-     &__name{
-         font-size: 20px;
-         line-height: 32px;
-     }
-     &__info{
-         padding-bottom: 3px;
-         background-color: transparent;
-         border:none; 
+        }
+    }
+    &__name{
+        font-size: 20px;
+        line-height: 32px;
+        @include tablet{
+            font-size: 24px;
+        }
+    }
+    &__info{
+        padding-bottom: 3px;
+        background-color: transparent;
+        border:none; 
         vertical-align: text-bottom;
-       
-      
-     }
-     &__sort{
-         margin-bottom: 13px;
-         label{
+    }
+    &__sort{
+        margin-bottom: 13px;
+        label{
             margin-left: 10px;
         }
-          span , strong{
-                vertical-align: middle;
-              line-height: 30px;
-              font-size: 20px;
-          }
-       
-     }
-     &__buttons{ 
-         border-bottom: 1px solid #575D61;  
-         margin-bottom: 40px;
-         &__wrap{
-             display: flex;
-             align-items: stretch;
-             justify-content: flex-start;
-         }  
-     }   
- 
-     &__tab-button{
-             margin-right: 18px;
-            padding: 10px ; 
-            font: normal normal 600 14px/26px "Open Sans";
-
-            background-color: #575D6133;
-            color: #2F353A;
-            border: solid 1px #575D6133 ;
-            border-top: transparent;
-       
-            @include mobile-sm{
-                min-width: 150px;
+        span , strong{
+            vertical-align: middle;
+            line-height: 30px;
+            font-size: 20px;
+            @include tablet{
+                font-size: 16px;
             }
-            
+        }
+        .radio-circle{
+            @include tablet{
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+    &__radio-text{
+        @include tablet{
+        margin-left: 9px; 
+        }  
+    }
+    &__buttons{ 
+        border-bottom: 1px solid #575D61;  
+        margin-bottom: 40px;
+        &__wrap{
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+        }  
+    }   
+
+    &__tab-button{
+        margin-right: 18px;
+        padding: 10px ; 
+        font: normal normal 600 14px/26px "Open Sans";
+
+        background-color: #575D6133;
+        color: #2F353A;
+        border: solid 1px #575D6133 ;
+        border-top: transparent;
+    
+        @include mobile-sm{
+            min-width: 150px;
+        }
+        @include tablet{
+            padding: 20px 10px;
+            min-width: 200px;
+            font-size: 18px;
+        }
     }
 
     &__approve-button{
         margin-left: auto;  
+        margin-bottom: 45px;
         position: absolute;
         top:29px;
         right: 20px;
+        display: block;
         padding: 18px 35px;
         @include tablet{
             position: static;
+            min-width: 300px;
         }
     }
  
     &__card{
-      
         position: relative;
         max-width: 470px;
         margin-left: auto;
         margin-right: auto;
         height: 0;
         padding-bottom:(266/414)*100%;
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
+        @include tablet{
+            margin-bottom: 10px;
+        } 
         &:hover{
             .photoselect__overlay{
                 opacity: 0;

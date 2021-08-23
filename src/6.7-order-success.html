@@ -1,0 +1,34 @@
+@@include("./html-templates/head.html",{
+    title:"Difference between Photo Book & Photo Album | PikPerfect", 
+    desc:"The main difference is Photo Albums have thick layflat pages and premium cover options while Photo Books have thinner flexible pages. ",
+  })
+  <link rel="stylesheet" href="css/module-photo-selection.css">
+  <main class="main-content"> 
+    <section class="section-stock">
+        <div class="container">
+            <div class="section-stock__wrapper">
+                <div class="section-stock__order">
+                    <div class="section-stock__img">
+                        <img src="./images/ic_heart.svg" alt="heart">
+                    </div>
+                    <h1 class="section-stock__title">Thank you</h1>
+                    <p class="section-stock__text section-stock__text_mb-5">Your payment has been received!</p>
+                    <p class="section-stock__text">Order Number</p>
+                    <button>4187320</button>
+                    <p>An email with invoice attached has been sent to you.</p>
+                </div>
+                <div class="section-stock__discount">
+                    <h2 class="section-stock__title">Give CHF25 - Get CHF25</h2>
+                    <p class="section-stock__text section-stock__text_mb-4">Over and over again!</p>
+                    <p class="section-stock__text_mb-4">Invite your friends and family to try PikPerfect, we’ll give them a CHF25 discount on their first purchase. You will also earn a CHF25 credit in your account every time a friend makes their first purchase</p>
+                    <div class="discount__form">
+                        <span class="discount__copy-link" id="copyCode">www.pikperfect.cm/frfrfhadnkndei</span>
+                        <button id="copyLink" class="btn btn-green">copy link</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+  <div class="swiper-delay" data-time="4000"></div>
+  @@include("./html-templates/footer.html" ) 

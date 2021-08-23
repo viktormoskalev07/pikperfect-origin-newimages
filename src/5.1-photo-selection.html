@@ -5,7 +5,7 @@ desc:"Photo Selection.",
 <link rel="stylesheet" href="css/module-photo-selection.css">
 <div class="footer-to-bottom">
   <header id="header" class='photoselect__header'>
-    <div class="container">
+    <div class="container photoselect__container">
       <a href="index.html" class="logo">
         <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
       </a>
@@ -17,13 +17,13 @@ desc:"Photo Selection.",
   <main>
 
     <section class="photoselect__section">
-      <div class="container">
+      <div class="container  photoselect__container">
 
         @@include("5.1/top.html")
 
       </div>
       @@include("5.1/buttons.html")
-      <div class="container">
+      <div class="container  photoselect__container">
         <div id="photoselect-parent" class="row  ">
           @@for (var i = 1; i <14; i++) { @@include("5.1/card.html",{ img:${i} }) } </div> </div> </section> <div
             style="display: none;" class="photoselect__zoom__container">
