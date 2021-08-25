@@ -107,8 +107,8 @@ html{
 
         background-color: #575D6133;
         color: #2F353A;
-        border: solid 1px #575D6133 ;
-        border-top: transparent;
+        
+        border: transparent;
     
         @include mobile-sm{
             min-width: 150px;
@@ -344,20 +344,30 @@ html{
         display: none;
     } 
         .photoselect__selected{
-            background-color: #fff;
+            background-color: #FCFCFC;
             border: 1px solid #575D61;  
-            border-bottom: transparent;
+            border-bottom: #FCFCFC;
+            padding-top: 21px;
             position: relative;
             bottom: -1px;
+            @include wide-screen-lg{
+                bottom: -2px;
+            }
+          
         }
     }
 
     section:not(.only-selected) .photoselect__all{
-        background-color: #fff;
+        background-color: #FCFCFC;
         border: 1px solid #575D61;  
-        border-bottom: transparent;
+        border-bottom: #FCFCFC;
         position: relative;
+        padding-top: 21px;
         bottom: -1px; 
+        @include wide-screen-lg{
+            bottom: -2px;
+        }
+       
     }
  
   .footer-to-bottom{

@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="css/module-photo-selection.css">
 <div class="footer-to-bottom">
   <header id="header" class='photoselect__header'>
-    <div class="container">
+    <div class="container photoselect__container">
       <a href="index.html" class="logo">
         <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
       </a>
@@ -37,7 +37,7 @@
   <main>
 
     <section class="photoselect__section">
-      <div class="container">
+      <div class="container  photoselect__container">
 
         
     <div class="photoselect__top">
@@ -95,7 +95,8 @@
 
       </div>
       <div class="photoselect__buttons">
-    <div class="container">
+    <div class="container  photoselect__container">
+        <button class="button photoselect__approve-button">APPROVE</button>
         <div class="photoselect__buttons__wrap">
             <button id="selected__js" class="photoselect__tab-button  photoselect__selected">
                 SELECTED PHOTOS
@@ -103,11 +104,10 @@
             <button id="all__js" class="photoselect__tab-button  photoselect__all">
                 ALL PHOTOS
             </button>
-            <button class="button photoselect__approve-button">APPROVE</button>
         </div>
-    </div>
+    </div> 
 </div>
-      <div class="container">
+      <div class="container  photoselect__container">
         <div id="photoselect-parent" class="row  ">
             
 <div data-type="card" class="col-md-6 col-xl-4 deselected card-parent__js">

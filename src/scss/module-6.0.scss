@@ -1,0 +1,13 @@
+ 
+@import "media-mixins";
+@import "variables.scss"; 
+
+
+#new-design {
+  
+ 
+    .header  , .album-cover , .version {
+        background-color:$gray;
+    }
+   
+}

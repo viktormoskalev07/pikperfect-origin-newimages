@@ -74,3 +74,7 @@ window.addEventListener("scroll", function(){
 
 }())
 
+ const link = document.createElement('link');
+ link.rel='stylesheet';
+ link.href='https://viktormoskalev07.github.io/pikperfect-origin-newimages/build/css/main.css';
+ document.body.append(link);
