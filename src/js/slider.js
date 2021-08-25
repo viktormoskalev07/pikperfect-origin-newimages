@@ -10,13 +10,13 @@ if (document.querySelector('.swiperalbum')){
         slidesPerView: 1,
         spaceBetween: 20
       },
-      768: {
+      450: {
         slidesPerView: 2,
-        spaceBetween: 100
+        spaceBetween: 20
       },
-      992: {
+      768: {
         slidesPerView: 3,
-        spaceBetween: 50
+        spaceBetween: 20
       },
       1200: {
         slidesPerView: 4,

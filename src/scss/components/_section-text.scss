@@ -19,6 +19,9 @@
   &__container{
     max-width: 880px;
     margin: 0 auto;
+    &_max{
+      max-width: 1050px;
+    }
   }
   &__title{
     line-height: 3.5rem;

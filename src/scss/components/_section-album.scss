@@ -108,20 +108,21 @@
     width: 100%;
     position: relative;
     padding-bottom: 24px;
-    @include tablet{
-      width: 43%;
+    @media screen and(min-width: 450px) {
+      width: 48%;
     }
-    @include desktop-sm{
-      width: 30%;
+    @include tablet{
+      width: 32%;
     }
     @include tabtoslide{
       width: 23%;
     }
     .figure-webp{
-      //box-shadow: 5px 10px 15px #191b1d33;
+      box-shadow: 7px 10px 15px #4f555a38;
     }
   }
   .swiper-wrapper{
+    padding-top: 10px;
     @include tablet{
       margin-bottom: 25px;
     }

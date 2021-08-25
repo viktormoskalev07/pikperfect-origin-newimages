@@ -1,0 +1,65 @@
+.section-stock{
+    color: #fff;
+    text-align: center;
+    h1,h2,h3,h4{
+        color: #fff;
+    }
+    &__wrapper{
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        } 
+    }
+    &__order{
+        background: #567C8B;
+        padding: 48px 20px;
+        @include desktop-md{
+            width: 42%;
+        }
+    }
+    &__discount{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: #567C8B;
+        padding: 48px 25px;
+        @include desktop-md{
+            width: 55%;
+            padding: 48px 45px 0;
+        }
+        .discount__form{
+            max-width: 450px;
+            margin: 0 auto;
+            @include tablet{
+                padding-bottom: 40px;
+            }
+        }
+        .discount__copy-link{
+            border: 0px;
+        }
+    }
+    &__title{
+        font-size: 32px;
+        @include tablet{
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+    }
+    &__text{
+        @include tablet{
+            font-size: 18px;
+        }
+        &_mb-5{
+            margin-bottom: 32px;
+            @include tablet{
+                margin-bottom: 48px;
+            }
+        }
+        &_mb-4{
+            margin-bottom: 32px;
+            @include tablet{
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
