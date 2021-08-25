@@ -4,6 +4,10 @@
 
 
 #new-design {
+  
  
-    @import 'modules/6.0'
+    .header  , .album-cover , .version {
+        background-color:$gray;
+    }
+   
 }
