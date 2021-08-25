@@ -2,6 +2,12 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 48px 15px 64px;  
+  .swiper-container{
+    // overflow: auto;
+    overflow: unset;
+    
+  }
+
   @include tablet{
     padding: 127px 15px 112px;
   }
@@ -119,6 +125,7 @@
     }
     .figure-webp{
       box-shadow: 7px 10px 15px #4f555a38;
+      
     }
   }
   .swiper-wrapper{
