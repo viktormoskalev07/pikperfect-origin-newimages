@@ -1,0 +1,50 @@
+.top-button{
+  
+    background-color: #8BA4B4;
+    padding: 7px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    &:hover{
+        background-color: $primary;
+    }
+  .icon-text{
+    background-image: url(../images/icons/6.0add_text.svg);
+    background-size: contain; 
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-position : 0 0;
+  }
+}
+
+.icon-feedback{
+    // background: transparent url(../images/icons/6.0feedback.svg) no-repeat 100% 100% cover;
+
+    background-image: url(../images/icons/6.0feedback.svg);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    height: 100%;
+    width: 100%;
+    background-position : 0 0;
+    pointer-events: none;
+  
+}
+ 
+.header{
+
+    .text{
+      color: #2E3031;
+    }
+}
+#send-button{
+   border:solid $primary 1px;
+   color: $primary;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:hover{
+      background-color:$primary;
+      color: white;
+  }
+}
