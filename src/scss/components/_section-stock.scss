@@ -4,42 +4,131 @@
     h1,h2,h3,h4{
         color: #fff;
     }
-    &__wrapper{
+    &__container{
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 16px;
         @include tablet{
+            padding: 0 20px;
+        }
+    }
+    &__wrapper{
+        @include desktop-md{
+            margin-bottom: 32px;
             display: flex;
             justify-content: space-between;
         } 
     }
     &__order{
-        background: #567C8B;
-        padding: 48px 20px;
+        margin-bottom: 24px;
+        background: $primary;
+        padding: 48px 20px 20px;
         @include desktop-md{
-            width: 42%;
+            padding: 48px 25px 19px;
+            margin-bottom: 0px;
+            width: 41%;
+        }
+        &_light{
+            background: #EDECEE;
+            @include desktop-md{
+                padding-bottom: 25px;
+            }
+            .section-stock__title{
+                margin-bottom: 20px;
+                @include desktop-md{
+                    margin-bottom: 30px;
+                }
+            }
         }
     }
     &__discount{
+        margin-bottom: 24px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        background: #567C8B;
-        padding: 48px 25px;
+        background: $primary;
+        padding: 48px 18px 0;
         @include desktop-md{
-            width: 55%;
+            margin-bottom: 0px;
+            width: 56.5%;
             padding: 48px 45px 0;
         }
         .discount__form{
-            max-width: 450px;
+            width: 100%;
             margin: 0 auto;
             @include tablet{
-                padding-bottom: 40px;
+                width: auto;
+                padding-bottom: 32px;
+            }
+            .btn{
+                @include tablet{
+                    padding: 0 20px;
+                }
             }
         }
         .discount__copy-link{
             border: 0px;
         }
+        &_light{ 
+            padding: 20px;
+            align-items: center;
+            background: #EDECEE;
+            justify-content: space-between;
+            @include desktop-md{
+                padding: 32px;
+                flex-direction: row;
+            }
+            .section-stock__title{
+                max-width: 325px;
+                margin: 0 auto;
+                margin-bottom: 24px;
+                @include tablet{
+                    margin-bottom: 32px;
+                }
+                @include desktop-md{
+                    margin: 0;
+                    margin-bottom: 48px;
+                    text-align: left !important;
+                }
+            }
+            .discount__form{
+                display: block;
+                @include tabtoslide{
+                    display: flex;
+                }
+                .btn{
+                    padding: 15px 20px;
+                    max-width: none;
+                    border-radius: 5px; 
+                    margin-top: 16px;
+                    @include tabtoslide{
+                        margin-top: 0;
+                        max-width: 165px;
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+                .discount__copy-link{
+                    border-radius: 5px; 
+                    @include tabtoslide{
+                        border-radius: 5px 0 0 5px;
+                    }
+                }
+            }
+        }
+    }
+    &__wrap{
+        width: 100%;
+        @include desktop-md{
+            width: 70%;
+        }
+        .button{
+            width: 100%;
+        }
     }
     &__title{
+        line-height: 1.3;
         font-size: 32px;
+        margin-bottom: 4px;
         @include tablet{
             font-size: 40px;
             margin-bottom: 10px;
@@ -59,6 +148,109 @@
             margin-bottom: 32px;
             @include tablet{
                 margin-bottom: 40px;
+            }
+        }
+        &_more{
+            font-size: 14px;
+            @include tablet{
+                font-size: 16px;
+            }
+        }
+    }
+    &__bottom-text{
+        margin-bottom: 0;
+    }
+    &__number{
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        display: block;
+        @include tablet{
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    }
+    &__button{
+        margin-bottom: 64px;
+        @include desktop-md{
+            margin-bottom: 112px;
+        }
+        h1,h2,h3,h4{
+            color: #2F353A;
+        }
+        .section-stock__title{
+            font-weight: 600;
+            text-align: center;
+            font-size: 24px;
+            @include tablet{
+                font-size: 32px;
+            }
+        }
+    }
+    &__form{
+        @include tablet{
+            width: auto;
+        }
+        .button{
+            width: 100%;
+        }
+    }
+    &__textarea{
+        width: 100%;
+        border: 1px solid #575D6180;
+        padding: 20px;
+        font-family: "open sans";
+        font-size: 14px;
+        margin-bottom: 17px;
+        @include tablet{
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+        &::placeholder{
+            max-width: 350px;
+            font-weight: 300;
+        }
+    }
+    &__icon{
+        margin-bottom: 20px;
+        @include desktop-md{
+            margin-bottom: 24px;
+        }
+    }
+    &__img{
+        img{
+            max-height: 290px;
+        }
+        &_mobile{
+            text-align: center;
+            margin-bottom: 24px;
+            @include desktop-md{
+                display: none;
+            }
+        }
+        &_desktop{
+            display: none;
+            margin-left: 30px;
+            @include desktop-md{
+                display: block;
+            }
+        }
+    }
+    &__link{
+        font-size: 14px;
+        padding: 12px;
+        position: relative;
+        img{
+            right: 2px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            @media screen and(min-width: 350px){
+                right: 12px;
+            }
+            @include tablet{
+                right: 16px;
             }
         }
     }
