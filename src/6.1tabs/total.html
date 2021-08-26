@@ -1,0 +1,64 @@
+<div class="actions row-fluid">
+    <h2 class="product__title">Total</h2>
+    <div class="products-footer">
+        <div class="product__check">
+            <div class="product__wrap">
+                <p class="product__name-check">Subtotal</p>
+                <p class="product__price">CHF 341.20</p>
+            </div>
+            <div class="product__wrap promoCodeContainer hidden">
+                <p class="product__name-check">Discount</p>
+                <p class="product__price">- CHF 50.00</p>
+            </div>
+        </div>
+        <div class="product__data">
+            <p>Flat Rate Shipping</p>
+            <div class="product__wrap product__wrap-data">
+                <div class="product__wrap">
+                    <div class="form-content">
+                        <div class="radio">
+                            <input type="radio" class="hidden" name="shippingType" checked="checked" id="shipping-standard" value="1">
+                            <span></span>
+                        </div>
+                        <p class="description"><span>Courier (Recommended)</span><br>8-10 work days</p>
+                    </div>
+                </div>
+                <p class="product__price">CHF 19.90</p>
+            </div>
+            <div class="product__wrap product__wrap-data">
+                <div class="form-content">
+                    <div class="radio">
+                        <input type="radio" class="hidden" name="shippingType" id="shipping-standard" value="0">
+                        <span></span>
+                    </div>
+                    <p class="description"><span>Standard Post</span><br>10-12 work days</p>
+                </div>
+                <div class="product__wrap">
+                    <p class="product__price">CHF 12.90</p>
+                </div>
+            </div>
+            <p>All times are estimates</p>
+        </div>
+    </div>
+    <div class="total product__total">
+        <p class="product__total-title">TOTAL</p> 
+        <p class="product__total-title">CHF 205.50<span>Not including VAT, taxes or duties</span></p>
+    </div>
+    <a href="/en/user/cart/billing-shipping" class="btn btn-default btn_blue btn-submit">Proceed to Checkout</a>
+    <div class="promo-code">
+        <label for="code" class="btn btn_gray showPromoContainer btn-promo-code">Promo Code</label>
+        <div class="promoCodeContainer hidden">
+            <div class="w-100">
+                <input name="discount" id="code" class="form-control smaller" type="text" placeholder="Enter discount code" value="">
+            </div>
+            <button class="btn btn-default btn-submit btn_blue smaller" id="apply-discount">APPLY</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+

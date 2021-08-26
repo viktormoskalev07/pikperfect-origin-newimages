@@ -1,14 +1,14 @@
  
-@import "media-mixins";
-@import "variables.scss"; 
-// @import "6-pages/header.scss"; 
-// @import "6-pages/product.scss"; 
-
+@import "main.scss";
+@import "6-pages/header.scss"; 
+@import "6-pages/product.scss"; 
+@import "6-pages/address.scss"; 
 
 #new-design-60{
   font-family: "Open Sans";
   background-color: #fff;
- padding-right: 0 !important;
+ padding-right: 0 !important; 
+ 
     .header  , .album-cover , .version {
         background-color:$gray;
     }
