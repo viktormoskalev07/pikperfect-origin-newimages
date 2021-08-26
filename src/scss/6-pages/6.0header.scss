@@ -1,50 +1,94 @@
-.top-button{
-  
-    background-color: #8BA4B4;
-    padding: 7px;
-    border-radius: 50%;
-    height: 32px;
-    width: 32px;
-    &:hover{
-        background-color: $primary;
-    }
-  .icon-text{
+*{
+  outline:solid rgba(50, 155, 97, 0.151) 1px;
+}
+
+.top-button {
+
+  background-color: #8BA4B4;
+  padding: 7px;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  .icon-text {
     background-image: url(../images/icons/6.0add_text.svg);
-    background-size: contain; 
+    background-size: contain;
     height: 100%;
     width: 100%;
     pointer-events: none;
-    background-position : 0 0;
+    background-position: 0 0;
   }
 }
 
-.icon-feedback{
-    // background: transparent url(../images/icons/6.0feedback.svg) no-repeat 100% 100% cover;
+.icon-feedback {
+  // background: transparent url(../images/icons/6.0feedback.svg) no-repeat 100% 100% cover;
 
-    background-image: url(../images/icons/6.0feedback.svg);
-    background-repeat: no-repeat;
-    background-size: contain; 
+  background-image: url(../images/icons/6.0feedback.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  background-position: 0 0;
+  pointer-events: none;
+
+}
+
+.header {
+  border:transparent;
+text-align: center;
+  .text {
+    color: #2E3031;
+  }
+ 
+  .row-fluid{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: center;
+      &>div{
+    margin: 15px 0; 
     height: 100%;
-    width: 100%;
-    background-position : 0 0;
-    pointer-events: none;
-  
+  }
+  }
+  .visible-xs-block{
+    color:$primary;
+  }
+}
+.buttonsContainer{ 
+  margin: 0;
+  display: none;
+  @include mobile-md{
+    display: block;
+  }
+  height: 100%;
+}
+#ORDER{
+  background-color:$primary;
+  border-color:$primary;
+  text-transform:uppercase;
+  font: normal normal bold 12px/17px 'Open Sans';
+    letter-spacing: 0px;
+  &:hover{
+    background-color: transparent;
+    color:$dark;
+  }
+
 }
  
-.header{
 
-    .text{
-      color: #2E3031;
-    }
-}
-#send-button{
-   border:solid $primary 1px;
-   color: $primary;
+#send-button {
+  border: solid $primary 1px;
+  color:$dark;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
-  &:hover{
-      background-color:$primary;
-      color: white;
+
+  &:hover {
+    background-color: $primary;
+    color: white;
   }
 }

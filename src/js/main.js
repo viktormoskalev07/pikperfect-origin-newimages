@@ -112,6 +112,16 @@ window.addEventListener("load", function () {
 }());
 
 (function () {
+  const copyText = document.getElementById("copyCodeAlbum");
+  const copyLink = document.getElementById("copyLinkAlbum");
+  if (copyText && copyLink) {
+    copyLink.addEventListener('click', function () {
+      window.navigator.clipboard.writeText(copyText.innerText)
+    })
+  }
+}());
+
+(function () {
   const btnPopupHelp = document.querySelector('#popupHelp');
   const PopupHelp = document.querySelector('.popup-help');
   const PopuopHelpName = document.querySelector("#popupHelpName");
