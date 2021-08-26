@@ -78,25 +78,42 @@
         })(window, document, 'script', 'dataLayer', 'GTM-N2XML2');
     </script> 
 
-       <header id="newheader" class='photoselect__header'>
-    <div class="container photoselect__container">
-      <a href="index.html" class="logo">
+       <header id="newheader" class='shop__header'>
+    <div class="container shop__container">
+      <a href="index.html" class="shop__logo logo">
         <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
       </a>
-      <nav>
-        <a href="6.1-order.html"> 1</a>
-        <a href="6.2-address.html"> 2</a>
-        <a href="6.3-review.html"> 3</a>
-        <a href="6.4-payment.html"> 4</a>
+      <nav class="shop__nav">
+        <div class="shop__nav-block active">
+          <a class="shop__nav-item" href="6.3-shopping-cart.html"> 1</a>
+          <p class="shop__name"><span>ORDER</span> DETAILS</p>
+        </div>
+        <div class="line"></div>
+        <div class="shop__nav-block">
+          <a class="shop__nav-item" href="6.4-address-input.html"> 2 </a>
+          <p class="shop__name">ADDRESS</p>
+        </div>
+        <div class="line"></div>
+        <div class="shop__nav-block">
+          <a class="shop__nav-item" href="6.5-address-confirmation.html"> 3 </a>
+          <p class="shop__name">REVIEW</p>
+        </div>
+        <div class="line"></div>
+        <div class="shop__nav-block">
+          <a class="shop__nav-item" href="6.6-payment-credit-cart.html"> 4 </a>
+          <p class="shop__name">PAYMENT</p>
+        </div><div class="shop__nav-block">
     </nav>
     </div>
-
   </header>
-
+<link rel="stylesheet" href="css/module-6.0.css">
  <style> #newheader{
   display: block;   
  }
-     </style>
+  </style>
+  <script>
+    function addFont(e){setTimeout(()=>{const e=document.createElement("link"),t=document.createElement("link");t.rel="preconnect",t.href="https://fonts.gstatic.com",e.rel="stylesheet",e.href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap",document.querySelector("head").append(t),document.querySelector("head").append(e),localStorage.setItem("font","true")},e)}localStorage.getItem("font")?addFont(0):window.matchMedia("(max-width: 480px)").matches?addFont(1e3):addFont(0);
+  </script>
 <div class="container">
 
     <div class="order-navigation">
