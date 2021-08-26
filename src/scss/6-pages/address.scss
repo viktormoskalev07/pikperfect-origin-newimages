@@ -1,0 +1,86 @@
+#pageAddress{
+    font-family: "open sans"!important;
+    .flex-row{
+        justify-content: space-between;
+        display: flex;
+        margin: 0 -15px;
+        flex-wrap: wrap;
+    }
+    .form-control{
+        border-radius: 0;
+        border: 1px solid #575D6180; 
+        padding: 12px 16px;
+        height: auto;
+        margin: 10px 0 24px;
+        &__label{
+            width: 100%;
+            font-family: "open sans";
+            font-weight: 400;
+            margin-bottom: 0;
+            padding: 0 8px;
+            
+        }
+        &__select{
+            padding: 7px 13px;
+        }
+    }
+    .btn{
+        transition: .3s;
+        font-size: 14px;
+        font-family: "open sans";
+        text-transform: uppercase;
+        background: #ffffff;
+        border: 1px solid #575D61;
+        border-radius: 5px;
+        color: #575D61;
+        padding: 15px;
+        font-weight: 600;
+        display: block;
+        cursor: pointer;
+        @include tablet{
+            min-width: 300px;
+        }
+        &:hover{
+            background: #575d61;
+            color: #fff;
+        } 
+        &_blue{
+            color: #fff;
+            background: #8BA4B4;
+            border: 1px solid #8BA4B4;
+        }
+        &_gray{
+            color: #575D61;
+            background: #EDECEE;
+            border: 1px solid #575D61;
+        }
+    }
+    button.btn-submit{
+        height: auto;
+        font-weight: 800;
+        @include tablet{
+            font-size: 18px;
+        }
+    }
+    .row{
+        margin: 0 -7px;
+    }
+    .form-content{
+        padding: 0;
+    }
+    .billingContainer, .shippingContainer{
+        @include desktop-sm{
+            width: 45%;
+            max-width: 45%;
+        }
+    }
+    .billingContainer{
+        margin-bottom: 70px;
+        @include desktop-sm{
+            margin-bottom: 0;
+        }
+    }
+    .checkbox{
+
+    }
+}

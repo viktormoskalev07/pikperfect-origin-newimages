@@ -1,12 +1,13 @@
  
 @import "media-mixins";
 @import "variables.scss"; 
+@import "main.scss";
 @import "6-pages/header.scss"; 
 @import "6-pages/product.scss"; 
+@import "6-pages/address.scss"; 
 
 
 #new-design {
-  
  
     .header  , .album-cover , .version {
         background-color:$gray;
