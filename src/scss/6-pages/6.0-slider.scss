@@ -2,6 +2,9 @@
 max-width: 100% ; 
   
 }
+.content , .container{
+    width: 100%;
+}
 
 .version{
     &.hidden-xs{
@@ -21,6 +24,10 @@ max-width: 100% ;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
+        @include tablet{
+           
+            margin-bottom: 25px;
+        }
         &>div{
             display: flex;
             align-items: center;
@@ -30,10 +37,19 @@ max-width: 100% ;
                  order: -1;
                  margin: auto;
                  width: 100%;
+                 flex-basis: 100%;
+                 max-width: 100%;
+
                  @include desktop-md{
                         width: auto;
+                        flex-basis: auto;
                         order: 0;
                  }
+            }
+            &:nth-child(1) , &:nth-child(3){
+                    width:auto;
+                    flex-basis: auto;
+                    max-width: 100%;
             }
         }
         .hidden-xs{
@@ -44,6 +60,7 @@ max-width: 100% ;
     #review_version{
         color:$dark;
         position: relative;
+        box-shadow: 1px 1px inset rgba(255, 0, 0, 0);
         font: normal normal normal 14px/26px 'Open Sans';
         background: url('../images/icons/ic_arrow_down_black.svg') no-repeat;
         background-position: 90% 45%;
@@ -76,6 +93,10 @@ max-width: 100% ;
     #flip-control-slider-wrap{
             margin: 0 12px;
             width: 160px;
+            @include tablet {
+                width: 365px;
+            }
+           
     }
     .right-paginator{
         background-image: url('../images/icons/1-arrow-left.svg')  ;
@@ -135,3 +156,4 @@ max-width: 100% ;
         }
     }
 }
+

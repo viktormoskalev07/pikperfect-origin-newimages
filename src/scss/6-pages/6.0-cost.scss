@@ -1,0 +1,51 @@
+ 
+
+#costEstimate{
+    position: static;
+    width: 100%;
+    
+        opacity: 1 !important;
+        display: block  !important;
+}
+
+.costEstimate__container{
+    width: 100%;
+    order: -1;
+}
+
+.cost{
+    color:$dark;
+    background-color:  $gray;
+    &__title{
+        font: normal normal 600 24px/32px 'Spectral';
+        margin-bottom: 25px;
+    }
+    &__price{
+        margin-bottom: 5px;
+    }
+    &__description{ 
+        margin-bottom: 25px;
+    }
+}
+
+.prices{
+    background-color:transparent;
+    border-bottom: solid red 1px ;
+    padding-bottom: 1px;
+}
+.total{
+    background-color:transparent;
+    &-title{
+        font: normal normal 600 24px/56px 'Open Sans';
+    }
+    &-price{
+        
+    }
+}
+
+
+// <div class="total">
+// <span class="total-title">Total</span>
+// <span class="total-price total_price">CHF 205.50  <span class="total-proce__shipping">  Excluding shipping </span> </span>
+// <a class="total__button" href="#"> CONTINUE TO CHECKOUT</a>
+// </div> 

@@ -1,7 +1,7 @@
 // *{
 //   outline:solid rgba(50, 155, 97, 0.151) 1px;
 // }
-
+ 
 .top-button {
 
   background-color: #8BA4B4;
@@ -24,9 +24,7 @@
   }
 }
 
-.icon-feedback {
-  // background: transparent url(../images/icons/6.0feedback.svg) no-repeat 100% 100% cover;
-
+.icon-feedback { 
   background-image: url(../images/icons/6.0feedback.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -38,10 +36,40 @@
 }
 
 .header {
-  border:transparent;
-text-align: center;
+  position: static;
+  .content{
+    width: 100%;
+  }
+  .container{
+    width: 100%;
+  }
+  .logo{
+    width: 140px;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+  .row{
+    justify-content: center;
+  }
+  .btn{
+    padding:8px 17px ;
+    margin-top: 0px;
+
+  }
+ 
+    justify-content: center;
+    border:transparent;
+  text-align: center;
   .text {
     color: #2E3031;
+    font-size: 14px;
+    @include tablet {
+      font-size: 0px
+    }
+    @include desktop-sm {
+      font-size: 12px
+    }
   }
  
   .row-fluid{
@@ -49,20 +77,55 @@ text-align: center;
    align-items: center;
    flex-wrap: wrap;
    justify-content: center;
+   @include tablet{
+     justify-content: space-between;
+   }
       &>div{
     margin: 15px 0; 
     height: 100%;
+    width: auto;
+    max-width: 100%;
+    flex-basis: auto; 
+    &:nth-child(2){
+      flex-grow: 0;
+    }
+        @include tablet {
+          padding: 0;
+        }
+      &:last-child{
+        @include tablet {
+         flex-grow: 2;
+        flex-shrink: 0;
+        margin-left: auto;
+        }
+
+         .row{
+           @include tablet {
+             justify-content: flex-end;
+           }
+           
+         }
+
+      }
   }
   }
   .visible-xs-block{
     color:$primary;
   }
 }
-.buttonsContainer{ 
+.buttonsContainer{  
   margin: 0;
+  font-size: 14px;
   display: none;
-  @include mobile-md{
+  @include tablet{
     display: block;
+    margin-left: 20px !important;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    &>a {
+      margin: 5px 10px;
+    }
   }
   height: 100%;
 }
@@ -75,6 +138,9 @@ text-align: center;
   &:hover{
     background-color: transparent;
     color:$dark;
+  }
+  @include tablet{
+    margin-bottom: 10px;
   }
 
 }
@@ -91,4 +157,17 @@ text-align: center;
     background-color: $primary;
     color: white;
   }
+ 
+}
+
+#review{
+  &>div{
+    width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+    @include tablet{
+      width: 50%;
+    }
+  }
+
 }
