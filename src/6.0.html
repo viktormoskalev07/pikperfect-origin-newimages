@@ -13,13 +13,24 @@
 
                 @@include("6.0/2formats.html")
                 @@include("6.0/3paper.html")
-                @@include("6.0/4cover.html")
-                @@include("6.0/5presentationCopies.html") 
-      
+ 
  
             @@include("6.0/6modals.html") 
  
         @@include("6.0/7footer.html")
 
- 
+        <script>
+            (function(){
+                const cards = document.querySelectorAll('.paper__card');
+                console.log(cards);
+                cards.forEach(card=>{
+                    card.addEventListener('click', function( ){
+                        cards.forEach(item=>{
+                            item.classList.remove('active'); 
+                        })
+                        this.classList.add('active');
+                    })
+                })
+            }())
+        </script>
         @@include("6.0/8oldScripts.html")

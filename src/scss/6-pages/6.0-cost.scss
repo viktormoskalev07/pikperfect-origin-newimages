@@ -11,6 +11,10 @@
 .costEstimate__container{
     width: 100%;
     order: -1;
+    .prices{
+        padding: 20px;
+    }
+    
 }
 
 .cost{
@@ -19,33 +23,60 @@
     &__title{
         font: normal normal 600 24px/32px 'Spectral';
         margin-bottom: 25px;
+        margin-top: 25px;
     }
     &__price{
         margin-bottom: 5px;
     }
     &__description{ 
-        margin-bottom: 25px;
+        margin-bottom: 25px; 
+    }
+    hr{
+        margin: 0;
+        border-top: 1px solid  #686a6b81;;
     }
 }
 
 .prices{
-    background-color:transparent;
-    border-bottom: solid red 1px ;
+    background-color:transparent; 
     padding-bottom: 1px;
 }
 .total{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   padding: 20px;
     background-color:transparent;
-    &-title{
-        font: normal normal 600 24px/56px 'Open Sans';
+    &__title{
+        width: 50%;
+        font: normal normal 600 24px/40px 'Open Sans';
     }
-    &-price{
-        
+
+    &__price{
+        font: normal normal 600 24px/40px 'Open Sans';
+        font-size: 14px;
+        text-align: right;
+        @include mobile-sm{
+            font-size: 24px;
+        }
+        width: 50%;
+    }
+    &__shipping{
+        width: 100%;
+        text-align: right; 
+        opacity: 0.7;
+        margin-bottom: 15px;
+    }
+    &__button{
+        width: 100%;
+        margin-top: 15px;
+        color:white;
+       font-size: 14px;  
+        &:hover{
+            color:$dark;
+        }
     }
 }
 
 
-// <div class="total">
-// <span class="total-title">Total</span>
-// <span class="total-price total_price">CHF 205.50  <span class="total-proce__shipping">  Excluding shipping </span> </span>
-// <a class="total__button" href="#"> CONTINUE TO CHECKOUT</a>
-// </div> 
+ 

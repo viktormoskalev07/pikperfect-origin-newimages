@@ -1,22 +1,85 @@
 .formats{
    background-color: #fff;
     h2{
-        font: normal normal 600 24px/32px 'Spectral';
-        @include tablet{
-                  font-size: 32px;
-        line-height: 40px;
-        }
-  
-        letter-spacing: 0px;
-        color: #2E3031;
-    }
-    .format-item{
-            display: none;
-    }
-    .format.disabled{
-        display: none;
-    }
+
+    } 
 }
- 
+
+.product{
+    &__container{
+        width: 100%;
+    }
+    &__title{
+     margin-top: 54px;
+     margin-bottom: 20px;
+   
+    }
+    &__subtitle{
+        font-size: 16px;
+         text-transform: uppercase;
+         margin-bottom: 22px;
+    }
+    &__size{
+        display: flex;
+        gap: 10px;
+        @include mobile-lg{
+            gap: 30px;
+        }
+        &__img{
+            width: 100%;
+            img{  
+                width: 100%;
+                object-fit: contain;
+                margin-bottom: 15px;
+            }
+            &.small{
+                width: 86px;
+                @include mobile-lg{
+                    width: 116px;
+                }
+            }
+            &.big{
+                width: 116px;
+                @include mobile-lg{
+                    width: 160px;
+                }
+            }
+        }
+    }
+    &__size__item{
+        float:none;
+        width: 50%; 
+        max-width: 220px;
+        .format{
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            text-align: center; 
+            &::before{
+                display: none;
+            }
+            padding: 10px;
+            @include mobile-sm{
+                padding: 20px;
+            }
+            &.active{
+                border: transparent;
+                background-color: $gray;
+            }
+        }
+    }
+    &__details{
+         font-size: 15px;
+    }
+    
+
+}
+ .format-flex{
+     display: flex;
+     flex-wrap: wrap;
+ }
 
 @import"6.0-cost.scss";
+@import"6.0-paper.scss"
