@@ -1,6 +1,6 @@
 <div class="col-lg-6 form-wrapper billingContainer">
     <div class="form-content billing-form">
-        <h1 class="product__title">Billing Address<span class="title-border"></span>
+        <h1 class="product__title">Billing Address</span>
         </h1>
         <div class="row">
             <label class="form-control__label col-md-6" for="firstNameBilling">First Name
@@ -59,7 +59,10 @@
         </div>
         <div class="row">
             <label class="form-control__label col-md-6" for="state">State
-                <input name="billing[state]" required type="text" id="state" title="State" class="form-control">
+                <select name="billing[state]" required type="text" id="state" title="State" class="form-control form-control__select">
+                    <option value="Luzern">Luzern</option>
+                    <option value="other">other</option>
+                </select>
             </label>
             <label class="form-control__label col-md-6" for="billing-country">Country
                 <select name="billing[iso2_country]" id="billing-country" title="country" class="form-control form-control__select"><option>Select Country</option>
@@ -262,7 +265,7 @@
         </div>
         <div class="row">
             <label class="form-control__label col-12" for="billing-phone">Phone number
-                <input name="billing[phone]" required type="text" id="billing-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
+                <input name="billing[phone]" required type="number" id="billing-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
             </label>
         </div>
     </div>
