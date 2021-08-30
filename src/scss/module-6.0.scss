@@ -1,18 +1,25 @@
- 
-@import "media-mixins";
-@import "variables.scss"; 
+// @import "media-mixins";
+// @import "variables.scss"; 
+
 @import "main.scss";
 @import "6-pages/header.scss"; 
 @import "6-pages/product.scss"; 
 @import "6-pages/address.scss"; 
 @import "6-pages/confirmation.scss"; 
 
-
-#new-design {
+#new-design-60{
+  font-family: "Open Sans";
+  background-color: #fff;
+ padding-right: 0 !important; 
  
     .header  , .album-cover , .version {
         background-color:$gray;
     }
-   
+   @import"6-pages/6.0header.scss";
+   @import"6-pages/6.0-slider.scss"; 
+   @import"6-pages/6.0-format.scss";
+
 }
 
+
+ 

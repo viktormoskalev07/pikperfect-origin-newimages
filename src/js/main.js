@@ -47,10 +47,7 @@ window.addEventListener("load", function () {
 });
 
 
-// promobar
-
-
-
+// promobar 
 (function(){
   const promoText = document.querySelector('#promo-place-text');
   const promoCode = document.querySelector('#promo-place-code');
@@ -72,8 +69,7 @@ window.addEventListener("load", function () {
   }
   if(promoText){
       promobar(); 
-  }
-
+  } 
 }());
 
 // promobar

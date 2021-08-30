@@ -1,0 +1,69 @@
+.paper{
+    &__container{
+        @include tablet{
+            display: flex;
+            gap: 20px;  
+      }
+    }
+    &__item{
+        padding: 10px;
+        @include mobile-sm{
+            padding: 16px;
+        }
+        background-color: $gray;
+        margin-bottom: 20px;
+    } 
+    &__title{
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+       margin-bottom: 10px;   
+    }
+    &__img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__card{  
+        border:solid #2F353A4D 2px;
+        margin-bottom: 16px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        letter-spacing: 0;
+        @include tablet{
+          width: 50%;
+      }
+
+        &.active{
+            background-color:#70707026;
+            border:solid transparent 2px; 
+        }
+        &__container{
+            @include tablet{
+                  display: flex;
+                  gap: 20px;
+            }
+          
+        }
+            &__title{
+                font-size: 18px;
+                color: #2F353A;
+                margin-bottom: 16px;
+            }
+            &__description{
+                    font-size: 14px;
+                    color: #2E3031;
+                    max-width: 260px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 16px;
+                    font-weight: 300;
+            }
+            &__price{
+                    font-size: 14px;
+                    margin-bottom: 16px; font-weight: 500;
+                    color: #2E3031;
+            }
+    }
+}
