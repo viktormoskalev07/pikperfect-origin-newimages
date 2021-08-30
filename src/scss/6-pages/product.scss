@@ -14,6 +14,36 @@ footer{
         float: none;
         padding: 0;
     }
+    .btn{
+        transition: .3s;
+        font-size: 14px;
+        font-family: "open sans";
+        text-transform: uppercase;
+        background: #ffffff;
+        border: 1px solid #575D61;
+        color: #575D61;
+        padding: 15px;
+        font-weight: 600;
+        display: block;
+        cursor: pointer;
+        @include tablet{
+            min-width: 300px;
+        }
+        &:hover{
+            background: #575d61;
+            color: #fff;
+        } 
+        &_blue{
+            color: #fff;
+            background: #8BA4B4;
+            border: 1px solid #8BA4B4;
+        }
+        &_gray{
+            color: #575D61;
+            background: #EDECEE;
+            border: 1px solid #575D61;
+        }
+    }
     .w-100{
         width: 100%;
     }
@@ -88,37 +118,6 @@ footer{
             color: #fff;
         } 
     }
-    .btn{
-        transition: .3s;
-        font-size: 14px;
-        font-family: "open sans";
-        text-transform: uppercase;
-        background: #ffffff;
-        border: 1px solid #575D61;
-        color: #575D61;
-        padding: 15px;
-        font-weight: 600;
-        display: block;
-        cursor: pointer;
-        @include tablet{
-            min-width: 300px;
-        }
-        &:hover{
-            background: #575d61;
-            color: #fff;
-        } 
-        &_blue{
-            color: #fff;
-            background: #8BA4B4;
-            border: 1px solid #8BA4B4;
-        }
-        &_gray{
-            color: #575D61;
-            background: #EDECEE;
-            border: 1px solid #575D61;
-        }
-    }
-    
 }
 .subscribe .btn{
     @include desktop-sm{
@@ -139,7 +138,7 @@ footer{
     }
     &__form{
         @include desktop-sm{
-            width: calc(100% - 475px);
+            width: calc(100% - 440px);
         }
     }
     &__form-address{

@@ -80,6 +80,43 @@
             margin-bottom: 0;
         }
     }
+    .navigation-prev, .navigation-next{
+        svg{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    .navigation-prev{
+        svg{
+            left: 16px;
+        }
+        .btn-default{
+            .b{
+                stroke: #575D61;
+            } 
+        }
+    }
+    .navigation-next{
+        svg{
+            right: 16px;
+        }
+    }
+    .btn-default{
+        position: relative;
+        &:hover{
+            .b{
+                stroke: #fff;
+            }  
+        }
+        .b{
+            stroke: #fff;
+        }
+        .a, .c{
+            fill: transparent;
+        }
+    }
     .checkbox{
 
     }

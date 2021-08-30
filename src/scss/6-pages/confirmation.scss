@@ -1,0 +1,16 @@
+#pageConfirmation{
+    .box{
+        &__address{
+            padding: 32px 21px;
+            background: #EDECEE;
+            .btn-default{
+                border: 0;
+                background: transparent;
+                text-decoration: underline;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
