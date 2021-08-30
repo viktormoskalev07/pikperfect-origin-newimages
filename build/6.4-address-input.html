@@ -118,10 +118,10 @@
 
 <div class="container" id="pageAddress">
     <form method="post" class="product__form-address" name="myBillingForm" id="MyBilling">
-        <div class="flex-row">
+        <div class="flex-row production__wrap-form">
             <div class="col-lg-6 form-wrapper billingContainer">
     <div class="form-content billing-form">
-        <h1 class="product__title">Billing Address<span class="title-border"></span>
+        <h1 class="product__title">Billing Address</span>
         </h1>
         <div class="row">
             <label class="form-control__label col-md-6" for="firstNameBilling">First Name
@@ -180,7 +180,10 @@
         </div>
         <div class="row">
             <label class="form-control__label col-md-6" for="state">State
-                <input name="billing[state]" required type="text" id="state" title="State" class="form-control">
+                <select name="billing[state]" required type="text" id="state" title="State" class="form-control form-control__select">
+                    <option value="Luzern">Luzern</option>
+                    <option value="other">other</option>
+                </select>
             </label>
             <label class="form-control__label col-md-6" for="billing-country">Country
                 <select name="billing[iso2_country]" id="billing-country" title="country" class="form-control form-control__select"><option>Select Country</option>
@@ -383,21 +386,21 @@
         </div>
         <div class="row">
             <label class="form-control__label col-12" for="billing-phone">Phone number
-                <input name="billing[phone]" required type="text" id="billing-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
+                <input name="billing[phone]" required type="number" id="billing-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
             </label>
         </div>
     </div>
 </div>
             <div class="col-lg-6 form-wrapper shippingContainer">
     <div class="form-content billing-form">
-        <div class="product__wrap">
+        <div class="product__wrap product__wrap_checkbox">
             <h2 class="product__title">Delivery Address</h2>
             <div class="checkbox" id="shipingCheckboxLabel">
                 <label>
-                    <input type="checkbox" class="hidden" id="shipping-shipingCheckbox"><span></span>same as Billing
+                    <input type="checkbox" class="hidden" id="shipping-shipingCheckbox">
+                    <span></span>Same as billing
                 </label>
             </div>
-            <span class="title-border"></span>
         </div>
         
         <div class="row">
@@ -457,10 +460,13 @@
         </div>
         <div class="row">
             <label class="form-control__label col-md-6" for="state">State
-                <input name="shipping[state]" required type="text" id="state" title="State" class="form-control">
+                <select name="shipping[state]" required type="text" id="state" title="State" class="form-control form-control__select">
+                    <option value="Luzern">Luzern</option>
+                    <option value="other">other</option>
+                </select>
             </label>
             <label class="form-control__label col-md-6" for="billing-country">Country
-                <select name="shipping[iso2_country]" id="shipping-country" title="country" class="form-control form-control__select"><option value="">Select Country</option>
+                <select name="shipping[iso2_country]" id="shipping-country" title="country" class="form-control form-control__select"><option>Select Country</option>
             <option value="AL">Albania</option>
             <option value="DZ">Algeria</option>
             <option value="AD">Andorra</option>
@@ -659,20 +665,24 @@
             </label>
         </div>
         <div class="row">
-                <label class="form-control__label col-12" for="billing-phone">Phone number
-                    <input name="shipping[phone]" required type="text" id="shipping-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
-                </label>
+            <label class="form-control__label col-12" for="billing-phone">Phone number
+                <input name="shipping[phone]" required type="number" id="shipping-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
+            </label>
         </div>
     </div>
 </div>
         </div>
-        <div class="clearfix">&nbsp;</div>
         <div class="flex-row">
-            <div class="navigation-prev col-6 col-lg-4">
-                <button type="button" name="cancel" id="cancel" class="btn btn-default btn-submit" value="< Back">&lt; Back</button>
+            <div class="navigation-prev col-6">
+                <button type="button" name="cancel" id="cancel" class="btn btn-default btn-submit" value="< BACK TO CART">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a,.b{fill:none;}.b{stroke:transparent;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><rect class="a" width="24" height="24"/><g transform="translate(3 6)"><line class="b" x1="18.338" transform="translate(0.143 6.23)"/><path class="b" d="M18.23,5,12,11.23l6.23,6.23" transform="translate(-12 -5)"/></g></svg>
+                    BACK TO CART
+                </button>
             </div>
-            <div class="navigation-next col-6 col-lg-4">
-                <button type="submit" name="submit" id="submit" class="btn btn-default btn_blue btn-submit" value="< Back">Continue &gt;</button>
+            <div class="navigation-next col-6">
+                <button type="submit" name="submit" id="submit" class="btn btn-default btn_blue btn-submit" value="Continue >">Continue 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a,.b{fill:none;}.b{stroke:transparent;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><rect class="a" width="24" height="24"/><g transform="translate(2.52 6)"><line class="b" x2="18.338" transform="translate(0 6.23)"/><path class="b" d="M12,5l6.23,6.23L12,17.461" transform="translate(0.25 -5)"/></g></svg>
+                </button>
             </div>
         </div>
     </form>
