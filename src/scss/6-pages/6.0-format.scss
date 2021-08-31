@@ -1,23 +1,27 @@
 .formats{
-   background-color: #fff;
-    h2{
-
-    } 
-}
-
+   background-color: #fff; 
+} 
 .product{
     &__container{
         width: 100%;
+        margin-bottom: 32px;
     }
     &__title{
      margin-top: 54px;
      margin-bottom: 20px;
+     @include wide-screen-sm{
+         margin-top: 0;
+         margin-bottom: 30px;
+     }
    
     }
     &__subtitle{
         font-size: 16px;
          text-transform: uppercase;
          margin-bottom: 22px;
+         @include wide-screen-sm{
+            font-size: 20px;
+        }
     }
     &__size{
         display: flex;

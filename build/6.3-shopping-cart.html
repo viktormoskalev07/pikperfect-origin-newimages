@@ -17,7 +17,7 @@
         href="https://www.pikperfect.com/en/photobook/review/JB651926245/hash/ce27cefaf83c203359f527d1d2f030a25974ee17/fullscreen/1">
     <link href="./6.0_files/base_css.1622406001.css" media="screen" rel="stylesheet" type="text/css">
     <link href="./6.0_files/review_vendor_css.1598473512.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="https://www.pikperfect.com/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" sizes="32x32">
     <link rel="alternate" hreflang="en"
         href="https://www.pikperfect.com/en/photobook/review/JB651926245/hash/ce27cefaf83c203359f527d1d2f030a25974ee17/fullscreen/1">
     <link rel="alternate" hreflang="de"
@@ -115,8 +115,8 @@
   </script>
 
 <main>
-<div class="container">
-    <div class="products" id="product">
+<div class="container" id="product">
+    <div class="products">
         <div class="actions row-fluid">
     <h2 class="product__title">Total</h2>
     <div class="products-footer">
@@ -161,7 +161,11 @@
     </div>
     <div class="total product__total">
         <p class="product__total-title">TOTAL</p> 
-        <p class="product__total-title">CHF 205.50<span>Not including VAT, taxes or duties</span></p>
+        <p class="product__total-title">CHF 205.50</p>
+        <p class="product__total-title">
+            <span>Not including VAT, taxes or duties</span>
+        </p>
+        
     </div>
     <a href="/en/user/cart/billing-shipping" class="btn btn-default btn_blue btn-submit">Proceed to Checkout</a>
     <div class="promo-code">
@@ -174,14 +178,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
         <form method="post" class="product__form" name="checkoutForm" enctype="multipart/form-data" id="checkoutForm">
             <div class="product-row" data-cart-index="1">
                 <h1 class="product__title">Shopping cart</h1>
@@ -190,10 +186,18 @@
                         <div class="product__info">
                             <h3 class="product-title">TEST BOOK (DO NOT DELETE)</h3>
                             <span class="description">Large Landscape (42x30 cm),<br> Printed Cover<br> 32 pages Lay-Flat 370gsm<br> with Presentation Box</span>
+                            <div class="row-fluid">
+                                <span class="col-md-12 removeButtonContainer">
+                                    <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
+                                    <input type="hidden" name="cart41681" value="">
+                                </span>
+                            </div>
                         </div>
+                        
                         <div class="product__wrap product__wrap-price">
                             <p class="tinyTopPadding product__price hidden">CHF 196.80</p>
-                            <div class="">
+                            <div class="product__wrap">
+                                <span>-</span>
                                 <select name="quantity41681" class="quantity form-control smaller">
                                     <option value="1" selected="selected">1</option>
                                     <option value="2">2</option>
@@ -296,16 +300,12 @@
                                     <option value="99">99</option>
                                     <option value="100">100</option>
                                 </select>
+                                <span>+</span>
                             </div>       
                             <p class="tinyTopPadding product__price">CHF 196.80</p>
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <span class="col-md-12 removeButtonContainer">
-                            <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
-                            <input type="hidden" name="cart41681" value="">
-                        </span>
-                    </div>
+                    
                 </div>
                 <div class="product">
                     <div class="row-fluid">
@@ -314,7 +314,7 @@
                             <span class="description">CHF 0.95 Per page</span>
                         </div>
                         <div class="product__wrap">  
-                            <p class="tinyTopPadding product__price">CHF 196.80</p>
+                            <p class="tinyTopPadding product__price product__wrap-price">CHF 196.80</p>
                         </div>
                     </div>
                 </div>
@@ -324,10 +324,17 @@
                             <h3 class="product-title">POCKET BOOK
                             </h3>
                             <span class="description">21x15 cm<br> Only purchased in sets of 2</span>
+                            <div class="row-fluid">
+                                <span class="col-md-12 removeButtonContainer">
+                                    <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
+                                    <input type="hidden" name="cart41681" value="">
+                                </span>
+                            </div>
                         </div>
                         <div class="product__wrap product__wrap-price">
                             <p class="tinyTopPadding product__price hidden">CHF 114.00</p>
-                            <div class="">
+                            <div class="product__wrap">
+                                <span>-</span>
                                 <select name="quantity41681" class="quantity form-control smaller">
                                     <option value="1" selected="selected">1</option>
                                     <option value="2">2</option>
@@ -430,16 +437,12 @@
                                     <option value="99">99</option>
                                     <option value="100">100</option>
                                 </select>
+                                <span>+</span>
                             </div>       
                             <p class="tinyTopPadding product__price">CHF 114.00</p>
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <span class="col-md-12 removeButtonContainer">
-                            <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
-                            <input type="hidden" name="cart41681" value="">
-                        </span>
-                    </div>
+                    
                 </div>
                 <div class="product">
                     <div class="duplicate-product">
@@ -466,10 +469,17 @@
                         <div class="product__info">
                             <h3 class="product-title">TEST BOOK (DO NOT DELETE)</h3>
                             <span class="description">Large Landscape (42x30 cm),<br> Printed Cover<br> 32 pages Lay-Flat 370gsm<br> with Presentation Box</span>
+                            <div class="row-fluid">
+                                <span class="col-md-12 removeButtonContainer">
+                                    <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
+                                    <input type="hidden" name="cart41681" value="">
+                                </span>
+                            </div>
                         </div>
                         <div class="product__wrap product__wrap-price">
                             <p class="tinyTopPadding product__price hidden">CHF 196.80</p>
-                            <div class="">
+                            <div class="product__wrap">
+                                <span>-</span>
                                 <select name="quantity41681" class="quantity form-control smaller">
                                     <option value="1" selected="selected">1</option>
                                     <option value="2">2</option>
@@ -572,16 +582,12 @@
                                     <option value="99">99</option>
                                     <option value="100">100</option>
                                 </select>
+                                <span>+</span>
                             </div>       
                             <p class="tinyTopPadding product__price">CHF 196.80</p>
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <span class="col-md-12 removeButtonContainer">
-                            <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
-                            <input type="hidden" name="cart41681" value="">
-                        </span>
-                    </div>
+                    
                 </div>
                 <div class="product">
                     <div class="row-fluid">
@@ -600,10 +606,17 @@
                             <h3 class="product-title">POCKET BOOK
                             </h3>
                             <span class="description">21x15 cm<br> Only purchased in sets of 2</span>
+                            <div class="row-fluid">
+                                <span class="col-md-12 removeButtonContainer">
+                                    <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
+                                    <input type="hidden" name="cart41681" value="">
+                                </span>
+                            </div>
                         </div>
                         <div class="product__wrap product__wrap-price">
                             <p class="tinyTopPadding product__price hidden">CHF 114.00</p>
-                            <div class="">
+                            <div class="product__wrap">
+                                <span>-</span>
                                 <select name="quantity41681" class="quantity form-control smaller">
                                     <option value="1" selected="selected">1</option>
                                     <option value="2">2</option>
@@ -706,16 +719,12 @@
                                     <option value="99">99</option>
                                     <option value="100">100</option>
                                 </select>
+                                <span>+</span>
                             </div>       
                             <p class="tinyTopPadding product__price">CHF 114.00</p>
                         </div>
                     </div>
-                    <div class="row-fluid">
-                        <span class="col-md-12 removeButtonContainer">
-                            <a href="#delete-item-modal" data-toggle="modal" data-remove-item="cart41681" class="removeItem link">Remove</a>
-                            <input type="hidden" name="cart41681" value="">
-                        </span>
-                    </div>
+                    
                 </div>
                 <div class="product">
                     <div class="duplicate-product">

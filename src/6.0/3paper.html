@@ -1,34 +1,48 @@
  <section class="paper__section">
-     <div class="container">
-         <h3 class="product__subtitle">
-             PAPER TYPE
-         </h3>
-        <div class="paper__container">
-            <div class="paper__item">
-                    <h4 class="paper__title">
-                        STANDARD
-                    </h4>
-                    <figure class="paper__img">
-                        <img src="images/6.0/image_paper_type_standard.jpg" alt="">
-                    </figure>
-                    <div class="paper__card__container">
-                     @@include('_paper-card.html')
-                       @@include('_paper-card.html') 
-                    </div> 
-            </div>
-            <div class="paper__item">
-                    <h4 class="paper__title">
-                        STANDARD
-                    </h4>
-                    <figure class="paper__img">
-                        <img src="images/6.0/image_paper_type_standard.jpg" alt="">
-                    </figure>
-                    <div class="paper__card__container">
-                     @@include('_paper-card.html')
-                       @@include('_paper-card.html') 
-                    </div> 
-            </div>
-        </div>
+     <h3 class="product__subtitle">
+         PAPER TYPE
+     </h3>
+     <div class="paper__container">
+         <div class="paper__item">
+             <h4 class="paper__title">
+                 STANDARD
+             </h4>
+             <figure class="paper__img">
+                 <img src="images/6.0/image_paper_type_standard.jpg" alt="standard">
+             </figure>
+             <div class="paper__card__container">
+                 @@include('_paper-card.html', {
+                 title:'Standard Matte <br> 170 GSM',
+                 description:'Our most economical option, this paper has a smooth and elegant matte finish.',
+                 price:'CHF 2.25 per 4 pages'
+                 })
+                 @@include('_paper-card.html', {
+                 title:' Photo Lustre <br>190 GSM ',
+                 description:' With a satin-matte finish, this paper has a color and contrast similar to a real photo print. ',
+                 price:' CHF 3.25 per 4 pages '
+                 })
+             </div>
+         </div>
+         <div class="paper__item">
+             <h4 class="paper__title">
+                 LAYFLAT
+             </h4>
+             <figure class="paper__img">
+                 <img src="images/6.0/image_paper_type_layflat.jpg" alt="layflat">
+             </figure>
+             <div class="paper__card__container">
+                 @@include('_paper-card.html', {
+                 title:' Layflat Matte <br> 370 GSM ',
+                 description:' Developed on FUJI album paper which offers stunning layflat spreads, the Pearl Matte finish is the most popular option as it offers some shine and good contrast. ',
+                 price:' CHF 3.25 per 4 pages '
+                 })
+                 @@include('_paper-card.html', {
+                 title:' Layflat Gloss <br> 370 GSM ',
+                 description:" Developed on FUJI album paper which offers stunning layflat spreads, the Gloss finish offers more sheen and higher color saturation, but it's more reflective. ",
+                 price:' CHF 3.25 per 4 pages '
+                 })
+             </div>
+         </div>
      </div>
-
+     <p class="paper__gsm">GSM indicates the paper weight. For reference, standard copy paper is 80 GSM.</p> 
  </section>
