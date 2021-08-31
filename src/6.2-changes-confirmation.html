@@ -1,0 +1,31 @@
+@@include("./html-templates/head.html",{
+    title:"Modal | PikPerfect", 
+    desc:"Answers to frequently asked questions about your account and order details.",
+})
+  <main class="main-content"> 
+    <!-- Button trigger modal -->
+    <button type="button" class="button" data-toggle="modal" id="modalThankYouForChanges">Modal Confirmation</button>
+
+    <!-- Modal -->
+    <div class="modal-changes">
+        <div class="modal-changes__wrap">
+            <div class="modal-changes__content">
+                <button type="button" id="ModalChangesClose" class="close">
+                    <img src="./images/ic_x.svg" alt="close">
+                </button>
+                <div class="modal-changes__header">
+                    <h5 class="modal-changes__title">Submit feedback?</h5>
+                </div>
+                <div class="modal-changes__body modal-changes__body_mini">
+                    <p>Have you entered feedback on the complete album? Once submitted, you will not be able to view the album again till the next revision is sent to you.</p>
+                </div>
+                <div class="modal-changes__footer">
+                    <a href="#" class="button button__light_border">ADD MORE</a>
+                    <a type="submit" href="#" class="button">SUBMIT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@@include("./html-templates/footer.html" )

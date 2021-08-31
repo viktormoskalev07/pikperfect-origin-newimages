@@ -1,0 +1,36 @@
+@@include("./html-templates/head.html",{
+    title:"Modal | PikPerfect", 
+    desc:"Answers to frequently asked questions about your account and order details.",
+})
+  <main class="main-content"> 
+    <!-- Button trigger modal -->
+    <button type="button" class="button" data-toggle="modal" id="modalThankYouForChanges">Modal Changes</button>
+
+    <!-- Modal -->
+    <div class="modal-changes">
+        <div class="modal-changes__wrap">
+            <div class="modal-changes__content">
+                <button type="button" id="ModalChangesClose" class="close">
+                    <img src="./images/ic_x.svg" alt="close">
+                </button>
+                <div class="modal-changes__header">
+                    <h5 class="modal-changes__title">Thank you for approving your design.</h5>
+                    <p>To confirm, you are ordering:</p>
+                </div>
+                <div class="modal-changes__body">
+                    <p><strong>Format: </strong>Large Square (30x30 cm I 12x12 in)</p>
+                    <p><strong>Paper: </strong>Standard Matte 170gsm <span>(pages do not lay flat)</span></p>
+                    <p><strong>Cover: </strong>Printed Cover</p>
+                    <p><strong>Presentation Box: </strong>Yes</p>
+                </div>
+                <div class="modal-changes__footer">
+                    <a href="#" class="button button__light_border">MAKE MORE CHANGES</a>
+                    <a href="#" class="button">PROCEED TO CART</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+@@include("./html-templates/footer.html" )

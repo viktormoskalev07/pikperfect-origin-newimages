@@ -1,0 +1,111 @@
+.modal-changes{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    transition: opacity .15s linear;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #2f353ac7;
+        &.open{
+            display: block;
+        }
+    &__wrap{
+        position: relative;
+        margin: auto;
+        top: 40%;              
+        transform: translate(0, -50%);
+        width: 100%;
+        max-width: 780px;
+    }
+    &__content{
+        position: relative;
+        margin: 16px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: .3rem;
+        padding: 45px 20px;
+        @include tablet{
+            padding: 40px 32px;
+        }
+    }
+    &__title{
+        font-size: 24px;
+        margin-bottom: 8px;
+        @include tablet{
+            font-size: 32px;
+        }
+    }
+    &__body{
+        margin: 10px 0 30px;
+        &_mini{
+            margin: 10px 0;
+            @include tablet{
+                margin-bottom: 30px;
+            }
+        }
+        p{
+            padding: 10px 0 13px;
+            border-bottom: 1px solid #2F353A4D;
+            font-size: 14px;
+            margin-bottom: 0;
+            &:last-child{
+                border: 0;
+            }
+            @include tablet{
+                font-size: 16px;
+                padding: 15px 0 20px;
+            }
+            strong{
+                display: block;
+                font-size: 16px;
+                @include tablet{
+                    display: inline;
+                }
+            }
+            span{
+                font-size: 14px;
+            }
+        }
+    }
+    &__footer{
+        display: block;
+        margin: 0 -8px;
+        @include mobile-lg{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .button{
+            display: block;
+            padding: 11px;
+            margin: 8px;
+            @include mobile-lg{
+                width: 100%;
+                max-width: 260px;
+                margin: 0 8px;
+            }
+        }
+    }
+    .close{
+        border: 0;
+        background: transparent;
+        line-height: 1;
+        width: 24px;
+        height: auto;
+        padding: 0;
+        cursor: pointer;
+        transition: .3s;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        &:hover{
+            box-shadow: 1px 1px 5px rgb(128, 128, 128);
+        }
+    }
+}

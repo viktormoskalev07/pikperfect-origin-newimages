@@ -158,6 +158,25 @@ window.addEventListener("load", function () {
     }
   }
 }());
+
+
+//////////// Modal ///////////
+(function(){
+  const ModalChanges = document.querySelector('#modalThankYouForChanges');
+  const ModalChangesOpen = document.querySelector('.modal-changes');
+  const ModalChangesClose = document.querySelector('#ModalChangesClose');
+
+  if(ModalChanges && ModalChangesOpen){
+    ModalChanges.addEventListener('click', function(){
+      ModalChangesOpen.classList.add('open');
+      if(ModalChangesClose){
+        ModalChangesClose.addEventListener('click', function(){
+          ModalChangesOpen.classList.remove('open');
+        })
+      }
+    })
+  }
+}());
  
 
 @@include('modules/imgpreloader.js')
