@@ -1,0 +1,147 @@
+@@include("./html-templates/head.html",{
+    title:"Account & Orders | PikPerfect", 
+    desc:"Answers to frequently asked questions about your account and order details.",
+  }) 
+  <link rel="stylesheet" href="./css/upload.css">
+  <main class="main-content"> 
+    <section class="upload__hero upload">
+        <h1 class="title">Sit back and relax while we design your perfect album!</h1>
+        <div class="upload__sub-title">
+            <p class="upload__sub-text">No prepayment required</p>
+            <p class="upload__sub-text">Unlimited revisions</p>
+            <p class="upload__sub-text">Quality Guarantee</p>
+        </div>
+        <div class="upload__album">
+            @@include('./3.1-premium-layflat-wedding-albums/hero/section-hero__left.html')
+            <div class="upload__wrap-type">
+                <h2 class="upload__title">Album type</h2>
+                <div class="upload__radio">
+                    <div class="upload__radio-item">
+                        <input type="radio" id="albumChoice1"
+                            name="contact" value="Premium Layflat Album">
+                        <label class="radio" for="albumChoice1"><span></span> Premium Layflat Album</label>
+                        <p class="upload__price">From €199.00</p>
+                        <p class="upload__album-info">Thick rigid layflat pages and premium cover options, 76 page maximum</p>
+                    </div>
+                    <div class="upload__radio-item">
+                        <input type="radio" id="albumChoice2"
+                            name="contact" value="Layflat Album">
+                        <label class="radio" for="albumChoice2"><span></span> Layflat Album</label>
+                        <p class="upload__price">From €54.90</p>
+                        <p class="upload__album-info">Standard layflat pages and cover options, 120 page maximum</p>
+                    </div>
+                    <div class="upload__radio-item">
+                        <input type="radio" id="albumChoice3"
+                            name="contact" value="Photo Book">
+                        <label class="radio" for="albumChoice3"><span></span> Photo Book</label>
+                        <p class="upload__price">From €24.90</p>
+                        <p class="upload__album-info">Digitally printed book-bound pages, 244 page maximum</p>
+                    </div>
+                </div>
+                <input type="checkbox"
+                    name="recommend">
+                <label class="checkbox" for="contactChoice2"><span></span> Not sure, please recommend.</label>
+            </div>
+        </div>
+    </section>
+    <section class="selection-album">
+        <div class="container">
+            <div class="selection-album__wrap">
+                <div class="selection-album__total">
+                    <div class="selection-album__total-wrap">
+                        <div class="selection-album__img">
+                            <img src="./images/towebp/14.0/image_album.png" alt="images_album">
+                        </div>
+                        <p class="selection-album__price-total">CHF 280.02</p>
+                        <p class="selection-album__price">$19.90 shipping per order</p>
+                    </div>
+                </div>
+                <div class="selection-album__complication">
+                    <div class="selection-album__section">
+                        <h2 class="selection-album__title-section">Occasion</h2>
+                        <div class="selection-album__section-wrap">
+                            <div class="selection-album__block active">
+                                <p>Wedding</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Baby</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Family</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Travel</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Cookbook</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Guest Book</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Milestone</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Others</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selection-album__section">
+                        <h2 class="selection-album__title-section">Album Size</h2>
+                        <div class="selection-album__album-size-wrap">
+                            <div class="selection-album__album-size">
+                                <div class="selection-album__img-album">
+                                    <img src="./images/towebp/14.0/20X20cm.svg" alt="20X20cm">
+                                </div>
+                                <p>20 X 20 cm</p>
+                            </div>
+                            <div class="selection-album__album-size">
+                                <div class="selection-album__img-album">
+                                    <img src="./images/towebp/14.0/27X20cm.svg" alt="27X20cm">
+                                </div>
+                                <p>27 X 20 cm</p>
+                            </div>
+                            <div class="selection-album__album-size bestseller active">
+                                <div class="selection-album__img-album">
+                                    <img src="./images/towebp/14.0/30X30cm.svg" alt="30X30cm">
+                                </div>
+                                <p>30 X 30 cm</p>
+                            </div>
+                            <div class="selection-album__album-size">
+                                <div class="selection-album__img-album">
+                                    <img src="./images/towebp/14.0/40X30cm.svg" alt="40X30cm">
+                                </div>
+                                <p>40 X 30 cm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selection-album__section">
+                        <h2 class="selection-album__title-section">Cover Material</h2>
+                        <div class="selection-album__section-wrap">
+                            <div class="selection-album__block active">
+                                <p>Photo Cover</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Linen</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Vegan Leather</p>
+                            </div>
+                            <div class="selection-album__block">
+                                <p>Leather</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="selection-album__section">
+                        <h2 class="selection-album__title-section">Linen Color</h2>
+                        <div class="selection-album__section-wrap">
+                            <div class="selection-album__color"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @@include("./html-templates/section-subscribe.html")
+  </main>
+  @@include("./html-templates/footer.html")
