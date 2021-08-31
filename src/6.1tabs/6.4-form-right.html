@@ -1,13 +1,13 @@
 <div class="col-lg-6 form-wrapper shippingContainer">
     <div class="form-content billing-form">
-        <div class="product__wrap">
+        <div class="product__wrap product__wrap_checkbox">
             <h2 class="product__title">Delivery Address</h2>
             <div class="checkbox" id="shipingCheckboxLabel">
                 <label>
-                    <input type="checkbox" class="hidden" id="shipping-shipingCheckbox"><span></span>same as Billing
+                    <input type="checkbox" class="hidden" id="shipping-shipingCheckbox">
+                    <span></span>Same as billing
                 </label>
             </div>
-            <span class="title-border"></span>
         </div>
         
         <div class="row">
@@ -67,10 +67,13 @@
         </div>
         <div class="row">
             <label class="form-control__label col-md-6" for="state">State
-                <input name="shipping[state]" required type="text" id="state" title="State" class="form-control">
+                <select name="shipping[state]" required type="text" id="state" title="State" class="form-control form-control__select">
+                    <option value="Luzern">Luzern</option>
+                    <option value="other">other</option>
+                </select>
             </label>
             <label class="form-control__label col-md-6" for="billing-country">Country
-                <select name="shipping[iso2_country]" id="shipping-country" title="country" class="form-control form-control__select"><option value="">Select Country</option>
+                <select name="shipping[iso2_country]" id="shipping-country" title="country" class="form-control form-control__select"><option>Select Country</option>
             <option value="AL">Albania</option>
             <option value="DZ">Algeria</option>
             <option value="AD">Andorra</option>
@@ -269,9 +272,9 @@
             </label>
         </div>
         <div class="row">
-                <label class="form-control__label col-12" for="billing-phone">Phone number
-                    <input name="shipping[phone]" required type="text" id="shipping-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
-                </label>
+            <label class="form-control__label col-12" for="billing-phone">Phone number
+                <input name="shipping[phone]" required type="number" id="shipping-phone" maxlength="30" title="Phone" class="form-control" placeholder="+1 917 669 1825">
+            </label>
         </div>
     </div>
 </div>

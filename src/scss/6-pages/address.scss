@@ -1,5 +1,7 @@
 #pageAddress{
     font-family: "open sans"!important;
+    max-width: 1295px !important;
+    margin: 0 auto;
     .flex-row{
         justify-content: space-between;
         display: flex;
@@ -17,11 +19,10 @@
             font-family: "open sans";
             font-weight: 400;
             margin-bottom: 0;
-            padding: 0 8px;
-            
+            padding: 0 8px; 
         }
         &__select{
-            padding: 7px 13px;
+            appearance: auto;
         }
     }
     .btn{
@@ -62,6 +63,8 @@
             font-size: 18px;
         }
     }
+    
+    
     .row{
         margin: 0 -7px;
     }
@@ -70,17 +73,24 @@
     }
     .billingContainer, .shippingContainer{
         @include desktop-sm{
-            width: 45%;
-            max-width: 45%;
+            width: 48%;
+            max-width: 48%;
         }
     }
     .billingContainer{
-        margin-bottom: 70px;
+        margin-bottom: 45px;
         @include desktop-sm{
             margin-bottom: 0;
         }
     }
     .navigation-prev, .navigation-next{
+        padding: 0 8px;
+        @include mobile-md{
+            padding: 0 15px;
+        }
+        @include desktop-md{
+            max-width: 28.5%;
+        }
         svg{
             position: absolute;
             top: 0;
@@ -90,7 +100,10 @@
     }
     .navigation-prev{
         svg{
-            left: 16px;
+            left: 8px;
+            @include mobile-sm{
+                left: 16px;
+            }
         }
         .btn-default{
             .b{
@@ -100,7 +113,10 @@
     }
     .navigation-next{
         svg{
-            right: 16px;
+            right: 8px;
+            @include mobile-sm{
+                right: 16px;
+            }
         }
     }
     .btn-default{
@@ -118,6 +134,15 @@
         }
     }
     .checkbox{
-
+        label{
+            color: #2E3031;
+        }
+        span{
+            height: 24px;
+            width: 24px;
+            border-radius: 0;
+            border: 2px solid #575D61;
+            margin-right: 12px;
+        }
     }
 }

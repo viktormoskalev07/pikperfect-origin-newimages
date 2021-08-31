@@ -4,12 +4,18 @@ h1,h2,h3,h4,p{
 }
 footer{
     background-color: #fff !important;
+    .footer-social{
+        display: flex;
+        margin: 0 auto;
+    }
     .copyright{
         background-color: #fff !important;
     }
 }
 #product{
     font-family: "open sans"!important;
+    max-width: 1250px !important;
+    margin: 0 auto;
     .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9{
         float: none;
         padding: 0;
@@ -44,15 +50,30 @@ footer{
             border: 1px solid #575D61;
         }
     }
+    &.container{
+        padding: 0 15px;
+        @include tablet{
+            padding: 0 20px;
+        }
+    }
     .w-100{
         width: 100%;
     }
     .line{
         border: 1px solid #2F353A4D;
-        margin: 65px 0;
+        margin: 45px 0;
+        @include tablet{
+            margin: 55px 0;
+        }
         @include desktop-sm{
             width: calc(100% - 475px);
         }     
+    }
+    .total{
+        padding:  24px 0 !important;
+        @include tablet{
+            padding: 32px 0 35px !important;
+        }
     }
     .promo-code{
         .promoCodeContainer{
@@ -98,7 +119,6 @@ footer{
         height: 32px;
         border-radius: 0;
         border: 1px solid #2F353A;
-        margin-right: 55px;
     }
     button.btn-add{
         float: none;
@@ -134,11 +154,15 @@ footer{
     margin-bottom: 20px;
     font-family: "open sans";
     @include tablet{
-        margin-bottom: 48px;
+        margin-bottom: 36px;
     }
     &__form{
+        margin: 40px 0;
+        @include tablet{
+           margin: 58px 0 0; 
+        }
         @include desktop-sm{
-            width: calc(100% - 440px);
+            width: calc(100% - 470px);
         }
     }
     &__form-address{
@@ -150,10 +174,11 @@ footer{
         font-size: 24px;  
         font-family: "Spectral";
         color: #2F353A;
-        margin-bottom: 40px;
+        margin-top: 0 !important;
+        margin-bottom: 25px !important;
         @include tablet{
+            margin-bottom: 32px !important;
             font-size: 32px;
-            margin-bottom: 40px;
         }
     }
     &-title{
@@ -171,10 +196,13 @@ footer{
 
     }
     .row-fluid{
-        
         @include tablet{
             display: flex;
             justify-content: space-between;
+        }
+        .removeItem{
+            margin-top: 10px;
+            display: block;
         }
     }
     &__wrap{
@@ -184,17 +212,29 @@ footer{
             padding: 0px;
             display: flex;
         }
+        &_checkbox{
+            display: block;
+            @include mobile-md{
+                display: flex;
+            }
+        }
     }
     &__wrap-price{
         width: 100%;
         @include tablet{
-            max-width: 220px;
+            max-width: 233px;
+            padding-top: 12px;
         }
         .product__price{
             order: -1;
             @include tablet{
                 order: 0;
             }
+        }
+        span{
+            font-size: 30px;
+            line-height: 1;
+            padding: 0 10px;
         }
     }
     &__wrap-data{
@@ -247,6 +287,7 @@ footer{
             font-weight: 300;
             margin-top: 10px;
             opacity: .7;
+            margin-left: auto;
         }
     }
     &__check{
@@ -277,22 +318,23 @@ footer{
 
 .actions{
     background: #EDECEE;
-    padding: 32px 20px;
+    padding: 32px 20px 20px;
     width: 100%;
     
     @include tablet{
         padding: 32px 24px;
+        max-width: 410px;
+        margin: 0 auto;
     }
     @include desktop-sm{
         position: sticky;
         float: right;
         top: 20px;
-        max-width: 410px;
     }
     .btn{
         width: 100%;
         @include tablet{
-            font-size: 18px;
+            font-size: 18px !important;
         }
     }
     .promo-code{

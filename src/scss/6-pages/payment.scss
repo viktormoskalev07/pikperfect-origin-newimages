@@ -1,0 +1,165 @@
+#pagePayment{
+    max-width: 1290px !important;
+    margin: 0 auto;
+    padding: 0 15px;
+        @include tablet{
+            padding: 0 20px;
+        }
+    .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+        float: none;
+        padding: 0;
+    }
+    .total.product__total{
+        padding: 24px 0 32px;
+        @include tablet{
+            padding: 32px 0 48px;
+        }
+    }
+    .btn{
+        transition: .3s;
+        font-size: 14px;
+        font-family: "open sans";
+        text-transform: uppercase;
+        background: #ffffff;
+        border: 1px solid #575D61;
+        color: #575D61;
+        padding: 15px;
+        font-weight: 600;
+        display: block;
+        cursor: pointer;
+        @include tablet{
+            min-width: 300px;
+        }
+        &:hover{
+            background: #575d61;
+            color: #fff;
+        } 
+        &_blue{
+            color: #fff;
+            background: #8BA4B4;
+            border: 1px solid #8BA4B4;
+        }
+        &_gray{
+            color: #575D61;
+            background: #EDECEE;
+            border: 1px solid #575D61;
+        }
+    }
+    .payment{
+        &__form{
+            max-width: 630px;
+            width: 100%;
+        }
+        &__img-card{
+            display: flex;
+            align-items: center;
+            margin: 15px 0 12px;
+            @include tablet{
+                margin: 17px 0px;
+            }
+        }
+        &__img{
+            margin-right: 12px;
+        }
+    }
+    .paymentButtonContainer > div{
+        margin-bottom: 0;
+    }
+    .product__title{
+        margin-top: 0 !important;
+    }
+    .form-control{
+        border-radius: 0;
+        border: 1px solid #575D6180; 
+        padding: 12px 16px;
+        height: auto;
+        margin: 10px 0 24px;
+        &__label{
+            width: 100%;
+            font-family: "open sans";
+            font-weight: 400;
+            margin-bottom: 0;
+            padding: 0 8px;
+            &_fs{
+                font-size: 14px;
+                @include desktop-md{
+                    font-size: 16px;
+                }
+            }
+        }
+        &__select{
+            padding: 7px 13px;
+        }
+    }
+    .form-content{
+        padding: 0;
+    }
+    input[type=checkbox], input[type=radio]{
+        width: 24px;
+        height: 24px;
+    }
+    .row{
+        margin: 0;
+    }
+    .d-md-none{
+        @include tablet{
+            display: none;
+        }
+    }
+    .tab-group{
+        max-width: 360px;
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            padding-top: 15px;
+        }
+    }
+    .tab-content{
+        margin-bottom: 60px;
+        @include tablet{
+            margin-bottom: 110px;
+            margin-right: 30px;
+        }
+    }
+    .tab-radio{
+        display: flex;
+        align-items: center;
+        input{
+            margin-top: -10px;
+            margin-right: 8px;
+        }
+        label{
+            font-weight: 500;
+            color: #2E3031;
+            @include tablet{
+                font-size: 18px;
+            }
+        }  
+        &.active{
+            label{
+                font-weight: 600;
+            }
+        }
+    }
+    .details{
+        margin: 30px 0 0;
+        @include tablet{
+            margin: 33px 0 230px;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+    }
+    .actions{
+        margin-bottom: 60px;
+    }
+}
+.paymentButtonContainer{
+    button.btn-submit{
+        padding: 10px !important;
+        border-radius: 5px !important;
+        @include tablet{
+            padding: 15px !important;
+        }
+    }
+}

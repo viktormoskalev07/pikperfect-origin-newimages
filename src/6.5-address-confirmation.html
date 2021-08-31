@@ -39,102 +39,85 @@
         </script>
 
 
-<div class="container" id="pageConfirmation">
-    @@include("6.1tabs/total-title.html")
-    <div class="row-fluid product__form">
-        <div class="col-md-6">
-            <div class="box box__address">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h2 class="box-heading product__title">Billing Address</h2>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="/en/user/cart/billing-shipping">
-                            <button class="btn-default btn-submit">Edit</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="box-body">
-                    <div class="row">
-                        <p class="col-md-12">Rushad1234 Vevaina<br>Jiejk<br>ttgt ERE<br>Serbia<br><br>+381 789484982</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="box box__address">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h2 class="box-heading product__title">Delivery Address</h2>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="/en/user/cart/billing-shipping">
-                            <button class="btn-default btn-submit">Edit</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="box-body">
-                    <div class="row">
-                        <p class="col-md-12">Rushad1234 Vevaina<br>Jiejk<br>ttgt ERE<br>Serbia<br><br>+381 789484982</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-        <div class="col-md-12">
-            <div class="box">
-                <div class="box-heading text-center">Order Summary</div>
-                <div class="box-body">
-                    <ol>
-                        <li class="order-item">
-                            <div class="item-title">
-                            <span class="pull-left"><strong>Test Book (do not delete)</strong></span>
-                            <span class="pull-right"><strong>190.30</strong></span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <span class="description">Large Landscape (42x30 cm (A3)), Printed Cover, 32 pages Lay-Flat 370gsm<br>with Presentation Box</span>
-                        </li>
-                    </ol>
-
-                    <div class="row-fluid">
-                        <div class="col-md-6 col-sm-6 leftPadding">
-                            <strong>Express Print &amp; Ship</strong>
+<div id="pageConfirmation">
+    <div class="container">
+        @@include("6.1tabs/total-title.html")
+        <div class="product__form product__wrap-form">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="box box__address">
+                        <div class="box__card">
+                                <h2 class="product__title">Billing Address</h2>
+                                <a class="edit" href="/en/user/cart/billing-shipping">
+                                    <button class="btn-default btn-submit">Edit</button>
+                                </a>
                         </div>
-                        <div class="col-md-6 col-sm-6 text-right noRightPadding">
-                            <strong>39.90</strong>
+                        <div class="box-body box-info">
+                            <p>Rushad Vevaina</p>
+                            <p>Address 1</p>
+                            <p>Address 2</p>
+                            <p>Luzern 6003</p>
+                            <p>Switzerland</p>
+                            <p class="tel">Tel: +1 917 669 1825</p>
                         </div>
                     </div>
-                    <div class="row-fluid total">
-                        <div class="col-md-6 col-sm-6">
-                            <a href="/en/user/cart/checkout">
-                                <button class="btn btn-default gray btn-submit">&lt; Edit Cart</button>
+                </div>
+                <div class="col-xl-6">
+                    <div class="box box__address">
+                        <div class="box__card">
+                            <h2 class="product__title">Delivery Address</h2>
+                            <a class="edit" href="/en/user/cart/billing-shipping">
+                                <button class="btn-default btn-submit">Edit</button>
                             </a>
                         </div>
-                        <div class="amount col-md-6 col-sm-6 text-right">Total:
-                            <strong>€ 230.20</strong>
+                        <div class="box-body">
+                            <div class="box-body box-info">
+                                <p>Rushad Vevaina</p>
+                                <p>Address 1</p>
+                                <p>Address 2</p>
+                                <p>Luzern 6003</p>
+                                <p>Switzerland</p>
+                                <p class="tel">Tel: +1 917 669 1825</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product__form">
+            <div class="box">
+                <div class="box-heading">Order Summary</div>
+                <div class="box-body">
+                    <ol class="box__list">
+                        <li class="order-item">
+                            <div class="item-title">
+                                <span>Photo Book Name</span>
+                                <p class="description">Large Landscape, Printed Cover<br> 48 pages Layflat Paper Matte<br> with presentation box</p>
+                            </div>
+                            <p class="product__price">CHF 123.89</p>
+                        </li>
+                        <li class="order-item">
+                            <div class="item-title">
+                                <span>Photo Book Name 2</span>
+                                <p class="description">Large Landscape, Printed Cover<br> 48 pages Layflat Paper Matte<br> with presentation box</p>
+                            </div>
+                            <p class="product__price">CHF 123.89</p>
+                        </li>
+                        <li class="order-item">
+                            <div class="item-title">
+                                <span>Photo Book Name 3</span>
+                                <p class="description">Large Landscape, Printed Cover<br> 48 pages Layflat Paper Matte<br> with presentation box</p>
+                            </div>
+                            <p class="product__price">CHF 123.89</p>
+                        </li>
+                    </ol>
                     
                 </div>
             </div>
         </div>
-        <div class="clearfix"></div>
-        <div class="title">Payment</div>
-        <div class="title-border"></div>
-        <p class="message text-center">Please select one of the payment options below to complete your order.</p>
-        <div class="row-fluid paymentButtonContainer">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="col-md-6 col-sm-6">
-                    <button class="btn btn-default orange btn-submit" id="payWithCC" data-toggle="modal" data-target="#payWithCcPopup">Credit Card</button><span>Additional fees may apply.</span>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <button class="btn btn-default orange btn-submit" id="payWithBank" data-toggle="modal" data-target="#bank-transfer-modal">Bank Transfer</button>
-                    <span>Euro SWIFT transfers only.</span>
-                </div>
-            </div>
-        </div>
     </div>
+        
 </div>
 
 <div class="modal payment-modal fade" id="bank-transfer-modal" tabindex="-1" role="dialog" aria-hidden="true">
