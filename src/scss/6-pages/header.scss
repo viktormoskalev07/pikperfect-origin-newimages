@@ -6,6 +6,9 @@
         @include tablet{
             padding: 65px 0;
         }
+        .container{
+            padding: 0 20px !important;
+        }
     }
     &__container{
         @include tablet{

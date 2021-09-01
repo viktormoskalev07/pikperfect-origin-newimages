@@ -2,6 +2,9 @@
     font-family: "open sans"!important;
     max-width: 1295px !important;
     margin: 0 auto;
+    &.container{
+        padding: 0 20px !important;
+    }
     .flex-row{
         justify-content: space-between;
         display: flex;
@@ -143,6 +146,11 @@
             border-radius: 0;
             border: 2px solid #575D61;
             margin-right: 12px;
+            left: -30px;
         }
     }
+    .custom-checkbox__input:checked ~ .custom-checkbox__checkmark {
+        background-color: #8BA4B4;
+        border: 1px solid transparent;
+      }
 }
