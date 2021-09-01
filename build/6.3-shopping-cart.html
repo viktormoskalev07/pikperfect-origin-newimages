@@ -134,23 +134,27 @@
             <p>Flat Rate Shipping</p>
             <div class="product__wrap product__wrap-data">
                 <div class="product__wrap">
-                    <div class="form-content">
+                    <div class="form-content-new">
                         <div class="radio">
-                            <input type="radio" class="hidden" name="shippingType" checked="checked" id="shipping-standard" value="1">
-                            <span></span>
+                            <label for="creditCard">
+                                <input id="creditCard" name="total" class="radio-hide" type="radio">
+                                <span class="radio-circle"></span>
+                                <p class="description"><span>Courier (Recommended)</span><br>8-10 work days</p>
+                            </label>
                         </div>
-                        <p class="description"><span>Courier (Recommended)</span><br>8-10 work days</p>
                     </div>
                 </div>
                 <p class="product__price">CHF 19.90</p>
             </div>
             <div class="product__wrap product__wrap-data">
-                <div class="form-content">
+                <div class="form-content-new">
                     <div class="radio">
-                        <input type="radio" class="hidden" name="shippingType" id="shipping-standard" value="0">
-                        <span></span>
+                        <label for="shipping-standard">
+                            <input id="shipping-standard" name="total" class="radio-hide" type="radio">
+                            <span class="radio-circle"></span>
+                            <p class="description"><span>Standard Post</span><br>10-12 work days</p>
+                        </label>
                     </div>
-                    <p class="description"><span>Standard Post</span><br>10-12 work days</p>
                 </div>
                 <div class="product__wrap">
                     <p class="product__price">CHF 12.90</p>
