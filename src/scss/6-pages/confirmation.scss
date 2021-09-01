@@ -1,6 +1,11 @@
 #pageConfirmation{
     max-width: 1290px;
     margin: 0 auto;
+    @media (min-width: 1280px){ 
+        .container{
+            padding: 0 20px !important;
+        }
+    }
     input.btn-submit, button.btn-submit{
         height: auto;
     }
