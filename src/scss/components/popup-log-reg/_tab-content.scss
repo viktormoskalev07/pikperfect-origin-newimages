@@ -21,7 +21,6 @@
 
     label {
       font-weight: 400;
-      text-transform: capitalize;
     }
 
     input {
@@ -30,6 +29,7 @@
       padding: 13px 20px;
       font-family: 'Open Sans', sans-serif;
       font-size: 0.875rem;
+      border: 1px solid #575D6180;
     }
   }
 

@@ -125,7 +125,7 @@ if (document.querySelector(".section-reviews-card__wrap")){
 
 
  
-if (document.querySelector('.section-hero__tab-activators')){ 
+if (document.querySelector('.section-hero__tab-activators')&&!document.querySelector('#no-video')){ 
   var swiperTabsControl = new Swiper(".section-hero__tab-activators", {  
     slidesPerView: 6,
     direction:'vertical',
@@ -144,7 +144,8 @@ if (document.querySelector('.section-hero__tab-activators')){
         swiper: swiperTabsControl
       } 
     });     
-    videoInSlider(); 
+     videoInSlider(); 
+ 
 }
 if (document.querySelector('.swiperBigSlider')){ 
     const   BigSlider = new Swiper(".swiperBigSlider", {
@@ -159,18 +160,18 @@ if (document.querySelector('.swiperBigSlider')){
     }); 
   }
  
-
-  if (document.querySelector('.update-slider')){ 
-    var swiperTabsControl = new Swiper(".update-slider", {  
+/////////// slider first /////////
+  if (document.querySelector('.update-slider-a')){ 
+    var swiperTabsControl = new Swiper(".update-slider-a", {  
       slidesPerView: 5,
       direction:'vertical',
       cssMode: true,
-      spaceBetween: 0,
+      spaceBetween: 16,
       allowTouchMove:false, 
       touchStartForcePreventDefault:true,
     });
     
-    var swiperTabs = new Swiper(".section-hero__swiper", { 
+    var swiperTabs = new Swiper(".section-hero__swiper-a", { 
         pagination: {
           el: ".section-hero__swiper-pagination",
           clickable: true
@@ -178,20 +179,50 @@ if (document.querySelector('.swiperBigSlider')){
         thumbs: {
           swiper: swiperTabsControl
         } 
-      });     
-      videoInSlider(); 
+      });  
   }
-  if (document.querySelector('.swiperBigSlider')){ 
-      const   BigSlider = new Swiper(".swiperBigSlider", {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+/////////// slider second /////////
+  if (document.querySelector('.update-slider-b')){ 
+    var swiperTabsControl = new Swiper(".update-slider-b", {  
+      slidesPerView: 5,
+      direction:'vertical',
+      cssMode: true,
+      spaceBetween: 16,
+      allowTouchMove:false, 
+      touchStartForcePreventDefault:true,
+    });
+    
+    var swiperTabs = new Swiper(".section-hero__swiper-b", { 
         pagination: {
-          el: ".swiperDescription-pagination",
-          clickable: true,
-        },
-      }); 
-    }
+          el: ".section-hero__swiper-pagination",
+          clickable: true
+        } ,  
+        thumbs: {
+          swiper: swiperTabsControl
+        } 
+      });  
+  }
+/////////// slider third /////////
+  if (document.querySelector('.update-slider-c')){ 
+    var swiperTabsControl = new Swiper(".update-slider-c", {  
+      slidesPerView: 5,
+      direction:'vertical',
+      cssMode: true,
+      spaceBetween: 16,
+      allowTouchMove:false, 
+      touchStartForcePreventDefault:true,
+    });
+    
+    var swiperTabs = new Swiper(".section-hero__swiper-c", { 
+        pagination: {
+          el: ".section-hero__swiper-pagination",
+          clickable: true
+        } ,  
+        thumbs: {
+          swiper: swiperTabsControl
+        } 
+      });  
+  }
+
 
   @@include('modules/galery.js')

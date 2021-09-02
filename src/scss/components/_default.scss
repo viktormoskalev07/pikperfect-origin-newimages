@@ -915,6 +915,21 @@ label {
 	.container{
 		max-width: 1285px !important;
 	}
+	.logo-mobile{
+		max-width: 300px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 32px;
+		.partner-company{
+			margin-top: 25px;
+		}
+		a{
+			margin: 0 auto;
+		}
+		@include desktop-sm{
+			display: none;
+		}
+	}
 }
 
 .footer .row {
