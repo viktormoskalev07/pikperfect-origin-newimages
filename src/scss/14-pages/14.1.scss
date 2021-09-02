@@ -1,3 +1,37 @@
-.testcss{
-    color:red;
+.section-album-title{
+    background: #EDECEE;
+    max-width: 1440px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    h1{
+      font-size: 24px;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+    input{
+        width: 250px;
+        border: 1px solid #575D6180;
+        padding: 13px;
+        text-align: left;
+    }
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 767px){
+    .section-album-title{
+        h1{
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        input{
+            text-align: center;
+        }
+        &__wrapper{
+            flex-direction: column;
+        }
+    }
 }
