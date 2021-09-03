@@ -9,6 +9,7 @@
     .link{
         font-size: 16px;
         background: transparent;
+        font-family: "open sans";
     }
     .modal-changes{
         .close{
@@ -69,7 +70,6 @@
 			.section-hero__tab-activator{
 			height:calc( 100% / 5 - 18px );
 			}
-            
 		}
 	}
     .dignity__block{
@@ -97,6 +97,7 @@
             }
         }
         .section-hero__swiper{
+            width: 86%;
             margin-bottom: 0;
         }
         .section-hero__swiper{
