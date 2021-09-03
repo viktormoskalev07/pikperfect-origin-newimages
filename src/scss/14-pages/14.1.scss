@@ -2,19 +2,19 @@
     display: flex;
     align-items: center;
     border-radius: 5px;
-    padding: 10px 24px;
+    padding: 9px 23px;
     width: 100%;
     max-width: 730px;
     margin: 0 auto;
     .alert-name{
         font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 4px;
+        line-height: 22px;
+        margin-bottom: 3px;
         font-weight: 600;
     }
     .alert-descr{
         font-size: 14px;
-        line-height: 24px;
+        line-height: 22px;
         font-weight: 300;
         margin-bottom: 0;
     }
@@ -40,7 +40,7 @@
 input{
     width: 250px;
     border: 1px solid #575D6180;
-    padding: 13px;
+    padding: 13px 11px;
     font-size: 16px;
     line-height: 20px;
     text-align: left;
@@ -90,7 +90,7 @@ input{
     }
     &__summary{
         font-size: 14px;
-        line-height: 24px;
+        line-height: 19px;
         font-family: 'Open Sans',sans-serif;
         font-weight: 300;
     }
@@ -100,7 +100,7 @@ input{
     }
 }
 .section-upload-choice{
-    padding: 0 16px;
+    padding: 0 10px;
     margin: 80px 0;
     &__wrapper{
         display: flex;
@@ -138,21 +138,21 @@ input{
     .title{
         text-transform: uppercase;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 22px;
         font-weight: 600;
         margin-bottom: 0;
     }
     .sub{
         margin-top: 4px;
         font-size: 12px;
-        line-height: 20px;
+        line-height: 15px;
         margin-bottom: 0;
     }
     .text{
         text-align: center;
         width: 100%;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 22px;
         &:before{
             content: '';
             display: block;
@@ -167,18 +167,18 @@ input{
 .section-upload-photo{
     max-width: 1440px;
     margin: 80px auto 112px;
-    padding: 0 16px;
+    padding: 0 10px;
     h2{
         font-size: 24px;
         line-height: 32px;
-        margin: 0 8px;
+        margin: 0 13px;
     }
     .alert{
         margin: -16px auto 24px;
     }
     &__text{
         font-size: 18px;
-        line-height: 26px;
+        line-height: 28px;
         font-weight: normal;
         margin-bottom: 40px;
         text-align: center;
@@ -214,8 +214,13 @@ input{
         img{
             width: 100%;
             max-width: 386px;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
             display: block;
+        }
+        .button{
+            width: 280px;
+            font-size: 14px;
+            line-height: 17px;
         }
     }
     &__wrapper{
@@ -229,6 +234,11 @@ input{
         display: flex;
         flex-direction: column;
         align-items: center;
+        .button{
+            width: 100%;
+            max-width: 403px;
+            line-height: 24px;
+        }
     }
     .upload-link{
         display: flex;
@@ -241,7 +251,7 @@ input{
         input{
             flex: 1;
             font-size: 14px;
-            line-height: 24px;
+            line-height: 20px;
             text-align: center;
         }
     }
@@ -348,7 +358,7 @@ input{
 }
 @media screen and (max-width: 767px){
     .section-album-title{
-        padding: 32px 18px;
+        padding: 32px 13px;
         h1{
             margin-right: 0;
             margin-bottom: 10px;
@@ -358,22 +368,25 @@ input{
         }
         &__wrapper{
             flex-direction: column;
+            margin-bottom: 16px;
         }
         &__summary{
             flex-direction: row;
             justify-content: flex-end;
             align-items: flex-end;
+            font-size: 14px;
+            line-height: 24px;
         }
         .summary{
             margin-right: 6px;
             text-align: center;
             flex: 1;
-            padding-left: 54px;
+            padding-left: 43px;
         }
     }
     .section-upload-choice{
         margin: 48px 0;
-        padding: 0 16px;
+        padding: 0 10px;
         &__wrapper{
             flex-direction: column;
             align-items: center;
@@ -401,12 +414,13 @@ input{
         .button{
             width: 100%;
             max-width: 500px;
+            line-height: 17px;
         }
         .column{
             padding: 0;
             max-width: 100%;
             .text{
-                margin-bottom: 24px;
+                margin-bottom: 27px;
             }
         }
         .separator{
@@ -446,6 +460,9 @@ input{
         &__text{
             font-size: 16px;
             line-height: 24px;
+            max-width: 250px;
+            margin-left: auto;
+            margin-right: auto;
         }
         &__head{
             flex-direction: column;
@@ -468,7 +485,7 @@ input{
         &__device{
             img{
                 max-width: 328px;
-                margin-bottom: 16px;
+                margin-bottom: 20px;
             }
         }
     }
