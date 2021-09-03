@@ -58,7 +58,7 @@ const popupLogin = (hasLogin) => {
   // checking if popupLogin parameter true/false
   if (hasLogin === false) {
     tabAddActive(registerBtn, registerContent);
-    loginTitle.innerHTML = "Register";
+    loginTitle.innerHTML = "Create Account";
   } else if (hasLogin === true) {
     tabAddActive(loginBtn, loginContent);
     loginTitle.innerHTML = "Login";
@@ -68,7 +68,7 @@ const popupLogin = (hasLogin) => {
   document.querySelector(registerBtn).addEventListener("click", () => {
     tabAddActive(registerBtn, registerContent);
     tabRemoveActive(loginBtn, loginContent);
-    loginTitle.innerHTML = "Register";
+    loginTitle.innerHTML = "Create Account";
   });
 
   // click on login btn in tab
