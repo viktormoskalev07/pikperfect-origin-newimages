@@ -23,7 +23,23 @@
             <div class="upload__wrap-type">
                 <div class="upload__wrap-video">
                     <h2 class="upload__title">Album type</h2>
-                    <a class="link" href="#"><img src="./images/ic_circle_play.svg" alt="ic_circle_play">Compare albums</a>
+                    <!-- Button modal -->
+                    <button type="button" class="link" data-toggle="modal" id="modalVideo"><img src="./images/ic_circle_play.svg" alt="ic_circle_play">Compare albums</button>
+                    <!-- Modal -->
+                    <div class="modal-changes">
+                        <div class="modal-changes__wrap">
+                            <div class="modal-changes__content">
+                                <button type="button" id="ModalVideoClose" class="close">
+                                    <img src="./images/ic_x.svg" alt="close">
+                                </button>
+                                <div class="modal-changes__body">
+                                    <video controls="controls" poster="./images/towebp/14.0/luxury-wedding-photo-book.jpg">
+                                        <source src="">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
                 </div>
                 <div class="upload__radio">
                     <div class="upload__radio-item">
@@ -219,4 +235,24 @@
     </section>
     @@include("./14.0/dignity.html")
   </main>
+  <!-- script for modal video -->
+  <script>
+    (function(){
+    const modalVideo = document.querySelector('#modalVideo');
+    const ModalChangesOpen = document.querySelector('.modal-changes');
+    const ModalVideoClose = document.querySelector('#ModalVideoClose');
+
+    if(modalVideo && ModalChangesOpen){
+        modalVideo.addEventListener('click', function(){
+        ModalChangesOpen.classList.add('open');
+        if(ModalVideoClose){
+            ModalVideoClose.addEventListener('click', function(){
+            ModalChangesOpen.classList.remove('open');
+            })
+        }
+        })
+    }
+    }());
+</script>
+<!-- script for modal video -->
   @@include("./html-templates/footer.html")
