@@ -7,9 +7,109 @@
 
 <main>
 
-<h1 class="testcss">delete it</h1>
+ <section class="section-album-title">
+    <div class="section-album-title__wrapper">
+      <h1>Album Title</h1>
+      <form action="">
+        <input type="text" placeholder="maximum 20 characters">
+      </form>
+    </div>
+    <div class="section-album-title__wrapper section-album-title__summary">
+     <div class="summary">Summary: 12x12 Latflat Album, Photo Cover, 60 pages, Pearl Matte</div> 
+     <a href="#" class="link">(change)</a>
+    </div>
+ </section>
 
+ <section class="section-upload-choice">
+  <form action="" class="section-upload-choice__wrapper">
+      <input type="radio" name="photo" id="all_photo" checked>
+      <label for="all_photo" class="item">
+        <p class="title">USE ALL PHOTOS</p>
+        <div class="text">
+          Only upload photos you'd like included.
+        </div>
+      </label>
+      <input type="radio" name="photo" id="use_service">
+      <label for="use_service" class="item">
+        <p class="title">PHOTO SELECTION SERVICE</p>
+        <p class="sub">(US $ 0.03/photo uploaded)</p>
+        <div class="text">
+          Upload all your photos, we'll help select the ones that best tell your story. You'll review the selection before we start with the album design.
+        </div>
+      </label>
+    </form>
+ </section>
 
+<section class="section-upload-photo">
+  <div class="section-upload-photo__head">
+    <h2>Upload Photos</h2>
+    <a href="" class="link">Upload FAQ's</a>
+  </div>
+  <div class="section-upload-photo__text">Add your photos from one or more of the following:</div>
+  <div class="alert alert__error" style="display: none;">
+    <div class="alert-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <rect class="a" width="24" height="24" style="fill:none; "/>
+        <g transform="translate(-0.662 -0.662)">
+          <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)" style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;"/>
+          <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)" style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;"/>
+        </g>
+      </svg>
+    </div>
+    <div class="alert-text">
+      <p class="alert-name">Network Error</p>
+      <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your connection resumes.</p>
+    </div>
+  </div>
+  <div class="section-upload-photo__wrapper">
+    <div class="column">
+      <form action="" class="section-upload-photo__device">
+        <div>
+          <img src="./images/current_device.png" alt="">
+          <p class="text">Current Device</p>
+        </div>
+        <button type="button" class="button">ADD PHOTOS</button>
+      </form>
+    </div>
+    <div class="separator"></div>
+    <div class="column">
+      <form action="" class="section-upload-photo__link">
+        <div class="services">
+          <button type="button" name="service" class="service-button">
+            <img src="./images/logo_google_photos.svg" alt="">
+            Google Photos
+          </button>
+          <button type="button" name="service" class="service-button">
+            <img src="./images/logo_dropbox.svg" alt="">
+            Dropbox
+          </button>
+          <button type="button" name="service" class="service-button">
+            <img src="./images/logo_google_drive.svg" alt="">
+            Google Drive
+          </button>
+          <button type="button" name="service" class="service-button">
+            <img src="./images/logo_one_drive.svg" alt="">
+            One Drive
+          </button>
+        </div>
+        <div class="upload-link">
+          <img src="./images/ic_link.svg" alt="">
+          <input type="text" placeholder="You can also copy & paste a link to a 3rd party photo gallery here">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="section-upload-photo__wrapper">
+    <div class="section-upload-photo__footer">
+      <ul class="specification">
+        <li>We only work with JPEG images. 30 MB maximum per photo</li>
+        <li>Photos save based on image name or date, not in the order you upload them</li>
+      </ul>
+      <button type="button" name="" class="button">NEXT: CHOOSE DESIGN STYLES</button>
+    </div>
+    
+  </div>
+</section>
 
 
   @@include("./3.0-wedding-albums/dignity.html")
