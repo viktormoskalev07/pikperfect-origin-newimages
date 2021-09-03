@@ -183,11 +183,9 @@
     }
     &__gallery{
         margin: 0 -16px 10px;
-        @include tablet{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         &_shadow{
             figure{
                 box-shadow: 7px 10px 15px #4f555a38;
@@ -196,11 +194,12 @@
         .section-content__img{
             margin-bottom: 32px;
             padding: 0 16px;
-            @include tablet{
+            width: 100%;
+            @include mobile-lg{
                 width: 45%;
                 margin-bottom: 45px;
             }
-            @include desktop-md{
+            @include desktop-sm{
                 width: 32%;
             }
             img{
