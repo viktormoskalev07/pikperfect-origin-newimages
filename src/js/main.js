@@ -177,7 +177,7 @@ window.addEventListener("load", function () {
     })
   }
 }());
- 
+
 
 @@include('modules/imgpreloader.js')
 @@include('modules/accordion.js') 

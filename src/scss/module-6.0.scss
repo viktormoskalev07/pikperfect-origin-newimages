@@ -21,5 +21,7 @@
    @import"6-pages/6.0-format.scss";
    @import"6-pages/6.0-additional.scss";
 
-
+   #flip-control .cover-slider-btn{
+     background: transparent !important;
+   }
 }

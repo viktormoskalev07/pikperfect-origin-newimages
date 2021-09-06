@@ -25,7 +25,21 @@ body {
 	max-width: 1600px;
 	margin: 0 auto;
 }
-
+.list-page{
+	padding: 0 20px 50px;
+	li{
+		list-style: none;
+		a{
+			display: block;
+			padding: 10px;
+			margin: 5px 10px;
+			font-weight: 600;
+			&:hover{
+				background: rgb(208, 224, 253);
+			}
+		}
+	}
+}
 a {
 	text-decoration: none;
 	transition: 0.4s;
@@ -573,7 +587,6 @@ label {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  width: 5.3rem;
 }
 .header .dropdown-lang .dropdown-menu {
   right: -.9rem!important;
@@ -914,6 +927,21 @@ label {
 	padding-bottom: 1.8rem;
 	.container{
 		max-width: 1285px !important;
+	}
+	.logo-mobile{
+		max-width: 300px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 32px;
+		.partner-company{
+			margin-top: 25px;
+		}
+		a{
+			margin: 0 auto;
+		}
+		@include desktop-sm{
+			display: none;
+		}
 	}
 }
 
@@ -1601,6 +1629,7 @@ label {
 	color: #567C8B;
 	text-decoration: underline;
 	cursor: pointer;
+	border: 0;
 	&:hover{
 		text-decoration: none;
 	}

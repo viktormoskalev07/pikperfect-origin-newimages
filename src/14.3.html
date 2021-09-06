@@ -1,0 +1,96 @@
+@@include("./html-templates/head.html",{
+    title:"Account & Orders | PikPerfect", 
+    desc:"Answers to frequently asked questions about your account and order details.",
+  }) 
+  <link rel="stylesheet" href="css/upload.css">
+
+<main> 
+
+<section class="instagram" style="order: 1">
+
+    <div class="instagram__container" id="instagam-cont"
+        data-instagram-post="https://api.curator.io/v1/feeds/16ffe87b-cb7e-4091-8ff6-bd0b35f8ded6/posts"> 
+        <a href='gfhfghfghgf' class="instagram__item">
+            <div class="instagram__image__container">
+                <figure class="instagram__image">
+                    <img src="images/inst/1.jpg" alt="instagram post image">
+                </figure>
+            </div>
+      
+        </a>
+        <div class="instagram__item">
+            <div class="instagram__image__container">
+                <figure class="instagram__image">
+                    <img src="images/inst/2.jpg" alt="instagram post image">
+                </figure>
+            </div>
+        
+        </div>
+        <div class="instagram__item">
+            <div class="instagram__image__container">
+                <figure class="instagram__image">
+                    <img src="images/inst/3.jpg" alt="instagram post image">
+                </figure>
+            </div>
+      
+        </div>
+        <div class="instagram__item">
+            <div class="instagram__image__container">
+                <figure class="instagram__image">
+                    <img src="images/inst/4.jpg" alt="instagram post image">
+                </figure>
+            </div>
+    
+        </div>
+    </div>
+
+</section>
+
+<!-- <script>
+    function instagramIntegration() {
+        let xhr = new XMLHttpRequest();
+        const container = document.querySelector("#instagam-cont");
+        const instaUserName = document.querySelectorAll(".instagram__user-name");
+        const instaImg = document.querySelectorAll(".instagram__image img");
+        const instaOld = document.querySelectorAll(".instagram__img__old");
+        const accountTitle = document.querySelector(".instagram__name-account");
+
+        if (container) {
+            const instPost = container.getAttribute('data-instagram-post');
+            fetch(instPost)
+                .then((resp) => {
+                    return resp.json()
+                })
+                .catch(e => {
+                    console.log('insta connection..')
+                })
+                .then((data1) => {
+                    if (data1) {
+                        const posts = data1.posts
+                        accountTitle.innerHTML = "@" + posts[0].user_full_name;
+                        for (let i = 0; i < 4; i++) {
+                            try {
+                                const post = posts[i];
+                                instaUserName[i].innerHTML = "@" + post.user_full_name;
+                                instaImg[i].src = post.image;
+                            } catch (e) {
+                                console.log(e);
+                            }
+                        }
+                    }
+                });
+        }
+    }
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", instagramIntegration());
+    } else {
+        instagramIntegration();
+    }
+</script> -->
+
+
+
+
+@@include("./3.0-wedding-albums/dignity.html")
+</main>
+@@include("./html-templates/footer.html")
