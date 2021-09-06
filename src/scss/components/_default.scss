@@ -25,7 +25,20 @@ body {
 	max-width: 1600px;
 	margin: 0 auto;
 }
-
+.list-page{
+	padding: 0 20px 50px;
+	li{
+		list-style: none;
+		a{
+			display: block;
+			padding: 10px;
+			margin: 5px 10px;
+			&:hover{
+				background: rgb(208, 224, 253);
+			}
+		}
+	}
+}
 a {
 	text-decoration: none;
 	transition: 0.4s;
