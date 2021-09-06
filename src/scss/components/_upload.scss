@@ -38,6 +38,7 @@
         &__content{
             padding: 0;
             height: 100%;
+            border-radius: 7px;
             video{
                 position: relative;
                 width: 100%;
@@ -59,6 +60,7 @@
             }
         }
         &__body{
+            height: 100%;
             margin: 0;
             border-radius: 5px;
             overflow: hidden;
@@ -97,7 +99,6 @@
             }
         }
         .section-hero__swiper{
-            width: 86%;
             margin-bottom: 0;
         }
         .section-hero__swiper{

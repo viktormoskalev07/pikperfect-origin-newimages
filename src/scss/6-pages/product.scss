@@ -12,6 +12,11 @@ footer{
         background-color: #fff !important;
     }
 }
+.custom-checkbox{
+    svg{
+        vertical-align: top; 
+    }
+}
 #product{
     font-family: "open sans"!important;
     max-width: 1250px !important;
@@ -311,7 +316,6 @@ footer{
             padding-right: 20px;
         }
     }
-    
 }
 
 
