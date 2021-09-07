@@ -13,9 +13,9 @@ window.addEventListener("load", function () {
     }
 
     if (window.scrollY >= 50) {
-      header.classList.add("header-shadow");
+      header.classList.add("header-fixed");
     } else {
-      header.classList.remove("header-shadow");
+      header.classList.remove("header-fixed");
     }
   }); 
   html = document.querySelector("html");

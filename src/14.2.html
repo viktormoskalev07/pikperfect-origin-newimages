@@ -1,0 +1,402 @@
+@@include("./html-templates/head.html",{
+title:"Account & Orders | PikPerfect",
+desc:"Answers to frequently asked questions about your account and order details.",
+})
+<link rel="stylesheet" href="css/upload.css">
+
+
+<main>
+
+  <section class="section-album-title">
+    <div class="section-album-title__wrapper">
+      <h1>Album Title</h1>
+      <form action="">
+        <input type="text" placeholder="maximum 20 characters">
+      </form>
+    </div>
+    <div class="section-album-title__wrapper section-album-title__summary">
+      <div class="summary">Summary: 12x12 Latflat Album, Photo Cover, 60 pages, Pearl Matte</div>
+      <a href="#" class="link">(change)</a>
+    </div>
+  </section>
+
+  <section class="section-upload-choice">
+    <form action="" class="section-upload-choice__wrapper">
+      <input type="radio" name="photo" id="all_photo" checked>
+      <label for="all_photo" class="item">
+        <p class="title">USE ALL PHOTOS</p>
+        <div class="text">
+          Only upload photos you'd like included.
+        </div>
+      </label>
+      <input type="radio" name="photo" id="use_service">
+      <label for="use_service" class="item">
+        <p class="title">PHOTO SELECTION SERVICE</p>
+        <p class="sub">(US $ 0.03/photo uploaded)</p>
+        <div class="text">
+          Upload all your photos, we'll help select the ones that best tell your story. You'll review the selection
+          before we start with the album design.
+        </div>
+      </label>
+    </form>
+  </section>
+
+  <section class="section-upload-photo">
+    <div class="section-upload-photo__head">
+      <h2>Upload Photos</h2>
+      <a href="" class="link">Upload FAQ's</a>
+    </div>
+    <div class="section-upload-photo__text">Add your photos from one or more of the following:</div>
+    <div class="alert alert__error" style="display: none;">
+      <div class="alert-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <rect class="a" width="24" height="24" style="fill:none; " />
+          <g transform="translate(-0.662 -0.662)">
+            <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+            <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+          </g>
+        </svg>
+      </div>
+      <div class="alert-text">
+        <p class="alert-name">Network Error</p>
+        <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your connection
+          resumes.</p>
+      </div>
+    </div>
+    <div class="section-upload-photo__wrapper">
+      <div class="column"> 
+        <form action="" class="section-upload-photo__device" style="display: none;">
+          <div>
+            <img src="./images/current_device.png" alt="">
+            <p class="text">Current Device</p>
+          </div>
+          <button type="button" class="button">ADD PHOTOS</button>
+        </form>
+        <div id="uploaderId" class="listMode">
+          <div class="plupload_wrapper">
+            <div class="ui-widget-content plupload_container ui-resizable plupload_view_list" id="uploaderId_container">
+              <div class="ui-state-default ui-widget-header plupload_header">
+                <div class="plupload_header_content">
+                  <div class="plupload_logo"></div>
+                  <div class="plupload_header_title">Select files</div>
+                  <div class="plupload_header_text">
+                    Add files to the upload queue and click the start button.
+                  </div>
+                </div>
+              </div>
+              <table class="plupload_filelist plupload_filelist_header ui-widget-header">
+                <tbody>
+                  <tr>
+                    <td class="plupload_cell plupload_file_name">File name</td>
+                    <td class="plupload_cell plupload_file_size">File Size</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="plupload_content plupload_dropbox" id="uploaderId_dropbox">
+                <div class="plupload_droptext" style="display: none;">
+                  Only .JPG or .JPEG files, 30 MB maximum per photo. <br />
+                  Color Profile: sRGB at 300 DPI. <br />
+                  <p class="message">
+                    Photos are saved based on the date-taken, they are not saved in the
+                    order in which you upload them. <br />Please make sure your computer
+                    is not set to go into "sleep" mode as this will interrupt your
+                    upload.
+                  </p>
+                </div>
+                <ul class="plupload_filelist_content" id="uploaderId_filelist" unselectable="on">
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3dfii70218s41i3he9ecu9b">
+                    <div class="plupload_file_name"
+                      title="depositphotos_108754822_stock_illustration_paint_tools_icons_set.jpg">
+                      <span
+                        class="plupload_file_name_wrapper">depositphotos_108754822_stock_illustration_paint_tools_icons_set.jpg
+                      </span>
+                    </div>
+                    <div class="plupload_file_status plupload_file_status_done">
+                      <div class="plupload_file_size">49 kb</div>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_0_name"
+                        value="depositphotos_108754822_stock_illustration_paint_tools_icons_set.jpg">
+                      <input type="hidden" name="uploaderId_0_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header plupload_file_status_done">
+                      <div class="plupload_file_size">39 kb</div>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header plupload_file_status_progress">
+                      <div class="progress-chart">
+                        <div class="circle">
+                          <div class="bar left"></div>
+                          <div class="bar right"></div>
+                          <div class="progress"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi1">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header plupload_file_status_progress">
+                      <div class="progress-chart">
+                        <div class="circle">
+                          <div class="bar left"></div>
+                          <div class="bar right"></div>
+                          <div class="progress"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header">
+                      <span class="plupload_file_percent">50%</span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header">
+                      <span class="plupload_file_percent">50%</span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status">
+                      <div class="plupload_file_progress ui-widget-header" style="width: 100%;"> </div>
+                      <span class="plupload_file_percent">50%</span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header">
+                      <span class="plupload_file_percent">50%</span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header">
+                      <span class="plupload_file_percent">50%</span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                  <li class="plupload_done ui-state-default plupload_file" id="o_1fet3gghe1o4g1nls57j1vu189bi">
+                    <div class="plupload_file_name" title="gui1.jpg">
+                      <span class="plupload_file_name_wrapper">gui1.jpg </span>
+                    </div>
+                    <div class="plupload_file_status ui-widget-header">
+                      <span class="plupload_file_percent">50%</span>
+                    </div>
+                    <div class="plupload_file_fields">
+                      <input type="hidden" name="uploaderId_1_name" value="gui1.jpg">
+                      <input type="hidden" name="uploaderId_1_status" value="done">
+                    </div>
+                  </li>
+                </ul>
+                <div class="plupload_clearer">&nbsp;</div>
+              </div>
+              <table class="plupload_filelist plupload_filelist_footer ui-widget-header">
+                <tbody>
+                  <tr>
+                    <td class="plupload_cell plupload_file_name">
+                      <div class="plupload_buttons" id="uploaderId_buttons" style="position: relative">
+                        <!-- Visible -->
+                        <a class="plupload_button plupload_add ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary"
+                          id="uploaderId_browse" role="button" style="z-index: 1; display: block">
+                          <span class="ui-button-icon-primary ui-icon ui-icon-circle-plus"></span>
+                          <span class="ui-button-text">Add photos</span></a>
+                        <div id="html5_1fedna72smv1ot0krs1tt74db4_container" class="moxie-shim moxie-shim-html5"
+                          style=" position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; overflow: hidden; z-index: 0;">
+                          <input id="html5_1fedna72smv1ot0krs1tt74db4" type="file"
+                            style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+                            multiple="" accept=".jpg,.jpg,.jpeg,.jpeg" tabindex="-1" />
+                        </div>
+                      </div>
+                    </td>
+                    <td class="plupload_file_size">
+                      <span class="plupload_total_file_size">0 kb</span>
+                      <span class="plupload_total_status">0%</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90"></div>
+            </div>
+            <input class="plupload_count" value="0" type="hidden" id="uploaderId_count" name="uploaderId_count" />
+          </div>
+          <div class="alert alert__error">
+            <div class="alert-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect class="a" width="24" height="24" style="fill:none; " />
+                <g transform="translate(-0.662 -0.662)">
+                  <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
+                    style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+                  <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
+                    style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+                </g>
+              </svg>
+            </div>
+            <div class="alert-text">
+              <p class="alert-name">Network Error</p>
+              <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
+                connection resumes.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="separator"></div>
+      <div class="column">
+        <form action="" class="section-upload-photo__link">
+          <div class="services">
+            <button type="button" name="service" class="service-button">
+              <img src="./images/logo_google_photos.svg" alt="">
+              Google Photos
+            </button>
+            <button type="button" name="service" class="service-button">
+              <img src="./images/logo_dropbox.svg" alt="">
+              Dropbox
+            </button>
+            <button type="button" name="service" class="service-button">
+              <img src="./images/logo_google_drive.svg" alt="">
+              Google Drive
+            </button>
+            <button type="button" name="service" class="service-button">
+              <img src="./images/logo_one_drive.svg" alt="">
+              One Drive
+            </button>
+          </div>
+          <div class="upload-link">
+            <img src="./images/ic_link.svg" alt="">
+            <input type="text" placeholder="You can also copy & paste a link to a 3rd party photo gallery here">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="section-upload-photo__wrapper">
+      <div class="section-upload-photo__footer">
+        <ul class="specification">
+          <li>We only work with JPEG images. 30 MB maximum per photo</li>
+          <li>Photos save based on image name or date, not in the order you upload them</li>
+        </ul>
+        <button type="button" name="" class="button">NEXT: CHOOSE DESIGN STYLES</button>
+      </div>
+
+    </div>
+  </section>
+  <script defer>
+    function progressCircle(item, progress) {
+
+      let deg = 360 * (progress / 100);
+
+      if (progress >= 50) {
+        item.classList.add('gt-50');
+      } else {
+        item.classList.remove('gt-50');
+      }
+      let fill = item.querySelector('.progress');
+      fill.style.transform = `rotate(${deg}deg)`;
+    }
+
+
+    // progressCircle(item, 49)   this function show progres 
+
+    //demo
+    const demovProgress = document.querySelectorAll('.progress-chart');
+    demovProgress.forEach((item, counter) => {
+      const testText = document.createElement('div');
+      if (counter) {
+        testText.innerHTML = "0";
+        testText.style = 'position:absolute ; transform:translate(40px, -30px)';
+        item.append(testText);
+      }
+      const rendomSpeed = Math.random() * 10;
+
+      let i = 1;
+      let u = 0.33;
+      setInterval(() => {
+        if (i >= 100 || i <= 0) {
+          u = u * -1;
+        }
+        i = i + u;
+        testText.innerHTML = Math.round(i) + '% (demo )';
+        progressCircle(item, i)
+      }, rendomSpeed);
+
+    })
+    //demo
+  </script>
+
+  @@include("./3.0-wedding-albums/dignity.html")
+</main>
+@@include("./html-templates/footer.html")
