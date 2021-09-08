@@ -1,0 +1,94 @@
+.feedback{
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+        @include desktop-md{
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__img{
+        order: 1;
+        @include desktop-md{
+            order: 0;
+            padding: 0 30px;
+            width: 45%;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            @include tabtoslide{
+                max-width: 435px;
+            }
+        }
+    }
+    &__info{
+        margin-bottom: 40px;
+        @include desktop-md{
+            width: 55%;
+            max-width: 635px;
+            margin-bottom: 0;
+        }
+        p{
+            margin-bottom: 16px;
+            @include tablet{
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        @include tablet{
+            margin-bottom: 32px;
+        }
+        h1{
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            margin-left: 12px;
+            font-size: 24px;
+            @include tablet{
+                margin-left: 20px;
+                font-size: 32px;
+            }
+        }
+        img{
+            width: 70px;
+            height: 70px;
+        }
+    }
+    &__description{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5;
+        @include tablet{
+            font-size: 20px;
+        }
+    }
+    &__date{
+        display: flex;
+        height: 48px;
+        input{
+            font-family: "open sans";
+            border: 1px solid #575D6180;
+            margin: 0;
+            max-width: 185px;
+        }
+        input[type=date]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            // width: 50%;
+        }
+        .button{
+            border-radius: 0px 5px 5px 0px;
+            width: 50%;
+            padding: 15px;
+            font-size: 14px;
+            display: block;
+            @include tablet{
+                max-width: 107px;
+            }
+        }
+    }
+}
