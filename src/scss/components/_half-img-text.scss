@@ -1,0 +1,50 @@
+.half-img-text{
+    margin: 64px 0 66px;
+    @include desktop-sm{
+        margin: 88px 0 100px;
+    }
+    &__wrap{
+        max-width: 1255px;
+        margin: 0 auto;
+        background: #EDECEE;
+        @include desktop-sm{
+            display: flex;
+        }
+    }
+    &__img{
+        @include desktop-sm{
+            width: 49%;
+        }
+    }
+    &__context{
+        padding: 40px 16px 20px;
+        @include tablet{
+            padding: 40px 20px;
+            font-size: 18px;
+        }
+        @include desktop-sm{
+            width: 51%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__context-wrap{
+        max-width: 400px;
+        @include tablet{
+            margin: 0 auto;
+        }
+        p{
+            max-width: 370px;
+        }
+        
+    }
+    .title{
+        text-align: left;
+        padding: 0;
+        margin-bottom: 28px;
+        @include tablet{
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -25,6 +25,20 @@ if (document.querySelector('.swiperalbum')){
     }, 
 });
 }
+
+////// slider for two images ////
+if (document.querySelector(".swiperDescription")){
+  var swiper123 = new Swiper(".swiperDescription", {
+      loop:true,
+      autoplay: {
+          delay: 5000,
+        },
+      pagination: {
+        el: ".swiperDescription-pagination",
+        clickable: true,
+      },
+    });
+  }
   
  
 if (document.querySelector(".section-reviews__swiper")){
@@ -222,6 +236,27 @@ if (document.querySelector('.swiperBigSlider')){
           swiper: swiperTabsControl
         } 
       });  
+  }
+
+
+//////// slider 14.2 /////
+if (document.querySelector(".select-style__swiper")){
+  var swiper123 = new Swiper(".select-style__swiper", {
+      loop:true,
+      // autoplay: {
+      //     delay: 3000,
+      //   },
+      navigation: {
+        nextEl: ".select-style__button-next",
+        prevEl: ".select-style__button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+      }
+    });
   }
 
 
