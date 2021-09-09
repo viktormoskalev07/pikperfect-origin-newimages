@@ -16,6 +16,21 @@
           <span class="photobook__radio__text">All</span> 
         </label>
       </div>
+      <h3 class="section-photobooks__title--radio">By design</h3>
+      <div class="photobook__radio__container">
+        @@loop('photobooks/radio-design.html', [ 
+        { type:"Classic" }, 
+        { type:"Minimilistic" },
+        { type:"Floral Dreams" },
+        { type:"Metalic Accents" },
+        { type:"Vintage" }, 
+        ]) 
+        <label class="photobook__radio__label" for="radioAllDesing"> 
+          <input class="photobook__radio__input" checked type="radio" id="radioAllDesing" name="byDesign" value="All"> 
+          <span class="photobook__radio__checker"></span> 
+          <span class="photobook__radio__text">All</span> 
+        </label>
+      </div>
     </div>
     <style>
       .light-italic {

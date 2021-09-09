@@ -215,7 +215,6 @@
 		right: 20px;
 		width: 166px;
 		height: 112px;
-		z-index: 0;
 		display: none;
 		
 		@include tablet{
@@ -224,10 +223,10 @@
 			width: 175px;
 		}
 		@include desktop-sm{
-			z-index: -1;
+			display: none;
 		}
 		@media screen and(min-width: 1400px) {
-			z-index: 0;
+			display: block;
 		}
 		&_bottom{
 			bottom: 0;

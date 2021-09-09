@@ -7,7 +7,7 @@
     max-width: 1256px;
     margin: 0 auto;
     @include desktop-md{
-      display: flex;
+      display: flex; 
     }
   }
   &__title{

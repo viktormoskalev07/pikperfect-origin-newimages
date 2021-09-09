@@ -5,7 +5,7 @@
     &__container{
         transition: all 0.4s;
         z-index: 1012;
-        position: fixed;
+        position: fixed; 
         top: 0;
         left: 0;
         right: 0;
@@ -202,6 +202,31 @@
                 width: 80%;
             }
          } 
+    }
+    &__button{
+        z-index: 1;
+        position: relative;
+        margin: 20px auto 0;
+        text-align: center;
+        @include tablet{
+            margin: 30px auto 0;
+        }
+        @media screen and(max-height: 420px){
+            margin: 10px auto 0;
+        }
+        .button{
+            border-radius: 0;
+            padding: 10px 20px;
+            font-weight: 600;
+            @include tablet{
+                font-size: 20px;
+                padding: 15px 20px;
+            }
+            @media screen and(max-height: 420px){
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
     }
 }
  
