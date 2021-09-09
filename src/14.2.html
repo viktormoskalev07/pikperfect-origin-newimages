@@ -3,7 +3,7 @@ title:"Account & Orders | PikPerfect",
 desc:"Answers to frequently asked questions about your account and order details.",
 })
 <link rel="stylesheet" href="css/upload.css">
-
+<link rel="stylesheet" href="css/module-photo-selection.css">
 
 <main>
 
@@ -384,7 +384,6 @@ desc:"Answers to frequently asked questions about your account and order details
               </div>
               </div>
             </div>
-            <button>q</button>
           </div> 
           <div class="select-style__button-slide select-style__button-next">
             <img src="./images/ic_arrow_right.svg" alt="ic_arrow_right"></div>
@@ -402,7 +401,17 @@ desc:"Answers to frequently asked questions about your account and order details
           <textarea class="form-control" name="textStyles" id="textStyles" placeholder="Add any special instructions for your designer here." cols="30" rows="10"></textarea>
         </div>
       </div>
-
+      <div class="select-style__type-album">
+        @@loop('./14.2/type-album.html',[
+          {name: 'Classic'},
+          {name: 'Classic'},
+          {name: 'Classic'},
+          {name: 'Classic'},
+          {name: 'Classic'},
+        ])
+      </div>
+      
+      
     </div>
   </section>
   

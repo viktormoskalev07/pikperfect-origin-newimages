@@ -52,7 +52,6 @@
             width: 24px;
             height: 24px;
         }
-
     }
     &__button-next{
         right: 24px;
@@ -99,6 +98,25 @@
             @include desktop-md{
                 display: none;
             }
+        }
+    }
+    .photoselect__favorite{
+        opacity: 1;
+        position: static;
+    }
+    &__type-album{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__name-type{
+        padding: 12px 20px;
+        margin: 0 4px;
+        border: 1px solid #575D614D;
+    }
+    &__block{
+        width: 50%;
+        @include tablet{
+            width: 145px;
         }
     }
 }
