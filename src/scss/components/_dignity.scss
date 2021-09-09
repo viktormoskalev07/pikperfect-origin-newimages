@@ -72,6 +72,14 @@
     @include desktop-md{
       width: calc(100% - 92px);
     }
+    &_small{
+      p{
+        @include desktop-md{
+          max-width: 205px;
+        }
+      }
+      
+    }
   }
   h3{
     font-size: 20px;

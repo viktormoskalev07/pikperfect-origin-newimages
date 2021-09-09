@@ -9,7 +9,20 @@
 	@include desktop-md {
 		padding: 0px 113px 90px 68px;
 	}
-
+	&__home-title{
+		span{
+			font-size: 15px;
+			font-family: "open sans";
+			display: block;
+			font-weight: 400;
+			@include mobile-sm{
+				font-size: 16px;
+			}
+			@include tablet{
+				font-size: 18px;
+			}
+		}
+	}
 	&__grid {
 		@include tabtoslide {
 			display: flex;
@@ -383,6 +396,9 @@
 			@include tablet{
 				margin-bottom: 24px;
 			}
+		}
+		.button__gray-dark{
+			max-width: none;
 		}
 		h1{
 			margin-bottom: 10px;

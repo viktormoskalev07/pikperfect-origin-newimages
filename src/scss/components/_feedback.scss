@@ -1,4 +1,8 @@
 .feedback{
+    margin: 10px 0 64px;
+    @include tablet{
+        margin: 20px 0 88px;
+    }
     &__wrap{
         display: flex;
         flex-direction: column;
@@ -12,7 +16,7 @@
         @include desktop-md{
             order: 0;
             padding: 0 30px;
-            width: 45%;
+            width: 40%;
         }
         img{
             display: block;
@@ -24,15 +28,20 @@
     }
     &__info{
         margin-bottom: 40px;
+        font-size: 14px;
+        @include tablet{
+            font-size: 16px;
+        }
         @include desktop-md{
-            width: 55%;
+            width: 60%;
             max-width: 635px;
             margin-bottom: 0;
+            margin-left: 50px;
         }
         p{
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             @include tablet{
-                margin-bottom: 24px;
+                margin-bottom: 20px;
             }
         }
     }
@@ -49,14 +58,20 @@
             padding: 0;
             margin-left: 12px;
             font-size: 24px;
+            line-height: 1.5;
             @include tablet{
                 margin-left: 20px;
                 font-size: 32px;
             }
         }
         img{
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
+            @include desktop-sm{
+                width: 70px;
+                height: 70px;
+            }
+            
         }
     }
     &__description{
@@ -69,25 +84,37 @@
     }
     &__date{
         display: flex;
-        height: 48px;
+        margin-top: 20px;
+        height: 40px;
+        @include tablet{
+            height: 48px;
+            margin-top: 25px;
+
+        }
         input{
             font-family: "open sans";
             border: 1px solid #575D6180;
             margin: 0;
             max-width: 185px;
+            font-weight: 400;
+            font-size: 16px;
+            @include tablet{
+                font-size: 18px;
+            }
         }
         input[type=date]::-webkit-calendar-picker-indicator {
             opacity: 0;
-            // width: 50%;
+            cursor: pointer;
         }
         .button{
             border-radius: 0px 5px 5px 0px;
             width: 50%;
-            padding: 15px;
+            padding: 10px;
             font-size: 14px;
             display: block;
             @include tablet{
                 max-width: 107px;
+                padding: 15px;
             }
         }
     }
