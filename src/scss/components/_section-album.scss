@@ -101,10 +101,10 @@
     }
   }
   &__button{
-    display: none;
     text-align: center;
-    @media screen and(min-width: 1200px) {
-      display: block;
+    margin-top: 20px;
+    @include tablet{
+      margin-top: 0;
     }
     a{
       padding: 15px 38px;

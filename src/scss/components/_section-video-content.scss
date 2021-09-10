@@ -7,6 +7,18 @@
   @include desktop-md{
     padding: 64px 15px 36px;
   }
+  &__img{
+    padding: 0;
+    .section-video-content__content{
+      padding: 32px 15px 40px;
+      @include desktop-md{
+        padding: 64px 15px 36px;
+      }
+    }
+    .section-video-content__container{
+      max-width: none;
+    }
+  }
   &__container{
     max-width: 1376px;
     margin: 0 auto;
@@ -28,6 +40,13 @@
       margin-right: 64px;
     }
   }
+  &__images{
+    @include desktop-md{
+      width: 48%;
+      margin-right: 64px;
+    }
+  }
+
   &__title{
     font-size: 32px;
     font-family: 'Spectral';
