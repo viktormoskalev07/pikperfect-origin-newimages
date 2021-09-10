@@ -29,7 +29,7 @@ if (document.querySelector('.swiperalbum')){
 ////// slider for two images ////
 if (document.querySelector(".swiperDescription")){
   var swiper123 = new Swiper(".swiperDescription", {
-      loop:true,
+      loop: false,
       autoplay: {
           delay: 5000,
         },
