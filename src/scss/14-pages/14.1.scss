@@ -110,11 +110,6 @@ input{
         justify-content: space-between;
     }
 }
-@media screen and (min-width: 1110px){
-    .alert{
-        max-width: 430px;
-    }
-}
 @media screen and (max-width: 1110px){
     .listMode{
         max-width: 430px;
