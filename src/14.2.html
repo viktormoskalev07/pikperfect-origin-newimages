@@ -294,26 +294,7 @@ desc:"Answers to frequently asked questions about your account and order details
             </div>
             <input class="plupload_count" value="0" type="hidden" id="uploaderId_count" name="uploaderId_count" />
           </div>
-          <div class="alert alert__error">
-            <div class="alert-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <rect class="a" width="24" height="24" style="fill:none; " />
-                <g transform="translate(-0.662 -0.662)">
-                  <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
-                    style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
-                  <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
-                    style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
-                </g>
-              </svg>
-            </div>
-            <div class="alert-text">
-              <p class="alert-name">Network Error</p>
-              <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
-                connection resumes.</p>
-            </div>
-          </div>
         </div>
-
       </div>
       <div class="separator"></div>
       <div class="column">
@@ -343,6 +324,24 @@ desc:"Answers to frequently asked questions about your account and order details
         </form>
       </div>
     </div>
+    <div class="alert alert__error">
+      <div class="alert-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <rect class="a" width="24" height="24" style="fill:none; " />
+          <g transform="translate(-0.662 -0.662)">
+            <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+            <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+          </g>
+        </svg>
+      </div>
+      <div class="alert-text">
+        <p class="alert-name">Network Error</p>
+        <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
+          connection resumes.</p>
+      </div>
+    </div>
     <div class="section-upload-photo__wrapper">
       <div class="section-upload-photo__footer">
         <ul class="specification">
@@ -351,7 +350,6 @@ desc:"Answers to frequently asked questions about your account and order details
         </ul>
         <button type="button" name="" class="button">NEXT: CHOOSE DESIGN STYLES</button>
       </div>
-
     </div>
   </section>
   <section class="select-style">
@@ -385,6 +383,16 @@ desc:"Answers to frequently asked questions about your account and order details
               </div>
             </div>
           </div> 
+          <span class="button button__light_border">
+            <button data-type="favorite" title="favorite" class="photoselect__favorite"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                  <circle class="a" cx="15" cy="15" r="15"></circle>
+                  <g transform="translate(3 4)"> 
+                      <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+                  </g>
+              </svg>
+          </button>
+            like</span>
           <div class="select-style__button-slide select-style__button-next">
             <img src="./images/ic_arrow_right.svg" alt="ic_arrow_right"></div>
           <div class="select-style__button-slide select-style__button-prev">
@@ -399,22 +407,48 @@ desc:"Answers to frequently asked questions about your account and order details
             <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
           </div>
           <textarea class="form-control" name="textStyles" id="textStyles" placeholder="Add any special instructions for your designer here." cols="30" rows="10"></textarea>
+          <p class="add-styles"><img src="./images/icon_link.svg" alt="icon_link">Attach additional instructions or examples of design styles you like</p>
         </div>
       </div>
       <div class="select-style__type-album">
         @@loop('./14.2/type-album.html',[
-          {name: 'Classic'},
-          {name: 'Classic'},
-          {name: 'Classic'},
-          {name: 'Classic'},
-          {name: 'Classic'},
+          {name: 'Classic', class:'checked', classP:''},
+          {name: 'The Minimalist', class:'', classP:'active'},
+          {name: 'Floral Dreams', class:'', classP:''},
+          {name: 'Eucalyptus', class:'', classP:''},
+          {name: 'Metallic Accents', class:'', classP:''},
+          {name: 'Linen Love', class:'', classP:''},
+          {name: 'Victorian Charm', class:'', classP:''},
         ])
       </div>
-      
-      
+      <div class="select-style__occasion select-style__occasion_mobile">
+        <div class="select-style__select">
+          <label for="occasionAlbum">Occasion</label>
+          <select name="occasion" class="form-control" id="occasionAlbum">
+            <option value="Wedding">Wedding</option>
+          </select>
+          <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
+        </div>
+        <textarea class="form-control" name="textStyles" id="textStyles" placeholder="Add any special instructions for your designer here." cols="30" rows="10"></textarea>
+        <p class="add-styles"><img src="./images/icon_link.svg" alt="icon_link">Attach additional instructions or examples of design styles you like</p>
+      </div>
+      <div class="select-style__checkbox">
+        <label class="custom-checkbox">
+          <input class="custom-checkbox__input" type="checkbox" tabindex="-1">
+          <span class="custom-checkbox__checkmark" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <rect style="fill:transparent;" width="24" height="24"></rect><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"></path>
+            </svg>
+          </span>Not sure, please recommend 
+          <span class="small-text">(you can always make changes later)</span>
+        </label>
+      </div>
+      <div class="select-style__button">
+        <a href="#" class="button">START DESIGN</a>
+      </div>
     </div>
   </section>
-  
+  @@include('./14.2/dignity.html')
 
 
   <script defer>
@@ -459,7 +493,5 @@ desc:"Answers to frequently asked questions about your account and order details
     })
     //demo
   </script>
-
-  @@include("./3.0-wedding-albums/dignity.html")
 </main>
 @@include("./html-templates/footer.html")

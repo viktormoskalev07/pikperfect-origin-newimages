@@ -1,0 +1,187 @@
+.section-upload-photo{
+    max-width: 1440px;
+    margin: 80px auto 112px;
+    padding: 0 16px;
+    h2{
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 13px;
+    }
+    &__text{
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: normal;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    &__head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+        .link{
+            display: block;
+            width: 120px;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: normal;
+        }
+        &:before{
+            content: '';
+            display: block;
+            width: 120px;
+        }
+    }
+    &__device, &__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @include desktop-sm{
+            justify-content: center;
+            width: 100%;
+        }
+        
+    }
+    &__device{
+        max-width: 522px;
+        img{
+            width: 100%;
+            max-width: 386px;
+            margin-bottom: 28px;
+            display: block;
+        }
+        .button{
+            width: 280px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        align-items: stretch;
+        margin-bottom: 32px;
+        &:last-child{
+            margin-bottom: 0;
+            justify-content: center;
+        }
+    }
+    &__footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .button{
+            width: 100%;
+            max-width: 403px;
+            line-height: 24px;
+        }
+    }
+    .upload-link{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        img{
+            display: block;
+            margin-right: 16px;
+        }
+        input{
+            flex: 1;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+    .column{
+        display: flex;
+        &:first-child{justify-content: flex-end;}
+        &:last-child{
+            justify-content: center;
+            @include tablet{
+                justify-content: flex-start;
+            }
+            @include desktop-sm{
+                width: 40%;
+            }
+        }
+        .text{
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    .service-button{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        background: none;
+        align-items: center;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+        width: 50%;
+        padding: 0;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        img{
+            display: block;
+            margin-bottom: 12px;
+        } 
+        @include desktop-sm{
+            font-size: 16px;
+            max-width: 300px;
+            margin-bottom: 72px;
+        }
+    }
+    .services{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .separator{
+        width: 65px;
+        margin: 0 48px;
+        max-height: 645px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:after{
+            content: 'or';
+            display: block;
+            background: #fcfcfc;
+            color: #2E3031;
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 26px;
+            z-index: 1;
+            padding: 12px;
+        }
+        &:before{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            background: #575D61;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+    .specification{
+        margin-bottom: 56px;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .section-upload-photo{
+        .separator{
+            width: 40px;
+            margin: 0 25px;
+        }
+    }
+}

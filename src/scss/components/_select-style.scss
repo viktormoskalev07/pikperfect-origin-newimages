@@ -23,20 +23,48 @@
     }
     &__slider{
         position: relative;
-        max-height: 430px;
-        height: 100%;
         @include desktop-md{
             width: 65%;
+        }
+        .button{
+            cursor: pointer;
+            width: 100px;
+            margin: 0 auto 32px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            padding: 5px 10px;
+            font-size: 14px;
+            border: 1px solid #575D614D;
+            button{
+                margin-right: 12px;
+            }
         }
     }
     &__img{
         img{
-            max-height: 430px;
+            max-height: 170px;
             width: 100%;
             object-fit: cover;
         }
+        @include mobile-md{
+            img{
+                max-height: 250px;
+            }
+        }
+        @include mobile-lg{
+            img{
+                max-height: 350px;
+            }
+        }
+        @include tablet{
+            img{
+                max-height: 430px;
+            }
+        }
     }
     &__button-slide{
+        opacity: 0;
         width: 48px;
         height: 48px;
         background: #fff;
@@ -52,6 +80,12 @@
             width: 24px;
             height: 24px;
         }
+        @include mobile-lg{
+            opacity: 1;
+        }
+    }
+    &__swiper{
+        margin-bottom: 16px;
     }
     &__button-next{
         right: 24px;
@@ -68,10 +102,30 @@
         }
         textarea{
             width: 100%;
-            height: 355px;
+            height: 367px;
             font-family: "open sans";
+            border-radius: 0;
             &:focus, &:active, &:focus-visible{
                 border-radius: 0;
+            }
+        }
+        .add-styles{
+            margin: 16px 0;
+            font-size: 12px;
+            img{
+                margin-right: 6px;
+            }
+        }
+        &_mobile{
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 40px;
+            @include desktop-md{
+                display: none;
+            }
+            textarea{
+                height: 200px;
             }
         }
     }
@@ -107,16 +161,64 @@
     &__type-album{
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 32px;
+        @include tablet{
+            margin-bottom: 48px;
+        }
+        @include tabtoslide{
+            justify-content: center;
+        }
     }
     &__name-type{
-        padding: 12px 20px;
-        margin: 0 4px;
+        padding: 12px;
+        margin: 0 4px 12px;
         border: 1px solid #575D614D;
+        cursor: pointer;
+        &.active{
+            background: #70707026;
+        }
     }
     &__block{
         width: 50%;
+        text-align: center;
+        margin-bottom: 22px;
         @include tablet{
-            width: 145px;
+            width: 25%;
+        }
+        @include desktop-sm{
+            width: 20%;
+        }
+        @include tabtoslide{
+            width: 155px;
+            margin-bottom: 0;
+        }
+    }
+    &__checkbox{
+        text-align: center;
+        margin-bottom: 20px;
+        @include tablet{
+            margin-bottom: 30px;
+        }
+        .small-text{
+            display: block;
+            font-size: 12px;
+            @include tablet{
+                display: inline;
+            }
+        }
+    }
+    &__button{
+        text-align: center;
+        margin-bottom: 64px;
+        @include tablet{
+            margin-bottom: 110px;
+        }
+        .button{
+            width: 100%;
+            @include mobile-md{
+                width: auto;
+                min-width: 400px;
+            }
         }
     }
 }
