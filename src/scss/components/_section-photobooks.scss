@@ -1,5 +1,9 @@
 body.overflow{
   overflow: hidden;
+  header{
+    position: fixed;
+    transform: translateY(0);
+  }
 }
 .section-photobooks{
   padding: 64px 16px;
@@ -51,7 +55,7 @@ body.overflow{
     &.open{
       display: block;
       background: #fff;
-      padding: 0;
+      padding: 75px 0 0;
       position: fixed;
       z-index: 1;
       width: 100%;
@@ -63,8 +67,12 @@ body.overflow{
         margin-bottom: 0;
       }
       .section-photobooks__sidebar-wrap{
-        padding: 20px 20px 0;
+        padding: 10px 20px 0;
       }
+    }
+    .close-filter{
+      top: 95px;
+      right: 24px;
     }
   }
   &__list{
