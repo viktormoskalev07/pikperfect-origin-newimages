@@ -178,6 +178,9 @@ window.addEventListener("load", function () {
   }
 }());
 
+
+
+////// sidebar mobile 8.0 8.2
 (function(){
   const filterBtn = document.querySelector('#filtrsBtn');
   const filterSidebar = document.querySelector('.section-photobooks__sidebar');
@@ -202,6 +205,23 @@ window.addEventListener("load", function () {
 
         })
       }
+    })
+  }
+}());
+
+/////// madal login:hover
+(function(){
+  const focusLogin = document.querySelector('#user-email');
+  const focusModuleLogin = document.querySelector('#dropdownMenu2');
+
+  if(focusLogin && focusModuleLogin){
+    focusLogin.addEventListener('focus', function(){
+      focusModuleLogin.classList.add('active');
+    })
+  }
+  if(focusLogin && focusModuleLogin){
+    focusLogin.addEventListener('blur', function(){
+      focusModuleLogin.classList.remove('active');
     })
   }
 }());

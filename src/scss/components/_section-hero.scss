@@ -409,6 +409,13 @@
 				padding: 0 4%;
 			}
 		}
+		&_light-khaki{
+			background-color: rgba($color: 	#A9B6AC, $alpha: .7);	
+			color: #2E3031;
+			h1{
+				color: #2E3031;
+			}
+		}
 		&_dirty-orange{
 			background-color: rgba($color: 	#DEB299, $alpha: .6);	
 			color: #2E3031;
