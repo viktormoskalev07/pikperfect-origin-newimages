@@ -178,6 +178,28 @@ window.addEventListener("load", function () {
   }
 }());
 
+(function(){
+  const filterBtn = document.querySelector('#filtrsBtn');
+  const filterSidebar = document.querySelector('.section-photobooks__sidebar');
+  const filterClose = document.querySelector('.close-filter');
+  const filterCloseApply = document.querySelector('#filtrsBtnApply');
+
+  if(filterBtn && filterSidebar){
+    filterBtn.addEventListener('click', function(){
+      filterSidebar.classList.add('open');
+      if(filterClose){
+        filterClose.addEventListener('click', function(){
+          filterSidebar.classList.remove('open');
+        })
+      }
+      if(filterCloseApply){
+        filterCloseApply.addEventListener('click', function(){
+          filterSidebar.classList.remove('open');
+        })
+      }
+    })
+  }
+}());
 
 @@include('modules/imgpreloader.js')
 @@include('modules/accordion.js') 
