@@ -47,6 +47,11 @@
         @include desktop-sm{
             padding: 70px 9%;
         }
+        &_small{
+            @include desktop-sm{
+                padding: 70px 2%;
+            }
+        }
         p{
             max-width: 360px;
             @include desktop-sm{

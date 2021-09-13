@@ -110,6 +110,14 @@
                      color: #5A6865;
               }
        }
+       &__light-khaki{
+              background: rgba($color: #8C9992, $alpha: 1); 
+              border-radius: 0;           
+              &:hover{
+                     border: 1px solid #8C9992;
+                     color: #8C9992;
+              }
+       }
        &__dirty-orange{
               background: rgba($color: #DEB299, $alpha: 1);            
               &:hover{

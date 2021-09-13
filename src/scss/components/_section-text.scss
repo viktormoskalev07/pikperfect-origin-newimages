@@ -22,6 +22,9 @@
     &_max{
       max-width: 1050px;
     }
+    &_middle{
+      max-width: 985px;
+    }
   }
   &__title{
     line-height: 3.5rem;
@@ -88,6 +91,9 @@
   }
   &_big-container{
     max-width: 1030px;
+  }
+  &_middle-container{
+    max-width: 990px;
   }
   &_mini-container{
     max-width: 600px;
