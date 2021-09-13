@@ -135,9 +135,14 @@ window.addEventListener("load", function () {
       PopupHelp.classList.toggle('active');
       btnPopupHelp.classList.toggle('active');
       document.body.addEventListener('click', helpPopupClose);
-      PopuopHelpName.focus();
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        PopuopHelpName.focus();
+      }
     })
+    
   }
+  
+  
 }());
 
 

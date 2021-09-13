@@ -177,6 +177,9 @@
         &.active{
             background: #70707026;
         }
+        &:hover{
+            background: #aaaaaa26;
+        }
     }
     &__block{
         width: 50%;
