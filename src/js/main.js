@@ -187,14 +187,19 @@ window.addEventListener("load", function () {
   if(filterBtn && filterSidebar){
     filterBtn.addEventListener('click', function(){
       filterSidebar.classList.add('open');
+      body.classList.add('overflow');
       if(filterClose){
         filterClose.addEventListener('click', function(){
           filterSidebar.classList.remove('open');
+          body.classList.remove('overflow');
+
         })
       }
       if(filterCloseApply){
         filterCloseApply.addEventListener('click', function(){
           filterSidebar.classList.remove('open');
+          body.classList.remove('overflow');
+
         })
       }
     })
