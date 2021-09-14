@@ -75,8 +75,8 @@
         text-align: center;
         border-radius: 50px;
         position: absolute;
-        transform: translate(0 , -50%);
-        top: 50%;
+        transform: translate(0 , -43%);
+        top: 43%;
         z-index: 1;
         img{
             margin: 12px;
@@ -156,6 +156,8 @@
         .form-control{
             border-radius: 0;
             appearance: none;
+            cursor: pointer;
+            background-color: transparent;
             @include desktop-sm{
                 height: 48px;
             }
@@ -163,6 +165,8 @@
         .arrow-down{
             position: absolute;
             right: 12px;
+            cursor: pointer;
+            z-index: -1;
         }
         &_mobile{
             @include desktop-md{
@@ -175,6 +179,14 @@
         position: static;
         cursor: pointer;
         pointer-events: auto;
+        circle{
+            transition: .3s;
+        }
+        &:hover{
+            circle{
+                fill: #fff;
+            } 
+        }
     }
     &__type-album{
         display: flex;
@@ -188,10 +200,11 @@
         }
     }
     &__name-type{
-        padding: 12px;
+        padding: 12px 7px;
         margin: 0 4px 9px;
         border: 1px solid #575D614D;
         cursor: pointer;
+        transition: .3s;
         @include tablet{
             margin: 0 4px 12px; 
             padding: 16px 12px;
@@ -206,10 +219,9 @@
     &__block{
         width: 50%;
         text-align: center;
-        margin-bottom: 14px;
+        margin-bottom: 22px;
         @include tablet{
-            width: 25%;
-            margin-bottom: 22px;
+            width: 25%; 
         }
         @include desktop-sm{
             width: 20%;

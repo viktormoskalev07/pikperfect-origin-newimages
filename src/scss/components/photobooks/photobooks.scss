@@ -20,6 +20,9 @@
         @include desktop-md{
             border-bottom: 0;
         }
+        &:last-child{
+            border-bottom: 0;
+        }
     }
     &__label{ 
         display: flex;
@@ -27,12 +30,6 @@
         cursor: pointer; 
         font: normal normal 300 18px/26px 'Open Sans';
         flex-basis: 100%; 
-    //    flex-basis: 45%;
-    //    padding: 15px 5px;
-    //    @include mobile-md{
-    //     flex-basis: 33%; 
-    //     padding: 10px 0;
-    //    }
        @include desktop-md{
         flex-basis: 100%; 
        } 
@@ -95,8 +92,6 @@
 }
 @keyframes d-none {
     0%{
-        
-        
     }
     100%{
          transform: scale(0);
@@ -105,7 +100,3 @@
         position: absolute;
     }
 }
-
-// .section-photobooks__blocks{
-//     justify-content: flex-start !important;
-// }
