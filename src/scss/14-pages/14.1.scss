@@ -14,7 +14,8 @@
     width: 100%;
     margin-bottom: 40px;
     @include desktop-sm{
-        max-width: 561px;
+        width: 45%;
+        margin-bottom: 30px;
     }
     .alert-name{
         font-size: 16px;
@@ -44,6 +45,13 @@
         background: #F1E3E4;
         .alert-icon{
             background: #D90017;
+        }
+    }
+    &__error-center{
+        margin: 0 auto 24px;
+        max-width: 730px;
+        @include desktop-sm{
+            width: 100%;
         }
     }
     &__warning{
@@ -108,11 +116,6 @@ input{
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-}
-@media screen and (max-width: 1110px){
-    .listMode{
-        max-width: 430px;
     }
 }
 
@@ -180,7 +183,7 @@ input{
         }
     }
     .section-upload-photo{
-        margin: 48px auto 64px;
+        margin: 48px auto 75px;
         h2{
             margin: 0;
         }
@@ -213,7 +216,6 @@ input{
         }
         .services{
             justify-content: space-around;
-            width: 80%;
         }
         .upload-link{
             flex-direction: column;

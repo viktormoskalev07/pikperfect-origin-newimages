@@ -5,6 +5,9 @@
         font-size: 24px;
         margin-bottom: 10px;
     }
+    .custom-checkbox{
+        cursor: pointer;
+    }
     .description{
         text-align: center;
         max-width: 605px;
@@ -24,7 +27,7 @@
     &__slider{
         position: relative;
         @include desktop-md{
-            width: 65%;
+            width: 66%;
         }
         .button{
             cursor: pointer;
@@ -95,14 +98,14 @@
     }
     &__occasion{
         display: none;
-        width: 35%;
+        width: 36%;
         margin-left: 32px;
         @include desktop-md{
             display: block;
         }
         textarea{
             width: 100%;
-            height: 367px;
+            height: 357px;
             font-family: "open sans";
             border-radius: 0;
             &:focus, &:active, &:focus-visible{
@@ -112,6 +115,10 @@
         .add-styles{
             margin: 16px 0;
             font-size: 12px;
+            line-height: 1;
+            @include desktop-sm{
+                margin: 10px 0;
+            }
             img{
                 margin-right: 6px;
             }
@@ -126,6 +133,12 @@
             }
             textarea{
                 height: 200px;
+            }
+            .select-style__select{
+                display: none;
+                @include desktop-sm{
+                    display: block;
+                }
             }
         }
     }
@@ -143,6 +156,9 @@
         .form-control{
             border-radius: 0;
             appearance: none;
+            @include desktop-sm{
+                height: 48px;
+            }
         }
         .arrow-down{
             position: absolute;
@@ -157,11 +173,13 @@
     .photoselect__favorite{
         opacity: 1;
         position: static;
+        cursor: pointer;
+        pointer-events: auto;
     }
     &__type-album{
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 32px;
+        margin-bottom: 15px;
         @include tablet{
             margin-bottom: 48px;
         }
@@ -171,9 +189,13 @@
     }
     &__name-type{
         padding: 12px;
-        margin: 0 4px 12px;
+        margin: 0 4px 9px;
         border: 1px solid #575D614D;
         cursor: pointer;
+        @include tablet{
+            margin: 0 4px 12px; 
+            padding: 16px 12px;
+        }
         &.active{
             background: #70707026;
         }
@@ -184,23 +206,24 @@
     &__block{
         width: 50%;
         text-align: center;
-        margin-bottom: 22px;
+        margin-bottom: 14px;
         @include tablet{
             width: 25%;
+            margin-bottom: 22px;
         }
         @include desktop-sm{
             width: 20%;
         }
         @include tabtoslide{
-            width: 155px;
+            width: 150px;
             margin-bottom: 0;
         }
     }
     &__checkbox{
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         @include tablet{
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
         .small-text{
             display: block;

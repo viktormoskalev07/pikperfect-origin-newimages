@@ -1,6 +1,6 @@
 .section-upload-photo{
-    max-width: 1440px;
-    margin: 80px auto 112px;
+    max-width: 1280px;
+    margin: 80px auto 70px;
     padding: 0 16px;
     h2{
         font-size: 24px;
@@ -13,6 +13,9 @@
         font-weight: normal;
         margin-bottom: 40px;
         text-align: center;
+        @include desktop-sm{
+            margin-bottom: 37px;
+        }
     }
     &__head{
         display: flex;
@@ -45,6 +48,10 @@
     }
     &__device{
         max-width: 522px;
+        @include desktop-sm{
+            text-align: center;
+            max-width: 385px;
+        }
         img{
             width: 100%;
             max-width: 386px;
@@ -65,6 +72,10 @@
             margin-bottom: 0;
             justify-content: center;
         }
+        @include desktop-sm{
+            justify-content: center;
+            margin-bottom: 15px;
+        }
     }
     &__footer{
         display: flex;
@@ -75,6 +86,9 @@
             max-width: 403px;
             line-height: 24px;
         }
+    }
+    &__img{
+        text-align: center;
     }
     .upload-link{
         display: flex;
@@ -93,14 +107,23 @@
     }
     .column{
         display: flex;
-        &:first-child{justify-content: flex-end;}
+        &:first-child{
+            justify-content: flex-end;
+            margin: 0 auto;
+            @include desktop-sm{
+                width: 45%;
+                margin: 0;
+                align-items: center;
+                
+            }
+        }
         &:last-child{
             justify-content: center;
             @include tablet{
                 justify-content: flex-start;
             }
             @include desktop-sm{
-                width: 40%;
+                width: 53%;
             }
         }
         .text{
@@ -108,6 +131,9 @@
             line-height: 26px;
             font-weight: 600;
             text-align: center;
+            @include desktop-sm{
+                margin-bottom: 60px;
+            }
         }
     }
     .service-button{
@@ -131,8 +157,9 @@
         } 
         @include desktop-sm{
             font-size: 16px;
-            max-width: 300px;
+            max-width: 250px;
             margin-bottom: 72px;
+            font-size: 18px;
         }
     }
     .services{
@@ -140,11 +167,14 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
+        @include desktop-sm{
+            justify-content: space-evenly;
+        }
     }
     .separator{
         width: 65px;
-        margin: 0 48px;
-        max-height: 645px;
+        margin: 0 35px;
+        height: 610px;
         position: relative;
         display: flex;
         align-items: center;
@@ -183,5 +213,5 @@
             width: 40px;
             margin: 0 25px;
         }
-    }
+    } 
 }

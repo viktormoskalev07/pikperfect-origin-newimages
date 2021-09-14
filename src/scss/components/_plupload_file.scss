@@ -46,7 +46,10 @@
         line-height: 26px;
         background: #7070704D;
         td{
-            padding: 17.5px 32px 16.5px;
+            padding: 11.5px 32px 16.5px;
+            @include tablet{
+                padding: 17.5px 32px 16.5px;
+            }
         }
     }
     &_footer{
@@ -63,7 +66,10 @@
             background: #EDECEE;
         }
         .plupload_file_size, .plupload_button{
-            padding: 15px 14px;
+            padding: 10px 14px;
+            @include tablet{
+                padding: 15px 14px;
+            }
         }
         td{
             font-size: 14px;
@@ -82,11 +88,6 @@
         li{gap: 0 24px;}
     } 
     .plupload_filelist{
-        &_header{
-            td{
-                padding: 17.5px 24px 16.5px;
-            }
-        }
         &_footer{
             tr{
                 display: flex;
