@@ -23,15 +23,7 @@
 		})
 	</script> 
  
-	  <div class="pre-header">
-    <div class="container">
-      <div class="promobar"> 
-        <span id="promo-place-text" class="promobar-hide">  </span> 
-        <strong id="promo-place-code" class="promobar-hide">  </strong>
-      </div>
-    </div>
-  </div> 
-<!-- xhr in main js -->
+	<!-- xhr in main js -->
 <header class="header">
   <a href="index.html" class="logo">
     <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
@@ -600,7 +592,7 @@
                     <h2 class="upload__title">Album type</h2>
                     <!-- Button modal -->
                     <button type="button" class="link" data-toggle="modal" id="modalVideo"><img src="./images/ic_circle_play.svg" alt="ic_circle_play">Compare albums</button>
-                    <!-- Modal -->
+                    <!-- Modal --> 
                     <div class="modal-changes">
                         <div class="modal-changes__wrap">
                             <div class="modal-changes__content">
@@ -608,9 +600,31 @@
                                     <img src="./images/ic_x.svg" alt="close">
                                 </button>
                                 <div class="modal-changes__body">
-                                    <video controls="controls" poster="./images/towebp/14.0/placeholder-video.jpg">
-                                        <source src="" >
-                                    </video>
+                                    <div class="lazy-video">
+    <div class="lazy-video__preloader">
+        <svg class= "lazy-video__preloader-svg" width="60" height="60" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#8ba4b4">
+            <g fill="none" fill-rule="evenodd">
+                <g transform="translate(1 1)" stroke-width="2">
+                    <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                    <path d="M36 18c0-9.94-8.06-18-18-18">
+                        <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 18 18"
+                            to="360 18 18"
+                            dur="1s"
+                            repeatCount="indefinite"/>
+                    </path>
+                </g>
+            </g>
+        </svg>
+    </div> 
+         <div class= "lazy-video__item " ><iframe frameborder="0" class="lazy-video__activator-js"
+            data-src= "https://player.vimeo.com/video/569987859?background=1 "
+            allow="autoplay; fullscreen; picture-in-picture" 
+            title="Premium Photo Albums - PikPerfect"></iframe>  
+        </div> 
+</div> 
                                 </div>
                             </div>
                         </div>
@@ -877,7 +891,7 @@
                                 </select>
                                 <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
                             </div>
-                            <p>We recommend using 100-150 photos in a 60 page album.<br> Additional pages can be added or removed during your album design.</p>
+                            <p>We recommend using 100-150 photos in a 60-page album.<br> Additional pages can be added or removed during your album design.</p>
                         </div>
                     </div>
                     <div class="selection-album__section">
