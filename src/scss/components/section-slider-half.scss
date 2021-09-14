@@ -1,0 +1,35 @@
+.section-slider-half{
+    max-width: 1255px;
+    margin: 0 auto;
+    .section-hero__left{
+        display: block;
+        @include desktop-md{
+            width: 50%;
+        }
+    }
+    .swiper-slide{
+        margin-bottom: 16px;
+    }
+    .section-hero__swiper{
+        width: 100%;
+    }
+    .section-hero__tab-activators{
+        flex-direction: row;
+        width: 100%;
+        .swiper-wrapper{
+            flex-direction: row;
+        }
+        .section-hero__tab-activator{
+            width: 90px;
+            height: 90px !important;
+        }
+    }
+    &__wrap{
+        display: flex;
+    }
+    &__context{
+        @include desktop-md{
+            width: 50%;
+        }
+    }
+}

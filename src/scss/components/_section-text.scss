@@ -10,6 +10,9 @@
   @include desktop-md{
     padding: 125px 23px 112px;
   }
+  &_light-grey{
+    background: #EDECEE;
+  }
   &_size-s{
     padding: 61px 16px;
     @include desktop-md{

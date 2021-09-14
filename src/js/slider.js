@@ -259,5 +259,47 @@ if (document.querySelector(".select-style__swiper")){
     });
   }
 
+  /////////// slider 16.0  first/////////
+  if (document.querySelector('.section-hero__slider-half')){ 
+    var swiperTabsControl = new Swiper(".section-hero__slider-half", {  
+      slidesPerView: 6,
+      direction:'vertical',
+      cssMode: true,
+      spaceBetween: 10,
+      allowTouchMove:false, 
+      touchStartForcePreventDefault:true,
+    });
+    
+    var swiperTabs = new Swiper(".section-hero__swiper-half", { 
+        pagination: {
+          el: ".section-hero__swiper-pagination",
+          clickable: true
+        } ,  
+        thumbs: {
+          swiper: swiperTabsControl
+        } 
+      });  
+  }
+  /////////// slider 16.0  second/////////
+  if (document.querySelector('.section-hero__slider-half-second')){ 
+    var swiperTabsControl = new Swiper(".section-hero__slider-half-second", {  
+      slidesPerView: 6,
+      direction:'vertical',
+      cssMode: true,
+      spaceBetween: 10,
+      allowTouchMove:false, 
+      touchStartForcePreventDefault:true,
+    });
+    
+    var swiperTabs = new Swiper(".section-hero__swiper-half-second", { 
+        pagination: {
+          el: ".section-hero__swiper-pagination",
+          clickable: true
+        } ,  
+        thumbs: {
+          swiper: swiperTabsControl
+        } 
+      });  
+  }
 
   @@include('modules/galery.js')
