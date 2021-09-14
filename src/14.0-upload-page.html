@@ -1,4 +1,4 @@
-@@include("./html-templates/head.html",{
+@@include("./html-templates/head-new.html",{
     title:"Start Project | PikPerfect", 
     desc:"Upload your photos and let our design team create a stunning wedding album or photo book for you.",
   }) 
@@ -30,7 +30,7 @@
                     <h2 class="upload__title">Album type</h2>
                     <!-- Button modal -->
                     <button type="button" class="link" data-toggle="modal" id="modalVideo"><img src="./images/ic_circle_play.svg" alt="ic_circle_play">Compare albums</button>
-                    <!-- Modal -->
+                    <!-- Modal --> 
                     <div class="modal-changes">
                         <div class="modal-changes__wrap">
                             <div class="modal-changes__content">
@@ -38,9 +38,10 @@
                                     <img src="./images/ic_x.svg" alt="close">
                                 </button>
                                 <div class="modal-changes__body">
-                                    <video controls="controls" poster="./images/towebp/14.0/placeholder-video.jpg">
-                                        <source src="" >
-                                    </video>
+                                    @@include('./video-include/lazyvideo.html',{
+                                        src:'569987859',
+                                        titleVideo: 'Premium Photo Albums - PikPerfect',
+                                    }) 
                                 </div>
                             </div>
                         </div>
@@ -228,7 +229,7 @@
                                 </select>
                                 <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
                             </div>
-                            <p>We recommend using 100-150 photos in a 60 page album.<br> Additional pages can be added or removed during your album design.</p>
+                            <p>We recommend using 100-150 photos in a 60-page album.<br> Additional pages can be added or removed during your album design.</p>
                         </div>
                     </div>
                     <div class="selection-album__section">
