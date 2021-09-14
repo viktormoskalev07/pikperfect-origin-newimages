@@ -271,10 +271,14 @@
         <h2 class="title">Follow us to keep up with the latest or ask a question</h2>
         <div class="instagram__social">
             <div class="instagram__icon">
-                <img src="./images/ic_facebook.svg" alt="ic_facebook">
+                <a href="https://www.facebook.com/PikPerfect" target="_blank">
+                    <img src="./images/ic_facebook.svg" alt="ic_facebook">
+                </a>
             </div>
             <div class="instagram__icon">
-                <img src="./images/ic_instagram.svg" alt="ic_instagram">
+                <a href="https://www.instagram.com/pikperfect_books/" target="_blank">
+                    <img src="./images/ic_instagram.svg" alt="ic_instagram">
+                </a>
             </div>
         </div>
         <div class="instagram__container" id="instagam-cont"
@@ -362,14 +366,13 @@
   </div>
 </section>
 </main>
-<!-- <script>
+<script>
     function instagramIntegration() {
         let xhr = new XMLHttpRequest();
         const container = document.querySelector("#instagam-cont");
-        const instaUserName = document.querySelectorAll(".instagram__user-name");
         const instaImg = document.querySelectorAll(".instagram__image img");
         const instaOld = document.querySelectorAll(".instagram__img__old");
-        const accountTitle = document.querySelector(".instagram__name-account");
+    
 
         if (container) {
             const instPost = container.getAttribute('data-instagram-post');
@@ -383,11 +386,9 @@
                 .then((data1) => {
                     if (data1) {
                         const posts = data1.posts
-                        accountTitle.innerHTML = "@" + posts[0].user_full_name;
                         for (let i = 0; i < 4; i++) {
                             try {
                                 const post = posts[i];
-                                instaUserName[i].innerHTML = "@" + post.user_full_name;
                                 instaImg[i].src = post.image;
                             } catch (e) {
                                 console.log(e);
@@ -402,7 +403,7 @@
     } else {
         instagramIntegration();
     }
-</script> -->
+</script>
 
 <footer class="footer">
   <div class="container">
@@ -613,7 +614,7 @@
     <li><a style="color:rgb(87, 35, 57)" href="./14.0-upload-page.html">14.0</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.1.html">14.1</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.2.html">14.2</a></li>
-    <li><a style="color:rgb(255, 0, 0)" href="./14.3.html">14.3</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./14.3.html">14.3</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./15.0-myprofile.html">15.0</a></li>   
 </ul>
 
