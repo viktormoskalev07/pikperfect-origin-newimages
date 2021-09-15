@@ -317,24 +317,37 @@
             right: 0px;
             bottom: -25px;
         }
+        &.active{
+            background: #70707026;
+        }
     }
     &__section-wrap-color{
         margin: 0 -7px;
     }
     &__foil-color{
         margin: 0 3px;
+        cursor: pointer;
         @include tablet{
             margin: 0 7px;
         }
+        p{
+            transition: .3s;
+        }
         .img-foil{
+            background: #26acab;
             padding: 10px;
             transition: .3s;
             margin-bottom: 7px;
         }
         &:hover{
-           .img-foil{
-               background: #70707026;
-           } 
+            p{
+                background: #70707026;
+            } 
+        }
+        &.active{
+            p{
+                background: #70707026;
+            } 
         }
     }
 }

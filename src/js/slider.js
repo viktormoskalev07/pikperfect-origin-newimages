@@ -309,21 +309,37 @@ if (document.querySelector(".select-style__swiper")){
         prevEl: ".swiper-button-prev-first",
       },
       breakpoints: {
-        320: {
+        300: {
+          slidesPerView: 3,
+          spaceBetween: 5
+        },
+        360: {
           slidesPerView: 4,
-          spaceBetween: 20
+          spaceBetween: 5
         },
         450: {
-          slidesPerView: 4,
-          spaceBetween: 20
+          slidesPerView: 5,
+          spaceBetween: 5
         },
-        768: {
+        550: {
+          slidesPerView: 6,
+          spaceBetween: 5
+        },
+        650: {
           slidesPerView: 7,
-          spaceBetween: 20
+          spaceBetween: 10
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 10
+        },
+        1100: {
+          slidesPerView: 6,
+          spaceBetween: 10
         },
         1200: {
           slidesPerView: 7,
-          spaceBetween: 20
+          spaceBetween: 10
         }, 
       }, 
   });
@@ -337,21 +353,37 @@ if (document.querySelector('.swipercolorSecond')){
       prevEl: ".swiper-button-prev-second",
     },
     breakpoints: {
-      320: {
+      300: {
+        slidesPerView: 3,
+        spaceBetween: 5
+      },
+      360: {
         slidesPerView: 4,
-        spaceBetween: 20
+        spaceBetween: 5
       },
       450: {
-        slidesPerView: 4,
-        spaceBetween: 20
+        slidesPerView: 5,
+        spaceBetween: 5
       },
-      768: {
+      550: {
+        slidesPerView: 6,
+        spaceBetween: 5
+      },
+      650: {
         slidesPerView: 7,
-        spaceBetween: 20
+        spaceBetween: 10
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 10
+      },
+      1100: {
+        slidesPerView: 6,
+        spaceBetween: 10
       },
       1200: {
         slidesPerView: 7,
-        spaceBetween: 20
+        spaceBetween: 10
       }, 
     }, 
 });
