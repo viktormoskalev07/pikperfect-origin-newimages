@@ -11,7 +11,7 @@
     setTimeout(() => {
          errm.remove( ); 
          item.style.marginBottom=(marginb)+'px';
-    }, 1000);
+    }, 3000);
 } 
 
 (function( ){
