@@ -1,4 +1,10 @@
 .paper{
+    &__section{
+        .product__subtitle{
+            font-family: "open sans";
+            font-weight: 600;
+        }
+    }
     &__container{  
         @include wide-screen-sm{
             margin: auto;
@@ -39,8 +45,8 @@
         cursor: pointer; 
         letter-spacing: 0;
         @include tablet{
-          width: 50%;
-      }
+            width: 50%;
+        }
 
         &.active{
             background-color:#70707026;
@@ -61,6 +67,8 @@
                 color: #2F353A;
                 line-height: 1.4;
                 margin-bottom: 16px;
+                font-family: "open sans";
+                font-weight: 600;
                 @include wide-screen-sm{
                     margin-bottom: 24px;
                 }
@@ -76,10 +84,10 @@
                     flex-grow: 1;
             }
             &__price{ 
-                    font-size: 14px;
-                    margin-bottom: 16px; 
-                    font-weight: 500;
-                    color: #2E3031; 
+                font-size: 14px;
+                margin-bottom: 16px; 
+                font-weight: 500;
+                color: #2E3031; 
             }
     }
     &__gsm{ 

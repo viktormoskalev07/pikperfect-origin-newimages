@@ -182,7 +182,35 @@
                         </div>
                     </div>
                     <div class="selection-album__section">
-                        <h2 class="selection-album__title-section">Cover Design <img src="./images/ic_info.svg" alt="ic_info"></h2>
+                        <div class="selection-album__wrap-title">
+                            <h2 class="selection-album__title-section">Cover Design</h2>
+                            <div class="selection-album__icon-info">
+                                <img class="icon-info icon-info-coverDesign" src="./images/ic_info.svg" alt="ic_info">
+                                <div class="selection-album__modal modal-coverDesign">
+                                    <div class="selection-album__modal-content">
+                                        <button class="popup__close close-modal-info-coverDesign">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                              <rect fill="transparent" width="24" height="24"></rect>
+                                              <g style="stroke:#2f353a;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" transform="translate(-0.662 -0.662)">
+                                              <line x1="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              <line x2="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              </g>
+                                            </svg>
+                                          </button>
+                                        <h2 class="title">Cover Design</h2>
+                                        @@loop('./14.0/modal-info-box.html',[
+                                        {title:'Standard Embossed Titles',text:'are available in either Folio or Bodoni fonts. Both fonts are offered in two different sizes, and in either CAPS or lowercase letters. These titles can have a maximum of 25 characters.'},
+                                        {title:'Designer Embossed Titles',text:'are pre-designed photo album title designs that can be used in conjunction with a single line of standard embossed text of maximum 20 characters.'},
+                                        {title:'Custom Embossed Titles and Logos',text:'allow you to personalize your album cover with a custom foil title. Send us your design or work with our team to create your own custom photo album title, from scratch.'},
+                                        {title:'Laser Etched Titles',text:'offer the flexibility to use virtually any design and font combination to create your custom title design. With laser etching, the heat from the laser is used to create the desired pattern on the cover fabric.'},
+                                        {title:'Cameo Windows',text:'allows you to enjoy the benefits of a luxurious leather or fabric album cover, while being able to also personalize it with your favourite photo.'},
+                                        {title:'Glass Covers',text:'features a glass album cover, paired with your choice of leather or fabric wrapped stylishly around the back.'},
+                                        {title:'Imagewrap Photo Covers',text:'wrap your favourite photos across the front cover, back cover, and spine. Printed with full-bleed on a single sheet of photo paper with a matte finish.'},
+                                        ])
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="selection-album__section-wrap">
                             @@loop('./14.0/section-block-3.html',[
                                 {name: 'Simple text', class:'active', price:'Included'},
@@ -208,7 +236,32 @@
                         </div>
                     </div>
                     <div class="selection-album__section">
-                        <h2 class="selection-album__title-section">Paper Type <img src="./images/ic_info.svg" alt="ic_info"></h2>
+                        <div class="selection-album__wrap-title">
+                            <h2 class="selection-album__title-section">Paper Type</h2>
+                            <div class="selection-album__icon-info">
+                                <img class="icon-info icon-info-paperType" src="./images/ic_info.svg" alt="ic_info">
+                                <div class="selection-album__modal modal-paperType">
+                                    <div class="selection-album__modal-content">
+                                        <button class="popup__close close-modal-info-paperType">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                              <rect fill="transparent" width="24" height="24"></rect>
+                                              <g style="stroke:#2f353a;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" transform="translate(-0.662 -0.662)">
+                                              <line x1="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              <line x2="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              </g>
+                                            </svg>
+                                          </button>
+                                        <h2 class="title">Paper Type</h2>
+                                        <p>We offer a range of different paper types and finishes, to meet all of your photo book printing needs. Our layflat albums are all developed on silver halide papers which offer very accurate skin tones, greater depth, and an increased color range and vibrancy. Our photo books are produced on HP Indigo Digital Presses, and while these offer incredible detail and color range for digital print, they will not have the same detail or depth as a silver halide photo print. The advantage of digitally printed papers is that they are less sensitive to moisture.</p>
+                                        <h3 class="sub-title">Premium Layflat Albums</h3>
+                                        <p><span>Fujicolor Crystal Archive Digital Paper Type DPII</span>: Created specifically for professional use, this Silver halide paper offers the widest color gamut, maximum density for deep blacks and excellent color saturation. The <span>Pearl Matte</span> finish is the most popular option as it offers some shine and good contrast. The <span>Gloss</span> finish offers more sheen which can make the images look slightly brighter and with a higher color saturation, but it's also more reflective.</p>
+                                        <p><span>Fujicolor Crystal Archive Art Velvet</span>: Aimed at the Fine Art Printing market, this Silver halide paper is professionally coated with a zero-reflective top layer that creates a stunningly soft and deep-matte effect. The velvet surface appeals to the sense of touch and offers the ultimate, deep-matte experience. Please note, the colors will not be as intense as the Fuji Pearl Matte or Gloss papers.</p>
+                                        <h3 class="sub-title">Layflat Albums</h3>
+                                        <p><span>Fujicolor Crystal Archive Album Paper</span>: Fuji’s consumer version of the above, this Silver halide paper is specially designed for layflat photo album printing. This paper delivers enhanced color reproduction and excellent image stability. The <span>Pearl Matte</span> finish is the most popular option as it offers some shine and good contrast. The Gloss finish offers more sheen which can make the images look slightly brighter and with a higher color saturation, but it's also more reflective.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="selection-album__section-wrap mt-45">
                             @@loop('./14.0/section-blocks.html',[
                                 {name: 'Fuji Pearl Matt', class:'active bestseller', price:''},

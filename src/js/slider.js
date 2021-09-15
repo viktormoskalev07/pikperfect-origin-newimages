@@ -1,4 +1,4 @@
-
+/////// slider for four albums ///
 if (document.querySelector('.swiperalbum')){
   var swiperAlbum = new Swiper(".swiperalbum", {
     pagination: {
@@ -105,14 +105,13 @@ if (document.querySelector(".section-reviews-card__wrap")){
     let checkVideo =1 ;
   function call (){ 
         if (checkVideo&&videoSlide){ 
-          if( videoSlide.matches('.swiper-slide-active')){ 
-                        
-                        video.src=video.dataset.src; 
-                        checkVideo=0;
-                        setTimeout(() => {
-                          videoPreloader.style.opacity=0;
-                        }, 300); 
-                        observer.disconnect();
+          if( videoSlide.matches('.swiper-slide-active')){  
+            video.src=video.dataset.src; 
+            checkVideo=0;
+            setTimeout(() => {
+              videoPreloader.style.opacity=0;
+            }, 300); 
+            observer.disconnect();
           } 
       }  
   }
@@ -124,17 +123,16 @@ if (document.querySelector(".section-reviews-card__wrap")){
     characterData:false,
     attributeFilter:['class']
   })
-
-     setTimeout(() => {
-       if(checkVideo){
-        video.src=video.dataset.src; 
-        checkVideo=0;
-        setTimeout(() => {
-          videoPreloader.style.opacity=0;
-        }, 300); 
-        observer.disconnect();
-       }
-     }, 2000);
+    //  setTimeout(() => {
+    //    if(checkVideo){
+    //     video.src=video.dataset.src; 
+    //     checkVideo=0;
+    //     setTimeout(() => {
+    //       videoPreloader.style.opacity=0;
+    //     }, 300); 
+    //     observer.disconnect();
+    //    }
+    //  }, 2000);
 } 
 
 
@@ -301,5 +299,62 @@ if (document.querySelector(".select-style__swiper")){
         } 
       });  
   }
+
+/////// slider for Linen Box Colors ////
+  if (document.querySelector('.swipercolor')){
+    var swiperAlbum = new Swiper(".swipercolor", {
+      loop:true,
+      navigation: {
+        nextEl: ".swiper-button-next-first",
+        prevEl: ".swiper-button-prev-first",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        450: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 7,
+          spaceBetween: 20
+        },
+        1200: {
+          slidesPerView: 7,
+          spaceBetween: 20
+        }, 
+      }, 
+  });
+}
+/////// slider for Leatherette Box Colors ////
+if (document.querySelector('.swipercolorSecond')){
+  var swiperAlbum = new Swiper(".swipercolorSecond", {
+    loop:true,
+    navigation: {
+      nextEl: ".swiper-button-next-second",
+      prevEl: ".swiper-button-prev-second",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      450: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 7,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 7,
+        spaceBetween: 20
+      }, 
+    }, 
+});
+}
 
   @@include('modules/galery.js')

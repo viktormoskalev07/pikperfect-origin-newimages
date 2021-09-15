@@ -231,6 +231,43 @@ window.addEventListener("load", function () {
   }
 }());
 
+
+/////// modal-info  Cover Design
+(function(){
+  const closeModalInfo = document.querySelector('.close-modal-info-coverDesign');
+  const ModalInfo = document.querySelector('.modal-coverDesign');
+  const iconModalInfo = document.querySelector('.icon-info-coverDesign');
+
+  if(closeModalInfo && ModalInfo){
+    iconModalInfo.addEventListener('mouseover', function(){
+      ModalInfo.classList.add('d-block');
+      body.classList.add('shadow');
+    })
+    closeModalInfo.addEventListener('click', function(){
+      ModalInfo.classList.remove('d-block');
+      body.classList.remove('shadow');
+    })
+  }
+}());
+
+/////// modal-info  Paper Type
+(function(){
+  const closeModalInfo = document.querySelector('.close-modal-info-paperType');
+  const ModalInfo = document.querySelector('.modal-paperType');
+  const iconModalInfo = document.querySelector('.icon-info-paperType');
+
+  if(closeModalInfo && ModalInfo){
+    iconModalInfo.addEventListener('mouseover', function(){
+      ModalInfo.classList.add('d-block');
+      body.classList.add('shadow');
+    })
+    closeModalInfo.addEventListener('click', function(){
+      ModalInfo.classList.remove('d-block');
+      body.classList.remove('shadow');
+    })
+  }
+}());
+
 @@include('modules/imgpreloader.js')
 @@include('modules/accordion.js') 
 @@include('modules/popup-login.js')

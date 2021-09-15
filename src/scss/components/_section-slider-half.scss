@@ -1,0 +1,95 @@
+.section-slider-half{
+    max-width: 1255px;
+    margin: 0 auto;
+    @include desktop-md{
+        margin: 110px auto 0;
+    }
+    .title{
+        @include tablet{
+           text-align: left; 
+        }
+    }
+    .section-hero__left{
+        display: block;
+        @include desktop-md{
+            width: 50%;
+            padding: 0 20px;
+        }
+        .swiper-slide{
+            margin-bottom: 16px;
+        }
+        .section-hero__swiper{
+            width: 100%;
+        }
+        .section-hero__tab-activators{
+            flex-direction: row;
+            width: 100%;
+            .swiper-wrapper{
+                flex-direction: row;
+            }
+            .section-hero__tab-activator{
+                width: 90px;
+                height: 90px !important;
+            }
+        }
+    }
+    
+    &__wrap{
+        @include desktop-md{
+            display: flex;
+            align-items: center;
+            margin: 0 -20px;
+        }
+        
+    }
+    &__context{
+        text-align: center;
+        @include desktop-md{
+            width: 50%;
+            text-align: left;
+            padding: 0 20px;
+        }
+    }
+    &__price{
+        font-family: 'Spectral';
+        font-size: 18px;
+        @include tablet{
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+    &__box{
+        .title{
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 10px;
+        }     
+    }
+    &__box-wrap{
+        position: relative;
+        .swiper-container{
+            margin: 0 50px;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            height: auto;
+            width: auto;
+            transform: translate(0, -50%);
+            margin: 0;
+        }
+        .swiper-button{
+            &::after{
+                font-size: 20px;
+                color: #2E3031;
+            }
+        } 
+    }
+    &__img{
+        width: 53px;
+        height: 53px;
+        margin: 0;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
