@@ -19,7 +19,7 @@
             border-radius: 50px;
             top: -50px;
             right: 0;
-            @include desktop-sm{
+            @include wide-screen-sm{
                 top: 0;
                 right: -80px;
                 width: 40px;
@@ -31,9 +31,8 @@
             }
         }
         &__wrap{
-            max-width: 720px;
-            max-height: 405px;
-            height: 100%;
+            max-width: 1000px;
+            max-height: 550px;
         }
         &__content{
             padding: 0;
@@ -42,6 +41,9 @@
                 position: relative;
                 height: 0;
                 padding-bottom: calc(405% / 720 *100);
+                @media screen and(max-height: 450px) {
+                    padding-bottom: calc(205% / 520 *100);
+                }
             }
         }
         &__body{

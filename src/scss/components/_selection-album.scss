@@ -152,6 +152,7 @@
             height: 24px;
             top: 14px;
             right: 10px;
+            z-index: -1;
         }
         .form-control{
             max-width: 190px;
@@ -162,6 +163,8 @@
             margin-bottom: 16px;
             appearance: none;
             width: 100%;
+            background: transparent;
+            cursor: pointer;
             &__select{
                 width: 50%;
                 position: relative;
