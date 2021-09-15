@@ -24,7 +24,12 @@
 	</script> 
  
 	<!-- xhr in main js -->
-<header class="header">
+<style>
+  #onlyStatic{
+    position: static;
+  }
+</style>
+<header id="onlyStatic" class="header">
   <a href="index.html" class="logo">
     <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
   </a>
@@ -638,7 +643,10 @@
             <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
           </div>
           <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
-          <p class="add-styles"><img src="./images/icon_link.svg" alt="icon_link">Attach additional instructions.</p>
+          <p class="add-styles">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-right:5px" fill="grey" viewBox="0 0 16 16">
+            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+          </svg>Attach additional instructions.</p>
         </div>
       </div>
       <div class="select-style__type-album">
