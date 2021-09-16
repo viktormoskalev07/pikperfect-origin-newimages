@@ -25,6 +25,7 @@
     }
     &__size{
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
         @include mobile-lg{
             gap: 30px;
@@ -32,8 +33,6 @@
         &__img{
             width: 100%;
             img{  
-                width: 100%;
-                object-fit: contain;
                 margin-bottom: 15px;
             }
             &.small{

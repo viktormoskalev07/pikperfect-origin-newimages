@@ -109,9 +109,6 @@
             margin-bottom: 24px;
         }
     }
-    &__img-album{
-        margin-bottom: 10px;
-    }
     &__complication{
         @include desktop-md{
             width: 50%;
@@ -244,16 +241,18 @@
             }
         }
     }
+    &__img-album{
+        margin-bottom: 10px;
+        text-align: center;
+        height: 100%;
+    }
     &__album-size{
         cursor: pointer;
         position: relative;
         transition: .3s;
         margin: 0 8px 10px;
         @include tablet{
-            margin: 0 10px 0px;
-        }
-        @include tabtoslide{
-            margin-bottom: 0;
+            margin: 0 10px 10px;
         }
         &.active{
             img{
@@ -278,9 +277,6 @@
         align-items: flex-end;
         flex-wrap: wrap;
         margin: 0 -10px;
-        @include mobile-md{
-            justify-content: space-between;
-        }
     }
     .bestseller{
         &::after{
