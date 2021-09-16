@@ -1,3 +1,39 @@
 .img-half-text{
-    
+    margin: 64px 0;
+    @include tablet{
+        margin: 110px 0;
+    }
+    .title{
+        text-align: left;
+    }
+    &__container{
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 15px;
+        @include tablet{
+            padding: 0 20px;
+        }
+    }
+    &__wrap{
+        background: #EDECEE;
+        @include desktop-md{
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__img{
+        @include desktop-md{
+            width: 50%;
+        }
+    }
+    &__context{
+        padding: 0 16px;
+        @include tablet{
+            padding: 0 25px;
+        }
+        @include desktop-md{
+            width: 50%;
+            padding: 0 55px; 
+        }
+    }
 }

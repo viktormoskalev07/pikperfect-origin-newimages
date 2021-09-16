@@ -27,7 +27,7 @@
         font-weight: 600;
         font-size: 16px;
         text-align: center;
-       margin-bottom: 10px;   
+       margin-bottom: 10px;  
     }
     &__img{
         width: 100%;
@@ -72,6 +72,10 @@
                 @include wide-screen-sm{
                     margin-bottom: 24px;
                 }
+                span{
+                    font-weight: 400;
+                    font-size: 14px;
+                } 
             }
             &__description{
                     font-size: 14px;
