@@ -141,7 +141,6 @@ if (document.querySelector('.section-hero__tab-activators')&&!document.querySele
   var swiperTabsControl = new Swiper(".section-hero__tab-activators", {  
     slidesPerView: 6,
     direction:'vertical',
-    cssMode: true,
     spaceBetween: 15,
     allowTouchMove:false, 
     touchStartForcePreventDefault:true,
