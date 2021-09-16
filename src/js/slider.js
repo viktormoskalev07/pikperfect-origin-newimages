@@ -176,7 +176,7 @@ if (document.querySelector('.swiperBigSlider')){
     var swiperTabsControl = new Swiper(".update-slider-a", {  
       slidesPerView: 5,
       direction:'vertical',
-      cssMode: true,
+      // cssMode: true,
       spaceBetween: 16,
       allowTouchMove:false, 
       touchStartForcePreventDefault:true,
@@ -197,7 +197,7 @@ if (document.querySelector('.swiperBigSlider')){
     var swiperTabsControl = new Swiper(".update-slider-b", {  
       slidesPerView: 5,
       direction:'vertical',
-      cssMode: true,
+      // cssMode: true,
       spaceBetween: 16,
       allowTouchMove:false, 
       touchStartForcePreventDefault:true,
@@ -218,7 +218,7 @@ if (document.querySelector('.swiperBigSlider')){
     var swiperTabsControl = new Swiper(".update-slider-c", {  
       slidesPerView: 5,
       direction:'vertical',
-      cssMode: true,
+      // cssMode: true,
       spaceBetween: 16,
       allowTouchMove:false, 
       touchStartForcePreventDefault:true,
@@ -261,7 +261,7 @@ if (document.querySelector(".select-style__swiper")){
     var swiperTabsControl = new Swiper(".section-hero__slider-half", {  
       slidesPerView: 6,
       direction:'vertical',
-      cssMode: true,
+      // cssMode: true,
       spaceBetween: 10,
       allowTouchMove:false, 
       touchStartForcePreventDefault:true,
@@ -282,7 +282,7 @@ if (document.querySelector(".select-style__swiper")){
     var swiperTabsControl = new Swiper(".section-hero__slider-half-second", {  
       slidesPerView: 6,
       direction:'vertical',
-      cssMode: true,
+      // cssMode: true,
       spaceBetween: 10,
       allowTouchMove:false, 
       touchStartForcePreventDefault:true,
