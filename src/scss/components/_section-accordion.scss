@@ -6,6 +6,17 @@
   @include tablet{
     padding: 118px 70px 96px;
   }
+  &_light{
+    background: #fff;
+  }
+  &_m-size{
+    padding: 0;
+    margin: 0 auto 64px;
+    @include tablet{
+      padding: 0 70px;
+      margin: 0 auto 110px;
+    }
+  }
   &__title{
     text-align: center;
     font-size: 32px;
@@ -16,6 +27,28 @@
     }
     @include desktop-md{
       font-size: 48px;
+    }
+    &.title-with-text{
+      margin-bottom: 8px;
+      @include tablet{
+        margin-bottom: 12px;
+      }
+      @include desktop-md{
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .text-entered{
+    text-align: center;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    @include tablet{
+      font-size: 18px;
+      margin-bottom: 55px;
+    }
+    @include desktop-md{
+      margin-bottom: 38px;
     }
   }
   .bottom-text{

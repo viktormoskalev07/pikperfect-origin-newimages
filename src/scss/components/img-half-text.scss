@@ -1,10 +1,15 @@
 .img-half-text{
-    margin: 64px 0;
+    margin: 64px 0 72px;
     @include tablet{
-        margin: 110px 0;
+        margin: 110px 0 120px;
     }
     .title{
         text-align: left;
+        margin-bottom: 20px;
+        padding: 0;
+        @include tablet{
+            margin-bottom: 24px;
+        }
     }
     &__container{
         max-width: 1300px;
@@ -23,17 +28,35 @@
     }
     &__img{
         @include desktop-md{
-            width: 50%;
+            width: 49.5%;
         }
     }
     &__context{
-        padding: 0 16px;
+        font-weight: 400;
+        padding: 37px 16px 13px;
         @include tablet{
-            padding: 0 25px;
+            padding: 32px 25px 12px;
         }
         @include desktop-md{
-            width: 50%;
-            padding: 0 55px; 
+            width: 50.5%;
+            padding: 32px 55px 12px; 
+        }
+    }
+    &__list{
+        margin-bottom: 24px;
+        @include tablet{
+            margin-bottom: 32px;
+        }
+    }
+    &__list-item{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 14px;
+        img{
+            margin-right: 8px;
+        }
+        p{
+            margin: 0;
         }
     }
 }
