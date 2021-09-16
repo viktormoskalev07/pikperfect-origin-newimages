@@ -94,6 +94,9 @@
         .section-hero__swiper{
             max-width: none;
             max-height: 550px;
+            @include desktop-sm{
+                max-height: none;
+            }
         }
         .swiper-pagination-bullet{
             width: 12px;
