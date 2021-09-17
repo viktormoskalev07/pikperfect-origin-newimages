@@ -239,7 +239,7 @@ window.addEventListener("load", function () {
   const iconModalInfo = document.querySelector('.icon-info-coverDesign');
 
   if(closeModalInfo && ModalInfo){
-    iconModalInfo.addEventListener('mouseover', function(){
+    iconModalInfo.addEventListener('click', function(){
       ModalInfo.classList.add('d-block');
       body.classList.add('shadow');
     })
@@ -257,7 +257,7 @@ window.addEventListener("load", function () {
   const iconModalInfo = document.querySelector('.icon-info-paperType');
 
   if(closeModalInfo && ModalInfo){
-    iconModalInfo.addEventListener('mouseover', function(){
+    iconModalInfo.addEventListener('click', function(){
       ModalInfo.classList.add('d-block');
       body.classList.add('shadow');
     })

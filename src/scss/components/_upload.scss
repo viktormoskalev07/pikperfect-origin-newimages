@@ -114,6 +114,14 @@
         }
         .section-hero__tab-activators{
             width: 15%;
+            .section-hero__tab-activator{
+                &:last-child{
+                     margin-bottom: 0 !important;
+                }
+            }
+            .swiper-slide-thumb-active figure{
+                border: 0 !important;
+            }
         }
     }
     &__wrap-video{

@@ -312,12 +312,70 @@
         &:hover::after{
             content: attr(data-title);
             position: absolute;
-            left: -13px;
-            right: 0px;
+            left: -15px;
+            right: -15px;
+            text-align: center;
+            margin: 0 auto;
             bottom: -25px;
         }
         &.active{
             background: #70707026;
+            &::after{
+                content: attr(data-title);
+                position: absolute;
+                left: -15px;
+                right: -15px;
+                text-align: center;
+                margin: 0 auto;
+                bottom: -25px;
+            }
+        }
+        .color{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            background: rgb(161, 161, 161);
+        }
+        .leather{
+            &-white{
+                background: #dadee7;
+            }
+            &-cream{
+                background: #d4c8ae;
+            }
+            &-brown{
+                background: #64342a;
+            }
+            &-bordeaux{
+                background: #7b313e;
+            }
+            &-black{
+                background: #2a2522;
+            }
+            &-yellow{
+                background: #ebaf3d;
+            }
+            &-red{
+                background: #d1253b;
+            }
+            &-pink{
+                background: #e14880;
+            }
+            &-purple{
+                background: #564886;
+            }
+            &-blue{
+                background: #1369b4;
+            }
+            &-dark-blue{
+                background: #2c4c89;
+            }
+            &-dark-green{
+                background: #234741;
+            }
+            &-turquoise{
+                background: #02b5b2;
+            }
         }
     }
     &__section-wrap-color{
