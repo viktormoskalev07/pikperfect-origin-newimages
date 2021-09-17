@@ -222,6 +222,7 @@
                                         {title:'Imagewrap Photo Covers',text:'wrap your favourite photos across the front cover, back cover, and spine. Printed with full-bleed on a single sheet of photo paper with a matte finish.'},
                                         ])
                                     </div>
+                                    <div class="modal-shadow modal-shadow-coverDesign"></div>
                                 </div>
                             </div>
                         </div>
@@ -273,6 +274,7 @@
                                         <h3 class="sub-title">Layflat Albums</h3>
                                         <p><span>Fujicolor Crystal Archive Album Paper</span>: Fuji’s consumer version of the above, this Silver halide paper is specially designed for layflat photo album printing. This paper delivers enhanced color reproduction and excellent image stability. The <span>Pearl Matte</span> finish is the most popular option as it offers some shine and good contrast. The Gloss finish offers more sheen which can make the images look slightly brighter and with a higher color saturation, but it's also more reflective.</p>
                                     </div>
+                                    <div class="modal-shadow modal-shadow-paperType"></div>
                                 </div>
                             </div>
                         </div>
@@ -333,6 +335,9 @@
             ModalChangesOpen.classList.remove('open');
             })
         }
+        });
+        ModalChangesOpen.addEventListener('click', function(){
+            ModalChangesOpen.classList.remove('open');
         })
     }
     }());
