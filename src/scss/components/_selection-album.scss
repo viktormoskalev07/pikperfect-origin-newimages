@@ -377,6 +377,124 @@
                 background: #02b5b2;
             }
         }
+        .liner{
+            &-white{
+                background: #ecebf1;
+            }
+            &-champagne{
+                background: #e4d8c8;
+            }
+            &-cappucino{
+                background: #c5ab94;
+            }
+            &-beige{
+                background: #a98a6b;
+            }
+            &-hazelnut{
+                background: #987d68;
+            }
+            &-chocolate{
+                background: #443123;
+            }
+            &-light-rose{
+                background: #c95e88;
+            }
+            &-rose{
+                background: #262b2e;
+            }
+            &-pink{
+                background: #b03257;
+            }
+            &-bordeaux{
+                background: #7b1e29;
+            }
+            &-red{
+                background: #b90920;
+            }
+            &-pumpkin{
+                background: #bd5e3e;
+            }
+            &-lemon{
+                background: #a1a43b;
+            }
+            &-sea-green{
+                background: #0d4c44;
+            }
+            &-baby-blue{
+                background: #79b0b7;
+            }
+            &-turquoise{
+                background: #02a19b;
+            }
+            &-sky-blue{
+                background: #417d97;
+            }
+            &-dark-blue{
+                background: #1c365b;
+            }
+            &-purple{
+                background: #42264e;
+            }
+            &-skygray{
+                background: #9d9d9d;
+            }
+            &-granite{
+                background: #6e7377;
+            }
+            &-anthracite{
+                background: #292e31;
+            }
+            &-black{
+                background: #191919;
+            }
+        }
+        .leatherette{
+            &-white{
+                background: #d7d7d7;
+            }
+            &-cream{
+                background: #e9d4b5;
+            }
+            &-camel{
+                background: #9a7c58;
+            }
+            &-brown{
+                background: #5a3427;
+            }
+            &-dark-brown{
+                background: #2e1914;
+            }
+            &-bordeaux{
+                background: #541f25;
+            }
+            &-red{
+                background: #9c1e29;
+            }
+            &-caramel{
+                background: #8f5128;
+            }
+            &-dark-green{
+                background: #191e18;
+            }
+            &-blue{
+                background: #2b4c81;
+            }
+            &-dark-blue{
+                background: #1a213d;
+            }
+            &-purple{
+                background: #361e2c;
+            }
+            &-peeble-gray{
+                background: #677077;
+            }
+            &-dark-gray{
+                background: #292e31;
+            }
+            &-black{
+                background: #13140e;
+            }
+        }
     }
     &__section-wrap-color{
         margin: 0 -7px;
