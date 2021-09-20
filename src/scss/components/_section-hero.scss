@@ -30,6 +30,17 @@
 		}
 	}
 	&__home-title{
+		font-size: 14px;
+		font-family: "open sans";
+		display: block;
+		font-weight: 400;
+		margin-bottom: 0 !important;
+		@include tabtoslide{
+			font-size: 18px;
+		}
+	}
+	&__sub-home-title{
+		color: #fff;
 		font-size: 30px;
 		@include mobile-sm{
 			font-size: 32px;
@@ -42,15 +53,6 @@
 		}
 		@include wide-screen-md{
 			font-size: 40px;
-		}
-		span{
-			font-size: 14px;
-			font-family: "open sans";
-			display: block;
-			font-weight: 400;
-			@include tabtoslide{
-				font-size: 18px;
-			}
 		}
 	}
 	&__grid {
