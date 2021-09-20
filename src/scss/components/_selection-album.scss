@@ -386,7 +386,24 @@
                 background: #02b5b2;
             }
         }
-        .liner{
+        .leather{
+            &Black{
+                background: #191919;
+            }
+            &Brown{
+                background: #5e3828;
+            }
+            &Blue{
+                background: #2a4a83;
+            }
+            &Red{
+                background: #ab2c33;
+            }
+            &White{
+                background: #efefef;
+            }
+        }
+        .linen{
             &-white{
                 background: #ecebf1;
             }
@@ -455,6 +472,32 @@
             }
             &-black{
                 background: #191919;
+            }
+        }
+        .linen{
+            &Champagne{
+                background: #ded6c1;
+            }
+            &Hazelnut{
+                background: #917b66;
+            }
+            &-light-rose{
+                background: #dd9fac;
+            }
+            &-rose{
+                background: #24292b;
+            }
+            &Red{
+                background: #a73244;
+            }
+            &-turquoise{
+                background: #31b6b3;
+            }
+            &DarkBlue{
+                background: #1e2f5b;
+            }
+            &Anthracite{
+                background: #202123;
             }
         }
         .leatherette{
