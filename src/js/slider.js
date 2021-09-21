@@ -174,7 +174,7 @@ if (document.querySelector('.swiperBigSlider')){
 /////////// slider first /////////
 
   if (document.querySelector('.update-slider-a')){ 
-    var swiperTabsControl = new Swiper(".update-slider-a", {  
+    const swiperTabsControl = new Swiper(".update-slider-a", {  
       slidesPerView: 5,
       direction:'vertical',
       // cssMode: true,
@@ -183,7 +183,7 @@ if (document.querySelector('.swiperBigSlider')){
       allowTouchMove:false,
       touchStartForcePreventDefault:true,
     });
-    var swiperTabs = new Swiper(".section-hero__swiper-a", { 
+    const swiperTabs = new Swiper(".section-hero__swiper-a", { 
         pagination: {
           el: ".section-hero__swiper-pagination",
           clickable: true,
@@ -195,15 +195,16 @@ if (document.querySelector('.swiperBigSlider')){
   }
   
   // (function(){
-  //   const swiperTabsControl = document.querySelector(".swiper-slide");
+  //   const swiperTabsControl = document.querySelector(".update-slider-a");
+  //   const swiperTabsControlImg = document.querySelector(".section-hero__tab-activator");
+
   //   swiperTabsControl.addEventListener('mouseover', function () {
   //     setTimeout(() => {
   //       let clickEvent = new Event('click'); 
-  //       swiperTabsControl.dispatchEvent(clickEvent); 
-  //       console.log(this);
+  //       swiperTabsControlImg.dispatchEvent(clickEvent); 
+  //       console.log();
   //     }, 1000);
   //   });
-
   // }());
 /////////// slider second /////////
   if (document.querySelector('.update-slider-b')){ 
