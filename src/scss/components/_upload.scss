@@ -86,7 +86,7 @@
             }
         }
         .figure-webp{
-            position: static;
+            // position: static;
         }
         .section-hero__swiper{
             margin-bottom: 0;
@@ -116,11 +116,11 @@
             width: 15%;
             .section-hero__tab-activator{
                 &:last-child{
-                     margin-bottom: 0 !important;
+                    margin-bottom: 0 !important;
                 }
             }
             .swiper-slide-thumb-active figure{
-                border: 0 !important;
+                // border: 0 !important;
             }
         }
     }
