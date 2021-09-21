@@ -126,12 +126,14 @@ window.addEventListener("load", function () {
     if (!(e.target.matches('.popup-help *'))) {
       PopupHelp.classList.remove('active');
       btnPopupHelp.classList.remove('active');
+      body.classList.remove('overflow');
       document.body.removeEventListener('click', helpPopupClose)
     }
   }
   if (btnPopupHelp && PopupHelp) {
     btnPopupHelp.addEventListener('click', function (e) {
       e.stopPropagation()
+      body.classList.add('overflow');
       PopupHelp.classList.toggle('active');
       btnPopupHelp.classList.toggle('active');
       document.body.addEventListener('click', helpPopupClose);
@@ -216,15 +218,21 @@ window.addEventListener("load", function () {
 /////// madal login:hover
 (function(){
   const focusLogin = document.querySelector('#user-email');
+  const focusLoginPass = document.querySelector('#user-password');
   const focusModuleLogin = document.querySelector('#dropdownMenu2');
 
+  
   if(focusLogin && focusModuleLogin){
     focusLogin.addEventListener('focus', function(){
       focusModuleLogin.classList.add('active');
     })
-  }
-  if(focusLogin && focusModuleLogin){
     focusLogin.addEventListener('blur', function(){
+      focusModuleLogin.classList.remove('active');
+    })
+    focusLoginPass.addEventListener('focus', function(){
+      focusModuleLogin.classList.add('active');
+    })
+    focusLoginPass.addEventListener('blur', function(){
       focusModuleLogin.classList.remove('active');
     })
   }
