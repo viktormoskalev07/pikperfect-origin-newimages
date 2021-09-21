@@ -178,7 +178,7 @@ if (document.querySelector('.swiperBigSlider')){
       slidesPerView: 5,
       direction:'vertical',
       // cssMode: true,
-      spaceBetween: 16,
+      spaceBetween: 11,
       draggable: true,
       allowTouchMove:false,
       touchStartForcePreventDefault:true,
