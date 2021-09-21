@@ -149,7 +149,7 @@ if (document.querySelector('.section-hero__tab-activators')&&!document.querySele
   var swiperTabs = new Swiper(".section-hero__swiper", { 
       pagination: {
         el: ".section-hero__swiper-pagination",
-        clickable: true
+        clickable: true,
       } ,  
       thumbs: {
         swiper: swiperTabsControl
@@ -172,26 +172,39 @@ if (document.querySelector('.swiperBigSlider')){
   }
  
 /////////// slider first /////////
+
   if (document.querySelector('.update-slider-a')){ 
     var swiperTabsControl = new Swiper(".update-slider-a", {  
       slidesPerView: 5,
       direction:'vertical',
       // cssMode: true,
       spaceBetween: 16,
-      allowTouchMove:false, 
+      draggable: true,
+      allowTouchMove:false,
       touchStartForcePreventDefault:true,
     });
-    
     var swiperTabs = new Swiper(".section-hero__swiper-a", { 
         pagination: {
           el: ".section-hero__swiper-pagination",
-          clickable: true
+          clickable: true,
         } ,  
         thumbs: {
           swiper: swiperTabsControl
         } 
       });  
   }
+  
+  // (function(){
+  //   const swiperTabsControl = document.querySelector(".swiper-slide");
+  //   swiperTabsControl.addEventListener('mouseover', function () {
+  //     setTimeout(() => {
+  //       let clickEvent = new Event('click'); 
+  //       swiperTabsControl.dispatchEvent(clickEvent); 
+  //       console.log(this);
+  //     }, 1000);
+  //   });
+
+  // }());
 /////////// slider second /////////
   if (document.querySelector('.update-slider-b')){ 
     var swiperTabsControl = new Swiper(".update-slider-b", {  

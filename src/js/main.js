@@ -133,12 +133,15 @@ window.addEventListener("load", function () {
   if (btnPopupHelp && PopupHelp) {
     btnPopupHelp.addEventListener('click', function (e) {
       e.stopPropagation()
-      body.classList.add('overflow');
+      
       PopupHelp.classList.toggle('active');
       btnPopupHelp.classList.toggle('active');
       document.body.addEventListener('click', helpPopupClose);
       if (window.matchMedia("(min-width: 768px)").matches) {
         PopuopHelpName.focus();
+      }
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        body.classList.toggle('overflow');
       }
     })
   }
