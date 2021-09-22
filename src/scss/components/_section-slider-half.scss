@@ -163,9 +163,10 @@
     &__button{
         margin: 48px 0 15px;
         @include tablet{
-            margin: 0 0 24px;
+            margin: 0 0 20px;
         }
         .button{
+            min-width: 270px;
             width: 100%;
             @include mobile-lg{
                 width: auto;
@@ -210,6 +211,15 @@
             @include tablet{
                 display: block;
             }
+        }
+    }
+    &__down-text{
+        max-width: 270px;
+        text-align: center;
+        font-weight: 500;
+        color: #888;
+        p{
+            margin: 0 auto;
         }
     }
 }
