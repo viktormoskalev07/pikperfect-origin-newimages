@@ -176,8 +176,12 @@
             }
         }
         &_big{
+            padding: 26px 10px !important;
+            @media screen and(min-width: 1024px) {
+                padding: 16px !important;
+            }
             @media screen and(min-width: 1265px){
-                padding: 26px 10px !important;
+                padding: 26px 16px !important;
             }
         }
     }
