@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="description"
-		content="Answers to frequently asked questions about your account and order details."> 
+	<meta name="description" 
+		content="Upload your photos and let our design team create a stunning wedding album or photo book for you."> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Account & Orders | PikPerfect</title>  
+	<title>Start Project | PikPerfect</title>  
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="icon" href="./images/favicon.png" sizes="32x32">
 	<style>
@@ -23,16 +23,13 @@
 		})
 	</script> 
  
-	  <div class="pre-header">
-    <div class="container">
-      <div class="promobar"> 
-        <span id="promo-place-text" class="promobar-hide">  </span> 
-        <strong id="promo-place-code" class="promobar-hide">  </strong>
-      </div>
-    </div>
-  </div> 
-<!-- xhr in main js -->
-<header class="header">
+	<!-- xhr in main js -->
+<style>
+  #onlyStatic{
+    position: static;
+  }
+</style>
+<header id="onlyStatic" class="header">
   <a href="index.html" class="logo">
     <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
   </a>
@@ -236,9 +233,9 @@
         </div>
       </div>
     </div>
-    <a href="14.0-upload-page.html" class="button button__start">EXPLORE RANGE</a>
+    <a href="14.0-upload-page.html" class="button button__start">start now</a>
     <div class="menu-fix"></div>
-      <a href="#" class="btn btn-blue">EXPLORE RANGE</a>
+      <a href="#" class="btn btn-blue">start now</a>
     </div>
   </div>
 </header> 
@@ -600,7 +597,7 @@
                     <h2 class="upload__title">Album type</h2>
                     <!-- Button modal -->
                     <button type="button" class="link" data-toggle="modal" id="modalVideo"><img src="./images/ic_circle_play.svg" alt="ic_circle_play">Compare albums</button>
-                    <!-- Modal -->
+                    <!-- Modal --> 
                     <div class="modal-changes">
                         <div class="modal-changes__wrap">
                             <div class="modal-changes__content">
@@ -608,9 +605,31 @@
                                     <img src="./images/ic_x.svg" alt="close">
                                 </button>
                                 <div class="modal-changes__body">
-                                    <video controls="controls" poster="./images/towebp/14.0/placeholder-video.jpg">
-                                        <source src="" >
-                                    </video>
+                                    <div class="lazy-video">
+    <div class="lazy-video__preloader">
+        <svg class= "lazy-video__preloader-svg" width="60" height="60" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#8ba4b4">
+            <g fill="none" fill-rule="evenodd">
+                <g transform="translate(1 1)" stroke-width="2">
+                    <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                    <path d="M36 18c0-9.94-8.06-18-18-18">
+                        <animateTransform
+                            attributeName="transform"
+                            type="rotate"
+                            from="0 18 18"
+                            to="360 18 18"
+                            dur="1s"
+                            repeatCount="indefinite"/>
+                    </path>
+                </g>
+            </g>
+        </svg>
+    </div> 
+         <div class= "lazy-video__item " ><iframe frameborder="0" class="lazy-video__activator-js"
+            data-src= "https://player.vimeo.com/video/569987859?background=1 "
+            allow="autoplay; fullscreen; picture-in-picture" 
+            title="Premium Photo Albums - PikPerfect"></iframe>  
+        </div> 
+</div> 
                                 </div>
                             </div>
                         </div>
@@ -642,14 +661,6 @@
                         <p class="upload__album-info">Digitally printed book-bound pages, 244 page maximum</p>
                     </div>
                 </div>
-                <label class="custom-checkbox">
-                    <input class="custom-checkbox__input" type="checkbox" tabindex="-1">
-                    <span class="custom-checkbox__checkmark" tabindex="0">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <rect style="fill:transparent;" width="24" height="24"></rect><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"></path>
-                      </svg>
-                    </span>Not sure, please recommend.
-                </label>
             </div>
         </div>
     </section>
@@ -691,30 +702,62 @@
                     <div class="selection-album__section">
                         <h2 class="selection-album__title-section">Album Size</h2>
                         <div class="selection-album__album-size-wrap">
-                            <div class="selection-album__album-size">
-                                <div class="selection-album__img-album">
-                                    <img src="./images/towebp/14.0/20x20cm.svg" alt="20X20cm">
-                                </div>
-                                <p>20 X 20 cm</p>
-                            </div>
-                            <div class="selection-album__album-size">
-                                <div class="selection-album__img-album">
-                                    <img src="./images/towebp/14.0/27x20cm.svg" alt="27X20cm">
-                                </div>
-                                <p>27 X 20 cm</p>
-                            </div>
-                            <div class="selection-album__album-size bestseller active">
-                                <div class="selection-album__img-album">
-                                    <img src="./images/towebp/14.0/30x30cm.svg" alt="30X30cm">
-                                </div>
-                                <p>30 X 30 cm</p>
-                            </div>
-                            <div class="selection-album__album-size">
-                                <div class="selection-album__img-album">
-                                    <img src="./images/towebp/14.0/40x30cm.svg" alt="40X30cm">
-                                </div>
-                                <p>40 X 30 cm</p>
-                            </div>
+                            <div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_1.svg" alt="42x30">
+    </figure>
+    <p>42x30</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_2.svg" alt="30x30">
+    </figure>
+    <p>30x30</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_3.svg" alt="21x30">
+    </figure>
+    <p>21x30</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_4.svg" alt="30x21">
+    </figure>
+    <p>30x21</p>
+</div><div class="selection-album__album-size bestseller active">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_5.svg" alt="21x21">
+    </figure>
+    <p>21x21</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_6.svg" alt="15x15">
+    </figure>
+    <p>15x15</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_7.svg" alt="21x15">
+    </figure>
+    <p>21x15</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_8.svg" alt="20x20">
+    </figure>
+    <p>20x20</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_9.svg" alt="30x30">
+    </figure>
+    <p>30x30</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_10.svg" alt="40x30">
+    </figure>
+    <p>40x30</p>
+</div><div class="selection-album__album-size ">
+    <figure class="selection-album__img-album">
+        <img src="./images/size-albums/image_book_11.svg" alt="27x20">
+    </figure>
+    <p>27x20</p>
+</div>
                         </div>
                     </div>
                     <div class="selection-album__section">
@@ -734,55 +777,179 @@
                     <div class="selection-album__section">
                         <h2 class="selection-album__title-section">Linen Color</h2>
                         <div class="selection-album__section-wrap selection-album__section-wrap-color">
-                            <div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
-</div><div class="selection-album__color" data-title="Champagne">
-    <img src="./images/towebp/14.0/linen_color_21.png" alt="linen_color_21">
+                            <div class="selection-album__color " data-title="White">
+    <div class="color leather-white"></div>
+</div><div class="selection-album__color active" data-title="Cream">
+    <div class="color leather-cream"></div>
+</div><div class="selection-album__color " data-title="Brown">
+    <div class="color leather-brown"></div>
+</div><div class="selection-album__color " data-title="Bordeaux">
+    <div class="color leather-bordeaux"></div>
+</div><div class="selection-album__color " data-title="Black">
+    <div class="color leather-black"></div>
+</div><div class="selection-album__color " data-title="Yellow">
+    <div class="color leather-yellow"></div>
+</div><div class="selection-album__color " data-title="Red">
+    <div class="color leather-red"></div>
+</div><div class="selection-album__color " data-title="Pink">
+    <div class="color leather-pink"></div>
+</div><div class="selection-album__color " data-title="Purple">
+    <div class="color leather-purple"></div>
+</div><div class="selection-album__color " data-title="Blue">
+    <div class="color leather-blue"></div>
+</div><div class="selection-album__color " data-title="Dark-blue">
+    <div class="color leather-dark-blue"></div>
+</div><div class="selection-album__color " data-title="Dark-green">
+    <div class="color leather-dark-green"></div>
+</div><div class="selection-album__color " data-title="Turquoise">
+    <div class="color leather-turquoise"></div>
+</div><div class="selection-album__color " data-title="Black">
+    <div class="color leatherBlack"></div>
+</div><div class="selection-album__color " data-title="Brown">
+    <div class="color leatherBrown"></div>
+</div><div class="selection-album__color " data-title="Blue">
+    <div class="color leatherBlue"></div>
+</div><div class="selection-album__color " data-title="Red">
+    <div class="color leatherRed"></div>
+</div><div class="selection-album__color " data-title="White">
+    <div class="color leatherWhite"></div>
+</div>
+                            <div class="selection-album__color " data-title="White">
+    <div class="color linen-white"></div>
+</div><div class="selection-album__color " data-title="Champagne">
+    <div class="color linen-champagne"></div>
+</div><div class="selection-album__color " data-title="Cappucino">
+    <div class="color linen-cappucino"></div>
+</div><div class="selection-album__color " data-title="Beige">
+    <div class="color linen-beige"></div>
+</div><div class="selection-album__color " data-title="Hazelnut">
+    <div class="color linen-hazelnut"></div>
+</div><div class="selection-album__color " data-title="Chocolate">
+    <div class="color linen-chocolate"></div>
+</div><div class="selection-album__color " data-title="Light-rose">
+    <div class="color linen-light-rose"></div>
+</div><div class="selection-album__color " data-title="Rose">
+    <div class="color linen-rose"></div>
+</div><div class="selection-album__color " data-title="Pink">
+    <div class="color linen-pink"></div>
+</div><div class="selection-album__color " data-title="Bordeaux">
+    <div class="color linen-bordeaux"></div>
+</div><div class="selection-album__color " data-title="Red">
+    <div class="color linen-red"></div>
+</div><div class="selection-album__color " data-title="Pumpkin">
+    <div class="color linen-pumpkin"></div>
+</div><div class="selection-album__color " data-title="Lemon">
+    <div class="color linen-lemon"></div>
+</div><div class="selection-album__color " data-title="Sea-green">
+    <div class="color linen-sea-green"></div>
+</div><div class="selection-album__color " data-title="Baby-blue">
+    <div class="color linen-baby-blue"></div>
+</div><div class="selection-album__color " data-title="Turquoise">
+    <div class="color linen-turquoise"></div>
+</div><div class="selection-album__color " data-title="Sky-blue">
+    <div class="color linen-sky-blue"></div>
+</div><div class="selection-album__color " data-title="Dark-blue">
+    <div class="color linen-dark-blue"></div>
+</div><div class="selection-album__color " data-title="Purple">
+    <div class="color linen-purple"></div>
+</div><div class="selection-album__color " data-title="Skygray">
+    <div class="color linen-skygray"></div>
+</div><div class="selection-album__color " data-title="Granite">
+    <div class="color linen-granite"></div>
+</div><div class="selection-album__color " data-title="Anthracite">
+    <div class="color linen-anthracite"></div>
+</div><div class="selection-album__color " data-title="Black">
+    <div class="color linen-black"></div>
+</div><div class="selection-album__color " data-title="Champagne">
+    <div class="color linenChampagne"></div>
+</div><div class="selection-album__color " data-title="Hazelnut">
+    <div class="color linenHazelnut"></div>
+</div><div class="selection-album__color " data-title="Red">
+    <div class="color linenRed"></div>
+</div><div class="selection-album__color " data-title="Turquoise">
+    <div class="color linen-turquoise"></div>
+</div><div class="selection-album__color " data-title="DarkBlue">
+    <div class="color linenDarkBlue"></div>
+</div><div class="selection-album__color " data-title="Anthracite">
+    <div class="color linenAnthracite"></div>
+</div>
+                            <div class="selection-album__color " data-title="White">
+    <div class="color leatherette-white"></div>
+</div><div class="selection-album__color " data-title="Cream">
+    <div class="color leatherette-cream"></div>
+</div><div class="selection-album__color " data-title="Camel">
+    <div class="color leatherette-camel"></div>
+</div><div class="selection-album__color " data-title="Brown">
+    <div class="color leatherette-brown"></div>
+</div><div class="selection-album__color " data-title="Dark-brown">
+    <div class="color leatherette-dark-brown"></div>
+</div><div class="selection-album__color " data-title="Bordeaux">
+    <div class="color leatherette-bordeaux"></div>
+</div><div class="selection-album__color " data-title="Red">
+    <div class="color leatherette-red"></div>
+</div><div class="selection-album__color " data-title="Caramel">
+    <div class="color leatherette-caramel"></div>
+</div><div class="selection-album__color " data-title="Dark-green">
+    <div class="color leatherette-dark-green"></div>
+</div><div class="selection-album__color " data-title="Blue">
+    <div class="color leatherette-blue"></div>
+</div><div class="selection-album__color " data-title="Dark-blue">
+    <div class="color leatherette-dark-blue"></div>
+</div><div class="selection-album__color " data-title="Purple">
+    <div class="color leatherette-purple"></div>
+</div><div class="selection-album__color " data-title="Peeble-gray">
+    <div class="color leatherette-peeble-gray"></div>
+</div><div class="selection-album__color " data-title="Dark-gray">
+    <div class="color leatherette-dark-gray"></div>
+</div><div class="selection-album__color " data-title="Black">
+    <div class="color leatherette-black"></div>
 </div>
                         </div>
                     </div>
                     <div class="selection-album__section">
-                        <h2 class="selection-album__title-section">Cover Design <img src="./images/ic_info.svg" alt="ic_info"></h2>
+                        <div class="selection-album__wrap-title">
+                            <h2 class="selection-album__title-section">Cover Design</h2>
+                            <div class="selection-album__icon-info">
+                                <img class="icon-info icon-info-coverDesign" src="./images/ic_info.svg" alt="ic_info">
+                                <div class="selection-album__modal modal-coverDesign">
+                                    <div class="selection-album__modal-content">
+                                        <button class="popup__close close-modal-info-coverDesign">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                              <rect fill="transparent" width="24" height="24"></rect>
+                                              <g style="stroke:#2f353a;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" transform="translate(-0.662 -0.662)">
+                                              <line x1="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              <line x2="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              </g>
+                                            </svg>
+                                          </button>
+                                        <h2 class="title">Cover Design</h2>
+                                        <div class="selection-album__modal-box">
+    <p class="box-title">Standard Embossed Titles</p>
+    <p>are available in either Folio or Bodoni fonts. Both fonts are offered in two different sizes, and in either CAPS or lowercase letters. These titles can have a maximum of 25 characters.</p>
+</div><div class="selection-album__modal-box">
+    <p class="box-title">Designer Embossed Titles</p>
+    <p>are pre-designed photo album title designs that can be used in conjunction with a single line of standard embossed text of maximum 20 characters.</p>
+</div><div class="selection-album__modal-box">
+    <p class="box-title">Custom Embossed Titles and Logos</p>
+    <p>allow you to personalize your album cover with a custom foil title. Send us your design or work with our team to create your own custom photo album title, from scratch.</p>
+</div><div class="selection-album__modal-box">
+    <p class="box-title">Laser Etched Titles</p>
+    <p>offer the flexibility to use virtually any design and font combination to create your custom title design. With laser etching, the heat from the laser is used to create the desired pattern on the cover fabric.</p>
+</div><div class="selection-album__modal-box">
+    <p class="box-title">Cameo Windows</p>
+    <p>allows you to enjoy the benefits of a luxurious leather or fabric album cover, while being able to also personalize it with your favorite photo.</p>
+</div><div class="selection-album__modal-box">
+    <p class="box-title">Glass Covers</p>
+    <p>features a glass album cover, paired with your choice of leather or fabric wrapped stylishly around the back.</p>
+</div><div class="selection-album__modal-box">
+    <p class="box-title">Imagewrap Photo Covers</p>
+    <p>wrap your favorite photos across the front cover, back cover, and spine. Printed with full-bleed on a single sheet of photo paper with a matte finish.</p>
+</div>
+                                    </div>
+                                    <div class="modal-shadow modal-shadow-coverDesign"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="selection-album__section-wrap">
                             <div class="selection-album__block selection-album__block-3 selection-album__block-img active">
     <p>Simple text <span>Included</span></p>
@@ -820,32 +987,32 @@
                     <div class="selection-album__section">
                         <h2 class="selection-album__title-section">Foil Color</h2>
                         <div class="selection-album__section-wrap">
-                            <div class="selection-album__foil-color" data-title="Champagne">
+                            <div class="selection-album__foil-color " data-title="Champagne">
     <div class="img-foil">
         <img src="./images/towebp/14.0/foil_color_gold.svg" alt="foil_color_gold">
     </div>
     <p>Gold</p>
-</div><div class="selection-album__foil-color" data-title="Champagne">
+</div><div class="selection-album__foil-color active" data-title="Champagne">
     <div class="img-foil">
         <img src="./images/towebp/14.0/foil_color_silver.svg" alt="foil_color_silver">
     </div>
     <p>Silver</p>
-</div><div class="selection-album__foil-color" data-title="Champagne">
+</div><div class="selection-album__foil-color " data-title="Champagne">
     <div class="img-foil">
         <img src="./images/towebp/14.0/foil_color_copper.svg" alt="foil_color_copper">
     </div>
     <p>Copper</p>
-</div><div class="selection-album__foil-color" data-title="Champagne">
+</div><div class="selection-album__foil-color " data-title="Champagne">
     <div class="img-foil">
         <img src="./images/towebp/14.0/foil_color_black.svg" alt="foil_color_black">
     </div>
     <p>Black</p>
-</div><div class="selection-album__foil-color" data-title="Champagne">
+</div><div class="selection-album__foil-color " data-title="Champagne">
     <div class="img-foil">
         <img src="./images/towebp/14.0/foil_color_white.svg" alt="foil_color_white">
     </div>
     <p>White</p>
-</div><div class="selection-album__foil-color" data-title="Champagne">
+</div><div class="selection-album__foil-color " data-title="Champagne">
     <div class="img-foil">
         <img src="./images/towebp/14.0/foil_color_gray.svg" alt="foil_color_gray">
     </div>
@@ -854,7 +1021,33 @@
                         </div>
                     </div>
                     <div class="selection-album__section">
-                        <h2 class="selection-album__title-section">Paper Type <img src="./images/ic_info.svg" alt="ic_info"></h2>
+                        <div class="selection-album__wrap-title">
+                            <h2 class="selection-album__title-section">Paper Type</h2>
+                            <div class="selection-album__icon-info">
+                                <img class="icon-info icon-info-paperType" src="./images/ic_info.svg" alt="ic_info">
+                                <div class="selection-album__modal modal-paperType">
+                                    <div class="selection-album__modal-content">
+                                        <button class="popup__close close-modal-info-paperType">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                              <rect fill="transparent" width="24" height="24"></rect>
+                                              <g style="stroke:#2f353a;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" transform="translate(-0.662 -0.662)">
+                                              <line x1="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              <line x2="14" y2="14" transform="translate(5.662 5.662)"></line>
+                                              </g>
+                                            </svg>
+                                          </button>
+                                        <h2 class="title">Paper Type</h2>
+                                        <p>We offer a range of different paper types and finishes, to meet all of your photo book printing needs. Our layflat albums are all developed on silver halide papers which offer very accurate skin tones, greater depth, and an increased color range and vibrancy. Our photo books are produced on HP Indigo Digital Presses, and while these offer incredible detail and color range for digital print, they will not have the same detail or depth as a silver halide photo print. The advantage of digitally printed papers is that they are less sensitive to moisture.</p>
+                                        <h3 class="sub-title">Premium Layflat Albums</h3>
+                                        <p><span>Fujicolor Crystal Archive Digital Paper Type DPII</span>: Created specifically for professional use, this Silver halide paper offers the widest color gamut, maximum density for deep blacks and excellent color saturation. The <span>Pearl Matte</span> finish is the most popular option as it offers some shine and good contrast. The <span>Gloss</span> finish offers more sheen which can make the images look slightly brighter and with a higher color saturation, but it's also more reflective.</p>
+                                        <p><span>Fujicolor Crystal Archive Art Velvet</span>: Aimed at the Fine Art Printing market, this Silver halide paper is professionally coated with a zero-reflective top layer that creates a stunningly soft and deep-matte effect. The velvet surface appeals to the sense of touch and offers the ultimate, deep-matte experience. Please note, the colors will not be as intense as the Fuji Pearl Matte or Gloss papers.</p>
+                                        <h3 class="sub-title">Layflat Albums</h3>
+                                        <p><span>Fujicolor Crystal Archive Album Paper</span>: Fuji’s consumer version of the above, this Silver halide paper is specially designed for layflat photo album printing. This paper delivers enhanced color reproduction and excellent image stability. The <span>Pearl Matte</span> finish is the most popular option as it offers some shine and good contrast. The Gloss finish offers more sheen which can make the images look slightly brighter and with a higher color saturation, but it's also more reflective.</p>
+                                    </div>
+                                    <div class="modal-shadow modal-shadow-paperType"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="selection-album__section-wrap mt-45">
                             <div class="selection-album__block selection-album__block-3 active bestseller">
     <p>Fuji Pearl Matt <span></span></p>
@@ -877,8 +1070,18 @@
                                 </select>
                                 <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
                             </div>
-                            <p>We recommend using 100-150 photos in a 60 page album.<br> Additional pages can be added or removed during your album design.</p>
+                            <p>We recommend using 100-150 photos in a 60-page album.<br> Additional pages can be added or removed during your album design.</p>
                         </div>
+                    </div>
+                    <div class="selection-album__section">
+                        <label class="custom-checkbox" style="cursor: pointer;">
+                            <input class="custom-checkbox__input" type="checkbox" tabindex="-1">
+                            <span class="custom-checkbox__checkmark" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <rect style="fill:transparent;" width="24" height="24"></rect><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"></path>
+                            </svg>
+                            </span>Too many choice? Upload photos and decide later.
+                        </label>
                     </div>
                     <div class="selection-album__section">
                         <a href="#" class="button">NEXT: UPLOAD PHOTOS</a>
@@ -937,6 +1140,9 @@
             ModalChangesOpen.classList.remove('open');
             })
         }
+        });
+        ModalChangesOpen.addEventListener('click', function(){
+            ModalChangesOpen.classList.remove('open');
         })
     }
     }());
@@ -1111,6 +1317,8 @@
     <li><a style="color:blue" href="./2.5-travel-photo-books.html">2.5</a></li>
     <li><a style="color:green" href="./2.6-baby-photo-books.html">2.6</a></li>  
     <li><a style="color:rgb(174, 0, 255)" href="./2.7-cookbook-recipe-photobooks.html">2.7</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./2.8-leather-photo-albums.html">2.8</a></li>
+
     <li><a style="color:rgb(87, 35, 57)" href="./2.9-engagement-photo-book.html">2.9</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./2.10-wedding-guest-books.html">2.10</a></li>
     <li><a style="color:rgb(64, 161, 179)" href="./2.11-pet-photo-books.html">2.11</a></li>
@@ -1149,8 +1357,10 @@
     <li><a style="color:rgb(87, 35, 57)" href="./14.0-upload-page.html">14.0</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.1.html">14.1</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.2.html">14.2</a></li>
-    <li><a style="color:rgb(255, 0, 0)" href="./14.3.html">14.3</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./14.3.html">14.3</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./15.0-myprofile.html">15.0</a></li>   
+    <li><a style="color:rgb(255, 166, 0)" href="./16.0-photo-album-boxes.html">16.0</a></li>   
+    <li><a style="color:rgb(255, 166, 0)" href="./16.1-parent-albums.html">16.1</a></li>   
 </ul>
 
 </div>
@@ -1193,11 +1403,11 @@
     <form action="#" class="tab-content__form">
       <div class="tab-content__row50">
         <div class="tab-content__input">
-          <label for="loginEmail">Email *</label>
+          <label for="loginEmail">Email</label>
           <input type="email" name="email" id="loginEmail" required>
         </div>
         <div class="tab-content__input">
-          <label for="login-password">Password *</label>
+          <label for="login-password">Password</label>
           <div class="tab-content__pass">
             <input type="password" name="password" id="login-password" required autocomplete="off">
             <span class="show-hide-password">
@@ -1358,7 +1568,7 @@
         <label for="popup-HelpMessage">Your Message</label>
         <textarea name="message" class="tab-content__textarea" cols="30" rows="8" id="popup-HelpMessage"></textarea>
       </div>
-      <button class="popup-help__button button" type="submit">send a message</button>
+      <button class="popup-help__button button" type="submit">send message</button>
     </form>  
   </div>
 </div>

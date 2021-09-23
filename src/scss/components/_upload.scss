@@ -19,7 +19,7 @@
             border-radius: 50px;
             top: -50px;
             right: 0;
-            @include desktop-sm{
+            @include wide-screen-sm{
                 top: 0;
                 right: -80px;
                 width: 40px;
@@ -31,32 +31,19 @@
             }
         }
         &__wrap{
-            max-width: 720px;
-            max-height: 405px;
-            height: 100%;
+            max-width: 1000px;
+            max-height: 550px;
         }
         &__content{
             padding: 0;
-            height: 100%;
             border-radius: 7px;
-            video{
+            .lazy-video {
                 position: relative;
-                width: 100%;
-                height: 100%;
-            }
-            video[poster]{
-                max-width: 720px;
-                max-height: 405px;
-                object-fit: cover;
-            }
-            video::after{
-                position: absolute;
-                background: url('../images/ic_play.svg');
-                width: 50px;
-                height: 50px;
-                top: 0;
-                left: 0;
-                content: '';
+                height: 0;
+                padding-bottom: calc(405% / 720 *100);
+                @media screen and(max-height: 450px) {
+                    padding-bottom: calc(205% / 520 *100);
+                }
             }
         }
         &__body{
@@ -99,7 +86,7 @@
             }
         }
         .figure-webp{
-            position: static;
+            // position: static;
         }
         .section-hero__swiper{
             margin-bottom: 0;
@@ -107,6 +94,9 @@
         .section-hero__swiper{
             max-width: none;
             max-height: 550px;
+            @include desktop-sm{
+                max-height: none;
+            }
         }
         .swiper-pagination-bullet{
             width: 12px;
@@ -124,6 +114,14 @@
         }
         .section-hero__tab-activators{
             width: 15%;
+            .section-hero__tab-activator{
+                &:last-child{
+                    margin-bottom: 0 !important;
+                }
+            }
+            .swiper-slide-thumb-active figure{
+                // border: 0 !important;
+            }
         }
     }
     &__wrap-video{
@@ -240,281 +238,5 @@
     }
     &__album-info{
         font-size: 14px;
-    }
-}
-
-.selection-album{
-    margin: 64px 0;
-    @include tablet{
-        margin: 70px 0;
-    } 
-    &__wrap{
-        
-        @include desktop-sm{
-            display: flex;
-            align-items: flex-start;
-            position: relative;
-        }
-    }
-    &__total{
-        @include desktop-sm{
-            width: 50%;
-            position: sticky;
-            top: 20px;
-        }
-    }
-    &__total-wrap{
-        margin: 0 auto;
-        max-width: 396px;
-        margin-bottom: 32px;
-        @include tablet{
-            margin: 0 auto;
-        }
-    }
-    &__img{
-        margin-bottom: 16px;
-        @include tablet{
-            margin-bottom: 24px;
-        }
-    }
-    &__img-album{
-        margin-bottom: 10px;
-    }
-    &__complication{
-        @include desktop-md{
-            width: 50%;
-        }
-    }
-    &__price-total{
-        font-size: 24px;
-        font-weight: 600;
-        margin-bottom: 4px;
-    }
-    &__price{
-        font-size: 14px;
-        margin-bottom: 0;
-    }
-    &__title-section{
-        font-size: 24px;
-        margin-bottom: 11px;
-    }
-    &__section{
-        max-width: 600px;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        @include tablet{
-            margin-bottom: 35px;
-        }
-        @include desktop-sm{
-            margin-left: 30px;
-        }
-        .button{
-            width: 100%;
-            @include mobile-lg{
-                width: auto;
-            }
-        }
-        .arrow-down{
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            top: 14px;
-            right: 10px;
-        }
-        .form-control{
-            max-width: 190px;
-            border-radius: 0;
-            border: 1px solid #575D6180;
-            padding: 12px 15px;
-            height: auto;
-            margin-bottom: 16px;
-            appearance: none;
-            width: 100%;
-            &__select{
-                width: 50%;
-                position: relative;
-                max-width: 190px;
-            }
-        }
-    }
-    &__section-wrap{
-        display: flex;
-        flex-wrap: wrap;
-        &.mt-45{
-            margin-top: 45px;
-        }
-    }
-    &__block{
-        width: 46.5%;
-        padding: 15px 10px;
-        border: 1px solid #575D614D;
-        text-align: center;
-        cursor: pointer;
-        transition: .3s;
-        font-weight: 400;
-        margin: 4px;
-        @include tablet{
-            padding: 17px 10px;
-        }
-        @include tabtoslide{
-            width: 23.5%;
-        }
-        p{
-            margin-bottom: 0;
-        }
-        &.active{
-            background: #70707026;
-        }
-        &:hover{
-            background: #70707015;
-        }
-        &-3{
-            width: 46.5%;
-            // margin-top: 25px;
-            position: relative;
-            @include desktop-md{
-                max-width: 200px;
-            }
-            @include tabtoslide{
-                max-width: 190px;
-            }
-            span{
-                display: block;
-                font-size: 14px;
-                font-weight: 300;
-            }
-            
-        }
-        &-img{
-            width: 100%;
-            margin-top: 0;
-            padding: 10px;
-            &:hover{ 
-                .img-album{
-                    display: block;
-                }
-            }
-            .img-album{
-                display: none;
-                position: absolute;
-                width: 200px;
-                height: 200px;
-                top: 90px;
-                left: -5px;
-                z-index: 1;
-                padding: 25px;
-                border: 1px solid #B7B7B7;
-                background: #fff;
-                animation: coverDesign .2s;
-            }
-        }
-    }
-    &__album-size{
-        cursor: pointer;
-        position: relative;
-        transition: .3s;
-        margin: 0 8px 10px;
-        @include tablet{
-            margin: 0 10px 0px;
-        }
-        @include tabtoslide{
-            margin-bottom: 0;
-        }
-        &.active{
-            img{
-                background: #70707026;
-            }
-        }
-        &:hover{
-            img{
-                background: #70707015;
-            }
-        }
-        &.bestseller{
-            margin-top: 35px;
-        }
-        p{
-            text-align: center;
-            margin-bottom: 0;
-        }
-    }
-    &__album-size-wrap{
-        display: flex;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        margin: 0 -10px;
-        @include mobile-md{
-            justify-content: space-between;
-        }
-    }
-    .bestseller{
-        &::after{
-            position: absolute;
-            content: 'BESTSELLER';
-            width: 88px;
-            height: 23px;
-            top: -30px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            background: #DEB299;
-            font-size: 12px;
-            color: #fff;
-            text-align: center;
-            font-weight: 600;
-        }
-    }
-    &__color{
-        max-width: 60px;
-        max-height: 60px;
-        margin: 10px 0px;
-        padding: 5px;
-        cursor: pointer;
-        transition: .3s;
-        position: relative;
-        @include tablet{
-            margin: 15px 7px;
-        }
-        &:hover{
-            background: #70707026;
-        }
-        &:hover::after{
-            content: attr(data-title);
-            position: absolute;
-            left: -13px;
-            right: 0px;
-            bottom: -25px;
-        }
-    }
-    &__section-wrap-color{
-        margin: 0 -7px;
-    }
-    &__foil-color{
-        margin: 0 3px;
-        @include tablet{
-            margin: 0 7px;
-        }
-        .img-foil{
-            padding: 10px;
-            transition: .3s;
-            margin-bottom: 7px;
-        }
-        &:hover{
-           .img-foil{
-               background: #70707026;
-           } 
-        }
-    }
-}
-
-@keyframes coverDesign {
-    0%{
-        opacity: 0; 
-    }
-    50%{
-        opacity: .4;
-    }
-    95%{
-        opacity: 1;
     }
 }

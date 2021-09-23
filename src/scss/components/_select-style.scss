@@ -5,6 +5,9 @@
         font-size: 24px;
         margin-bottom: 10px;
     }
+    .custom-checkbox{
+        cursor: pointer;
+    }
     .description{
         text-align: center;
         max-width: 605px;
@@ -23,20 +26,48 @@
     }
     &__slider{
         position: relative;
-        max-height: 430px;
-        height: 100%;
         @include desktop-md{
-            width: 65%;
+            width: 66%;
+        }
+        .button{
+            cursor: pointer;
+            width: 100px;
+            margin: 0 auto 32px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            padding: 5px 10px;
+            font-size: 14px;
+            border: 1px solid #575D614D;
+            button{
+                margin-right: 12px;
+            }
         }
     }
     &__img{
         img{
-            max-height: 430px;
+            max-height: 170px;
             width: 100%;
             object-fit: cover;
         }
+        @include mobile-md{
+            img{
+                max-height: 250px;
+            }
+        }
+        @include mobile-lg{
+            img{
+                max-height: 350px;
+            }
+        }
+        @include tablet{
+            img{
+                max-height: 430px;
+            }
+        }
     }
     &__button-slide{
+        opacity: 0;
         width: 48px;
         height: 48px;
         background: #fff;
@@ -44,14 +75,20 @@
         text-align: center;
         border-radius: 50px;
         position: absolute;
-        transform: translate(0 , -50%);
-        top: 50%;
+        transform: translate(0 , -43%);
+        top: 43%;
         z-index: 1;
         img{
             margin: 12px;
             width: 24px;
             height: 24px;
         }
+        @include mobile-lg{
+            opacity: 1;
+        }
+    }
+    &__swiper{
+        margin-bottom: 16px;
     }
     &__button-next{
         right: 24px;
@@ -61,17 +98,47 @@
     }
     &__occasion{
         display: none;
-        width: 35%;
+        width: 36%;
         margin-left: 32px;
         @include desktop-md{
             display: block;
         }
         textarea{
             width: 100%;
-            height: 355px;
+            height: 357px;
             font-family: "open sans";
+            border-radius: 0;
             &:focus, &:active, &:focus-visible{
                 border-radius: 0;
+            }
+        }
+        .add-styles{
+            margin: 16px 0;
+            font-size: 12px;
+            line-height: 1;
+            @include desktop-sm{
+                margin: 10px 0;
+            }
+            img{
+                margin-right: 6px;
+            }
+        }
+        &_mobile{
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 40px;
+            @include desktop-md{
+                display: none;
+            }
+            textarea{
+                height: 200px;
+            }
+            .select-style__select{
+                display: none;
+                @include desktop-sm{
+                    display: block;
+                }
             }
         }
     }
@@ -89,10 +156,17 @@
         .form-control{
             border-radius: 0;
             appearance: none;
+            cursor: pointer;
+            background-color: transparent;
+            @include desktop-sm{
+                height: 48px;
+            }
         }
         .arrow-down{
             position: absolute;
             right: 12px;
+            cursor: pointer;
+            z-index: -1;
         }
         &_mobile{
             @include desktop-md{
@@ -103,20 +177,86 @@
     .photoselect__favorite{
         opacity: 1;
         position: static;
+        cursor: pointer;
+        pointer-events: auto;
+        circle{
+            transition: .3s;
+        }
+        &:hover{
+            circle{
+                fill: #fff;
+            } 
+        }
     }
     &__type-album{
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 15px;
+        @include tablet{
+            margin-bottom: 48px;
+        }
+        @include tabtoslide{
+            justify-content: center;
+        }
     }
     &__name-type{
-        padding: 12px 20px;
-        margin: 0 4px;
+        padding: 12px 7px;
+        margin: 0 4px 9px;
         border: 1px solid #575D614D;
+        cursor: pointer;
+        transition: .3s;
+        @include tablet{
+            margin: 0 4px 12px; 
+            padding: 16px 12px;
+        }
+        &.active{
+            background: #70707026;
+        }
+        &:hover{
+            background: #aaaaaa26;
+        }
     }
     &__block{
         width: 50%;
+        text-align: center;
+        margin-bottom: 22px;
         @include tablet{
-            width: 145px;
+            width: 25%; 
+        }
+        @include desktop-sm{
+            width: 20%;
+        }
+        @include tabtoslide{
+            width: 150px;
+            margin-bottom: 0;
+        }
+    }
+    &__checkbox{
+        text-align: center;
+        margin-bottom: 10px;
+        @include tablet{
+            margin-bottom: 24px;
+        }
+        .small-text{
+            display: block;
+            font-size: 12px;
+            @include tablet{
+                display: inline;
+            }
+        }
+    }
+    &__button{
+        text-align: center;
+        margin-bottom: 64px;
+        @include tablet{
+            margin-bottom: 110px;
+        }
+        .button{
+            width: 100%;
+            @include mobile-md{
+                width: auto;
+                min-width: 400px;
+            }
         }
     }
 }

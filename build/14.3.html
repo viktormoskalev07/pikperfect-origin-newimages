@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="description"
-		content="Answers to frequently asked questions about your account and order details."> 
+	<meta name="description" 
+		content="Upload your photos and let our design team create a stunning wedding album or photo book for you."> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Account & Orders | PikPerfect</title>  
+	<title>Start Project | PikPerfect</title>  
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="icon" href="./images/favicon.png" sizes="32x32">
 	<style>
@@ -23,16 +23,13 @@
 		})
 	</script> 
  
-	  <div class="pre-header">
-    <div class="container">
-      <div class="promobar"> 
-        <span id="promo-place-text" class="promobar-hide">  </span> 
-        <strong id="promo-place-code" class="promobar-hide">  </strong>
-      </div>
-    </div>
-  </div> 
-<!-- xhr in main js -->
-<header class="header">
+	<!-- xhr in main js -->
+<style>
+  #onlyStatic{
+    position: static;
+  }
+</style>
+<header id="onlyStatic" class="header">
   <a href="index.html" class="logo">
     <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
   </a>
@@ -236,12 +233,12 @@
         </div>
       </div>
     </div>
-    <a href="14.0-upload-page.html" class="button button__start">EXPLORE RANGE</a>
+    <a href="14.0-upload-page.html" class="button button__start">start now</a>
     <div class="menu-fix"></div>
-      <a href="#" class="btn btn-blue">EXPLORE RANGE</a>
+      <a href="#" class="btn btn-blue">start now</a>
     </div>
   </div>
-</header> 
+</header>  
   <link rel="stylesheet" href="css/upload.css">
 <main> 
 <section class="feedback">
@@ -271,10 +268,14 @@
         <h2 class="title">Follow us to keep up with the latest or ask a question</h2>
         <div class="instagram__social">
             <div class="instagram__icon">
-                <img src="./images/ic_facebook.svg" alt="ic_facebook">
+                <a href="https://www.facebook.com/PikPerfect" target="_blank">
+                    <img src="./images/ic_facebook.svg" alt="ic_facebook">
+                </a>
             </div>
             <div class="instagram__icon">
-                <img src="./images/ic_instagram.svg" alt="ic_instagram">
+                <a href="https://www.instagram.com/pikperfect_books/" target="_blank">
+                    <img src="./images/ic_instagram.svg" alt="ic_instagram">
+                </a>
             </div>
         </div>
         <div class="instagram__container" id="instagam-cont"
@@ -362,14 +363,13 @@
   </div>
 </section>
 </main>
-<!-- <script>
+<script>
     function instagramIntegration() {
         let xhr = new XMLHttpRequest();
         const container = document.querySelector("#instagam-cont");
-        const instaUserName = document.querySelectorAll(".instagram__user-name");
         const instaImg = document.querySelectorAll(".instagram__image img");
         const instaOld = document.querySelectorAll(".instagram__img__old");
-        const accountTitle = document.querySelector(".instagram__name-account");
+    
 
         if (container) {
             const instPost = container.getAttribute('data-instagram-post');
@@ -383,11 +383,9 @@
                 .then((data1) => {
                     if (data1) {
                         const posts = data1.posts
-                        accountTitle.innerHTML = "@" + posts[0].user_full_name;
                         for (let i = 0; i < 4; i++) {
                             try {
                                 const post = posts[i];
-                                instaUserName[i].innerHTML = "@" + post.user_full_name;
                                 instaImg[i].src = post.image;
                             } catch (e) {
                                 console.log(e);
@@ -402,7 +400,7 @@
     } else {
         instagramIntegration();
     }
-</script> -->
+</script>
 
 <footer class="footer">
   <div class="container">
@@ -573,6 +571,8 @@
     <li><a style="color:blue" href="./2.5-travel-photo-books.html">2.5</a></li>
     <li><a style="color:green" href="./2.6-baby-photo-books.html">2.6</a></li>  
     <li><a style="color:rgb(174, 0, 255)" href="./2.7-cookbook-recipe-photobooks.html">2.7</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./2.8-leather-photo-albums.html">2.8</a></li>
+
     <li><a style="color:rgb(87, 35, 57)" href="./2.9-engagement-photo-book.html">2.9</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./2.10-wedding-guest-books.html">2.10</a></li>
     <li><a style="color:rgb(64, 161, 179)" href="./2.11-pet-photo-books.html">2.11</a></li>
@@ -611,8 +611,10 @@
     <li><a style="color:rgb(87, 35, 57)" href="./14.0-upload-page.html">14.0</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.1.html">14.1</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.2.html">14.2</a></li>
-    <li><a style="color:rgb(255, 0, 0)" href="./14.3.html">14.3</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./14.3.html">14.3</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./15.0-myprofile.html">15.0</a></li>   
+    <li><a style="color:rgb(255, 166, 0)" href="./16.0-photo-album-boxes.html">16.0</a></li>   
+    <li><a style="color:rgb(255, 166, 0)" href="./16.1-parent-albums.html">16.1</a></li>   
 </ul>
 
 </div>
@@ -655,11 +657,11 @@
     <form action="#" class="tab-content__form">
       <div class="tab-content__row50">
         <div class="tab-content__input">
-          <label for="loginEmail">Email *</label>
+          <label for="loginEmail">Email</label>
           <input type="email" name="email" id="loginEmail" required>
         </div>
         <div class="tab-content__input">
-          <label for="login-password">Password *</label>
+          <label for="login-password">Password</label>
           <div class="tab-content__pass">
             <input type="password" name="password" id="login-password" required autocomplete="off">
             <span class="show-hide-password">
@@ -820,7 +822,7 @@
         <label for="popup-HelpMessage">Your Message</label>
         <textarea name="message" class="tab-content__textarea" cols="30" rows="8" id="popup-HelpMessage"></textarea>
       </div>
-      <button class="popup-help__button button" type="submit">send a message</button>
+      <button class="popup-help__button button" type="submit">send message</button>
     </form>  
   </div>
 </div>

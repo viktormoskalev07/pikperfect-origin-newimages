@@ -10,6 +10,9 @@
   @include desktop-md{
     padding: 125px 23px 112px;
   }
+  &_light-grey{
+    background: #EDECEE;
+  }
   &_size-s{
     padding: 61px 16px;
     @include desktop-md{
@@ -22,6 +25,9 @@
     &_max{
       max-width: 1050px;
     }
+    &_middle{
+      max-width: 985px;
+    }
   }
   &__title{
     line-height: 3.5rem;
@@ -29,6 +35,7 @@
     font-family: 'Spectral';
     font-weight: 600;
     margin-bottom: 24px;
+    line-height: 1.3;
     @include tablet{
       font-size: 42px;
       margin-bottom: 28px;
@@ -88,6 +95,9 @@
   }
   &_big-container{
     max-width: 1030px;
+  }
+  &_middle-container{
+    max-width: 990px;
   }
   &_mini-container{
     max-width: 600px;

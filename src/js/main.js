@@ -126,18 +126,27 @@ window.addEventListener("load", function () {
     if (!(e.target.matches('.popup-help *'))) {
       PopupHelp.classList.remove('active');
       btnPopupHelp.classList.remove('active');
+      body.classList.remove('overflow');
       document.body.removeEventListener('click', helpPopupClose)
     }
   }
   if (btnPopupHelp && PopupHelp) {
     btnPopupHelp.addEventListener('click', function (e) {
       e.stopPropagation()
+      
       PopupHelp.classList.toggle('active');
       btnPopupHelp.classList.toggle('active');
       document.body.addEventListener('click', helpPopupClose);
-      PopuopHelpName.focus();
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        PopuopHelpName.focus();
+      }
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        body.classList.toggle('overflow');
+      }
     })
   }
+  
+  
 }());
 
 
@@ -176,6 +185,109 @@ window.addEventListener("load", function () {
       }
     })
   }
+}());
+
+
+
+////// sidebar mobile 8.0 8.2
+(function(){
+  const filterBtn = document.querySelector('#filtrsBtn');
+  const filterSidebar = document.querySelector('.section-photobooks__sidebar');
+  const filterClose = document.querySelector('.close-filter');
+  const filterCloseApply = document.querySelector('#filtrsBtnApply');
+
+  if(filterBtn && filterSidebar){
+    filterBtn.addEventListener('click', function(){
+      filterSidebar.classList.add('open');
+      body.classList.add('overflow');
+      if(filterClose){
+        filterClose.addEventListener('click', function(){
+          filterSidebar.classList.remove('open');
+          body.classList.remove('overflow');
+
+        })
+      }
+      if(filterCloseApply){
+        filterCloseApply.addEventListener('click', function(){
+          filterSidebar.classList.remove('open');
+          body.classList.remove('overflow');
+
+        })
+      }
+    })
+  }
+}());
+
+/////// madal login:hover
+(function(){
+  const focusLogin = document.querySelector('#user-email');
+  const focusLoginPass = document.querySelector('#user-password');
+  const focusModuleLogin = document.querySelector('#dropdownMenu2');
+
+  
+  if(focusLogin && focusModuleLogin){
+    focusLogin.addEventListener('focus', function(){
+      focusModuleLogin.classList.add('active');
+    })
+    focusLogin.addEventListener('blur', function(){
+      focusModuleLogin.classList.remove('active');
+    })
+    focusLoginPass.addEventListener('focus', function(){
+      focusModuleLogin.classList.add('active');
+    })
+    focusLoginPass.addEventListener('blur', function(){
+      focusModuleLogin.classList.remove('active');
+    })
+  }
+}());
+
+
+/////// modal-info  Cover Design
+(function(){
+  const closeModalInfo = document.querySelector('.close-modal-info-coverDesign');
+  const ModalInfo = document.querySelector('.modal-coverDesign');
+  const iconModalInfo = document.querySelector('.icon-info-coverDesign');
+  const shadowClose = document.querySelector('.modal-shadow-coverDesign');
+
+  if(closeModalInfo && ModalInfo){
+    iconModalInfo.addEventListener('click', function(){
+      ModalInfo.classList.add('d-block');
+      body.classList.add('shadow');
+    });
+    closeModalInfo.addEventListener('click', function(){
+      ModalInfo.classList.remove('d-block');
+      body.classList.remove('shadow');
+    });
+    shadowClose.addEventListener('click', function(){
+      ModalInfo.classList.remove('d-block');
+      body.classList.remove('shadow');
+    });
+  }
+}());
+
+
+/////// modal-info  Paper Type
+(function(){
+  const closeModalInfo = document.querySelector('.close-modal-info-paperType');
+  const ModalInfo = document.querySelector('.modal-paperType');
+  const iconModalInfo = document.querySelector('.icon-info-paperType');
+  const shadowClose = document.querySelector('.modal-shadow-paperType');
+
+  if(closeModalInfo && ModalInfo){
+    iconModalInfo.addEventListener('click', function(){
+      ModalInfo.classList.add('d-block');
+      body.classList.add('shadow');
+    });
+    closeModalInfo.addEventListener('click', function(){
+      ModalInfo.classList.remove('d-block');
+      body.classList.remove('shadow');
+    });
+    shadowClose.addEventListener('click', function(){
+      ModalInfo.classList.remove('d-block');
+      body.classList.remove('shadow');
+    });
+  }
+  
 }());
 
 

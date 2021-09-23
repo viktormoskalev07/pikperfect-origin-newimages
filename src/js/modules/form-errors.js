@@ -19,14 +19,25 @@
     forms.forEach(form => {
         form.addEventListener('submit',function  (e) {
             e.preventDefault();
-            const items =  form.querySelectorAll('input');
-            const text = 'error message';
+            const itemName =  form.querySelectorAll('#popupHelpName');
+            const itemEmail =  form.querySelectorAll('#popupHelpEmail');
+            const itemMessage =  form.querySelectorAll('#popup-HelpMessage');
+            const textName = 'Please enter your name';
+            const textEmail = 'Please enter a valid email';
+            const textMessage = 'Please enter your message';
             const color = 'red';
-            items.forEach(item => {
-                formErr(item, text,color);
-            });    
+            itemName.forEach(item => {
+                formErr(item, textName,color);
+            });
+            itemEmail.forEach(item => {
+                formErr(item, textEmail,color);
+            }); 
+            itemMessage.forEach(item => {
+                formErr(item, textMessage,color);
+            });     
         })
     });
 }());
+
 
 

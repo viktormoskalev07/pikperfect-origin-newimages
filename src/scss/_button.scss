@@ -110,6 +110,21 @@
                      color: #5A6865;
               }
        }
+       &__light-khaki{
+              background: rgba($color: #8C9992, $alpha: 1); 
+              border-radius: 0;           
+              &:hover{
+                     border: 1px solid #8C9992;
+                     color: #8C9992;
+              }
+       }
+       &__light-brown{
+              background: rgba($color: #B3A38799, $alpha: .6);           
+              &:hover{
+                     border: 1px solid #B3A38799;
+                     color: #B3A38799;
+              }
+       }
        &__dirty-orange{
               background: rgba($color: #DEB299, $alpha: 1);            
               &:hover{

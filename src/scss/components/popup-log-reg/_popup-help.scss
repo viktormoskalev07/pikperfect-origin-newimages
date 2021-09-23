@@ -54,7 +54,7 @@
         margin-top: 32px;
     }
     &__btn{
-        z-index: 1001;
+        z-index: 1002;
      
         position: fixed;
         bottom: 0;
@@ -90,5 +90,22 @@
     }
     &.active{
         display: block;
+        overflow: auto;
+        @media (max-width:575px){
+            bottom: 0;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: none;
+            height: 100vh;
+        }
+        @media (max-height:575px){
+            bottom: 0;
+            top: 0;
+            right: 0;
+            width: 100%;
+            max-width: none;
+            height: 100%;
+        }
     }
 }

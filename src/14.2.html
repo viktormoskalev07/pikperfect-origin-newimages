@@ -1,7 +1,7 @@
-@@include("./html-templates/head.html",{
-title:"Account & Orders | PikPerfect",
-desc:"Answers to frequently asked questions about your account and order details.",
-})
+@@include("./html-templates/head-new.html",{
+  title:"Start Project | PikPerfect", 
+  desc:"Upload your photos and let our design team create a stunning wedding album or photo book for you.",
+}) 
 <link rel="stylesheet" href="css/upload.css">
 <link rel="stylesheet" href="css/module-photo-selection.css">
 
@@ -77,15 +77,6 @@ desc:"Answers to frequently asked questions about your account and order details
         <div id="uploaderId" class="listMode">
           <div class="plupload_wrapper">
             <div class="ui-widget-content plupload_container ui-resizable plupload_view_list" id="uploaderId_container">
-              <div class="ui-state-default ui-widget-header plupload_header">
-                <div class="plupload_header_content">
-                  <div class="plupload_logo"></div>
-                  <div class="plupload_header_title">Select files</div>
-                  <div class="plupload_header_text">
-                    Add files to the upload queue and click the start button.
-                  </div>
-                </div>
-              </div>
               <table class="plupload_filelist plupload_filelist_header ui-widget-header">
                 <tbody>
                   <tr>
@@ -294,26 +285,7 @@ desc:"Answers to frequently asked questions about your account and order details
             </div>
             <input class="plupload_count" value="0" type="hidden" id="uploaderId_count" name="uploaderId_count" />
           </div>
-          <div class="alert alert__error">
-            <div class="alert-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <rect class="a" width="24" height="24" style="fill:none; " />
-                <g transform="translate(-0.662 -0.662)">
-                  <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
-                    style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
-                  <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
-                    style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
-                </g>
-              </svg>
-            </div>
-            <div class="alert-text">
-              <p class="alert-name">Network Error</p>
-              <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
-                connection resumes.</p>
-            </div>
-          </div>
         </div>
-
       </div>
       <div class="separator"></div>
       <div class="column">
@@ -343,21 +315,39 @@ desc:"Answers to frequently asked questions about your account and order details
         </form>
       </div>
     </div>
+    <div class="alert alert__error">
+      <div class="alert-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <rect class="a" width="24" height="24" style="fill:none; " />
+          <g transform="translate(-0.662 -0.662)">
+            <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+            <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+          </g>
+        </svg>
+      </div>
+      <div class="alert-text">
+        <p class="alert-name">Network Error</p>
+        <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
+          connection resumes.</p>
+      </div>
+    </div>
     <div class="section-upload-photo__wrapper">
       <div class="section-upload-photo__footer">
         <ul class="specification">
           <li>We only work with JPEG images. 30 MB maximum per photo</li>
           <li>Photos save based on image name or date, not in the order you upload them</li>
         </ul>
-        <button type="button" name="" class="button">NEXT: CHOOSE DESIGN STYLES</button>
+        <a href="#design-styles" class="button">NEXT: CHOOSE DESIGN STYLES</a>
       </div>
-
     </div>
   </section>
   <section class="select-style">
-    <div class="select-style__container">
+    <a href="" name="design-styles"></a>
+    <div class="select-style__container">      
       <h2 class="title">Design Styles</h2>
-      <p class="description">Select the style/s you like best. If you’re looking for something different, please detail it out in the section below.</p>
+      <p class="description">Select the style you like best. If you’re looking for something different, please detail it out in the section below.</p>
       <div class="select-style__wrapper">
         <div class="select-style__select select-style__select_mobile">
           <label for="occasionAlbum">Occasion</label>
@@ -385,6 +375,16 @@ desc:"Answers to frequently asked questions about your account and order details
               </div>
             </div>
           </div> 
+          <span class="button button__light_border">
+            <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                  <circle class="a" cx="15" cy="15" r="15"></circle>
+                  <g transform="translate(3 4)"> 
+                      <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+                  </g>
+              </svg>
+          </button>
+            like</span>
           <div class="select-style__button-slide select-style__button-next">
             <img src="./images/ic_arrow_right.svg" alt="ic_arrow_right"></div>
           <div class="select-style__button-slide select-style__button-prev">
@@ -395,26 +395,61 @@ desc:"Answers to frequently asked questions about your account and order details
             <label for="occasionAlbum">Occasion</label>
             <select name="occasion" class="form-control" id="occasionAlbum">
               <option value="Wedding">Wedding</option>
+              <option value="Wedding">Baby</option>
+              <option value="Wedding">Family</option>
+              <option value="Wedding">Travel</option>
+              <option value="Wedding">Cookbook</option>
+              <option value="Wedding">Milestone</option>
+              <option value="Wedding">Guest Book</option>
+              <option value="Wedding">Others</option>
             </select>
             <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
           </div>
-          <textarea class="form-control" name="textStyles" id="textStyles" placeholder="Add any special instructions for your designer here." cols="30" rows="10"></textarea>
+          <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
+          <p class="add-styles">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-right:5px" fill="grey" viewBox="0 0 16 16">
+            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+          </svg>Attach additional instructions.</p>
         </div>
       </div>
       <div class="select-style__type-album">
         @@loop('./14.2/type-album.html',[
-          {name: 'Classic'},
-          {name: 'Classic'},
-          {name: 'Classic'},
-          {name: 'Classic'},
-          {name: 'Classic'},
+          {name: 'Classic', class:'checked', classP:''},
+          {name: 'The Minimalist', class:'', classP:'active'},
+          {name: 'Floral Dreams', class:'', classP:''},
+          {name: 'Eucalyptus', class:'', classP:''},
+          {name: 'Metallic Accents', class:'', classP:''},
+          {name: 'Linen Love', class:'', classP:''},
+          {name: 'Victorian Charm', class:'', classP:''},
         ])
       </div>
-      
-      
+      <div class="select-style__occasion select-style__occasion_mobile">
+        <div class="select-style__select">
+          <label for="occasionAlbum">Occasion</label>
+          <select name="occasion" class="form-control" id="occasionAlbum">
+            <option value="Wedding">Wedding</option>
+          </select>
+          <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
+        </div>
+        <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
+        <p class="add-styles"><img src="./images/icon_link.svg" alt="icon_link">Attach additional instructions or examples of design styles you like</p>
+      </div>
+      <div class="select-style__checkbox">
+        <label class="custom-checkbox">
+          <input class="custom-checkbox__input" type="checkbox" tabindex="-1">
+          <span class="custom-checkbox__checkmark" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <rect style="fill:transparent;" width="24" height="24"></rect><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"></path>
+            </svg>
+          </span>Not sure, please recommend
+        </label>
+      </div>
+      <div class="select-style__button">
+        <a href="#" class="button">START DESIGN</a>
+      </div>
     </div>
   </section>
-  
+  @@include('./14.2/dignity.html')
 
 
   <script defer>
@@ -459,7 +494,5 @@ desc:"Answers to frequently asked questions about your account and order details
     })
     //demo
   </script>
-
-  @@include("./3.0-wedding-albums/dignity.html")
 </main>
 @@include("./html-templates/footer.html")

@@ -3,24 +3,56 @@
 		@content;
 	}
 }
-
+// h1{
+// 	font-size: clamp(24px, 2vw, 40px) !important;
+// }
 .section-hero {
 	padding-bottom: 30px;
 	@include desktop-md {
 		padding: 0px 113px 90px 68px;
 	}
+	&__size-title{
+		font-size: 30px;
+		@include mobile-sm{
+			font-size: 32px;
+		}
+		@include desktop-sm{
+			font-size: 28px;
+		}
+		@include tabtoslide{
+			font-size: 34px;
+		}
+		@include wide-screen-md{
+			font-size: 36px;
+		}
+		@media screen and(min-width: 1400px) {
+			font-size: 40px;
+		}
+	}
 	&__home-title{
-		span{
-			font-size: 15px;
-			font-family: "open sans";
-			display: block;
-			font-weight: 400;
-			@include mobile-sm{
-				font-size: 16px;
-			}
-			@include tablet{
-				font-size: 18px;
-			}
+		font-size: 14px;
+		font-family: "open sans";
+		display: block;
+		font-weight: 400;
+		margin-bottom: 0 !important;
+		@include tabtoslide{
+			font-size: 18px;
+		}
+	}
+	&__sub-home-title{
+		color: #fff;
+		font-size: 30px;
+		@include mobile-sm{
+			font-size: 32px;
+		}
+		@include desktop-sm{
+			font-size: 30px;
+		}
+		@include tabtoslide{
+			font-size: 34px;
+		}
+		@include wide-screen-md{
+			font-size: 40px;
 		}
 	}
 	&__grid {
@@ -28,16 +60,13 @@
 			display: flex;
 			align-items: center;
 		}
-
 	}
-
 	&__left {
 		width: 100%;
 
 		@include tabtoslide {
 			width: 60%;
 		}
-
 		display: flex;
 	}
 
@@ -358,6 +387,13 @@
 				color: #2E3031;
 			}
 		}
+		&_light-brown{
+			background-color: rgba($color: 	#EAE4D9, $alpha: .2);	
+			color: #2E3031;
+			h1{
+				color: #2E3031;
+			}
+		}
 		&_gray-pink{
 			background-color: rgba($color: 	#938C93, $alpha: .7);	
 			color: #ffffff;
@@ -380,6 +416,13 @@
 			}
 			@include tabtoslide{
 				padding: 0 4%;
+			}
+		}
+		&_light-khaki{
+			background-color: rgba($color: 	#A9B6AC, $alpha: .7);	
+			color: #2E3031;
+			h1{
+				color: #2E3031;
 			}
 		}
 		&_dirty-orange{

@@ -1,4 +1,10 @@
 @import '../components/select-style';
+@import '../components/plupload_file_status';
+@import '../components/section-album-title';
+@import '../components/section-upload-choice';
+@import '../components/section-upload-photo';
+@import '../components/plupload_file';
+
 
 .alert{
     display: flex;
@@ -6,8 +12,11 @@
     border-radius: 5px;
     padding: 9px 23px;
     width: 100%;
-    max-width: 730px;
-    margin: 0 auto;
+    margin-bottom: 40px;
+    @include desktop-sm{
+        width: 45%;
+        margin-bottom: 30px;
+    }
     .alert-name{
         font-size: 16px;
         line-height: 22px;
@@ -38,64 +47,17 @@
             background: #D90017;
         }
     }
+    &__error-center{
+        margin: 0 auto 24px;
+        max-width: 730px;
+        @include desktop-sm{
+            width: 100%;
+        }
+    }
     &__warning{
         background: #edecee;
         .alert-icon{
             background: #deb299;
-        }
-    }
-}
-
-.plupload_file_status{
-    &_progress{
-        .circle{
-            height: 32px;
-            width: 32px;
-            position: relative;
-            border-radius: 50%;
-            background: #b5b5b5;
-            &:after{
-                content: '';
-                display: block;
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                background: #edecee;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                z-index: 3;
-                transform: translate(-50%,-50%);
-            }
-          }
-          .circle .bar{
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background: #b5b5b5;
-            border-radius: 50%;
-            clip: rect(0px, 32px, 32px, 16px);
-          }
-          .circle .progress{
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            border-radius: 50%;
-            clip: rect(0px, 16px, 32px, 0px);
-            background: #567C8B;
-            transform: rotate(0deg);
-            z-index: 0; 
-          }
-          .circle .left{
-            z-index: 1;
-            transform: rotate(180deg);
-          }
-        .gt-50{
-            .right{background: #567C8B;}
-            .progress{
-                z-index: 2;
-                transform: rotate(180deg);
-            }
         }
     }
 }
@@ -130,273 +92,6 @@ input{
         }
     }
 }
-.section-album-title{
-    background: #EDECEE;
-    width:100%;
-    padding: 40px 20px;
-    margin: 0 auto;
-    h1{
-      font-size: 24px;
-      line-height: 32px;
-      margin-right: 20px;
-      margin-bottom: 0;
-      color: #2e3031;
-    }
-    &__wrapper{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 24px;
-        &:last-child{margin-bottom: 0;}
-    }
-    &__summary{
-        font-size: 14px;
-        line-height: 19px;
-        font-family: 'Open Sans',sans-serif;
-        font-weight: 300;
-    }
-    .summary{
-        margin-right: 8px;
-        font-style: italic;
-    }
-}
-.section-upload-choice{
-    padding: 0 10px;
-    margin: 80px 0;
-    &__wrapper{
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-    }
-    .item{
-        border: 1px solid #575D614D;
-        background: #fff;
-        padding: 32px 20px;
-        cursor: pointer;
-        max-width: 503px;
-        width: 100%;
-        margin-right: 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0;
-        transition: all .2s linear;
-        &:last-child{margin-right: 0;}
-        &:hover{
-            box-shadow: inset 0 0 0px 1px #575D614D;
-        }
-    }
-    input[type="radio"]{
-        display: none;
-        &:checked{
-            & + .item{
-                background: #70707026;
-            }
-            &:hover + .item{box-shadow: none;}
-        }
-    }
-    .title{
-        text-transform: uppercase;
-        font-size: 16px;
-        line-height: 22px;
-        font-weight: 600;
-        margin-bottom: 0;
-    }
-    .sub{
-        margin-top: 4px;
-        font-size: 12px;
-        line-height: 15px;
-        margin-bottom: 0;
-    }
-    .text{
-        text-align: center;
-        width: 100%;
-        font-size: 14px;
-        line-height: 22px;
-        &:before{
-            content: '';
-            display: block;
-            width: 100%;
-            max-width: 413px;
-            height: 1px;
-            margin: 21px auto;
-            background: #7070704D;
-        }
-    }
-}
-.section-upload-photo{
-    max-width: 1440px;
-    margin: 80px auto 112px;
-    padding: 0 10px;
-    h2{
-        font-size: 24px;
-        line-height: 32px;
-        margin: 0 13px;
-    }
-    .alert{
-        margin: -16px auto 24px;
-    }
-    &__text{
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: normal;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-    &__head{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 12px;
-        .link{
-            display: block;
-            width: 120px;
-            font-size: 16px;
-            line-height: 26px;
-            font-weight: normal;
-        }
-        &:before{
-            content: '';
-            display: block;
-            width: 120px;
-        }
-    }
-    &__link{
-        width: 100%;
-        max-width: 522px;
-        max-height: 380px;
-    }
-    &__device, &__link{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 114px 0;
-    }
-    &__device{
-        max-width: 522px;
-        img{
-            width: 100%;
-            max-width: 386px;
-            margin-bottom: 28px;
-            display: block;
-        }
-        .button{
-            width: 280px;
-            font-size: 14px;
-            line-height: 17px;
-        }
-    }
-    &__wrapper{
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-        margin-bottom: 32px;
-        .alert{
-            margin: 24px 0;
-        }
-        &:last-child{margin-bottom: 0;}
-    }
-    &__footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .button{
-            width: 100%;
-            max-width: 403px;
-            line-height: 24px;
-        }
-    }
-    .upload-link{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        img{
-            display: block;
-            margin-right: 16px;
-        }
-        input{
-            flex: 1;
-            font-size: 14px;
-            line-height: 20px;
-            text-align: center;
-        }
-    }
-    .column{
-        display: flex;
-        flex: 1;
-        &:first-child{justify-content: flex-end;}
-        &:last-child{justify-content: flex-start;}
-        .text{
-            font-size: 24px;
-            line-height: 26px;
-            font-weight: 600;
-            text-align: center;
-        }
-    }
-    .service-button{
-        border: none;
-        outline: none;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        background: none;
-        align-items: center;
-        font-size: 18px;
-        line-height: 26px;
-        font-weight: 600;
-        width: 174px;
-        padding: 0;
-        justify-content: space-between;
-        margin-bottom: 72px;
-        img{
-            display: block;
-            margin-bottom: 12px;
-        } 
-    }
-    .services{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 420px;
-    }
-    .separator{
-        width: 65px;
-        margin: 0 48px;
-        max-height: 645px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &:after{
-            content: 'or';
-            display: block;
-            background: #fcfcfc;
-            color: #2E3031;
-            text-transform: uppercase;
-            font-size: 18px;
-            line-height: 26px;
-            z-index: 1;
-            padding: 12px;
-        }
-        &:before{
-            content: '';
-            display: block;
-            width: 1px;
-            height: 100%;
-            position: absolute;
-            background: #575D61;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, 0);
-        }
-    }
-    .specification{
-        margin-bottom: 56px;
-    }
-}
 .specification{
     font-size: 16px;
     line-height: 24px;
@@ -423,85 +118,7 @@ input{
         justify-content: space-between;
     }
 }
-.plupload_file_size{
-    flex: 1;
-}
-.plupload_file_status, .plupload_file_size{
-    flex: 1;
-}
-.plupload_filelist_content{
-    max-height: 480px;
-    overflow-y: auto;
-    &::-webkit-scrollbar{
-        width: 8px;
-    }
-    &::-webkit-scrollbar-thumb{
-        background: #567C8B;
-    }
-    &::-webkit-scrollbar-track{
-        background: #B5B5B5;
-    }
-}
-.plupload_file_name{
-    width: 50%;
-    overflow: hidden;
-}
-.plupload_file_thumb, .plupload_file_fields, 
-.plupload_file_action, .plupload_clearer{
-    display: none;
-}
-.plupload_filelist_content{
-    li{
-        gap: 0 40px;
-        padding: 8px 32px 8px;
-        height: 48px;
-        background: #EDECEE;
-        &:nth-child(even){
-            background: #7070704D;
-        }
-    }
-}
-.plupload_filelist{
-    width: 100%;
-    border-spacing: 0;
-    &_header{
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 26px;
-        background: #7070704D;
-        td{
-            padding: 17.5px 32px 16.5px;
-        }
-    }
-    &_footer{
-        .plupload_button{
-            background: #8BA4B4;
-            color: #fff;
-            font-weight: 600;
-            transition: 0.3s linear;
-            &:hover{
-                background: #567C8B;
-            }
-        }
-        .plupload_file_size{
-            background: #EDECEE;
-        }
-        .plupload_file_size, .plupload_button{
-            padding: 15px 14px;
-        }
-        td{
-            font-size: 14px;
-            line-height: 19px;
-            padding: 0;
-            text-align: center;
-            text-transform: uppercase;
-        }
-    }
-    td{
-       width: 50%;
-    }
-}
+
 .plupload_header_title{
     font-size: 16px;
     line-height: 22px;
@@ -514,40 +131,8 @@ input{
     font-weight: 300;
     margin-bottom: 10px;
 }
-@media screen and (max-width: 1110px){
-    .listMode{
-        max-width: 330px;
-    }
-    .plupload_filelist_content{
-        li{gap: 0 24px;}
-    } 
-    .plupload_filelist{
-        &_header{
-            td{
-                padding: 17.5px 24px 16.5px;
-            }
-        }
-        &_footer{
-            tr{
-                display: flex;
-                flex-direction: column;
-            }
-            td{width: 100%;}
-        }
-    }
-}
+
 @media screen and (max-width: 991px){
-    .section-upload-photo{
-        .separator{
-            width: 40px;
-            margin: 0 25px;
-        }
-        .service-button{
-            width: 156px;
-        }
-    }
-}
-@media screen and (max-width: 767px){
     .section-album-title{
         padding: 32px 13px;
         h1{
@@ -577,7 +162,7 @@ input{
     }
     .section-upload-choice{
         margin: 48px 0;
-        padding: 0 10px;
+        padding: 0 16px;
         &__wrapper{
             flex-direction: column;
             align-items: center;
@@ -598,7 +183,7 @@ input{
         }
     }
     .section-upload-photo{
-        margin: 48px auto 64px;
+        margin: 48px auto 75px;
         h2{
             margin: 0;
         }
@@ -628,12 +213,6 @@ input{
                 left: 0;
                 transform: translate(0, -50%);
             }
-        }
-        .service-button{
-            font-size: 16px;
-            width: 50%;
-            max-width: 158px;
-            margin-bottom: 32px;
         }
         .services{
             justify-content: space-around;
@@ -689,7 +268,7 @@ input{
         }
     }
     .listMode{
-        max-width: 370px;
+        max-width: 670px;
         margin: 0 auto;
     }
 }

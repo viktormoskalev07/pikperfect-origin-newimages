@@ -1,0 +1,99 @@
+.plupload_file_size{
+    flex: 1;
+}
+.plupload_file_status, .plupload_file_size{
+    flex: 1;
+}
+.plupload_filelist_content{
+    max-height: 480px;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        width: 8px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #567C8B;
+    }
+    &::-webkit-scrollbar-track{
+        background: #B5B5B5;
+    }
+}
+.plupload_file_name{
+    width: 50%;
+    overflow: hidden;
+}
+.plupload_file_thumb, .plupload_file_fields, 
+.plupload_file_action, .plupload_clearer{
+    display: none;
+}
+.plupload_filelist_content{
+    li{
+        gap: 0 40px;
+        padding: 8px 32px 8px;
+        height: 48px;
+        background: #EDECEE;
+        &:nth-child(even){
+            background: #7070704D;
+        }
+    }
+}
+.plupload_filelist{
+    width: 100%;
+    border-spacing: 0;
+    &_header{
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 26px;
+        background: #7070704D;
+        td{
+            padding: 11.5px 32px 16.5px;
+            @include tablet{
+                padding: 17.5px 32px 16.5px;
+            }
+        }
+    }
+    &_footer{
+        .plupload_button{
+            background: #8BA4B4;
+            color: #fff;
+            font-weight: 600;
+            transition: 0.3s linear;
+            &:hover{
+                background: #567C8B;
+            }
+        }
+        .plupload_file_size{
+            background: #EDECEE;
+        }
+        .plupload_file_size, .plupload_button{
+            padding: 10px 14px;
+            @include tablet{
+                padding: 15px 14px;
+            }
+        }
+        td{
+            font-size: 14px;
+            line-height: 19px;
+            padding: 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    td{
+       width: 50%;
+    }
+}
+@media screen and (max-width: 1110px){
+    .plupload_filelist_content{
+        li{gap: 0 24px;}
+    } 
+    .plupload_filelist{
+        &_footer{
+            tr{
+                display: flex;
+                flex-direction: column;
+            }
+            td{width: 100%;}
+        }
+    }
+}

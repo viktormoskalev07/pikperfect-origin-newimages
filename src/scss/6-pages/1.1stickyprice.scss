@@ -2,28 +2,29 @@
     display: flex;
     flex-direction: column;
     margin-top: 64px;
+    @include desktop-md {
+        margin-top: 100px;
+        flex-direction: row;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    &__left{
+        flex-grow: 1;
+    }
+    &__right{
+        order:-1;
         @include desktop-md {
-            margin-top: 100px;
-            flex-direction: row;
-              gap: 20px;
-              align-items: flex-start;
-
+            order: 1;
+        position: sticky;
+        top: 15px;
+        width: 410px;
+        flex-shrink: 0;
         }
-            &__left{
-                flex-grow: 1;
-            }
-            &__right{
-                order:-1;
-                @include desktop-md {
-              
-                    order: 1;
-                position: sticky;
-                top: 15px;
-                width: 410px;
-                flex-shrink: 0;
-                }
-                
-            }
+    }
+    .product__subtitle{
+        font-family: "open sans";
+        font-weight: 600;
+    }
 }
 .container{
     @include wide-screen-sm{

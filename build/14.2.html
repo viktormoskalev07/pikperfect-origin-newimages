@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="description"
-		content="Answers to frequently asked questions about your account and order details."> 
+	<meta name="description" 
+		content="Upload your photos and let our design team create a stunning wedding album or photo book for you."> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Account & Orders | PikPerfect</title>  
+	<title>Start Project | PikPerfect</title>  
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="icon" href="./images/favicon.png" sizes="32x32">
 	<style>
@@ -23,16 +23,13 @@
 		})
 	</script> 
  
-	  <div class="pre-header">
-    <div class="container">
-      <div class="promobar"> 
-        <span id="promo-place-text" class="promobar-hide">  </span> 
-        <strong id="promo-place-code" class="promobar-hide">  </strong>
-      </div>
-    </div>
-  </div> 
-<!-- xhr in main js -->
-<header class="header">
+	<!-- xhr in main js -->
+<style>
+  #onlyStatic{
+    position: static;
+  }
+</style>
+<header id="onlyStatic" class="header">
   <a href="index.html" class="logo">
     <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
   </a>
@@ -236,12 +233,12 @@
         </div>
       </div>
     </div>
-    <a href="14.0-upload-page.html" class="button button__start">EXPLORE RANGE</a>
+    <a href="14.0-upload-page.html" class="button button__start">start now</a>
     <div class="menu-fix"></div>
-      <a href="#" class="btn btn-blue">EXPLORE RANGE</a>
+      <a href="#" class="btn btn-blue">start now</a>
     </div>
   </div>
-</header>
+</header> 
 <link rel="stylesheet" href="css/upload.css">
 <link rel="stylesheet" href="css/module-photo-selection.css">
 
@@ -317,15 +314,6 @@
         <div id="uploaderId" class="listMode">
           <div class="plupload_wrapper">
             <div class="ui-widget-content plupload_container ui-resizable plupload_view_list" id="uploaderId_container">
-              <div class="ui-state-default ui-widget-header plupload_header">
-                <div class="plupload_header_content">
-                  <div class="plupload_logo"></div>
-                  <div class="plupload_header_title">Select files</div>
-                  <div class="plupload_header_text">
-                    Add files to the upload queue and click the start button.
-                  </div>
-                </div>
-              </div>
               <table class="plupload_filelist plupload_filelist_header ui-widget-header">
                 <tbody>
                   <tr>
@@ -534,26 +522,7 @@
             </div>
             <input class="plupload_count" value="0" type="hidden" id="uploaderId_count" name="uploaderId_count" />
           </div>
-          <div class="alert alert__error">
-            <div class="alert-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <rect class="a" width="24" height="24" style="fill:none; " />
-                <g transform="translate(-0.662 -0.662)">
-                  <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
-                    style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
-                  <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
-                    style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
-                </g>
-              </svg>
-            </div>
-            <div class="alert-text">
-              <p class="alert-name">Network Error</p>
-              <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
-                connection resumes.</p>
-            </div>
-          </div>
         </div>
-
       </div>
       <div class="separator"></div>
       <div class="column">
@@ -583,21 +552,39 @@
         </form>
       </div>
     </div>
+    <div class="alert alert__error">
+      <div class="alert-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <rect class="a" width="24" height="24" style="fill:none; " />
+          <g transform="translate(-0.662 -0.662)">
+            <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+            <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
+              style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+          </g>
+        </svg>
+      </div>
+      <div class="alert-text">
+        <p class="alert-name">Network Error</p>
+        <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
+          connection resumes.</p>
+      </div>
+    </div>
     <div class="section-upload-photo__wrapper">
       <div class="section-upload-photo__footer">
         <ul class="specification">
           <li>We only work with JPEG images. 30 MB maximum per photo</li>
           <li>Photos save based on image name or date, not in the order you upload them</li>
         </ul>
-        <button type="button" name="" class="button">NEXT: CHOOSE DESIGN STYLES</button>
+        <a href="#design-styles" class="button">NEXT: CHOOSE DESIGN STYLES</a>
       </div>
-
     </div>
   </section>
   <section class="select-style">
-    <div class="select-style__container">
+    <a href="" name="design-styles"></a>
+    <div class="select-style__container">      
       <h2 class="title">Design Styles</h2>
-      <p class="description">Select the style/s you like best. If you’re looking for something different, please detail it out in the section below.</p>
+      <p class="description">Select the style you like best. If you’re looking for something different, please detail it out in the section below.</p>
       <div class="select-style__wrapper">
         <div class="select-style__select select-style__select_mobile">
           <label for="occasionAlbum">Occasion</label>
@@ -625,6 +612,16 @@
               </div>
             </div>
           </div> 
+          <span class="button button__light_border">
+            <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                  <circle class="a" cx="15" cy="15" r="15"></circle>
+                  <g transform="translate(3 4)"> 
+                      <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+                  </g>
+              </svg>
+          </button>
+            like</span>
           <div class="select-style__button-slide select-style__button-next">
             <img src="./images/ic_arrow_right.svg" alt="ic_arrow_right"></div>
           <div class="select-style__button-slide select-style__button-prev">
@@ -635,70 +632,156 @@
             <label for="occasionAlbum">Occasion</label>
             <select name="occasion" class="form-control" id="occasionAlbum">
               <option value="Wedding">Wedding</option>
+              <option value="Wedding">Baby</option>
+              <option value="Wedding">Family</option>
+              <option value="Wedding">Travel</option>
+              <option value="Wedding">Cookbook</option>
+              <option value="Wedding">Milestone</option>
+              <option value="Wedding">Guest Book</option>
+              <option value="Wedding">Others</option>
             </select>
             <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
           </div>
-          <textarea class="form-control" name="textStyles" id="textStyles" placeholder="Add any special instructions for your designer here." cols="30" rows="10"></textarea>
+          <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
+          <p class="add-styles">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-right:5px" fill="grey" viewBox="0 0 16 16">
+            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+          </svg>Attach additional instructions.</p>
         </div>
       </div>
       <div class="select-style__type-album">
         <div class="select-style__block">
-    <p class="select-style__name-type">Classic</p>
+    <p class="select-style__name-type ">Classic</p>
     <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
-        <circle class="a" cx="15" cy="15" r="15"></circle>
-        <g transform="translate(3 4)"> 
-            <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
-        </g>
-    </svg>
-</button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
 </div><div class="select-style__block">
-    <p class="select-style__name-type">Classic</p>
-    <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
-        <circle class="a" cx="15" cy="15" r="15"></circle>
-        <g transform="translate(3 4)"> 
-            <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
-        </g>
-    </svg>
-</button>
+    <p class="select-style__name-type active">The Minimalist</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
 </div><div class="select-style__block">
-    <p class="select-style__name-type">Classic</p>
-    <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
-        <circle class="a" cx="15" cy="15" r="15"></circle>
-        <g transform="translate(3 4)"> 
-            <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
-        </g>
-    </svg>
-</button>
+    <p class="select-style__name-type ">Floral Dreams</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
 </div><div class="select-style__block">
-    <p class="select-style__name-type">Classic</p>
-    <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
-        <circle class="a" cx="15" cy="15" r="15"></circle>
-        <g transform="translate(3 4)"> 
-            <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
-        </g>
-    </svg>
-</button>
+    <p class="select-style__name-type ">Eucalyptus</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
 </div><div class="select-style__block">
-    <p class="select-style__name-type">Classic</p>
-    <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
-        <circle class="a" cx="15" cy="15" r="15"></circle>
-        <g transform="translate(3 4)"> 
-            <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
-        </g>
-    </svg>
-</button>
+    <p class="select-style__name-type ">Metallic Accents</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type ">Linen Love</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type ">Victorian Charm</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
 </div>
       </div>
-      
-      
+      <div class="select-style__occasion select-style__occasion_mobile">
+        <div class="select-style__select">
+          <label for="occasionAlbum">Occasion</label>
+          <select name="occasion" class="form-control" id="occasionAlbum">
+            <option value="Wedding">Wedding</option>
+          </select>
+          <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
+        </div>
+        <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
+        <p class="add-styles"><img src="./images/icon_link.svg" alt="icon_link">Attach additional instructions or examples of design styles you like</p>
+      </div>
+      <div class="select-style__checkbox">
+        <label class="custom-checkbox">
+          <input class="custom-checkbox__input" type="checkbox" tabindex="-1">
+          <span class="custom-checkbox__checkmark" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <rect style="fill:transparent;" width="24" height="24"></rect><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"></path>
+            </svg>
+          </span>Not sure, please recommend
+        </label>
+      </div>
+      <div class="select-style__button">
+        <a href="#" class="button">START DESIGN</a>
+      </div>
     </div>
   </section>
-  
+  <section class="dignity">
+  <div class="dignity__container">
+    <h2 class="dignity__title">The PikPerfect Advantage</h2>
+    <div class="dignity__wrap">
+      <div class="dignity__block">
+        <div class="dignity__img">
+          <img src="./images/circle_the_human_touch.svg" alt="circle_the_human_touch">
+        </div>
+        <div class="dignity__content">
+          <h3>We do the Work</h3>
+          <p>We help select the best photos and carefully design your album. Unlimited revisions included.</p>
+        </div>
+      </div>
+      <div class="dignity__block">
+        <div class="dignity__img">
+          <img src="./images/circle_attention_to_detail.svg" alt="circle_attention_to_detail">
+        </div>
+        <div class="dignity__content">
+          <h3>Quality Matters</h3>
+          <p>Handcrafted using only professional grade materials. Designed to last a lifetime.</p>
+        </div>
+      </div>
+      <div class="dignity__block">
+        <div class="dignity__img">
+          <img src="./images/circle_premium_materials.svg" alt="circle_premium_materials">
+        </div>
+        <div class="dignity__content">
+          <h3>Happiness Guaranteed</h3>
+          <p>Pay only when you love your photo album design. Quality guaranteed.</p>
+        </div>
+      </div>    
+    </div>
+  </div>
+</section>
 
 
   <script defer>
@@ -743,41 +826,6 @@
     })
     //demo
   </script>
-
-  <section class="dignity">
-  <div class="dignity__container">
-    <h2 class="dignity__title">Why Choose Us?</h2>
-    <div class="dignity__wrap">
-      <div class="dignity__block">
-        <div class="dignity__img">
-          <img src="./images/circle_the_human_touch.svg" alt="circle_the_human_touch">
-        </div>
-        <div class="dignity__content">
-          <h3>The Human Touch</h3>
-          <p>We’ll help choose the best photos and design the album exactly as you envisioned.</p>
-        </div>
-      </div>
-      <div class="dignity__block">
-        <div class="dignity__img">
-          <img src="./images/circle_attention_to_detail.svg" alt="circle_attention_to_detail">
-        </div>
-        <div class="dignity__content">
-          <h3>Attention to Detail</h3>
-          <p>Every album is carefully checked to ensure it prints perfectly, and packaged with care.</p>
-        </div>
-      </div>
-      <div class="dignity__block">
-        <div class="dignity__img">
-          <img src="./images/circle_premium_materials.svg" alt="circle_premium_materials">
-        </div>
-        <div class="dignity__content">
-          <h3>Premium Material</h3>
-          <p>Our Wedding Albums are assembled using the finest materials and photo papers.</p>
-        </div>
-      </div>    
-    </div>
-  </div>
-</section>
 </main>
 <footer class="footer">
   <div class="container">
@@ -948,6 +996,8 @@
     <li><a style="color:blue" href="./2.5-travel-photo-books.html">2.5</a></li>
     <li><a style="color:green" href="./2.6-baby-photo-books.html">2.6</a></li>  
     <li><a style="color:rgb(174, 0, 255)" href="./2.7-cookbook-recipe-photobooks.html">2.7</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./2.8-leather-photo-albums.html">2.8</a></li>
+
     <li><a style="color:rgb(87, 35, 57)" href="./2.9-engagement-photo-book.html">2.9</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./2.10-wedding-guest-books.html">2.10</a></li>
     <li><a style="color:rgb(64, 161, 179)" href="./2.11-pet-photo-books.html">2.11</a></li>
@@ -986,8 +1036,10 @@
     <li><a style="color:rgb(87, 35, 57)" href="./14.0-upload-page.html">14.0</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.1.html">14.1</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.2.html">14.2</a></li>
-    <li><a style="color:rgb(255, 0, 0)" href="./14.3.html">14.3</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./14.3.html">14.3</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./15.0-myprofile.html">15.0</a></li>   
+    <li><a style="color:rgb(255, 166, 0)" href="./16.0-photo-album-boxes.html">16.0</a></li>   
+    <li><a style="color:rgb(255, 166, 0)" href="./16.1-parent-albums.html">16.1</a></li>   
 </ul>
 
 </div>
@@ -1030,11 +1082,11 @@
     <form action="#" class="tab-content__form">
       <div class="tab-content__row50">
         <div class="tab-content__input">
-          <label for="loginEmail">Email *</label>
+          <label for="loginEmail">Email</label>
           <input type="email" name="email" id="loginEmail" required>
         </div>
         <div class="tab-content__input">
-          <label for="login-password">Password *</label>
+          <label for="login-password">Password</label>
           <div class="tab-content__pass">
             <input type="password" name="password" id="login-password" required autocomplete="off">
             <span class="show-hide-password">
@@ -1195,7 +1247,7 @@
         <label for="popup-HelpMessage">Your Message</label>
         <textarea name="message" class="tab-content__textarea" cols="30" rows="8" id="popup-HelpMessage"></textarea>
       </div>
-      <button class="popup-help__button button" type="submit">send a message</button>
+      <button class="popup-help__button button" type="submit">send message</button>
     </form>  
   </div>
 </div>
