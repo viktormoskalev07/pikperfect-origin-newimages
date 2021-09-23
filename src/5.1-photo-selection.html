@@ -11,32 +11,24 @@ desc:"Photo Selection.",
       </a>
     </div>
   </header>
-
-
-
   <main>
-
     <section class="photoselect__section">
       <div class="container  photoselect__container">
-
         @@include("5.1/top.html")
-
       </div>
       @@include("5.1/buttons.html")
       <div class="container  photoselect__container">
         <div id="photoselect-parent" class="row  ">
-          @@for (var i = 1; i <14; i++) { @@include("5.1/card.html",{ img:${i} }) } </div> </div> </section> <div
-            style="display: none;" class="photoselect__zoom__container">
+          @@for (var i = 1; i <14; i++) { @@include("5.1/card.html",{ img:${i} }) } 
+        </div> 
+      </div> 
+    </section> 
+    <div style="display: none;" class="photoselect__zoom__container">
             <figure class="photoselect__zoom__img">
             </figure>
             <button title="close" class="photoselect__zoom__close">x</button>
         </div>
-
-
   </main>
-
-
-
   <footer class="footer">
     <div class="photoselect__go-top__container">
       <a href="#header" class="photoselect__go-top" title="go top"> <svg xmlns="http://www.w3.org/2000/svg" width="30"
@@ -47,13 +39,9 @@ desc:"Photo Selection.",
             <path class="b" d="M5,14l9-9,9,9" transform="translate(0 -3)" />
           </g>
         </svg></a>
-
     </div> 
   </footer>
-
 </div>
-
 <script src='js/5.1photoselect.js'></script>
 </body>
-
 </html>
