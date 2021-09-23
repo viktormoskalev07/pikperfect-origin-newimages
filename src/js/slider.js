@@ -30,6 +30,7 @@ if (document.querySelector('.swiperalbum')){
 if (document.querySelector(".swiperDescription")){
   var swiper123 = new Swiper(".swiperDescription", {
       loop:true,
+      Infinity: false,
       autoplay: {
           delay: 5000,
         },
