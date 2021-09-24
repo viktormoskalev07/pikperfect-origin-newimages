@@ -61,6 +61,18 @@
         }
     }
 }
+
+// fix plugin
+
+.plupload_button{
+    display: block !important;
+}
+
+.plupload_file{
+    width: 100% !important;
+}
+
+
 input{
     width: 250px;
     border: 1px solid #575D6180;

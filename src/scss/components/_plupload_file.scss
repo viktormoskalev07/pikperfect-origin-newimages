@@ -65,7 +65,7 @@
         .plupload_file_size{
             background: #EDECEE;
         }
-        .plupload_file_size, .plupload_button{
+        .plupload_file_size, .plupload_button , .plupload_file_status{
             padding: 10px 14px;
             @include tablet{
                 padding: 15px 14px;
