@@ -64,14 +64,25 @@
 
 // fix plugin
 
+.plupload_buttons{
+    display: flex;
+}
 .plupload_button{
-    display: block !important;
+    width: 100% !important;
 }
 
 .plupload_file{
     width: 100% !important;
 }
-
+.plupload_file_name{
+    width: 100%;
+    @include desktop-md{
+        width: 50% !important;
+    }
+}
+.plupload_filelist td {
+    width: auto !important;
+}
 
 input{
     width: 250px;
