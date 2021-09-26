@@ -71,12 +71,12 @@
 .plupload_button{
     width: 100% !important;
 }
-
 .plupload_file{
     width: 100% !important;
 }
 .plupload_file_name{
     width: 100%;
+    order: -1;
     @include desktop-md{
         width: 50% !important;
     }
