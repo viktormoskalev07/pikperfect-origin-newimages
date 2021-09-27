@@ -77,20 +77,20 @@
 .plupload_file{
     width: 100% !important;
 }
-.plupload_file_name{
+.plupload_filelist td{
     width: 100%;
+}
+.plupload_file_name{
+    width: 50%;
     order: -1;
     @include desktop-md{
-        width: 100% !important;
+        width: 50% !important;
     }
-}
-.plupload_file_status{
-    background: #edecee;
 }
 .plupload_filelist_footer tr{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
 }
 .plupload_filelist_content li{
     height: auto;
