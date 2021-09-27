@@ -53,6 +53,11 @@
         float:none;
         width: 50%; 
         max-width: 220px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            background-color: #f6f6f6;
+        }
         .format{
             height: 100%;
             display: flex;
