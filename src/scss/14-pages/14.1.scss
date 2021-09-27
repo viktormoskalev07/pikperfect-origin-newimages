@@ -71,18 +71,30 @@
 .plupload_button{
     width: 100% !important;
 }
+.plupload_started{
+    min-height: 30px;
+}
 .plupload_file{
     width: 100% !important;
 }
 .plupload_file_name{
-    width: 50%;
+    width: 100%;
     order: -1;
     @include desktop-md{
-        width: 50% !important;
+        width: 100% !important;
     }
 }
-.plupload_filelist td {
-    width: auto !important;
+.plupload_file_status{
+    background: #edecee;
+}
+.plupload_filelist_footer tr{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.plupload_filelist_content li{
+    height: auto;
+    min-height: 48px;
 }
 
 input{
