@@ -71,9 +71,9 @@
 .plupload_button{
     width: 100% !important;
 }
-.plupload_started{
-    min-height: 30px;
-}
+// .plupload_started{
+//     min-height: 30px;
+// }
 .plupload_file{
     width: 100% !important;
 }
@@ -87,6 +87,15 @@
         width: 50% !important;
     }
 }
+.plupload_filelist_header td {
+    padding: 11.5px 7px 16.5px;
+    @include mobile-md{
+        padding: 11.5px 20px 16.5px;
+    }
+    @include mobile-lg{
+        padding: 11.5px 32px 16.5px;
+    }
+}
 .plupload_filelist_footer tr{
     display: flex;
     flex-wrap: wrap;
@@ -95,6 +104,14 @@
 .plupload_filelist_content li{
     height: auto;
     min-height: 48px;
+    gap: 0 13px;
+    padding: 8px 15px 8px;
+    @include mobile-md{
+        padding: 8px 20px 8px;
+    }
+    @include mobile-lg{
+        padding: 8px 32px 8px;
+    }
 }
 
 input{
