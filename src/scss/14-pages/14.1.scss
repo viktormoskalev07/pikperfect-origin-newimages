@@ -102,7 +102,9 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
-
+.plupload_file_size{
+    text-align: right;
+}
 .plupload_filelist_content li{
     height: auto;
     min-height: 48px;
