@@ -93,15 +93,16 @@
         padding: 11.5px 32px 16.5px;
     }
 }
+.plupload_filelist_header tr{
+    display: flex;
+    justify-content: space-between;
+}
 .plupload_filelist_footer tr{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
-.plupload_filelist_header tr{
-    display: flex;
-    justify-content: space-between;
-}
+
 .plupload_filelist_content li{
     height: auto;
     min-height: 48px;
