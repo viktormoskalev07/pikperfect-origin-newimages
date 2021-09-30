@@ -256,7 +256,7 @@ if (document.querySelector('.swiperBigSlider')){
   }
 
 
-//////// slider 14.2 /////
+//////// slider 14.2 album /////
 if (document.querySelector(".select-style__swiper")){
   var swiper123 = new Swiper(".select-style__swiper", {
       loop:true,
@@ -264,13 +264,45 @@ if (document.querySelector(".select-style__swiper")){
       //     delay: 3000,
       //   },
       navigation: {
-        nextEl: ".select-style__button-next",
-        prevEl: ".select-style__button-prev",
+        nextEl: ".next",
+        prevEl: ".prev",
       },
       breakpoints: {
         320: {
           slidesPerView: 1,
           spaceBetween: 20
+        },
+      }
+    });
+  }
+
+  //////// slider 14.2  cards /////
+if (document.querySelector(".select-style__swiper-card")){
+  var swiper123 = new Swiper(".select-style__swiper-card", {
+      loop:true,
+      // autoplay: {
+      //     delay: 3000,
+      //   },
+      navigation: {
+        nextEl: ".next-card",
+        prevEl: ".prev-card",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 8
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 8
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 8
         },
       }
     });

@@ -347,7 +347,63 @@
     <a href="" name="design-styles"></a>
     <div class="select-style__container">      
       <h2 class="title">Design Styles</h2>
-      <p class="description">Select the style you like best. If you’re looking for something different, please detail it out in the section below.</p>
+      <p class="description">Choose from the examples of our most popular styles and we’ll customize it to match your photos.</p>
+      <div class="select-style__type-album">
+        <div class="select-style__slider card">
+          <div class="swiper-container select-style__swiper-card">
+            <div class="swiper-wrapper"> 
+              <div class="swiper-slide">
+                <div class="select-style__slide-item">
+                  @@include('./14.2/type-album.html',{
+                    name: 'FLORAL DREAMS',
+                    class:'checked',
+                    classP:'',
+                    classLike:'',
+                    text:'Floral patterns chosen to match your wedding style and colors, while keeping a light and airy look throughout the album.'
+                  })
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="select-style__slide-item">
+                  @@include('./14.2/type-album.html',{
+                    name: 'THE MINIMALIST',
+                    class:'button__light_border',
+                    classP:'',
+                    classLike:'',
+                    text:'Colored backgrounds and blocks customized to match the colors in your photos. Some use of thin borders on images.'
+                  })
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="select-style__slide-item">
+                  @@include('./14.2/type-album.html',{
+                    name: 'COLORED BLOCKS',
+                    class:'checked',
+                    classLike:'button-like',
+                    classP:'active',
+                    text:'Colored backgrounds and blocks customized to match the colors in your photos. Some use of thin borders on images.'
+                  })
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="select-style__slide-item">
+                  @@include('./14.2/type-album.html',{
+                    name: 'METALLIC ACCENTS',
+                    class:'',
+                    classP:'',
+                    classLike:'',
+                    text:'Colored backgrounds and blocks customized to match the colors in your photos. Some use of thin borders on images.'
+                  })
+                </div>
+              </div>
+            </div>
+          </div> 
+          <div class="select-style__button-slide select-style__button-next next-card">
+            <img src="./images/ic_arrow_right.svg" alt="ic_arrow_right"></div>
+          <div class="select-style__button-slide select-style__button-prev prev-card">
+            <img src="./images/ic_arrow_left.svg" alt="ic_arrow_left"></div> 
+        </div>
+      </div>
       <div class="select-style__wrapper">
         <div class="select-style__select select-style__select_mobile">
           <label for="occasionAlbum">Occasion</label>
@@ -362,32 +418,23 @@
               <div class="swiper-slide">
                 <div class="select-style__slide-item">
                     <div class="select-style__img">
-                      <img src="./images/towebp/14.3/image_5.jpg" alt="">
+                      <img src="./images/towebp/14.3/image_5.jpg" alt="image-5">
                     </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="select-style__slide-item">
                   <div class="select-style__img">
-                    <img src="./images/towebp/14.3/image_5.jpg" alt="">
+                    <img src="./images/towebp/14.3/image_5.jpg" alt="image-5">
                   </div>
               </div>
               </div>
             </div>
           </div> 
-          <span class="button button__light_border">
-            <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
-                  <circle class="a" cx="15" cy="15" r="15"></circle>
-                  <g transform="translate(3 4)"> 
-                      <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
-                  </g>
-              </svg>
-          </button>
-            like</span>
-          <div class="select-style__button-slide select-style__button-next">
+          <p class="select-style__example">Example <span>1</span>/3</p>
+          <div class="select-style__button-slide select-style__button-next next">
             <img src="./images/ic_arrow_right.svg" alt="ic_arrow_right"></div>
-          <div class="select-style__button-slide select-style__button-prev">
+          <div class="select-style__button-slide select-style__button-prev prev">
             <img src="./images/ic_arrow_left.svg" alt="ic_arrow_left"></div> 
         </div>
         <div class="select-style__occasion">
@@ -407,22 +454,11 @@
           </div>
           <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
           <p class="add-styles">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-right:5px" fill="grey" viewBox="0 0 16 16">
-            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+            <img src="./images/ic_attach.svg" alt="ic_attach">
           </svg>Attach additional instructions.</p>
         </div>
       </div>
-      <div class="select-style__type-album">
-        @@loop('./14.2/type-album.html',[
-          {name: 'Classic', class:'checked', classP:''},
-          {name: 'The Minimalist', class:'', classP:'active'},
-          {name: 'Floral Dreams', class:'', classP:''},
-          {name: 'Eucalyptus', class:'', classP:''},
-          {name: 'Metallic Accents', class:'', classP:''},
-          {name: 'Linen Love', class:'', classP:''},
-          {name: 'Victorian Charm', class:'', classP:''},
-        ])
-      </div>
+      
       <div class="select-style__occasion select-style__occasion_mobile">
         <div class="select-style__select">
           <label for="occasionAlbum">Occasion</label>

@@ -10,8 +10,7 @@
     }
     .description{
         text-align: center;
-        max-width: 605px;
-        margin: 0 auto 32px;
+        margin: 0 auto 24px;
         @include tablet{
             font-size: 18px;
         }
@@ -41,6 +40,37 @@
             border: 1px solid #575D614D;
             button{
                 margin-right: 12px;
+            }
+        }
+        &.card{
+            width: 100%;
+            .swiper-container{
+                // max-width: 1100px;
+                margin: 0 0px;
+                align-items: center;
+                display: flex;
+                @include mobile-lg{
+                    margin: 0 70px;
+                }
+            }
+            .select-style__button-prev{
+                left: 10px;
+                @include mobile-lg{
+                    left: 0;
+                }
+            }
+            .select-style__button-next{
+                right: 10px;
+                @include mobile-lg{
+                    right: 0;
+                }
+            }
+            .select-style__button-slide{
+                top: 80%;
+                opacity: 1;
+                @include mobile-lg{
+                    top: 33%
+                }
             }
         }
     }
@@ -111,16 +141,23 @@
             &:focus, &:active, &:focus-visible{
                 border-radius: 0;
             }
+            &::placeholder{
+                font-size: 14px;
+            }
         }
         .add-styles{
             margin: 16px 0;
             font-size: 12px;
             line-height: 1;
+            display: flex;
+            align-items: center;
             @include desktop-sm{
                 margin: 10px 0;
             }
             img{
                 margin-right: 6px;
+                width: 24px;
+                height: 20px;
             }
         }
         &_mobile{
@@ -153,6 +190,7 @@
             font-weight: 600;
             margin-right: 16px;
         }
+        
         .form-control{
             border-radius: 0;
             appearance: none;
@@ -192,22 +230,27 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 15px;
-        @include tablet{
-            margin-bottom: 48px;
-        }
         @include tabtoslide{
             justify-content: center;
         }
     }
     &__name-type{
-        padding: 12px 7px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: "open sans";
+        font-weight: 600;
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+    &__wrap{
+        padding: 15px;
         margin: 0 4px 9px;
         border: 1px solid #575D614D;
         cursor: pointer;
         transition: .3s;
         @include tablet{
             margin: 0 4px 12px; 
-            padding: 16px 12px;
+            padding: 25px;
         }
         &.active{
             background: #70707026;
@@ -215,27 +258,46 @@
         &:hover{
             background: #aaaaaa26;
         }
+        p{
+            margin-bottom: 0;
+            font-size: 14px;
+        }
     }
     &__block{
-        width: 50%;
+        width: 100%;
         text-align: center;
         margin-bottom: 22px;
-        @include tablet{
-            width: 25%; 
+        .like{
+            display: none;
         }
-        @include desktop-sm{
-            width: 20%;
-        }
-        @include tabtoslide{
-            width: 150px;
-            margin-bottom: 0;
+        .button-like{
+            background: #fff;
+            color: #575d61!important;
+            border: 1px solid #575D614D;
+            cursor: pointer;
+            width: 100px;
+            margin: 0 auto 32px;
+            display: flex;
+            text-align: center;   
+            align-items: center;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            .like{
+                display: inline;
+            }
+            button{
+                margin-right: 12px;
+            }
         }
     }
     &__checkbox{
         text-align: center;
-        margin-bottom: 10px;
+        margin: 20px 0 10px;
         @include tablet{
-            margin-bottom: 24px;
+            margin: 30px 0 24px;
         }
         .small-text{
             display: block;
@@ -258,5 +320,10 @@
                 min-width: 400px;
             }
         }
+    }
+    &__example{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
     }
 }
