@@ -66,11 +66,7 @@
 
 .plupload_buttons{
     display: flex;
-    flex-wrap: nowrap;
-    background: #8ba4b3;
-    &:hover{
-        background: #567c8b;
-    }
+    flex-wrap: wrap;
 }
 .plupload_button{
     width: 100% !important;
@@ -110,6 +106,12 @@
     flex-direction: column;
     @include wide-screen-sm{
         flex-direction: row;
+    }
+    .plupload_file_name, .plupload_file_size{
+        width: 100%;
+        @include wide-screen-sm{
+            width: 50%;
+        }
     }
 }
 .plupload_file_size{
