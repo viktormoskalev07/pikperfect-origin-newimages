@@ -290,6 +290,18 @@ window.addEventListener("load", function () {
   
 }());
 
+////// 14.2 click like /////
+// (function(){
+//   const buttonLike = document.querySelector('.button-like');
+//   const activeLike = document.querySelector('.photoselect__favorite');
+
+//   if(buttonLike){
+//     buttonLike.addEventListener('click', function(){
+//       activeLike.classList.toggle('checked');
+//       console.log('hi');
+//     })
+//   }
+// }());
 
 @@include('modules/imgpreloader.js')
 @@include('modules/accordion.js') 
