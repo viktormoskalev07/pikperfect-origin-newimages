@@ -66,7 +66,11 @@
 
 .plupload_buttons{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    background: #8ba4b3;
+    &:hover{
+        background: #567c8b;
+    }
 }
 .plupload_button{
     width: 100% !important;
@@ -104,8 +108,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    @include mobile-lg{
-        // padding: 11.5px 32px 16.5px;
+    @include wide-screen-sm{
         flex-direction: row;
     }
 }
