@@ -108,9 +108,9 @@
         flex-direction: row;
     }
     .plupload_file_name, .plupload_file_size{
-        width: 100%;
+        width: 100% !important;
         @include wide-screen-sm{
-            width: 50%;
+            width: 50% !important;
         }
     }
 }
