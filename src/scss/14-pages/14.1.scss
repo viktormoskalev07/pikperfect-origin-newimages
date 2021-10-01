@@ -79,6 +79,9 @@
 }
 .plupload_filelist td{
     width: 100%;
+    @include mobile-lg{
+        width: 50%;
+    }
 }
 .plupload_file_name{
     width: 50%;
@@ -101,6 +104,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    @include mobile-lg{
+        // padding: 11.5px 32px 16.5px;
+        flex-direction: row;
+    }
 }
 .plupload_file_size{
     text-align: right;
