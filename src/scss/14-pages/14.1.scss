@@ -65,15 +65,16 @@
 // fix plugin
 
 .plupload_buttons{
+    font-size: 0;
     display: flex;
     flex-wrap: wrap;
+    a{
+        font-size: 14px;
+    }
 }
 .plupload_button{
     width: 100% !important;
 }
-// .plupload_started{
-//     min-height: 30px;
-// }
 .plupload_file{
     width: 100% !important;
 }
