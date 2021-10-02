@@ -19,7 +19,7 @@ const videoLoder=()=>{
  
   if(video){
       let videoTimeout=2500; 
-      if(mediaQuery2){
+      if(mediaQuery){
         videoTimeout=8000;
       }   
       setTimeout(() => {

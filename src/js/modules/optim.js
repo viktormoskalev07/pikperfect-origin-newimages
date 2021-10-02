@@ -18,23 +18,23 @@
         ) 
   }   
  
-window.addEventListener('load', function(){   
-const mediaQuery2 = window.matchMedia('(max-width: 480px)').matches;  
-  let swiperLoadingDelay=1; 
+window.addEventListener('load', function(){    
+  let swiperLoadingDelay=3500; 
   const swipDelay = document.querySelector('.swiper-delay'); 
   if(swipDelay){ 
     const addtime= parseInt(swipDelay.dataset.time);
     if(addtime>100){
       swiperLoadingDelay=1+ addtime/5;
-      if (mediaQuery2) {
+      if (mediaQuery) {
         swiperLoadingDelay =addtime;
       } 
     } 
+    
   }  
   addScript('js/swiper.min.js' , swiperLoadingDelay).addEventListener('load',()=>{
     addScript('js/slider.js' , 0);
  }) 
- 
+ console.log(mediaQuery , swiperLoadingDelay)
  
   addScript('//code.jquery.com/jquery-1.11.2.min.js' , 6000).addEventListener('load',()=>{ 
     addScript('js/jqueryWorksHere.js' , 0);

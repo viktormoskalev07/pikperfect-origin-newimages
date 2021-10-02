@@ -1,6 +1,6 @@
 const header = document.querySelector(".header");
 const body = document.querySelector("body"); 
-
+const mediaQuery = window.matchMedia('(max-width: 580px)').matches;  
 let scrollPos = 0;
 window.addEventListener("load", function () {
   window.addEventListener("scroll", function () {

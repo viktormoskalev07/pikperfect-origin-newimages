@@ -128,9 +128,8 @@ if (document.querySelector(".section-reviews-card__wrap")){
         video.src=video.dataset.src.replace('background=1',""); 
         checkVideo=0; 
        }
-     }, 2000);
-} 
-
+     }, mediaQuery?5000:1200);
+}  
 
  
 if (document.querySelector('.section-hero__tab-activators')&&!document.querySelector('#no-video')){ 

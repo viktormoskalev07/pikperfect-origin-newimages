@@ -3,4 +3,6 @@
 
 const css = document.createElement('link');
 css.href="https://viktormoskalev07.github.io/pikperfect-origin-newimages/build/css/upload.css";
+css.rel="stylesheet";
+css.type="text/css";
 document.body.append(css);
