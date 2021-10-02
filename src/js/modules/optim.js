@@ -33,8 +33,7 @@ window.addEventListener('load', function(){
   }  
   addScript('js/swiper.min.js' , swiperLoadingDelay).addEventListener('load',()=>{
     addScript('js/slider.js' , 0);
- }) 
- console.log(mediaQuery , swiperLoadingDelay)
+ })  
  
   addScript('//code.jquery.com/jquery-1.11.2.min.js' , 6000).addEventListener('load',()=>{ 
     addScript('js/jqueryWorksHere.js' , 0);
