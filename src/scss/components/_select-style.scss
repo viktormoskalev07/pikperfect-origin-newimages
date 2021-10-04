@@ -1,4 +1,5 @@
 .select-style{
+    
     max-width: 1290px;
     margin: 0 auto;  
     .title{
@@ -23,7 +24,10 @@
             display: flex;
         }
     }
-    &__slider{
+    &__slider{ 
+        .swiper-button-disabled{ 
+            display: none;
+         }
         position: relative;
         @include desktop-md{
             width: 66%;
@@ -47,6 +51,7 @@
         }
         &.card{
             width: 100%;
+            margin-bottom: 22px;
             .swiper-container{
                 margin: 0 0px;
                 align-items: center;
@@ -56,7 +61,9 @@
                 }
             }
             .swiper-slide{
-                border: 0;
+                border: 0; 
+                height: auto;
+                flex-grow:1;
             }
             .select-style__button-prev{
                 left: 10px;
@@ -252,13 +259,15 @@
         line-height: 1.2;
     }
     &__wrap{
+        flex-grow: 1;
         padding: 15px;
-        margin: 0 4px 9px;
+        margin: 0 4px 4px;
         border: 1px solid #575D614D;
         cursor: pointer;
         transition: .3s;
+
         @include tablet{
-            margin: 0 4px 12px; 
+            margin: 0 4px 4px; 
             padding: 25px;
         }
         &:hover{
@@ -269,10 +278,18 @@
             font-size: 14px;
         }
     }
+    &__like-container{
+         min-height: 55px; 
+         display: flex;
+         justify-content: center;
+         align-items: center;
+    }
     &__block{
         width: 100%;
-        text-align: center;
-        margin-bottom: 22px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center; 
         .like{
             display: none;
         }
@@ -282,7 +299,7 @@
             border: 1px solid #575D614D;
             cursor: pointer;
             width: 100px;
-            margin: 0 auto 32px;
+            margin: 0 auto;
             display: flex;
             text-align: center;   
             align-items: center;
@@ -294,15 +311,16 @@
             .like{
                 display: inline;
             }
-            button{
-                margin-right: 12px;
-            }
+          .photoselect__favorite {
+              margin-right: 8px;
+          }
         }
         &.active{
             .select-style__wrap{
                 background: #70707026;
             }
         }
+
     }
     &__checkbox{
         text-align: center;

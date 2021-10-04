@@ -278,7 +278,7 @@ if (document.querySelector(".select-style__swiper")){
   //////// slider 14.2  cards /////
 if (document.querySelector(".select-style__swiper-card")){
   var swiper123 = new Swiper(".select-style__swiper-card", {
-      loop:true,
+      
       // autoplay: {
       //     delay: 3000,
       //   },
@@ -296,10 +296,14 @@ if (document.querySelector(".select-style__swiper-card")){
           spaceBetween: 8
         },
         1024: {
+          allowTouchMove:false, 
+          touchStartForcePreventDefault:true,
           slidesPerView: 3,
           spaceBetween: 8
         },
         1200: {
+          allowTouchMove:false, 
+          touchStartForcePreventDefault:true,
           slidesPerView: 4,
           spaceBetween: 8
         },

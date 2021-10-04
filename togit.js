@@ -17,12 +17,12 @@ ncp.limit = 16;
           return console.error(err);
         }
        });
-       console.log(chalk.green('finish , wait a second ..'));
+       console.log(chalk.green(' wait a second ..'));
        console.log(chalk.red(imageErrors));
  } 
   
  
- console.log('it can work in background');
+ console.log('one more second...');
  setTimeout(() => {
     
     copyToBuild();
