@@ -262,6 +262,10 @@ if (document.querySelector(".select-style__swiper")){
       // autoplay: {
       //     delay: 3000,
       //   },
+      pagination: {
+        el: ".select-style__example",
+        type: "fraction",
+      },
       navigation: {
         nextEl: ".next",
         prevEl: ".prev",
