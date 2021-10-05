@@ -276,39 +276,46 @@ if (document.querySelector(".select-style__swiper")){
   }
 
   //////// slider 14.2  cards /////
+
 if (document.querySelector(".select-style__swiper-card")){
-  var swiper123 = new Swiper(".select-style__swiper-card", {
-      
-      // autoplay: {
-      //     delay: 3000,
-      //   },
-      navigation: {
+  var swiper223 = new Swiper(".select-style__swiper-card", {  
+       navigation: {
         nextEl: ".next-card",
         prevEl: ".prev-card",
       },
       breakpoints: {
         320: {
           slidesPerView: 1,
+          slidesPerGroup: 1,
           spaceBetween: 10
         },
-        768: {
+        576: {
           slidesPerView: 2,
-          spaceBetween: 8
+          spaceBetween: 8,
+          slidesPerGroup: 2,
         },
-        1024: {
-          allowTouchMove:false, 
-          touchStartForcePreventDefault:true,
+        1024: { 
           slidesPerView: 3,
-          spaceBetween: 8
+          spaceBetween: 8,
+          slidesPerGroup:3,
         },
-        1200: {
-          allowTouchMove:false, 
-          touchStartForcePreventDefault:true,
+        1200: { 
           slidesPerView: 4,
-          spaceBetween: 8
+          spaceBetween: 8,
+          slidesPerGroup:4
         },
       }
     });
+    const btnNext =document.querySelector(".select-style__button-next.next-card");
+
+    function SlideToStart( ){
+      swiper223.slideTo(0);
+      btnNext.removeEventListener('click', SlideToStart)
+    } 
+        swiper223.on('reachEnd', function () { 
+           btnNext.addEventListener('click', SlideToStart)
+
+        });
   }
 
   /////////// slider 16.0  first/////////

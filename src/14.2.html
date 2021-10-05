@@ -353,35 +353,36 @@
           <div class="swiper-container select-style__swiper-card">
             <div class="swiper-wrapper">  
                   @@include('./14.2/type-album.html',{
-                    name: 'FLORAL DREAMS',
-                    class:'checked',
-                    classP:'',
-                    classLike:'',
+                    name: 'FLORAL DREAMS', 
                     text:'Floral patterns chosen to match your wedding style and colors, while keeping a light and airy look throughout the album.'
                   })
         
                   @@include('./14.2/type-album.html',{
-                    name: 'THE MINIMALIST',
-                    class:'button__light_border',
-                    classP:'',
-                    classLike:'',
+                    name: 'THE MINIMALIST', 
                     text:'Colored backgrounds and blocks customized to match the colors in your photos. Some use of thin borders on images.'
                   })
           
                   @@include('./14.2/type-album.html',{
-                    name: 'COLORED BLOCKS',
-                    class:'',
-                    classLike:'button-like',
-                    classP:'active',
+                    name: 'COLORED BLOCKS', 
                     text:'Colored backgrounds and blocks customized to match the colors in your photos. Some use of thin borders on images.'
                   })
             
                   @@include('./14.2/type-album.html',{
-                    name: 'METALLIC ACCENTS',
-                    class:'',
-                    classP:'',
-                    classLike:'',
+                    name: 'METALLIC ACCENTS', 
                     text:'Colored backgrounds and blocks customized to match the colors in your photos. Some use of thin borders on images.'
+                  })
+            
+                  @@include('./14.2/type-album.html',{
+                    name: 'test1', 
+                    text:'testtest test test test test testtesttest test test test test testtesttest test test test test test '
+                  })
+                  @@include('./14.2/type-album.html',{
+                    name: 'test2', 
+                    text:'testtest test test test test testtesttest test test test test testtesttest test test test test test '
+                  })
+                  @@include('./14.2/type-album.html',{
+                    name: 'test3', 
+                    text:'testtest test test test test testtesttest test test test test testtesttest test test test test test '
                   })
              
             </div>
@@ -527,8 +528,7 @@
     (function(){
       const select =document.querySelectorAll(".select-style__block"); 
       select.forEach((item)=>{
-        const child =item.querySelector(".select-style__wrap");
-        console.log(child); 
+        const child =item.querySelector(".select-style__wrap"); 
         child.addEventListener("click", ()=>{
           select.forEach((item2)=>{item2.classList.remove("active");})
           item.classList.add("active"); 
