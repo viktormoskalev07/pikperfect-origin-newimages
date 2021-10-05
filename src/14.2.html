@@ -553,10 +553,11 @@
       })
     }());
     (function(){
-      const liked = document.querySelectorAll(".photoselect__favorite"); 
+      const liked = document.querySelectorAll(".button-like"); 
       liked.forEach((item)=>{
         item.addEventListener('click', function(){
-          this.classList.toggle('checked');
+          const span = this.querySelector('.photoselect__favorite');
+          span.classList.toggle('checked');
         })
       })
     }());
