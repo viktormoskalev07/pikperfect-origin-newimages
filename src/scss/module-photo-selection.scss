@@ -42,21 +42,26 @@ html{
                 }
             } 
         }
-        .container{
-            max-width: 1300px !important;
-        }
     }
     &__section{
-        .container{
-            max-width: 1300px !important;
-        }
+        // .container{
+        //     max-width: 1300px !important;
+        // }
     }
     &__container{
+        padding: 0 30px !important;
+        @include mobile-lg{
+            padding: 0 50px !important;
+        }
         @include tablet{
             .col-xl-4{
                 padding: 0 5px;
             }
-            max-width: 1295px !important;
+            max-width: 1350px !important;
+            padding: 0 80px !important;
+        }
+        @include desktop-sm{
+            padding: 0 80px !important;
         }
     }
     &__top{
@@ -155,10 +160,18 @@ html{
         margin-bottom: 10px;
         position: absolute;
         top:29px;
-        right: 20px;
+        right: 30px;
         display: block;
-        padding: 18px 35px;
-        @include tablet{
+        padding: 12px 20px !important;
+        @include mobile-sm{
+            padding: 12px 35px !important;
+        }
+        @include mobile-lg{
+            right: 80px;
+            padding: 12px 50px !important;
+        }
+        @include desktop-sm{
+            padding: 15px 50px !important;
             position: static;
             min-width: 300px;
         }
