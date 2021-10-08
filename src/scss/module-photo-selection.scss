@@ -1,27 +1,54 @@
 @import "media-mixins";
 @import "variables.scss"; 
 @import "components/section-stock.scss";
+@import "components/_selection-album.scss";
 html{
     scroll-behavior: smooth;
 }
- 
+.shadow {
+    position: relative;
+    overflow: hidden;
+}
+.icon-info{
+    cursor: pointer;
+    margin-top: -5px;
+    &:hover{
+        transform: scale3d(1.2,1.2,1.2);
+    }
+}
+.modal-shadow{
+    margin: -50px -35px;
+}
+.selection-album__modal-content{
+    height: auto;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
 
 .photoselect {
    &__section *{
         transition:  0.4s;
     }
-        &__header{
+    &__header{
         padding: 48px 2px 42px;
         .logo{ 
             img{
                 width: 120px;
-                @include mobile-sm{
+                @include mobile-md{
                     width: 150px;
                 }
                 @include tablet{
                     width: 195px;
                 }
             } 
+        }
+        .container{
+            max-width: 1300px !important;
+        }
+    }
+    &__section{
+        .container{
+            max-width: 1300px !important;
         }
     }
     &__container{
@@ -33,9 +60,11 @@ html{
         }
     }
     &__top{
+        margin-bottom: 30px;
         @include tablet{
             width: 100%;
             display: inline-flex; 
+            margin-bottom: 22px;
         }
     }
     &__left, &__right{
@@ -50,6 +79,7 @@ html{
         @include tablet{
             text-align: right;
             padding-left: 30px;
+            font-size: 18px;
         }
     }
     &__name{
@@ -57,6 +87,10 @@ html{
         line-height: 32px;
         @include tablet{
             font-size: 24px;
+            margin-bottom: 23px;
+        }
+        img{
+            margin-left: 10px;
         }
     }
     &__info{
@@ -73,10 +107,6 @@ html{
         span , strong{
             vertical-align: middle;
             line-height: 30px;
-            font-size: 20px;
-            @include tablet{
-                font-size: 16px;
-            }
         }
         .radio-circle{
             @include tablet{
@@ -92,7 +122,7 @@ html{
     }
     &__buttons{ 
         border-bottom: 1px solid #575D61;  
-        margin-bottom: 40px;
+        margin-bottom: 43px;
         &__wrap{
             display: flex;
             align-items: stretch;
@@ -380,3 +410,5 @@ html{
   }
  
  
+
+  
