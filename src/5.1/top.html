@@ -1,32 +1,32 @@
 
     <div class="photoselect__top">
         <div class="photoselect__left">
-          <h1 class="photoselect__name">
-            Photo Selection: Our Safari 2021 <button class="photoselect__info" title="info"><svg
-                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <defs>
-                  <style>
-                    .a,
-                    .b {
-                      fill: none;
-                    }
-  
-                    .b {
-                      stroke: #2f353a;
-                      stroke-linecap: round;
-                      stroke-linejoin: round;
-                      stroke-width: 2px;
-                    }
-                  </style>
-                </defs>
-                <rect class="a" width="24" height="24" />
-                <circle class="b" cx="10" cy="10" r="10" transform="translate(2 2)" />
-                <line class="b" y1="4" transform="translate(12 12)" />
-                <line class="b" x2="0.01" transform="translate(12 8)" />
-              </svg> </button>
-          </h1>
+          <div class="photoselect__name-wrap">
+            <h1 class="photoselect__name">Photo Selection: Our Safari 2021 
+              <img class="icon-info icon-info-infoFoto" src="./images/ic_info.svg" alt="ic_info">
+            </h1>
+            <div class="selection-album__icon-info">
+              <div class="selection-album__modal modal-infoFoto">
+                  <div class="selection-album__modal-content">
+                      <button class="popup__close close-modal-info">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <rect fill="transparent" width="24" height="24"></rect>
+                            <g style="stroke:#2f353a;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" transform="translate(-0.662 -0.662)">
+                            <line x1="14" y2="14" transform="translate(5.662 5.662)"></line>
+                            <line x2="14" y2="14" transform="translate(5.662 5.662)"></line>
+                            </g>
+                          </svg>
+                        </button>
+                      <h2 class="title">SELECTED PHOTOS</h2>
+                      <p>SELECTED PHOTOS is a list of the images we think best tell your story. You can easily add or remove photos by clicking on the green checkmark. You can also view the complete set of images by clicking on the ALL PHOTOS tab.</p>
+                      <p>We will start with your album design once the selection has been approved.</p>
+                  </div>
+                  <div class="modal-shadow modal-shadow-infoFoto"></div>
+              </div>
+            </div>
+          </div>
           <div class="photoselect__sort">
-                <strong>Sort by</strong>
+                <strong>Sort by</strong> 
                 <label > 
                     <input class="radio-hide" name="sort" value="sortdate" type="radio">
                     <span class="radio-circle"> </span>

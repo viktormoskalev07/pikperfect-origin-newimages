@@ -3,14 +3,12 @@
 		@content;
 	}
 }
-// h1{
-// 	font-size: clamp(24px, 2vw, 40px) !important;
-// }
 .section-hero {
 	padding-bottom: 30px;
 	@include desktop-md {
 		padding: 0px 113px 90px 68px;
 	}
+	
 	&__size-title{
 		font-size: 30px;
 		@include mobile-sm{
@@ -228,6 +226,21 @@
 		}
 		p{
 			padding: 0 15px;
+		}
+		.section-hero__span{
+			margin-bottom: 28px;
+			@include tablet{
+				margin-bottom: 50px;
+			}
+			span{
+				display: block;
+				font-family: 'open sans';
+				font-weight: 300;
+				font-size: 16px;
+				@include tablet{
+					font-size: 18px;
+				}
+			}
 		}
 	}
 	&__wrap-flex{

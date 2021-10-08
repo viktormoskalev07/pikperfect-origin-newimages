@@ -72,7 +72,31 @@ window.addEventListener("scroll", function(){
 
 
 
-}())
+}());
+
+////// modal info ////
+(function(){
+    const closeModalInfo = document.querySelector('.close-modal-info');
+    const ModalInfo = document.querySelector('.modal-infoFoto');
+    const iconModalInfo = document.querySelector('.icon-info-infoFoto');
+    const shadowClose = document.querySelector('.modal-shadow-infoFoto');
+    const body = document.querySelector('body');
+  
+    if(closeModalInfo && ModalInfo){
+      iconModalInfo.addEventListener('click', function(){
+        ModalInfo.classList.add('d-block');
+        body.classList.add('shadow');
+      });
+      closeModalInfo.addEventListener('click', function(){
+        ModalInfo.classList.remove('d-block');
+        body.classList.remove('shadow');
+      });
+      shadowClose.addEventListener('click', function(){
+        ModalInfo.classList.remove('d-block');
+        body.classList.remove('shadow');
+      });
+    }
+  }());
 
  const link = document.createElement('link');
  link.rel='stylesheet';
