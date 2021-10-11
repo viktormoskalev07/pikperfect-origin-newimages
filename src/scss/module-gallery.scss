@@ -66,7 +66,7 @@
          
         width: calc(100% - 20px); 
         @include mobile-lg{
-            width: calc(100% - 120px);  
+            width: calc(100% - 150px);  
         }  
         @include wide-screen-md{
             width: calc(100% - 400px); 
@@ -75,6 +75,9 @@
         overflow: hidden; 
             img{
                 width: 100%;
+            }
+            .swiper-container{
+                border: 5px solid #b6b6b6;
             }
     }
 
