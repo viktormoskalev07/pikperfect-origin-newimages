@@ -367,7 +367,7 @@ if (document.querySelector(".select-style__swiper-card")){
 
 /////// slider for Linen Box Colors ////
   if (document.querySelector('.swipercolor')){
-    var swiperAlbum = new Swiper(".swipercolor", {
+    var swiperAlbumFirst = new Swiper(".swipercolor", {
       loop:true,
       navigation: {
         nextEl: ".swiper-button-next-first",
@@ -376,38 +376,55 @@ if (document.querySelector(".select-style__swiper-card")){
       breakpoints: {
         300: {
           slidesPerView: 3,
+          slidesPerGroup: 3,
           spaceBetween: 5
         },
         360: {
           slidesPerView: 4,
+          slidesPerGroup: 4,
           spaceBetween: 5
         },
         450: {
           slidesPerView: 5,
+          slidesPerGroup: 5,
           spaceBetween: 5
         },
         550: {
           slidesPerView: 6,
+          slidesPerGroup: 6,
           spaceBetween: 5
         },
         650: {
           slidesPerView: 7,
+          slidesPerGroup: 7,
           spaceBetween: 10
         },
         1024: {
           slidesPerView: 5,
+          slidesPerGroup: 5,
           spaceBetween: 10
         },
         1100: {
           slidesPerView: 6,
+          slidesPerGroup: 6,
           spaceBetween: 10
         },
         1200: {
           slidesPerView: 7,
+          slidesPerGroup: 7,
           spaceBetween: 10
         }, 
       }, 
   });
+  const btnNextColor =document.querySelector(".swiper-button-next-first");
+     function SlideToStart( ){
+      swiperAlbumFirst.slideTo(0);
+      btnNextColor.removeEventListener('click', SlideToStart)
+    } 
+    swiperAlbumFirst.on('reachEnd', function () { 
+          btnNextColor.addEventListener('click', SlideToStart)
+
+        });
 }
 /////// slider for Leatherette Box Colors ////
 if (document.querySelector('.swipercolorSecond')){
@@ -420,38 +437,55 @@ if (document.querySelector('.swipercolorSecond')){
     breakpoints: {
       300: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 5
       },
       360: {
         slidesPerView: 4,
+        slidesPerGroup: 4,
         spaceBetween: 5
       },
       450: {
         slidesPerView: 5,
+        slidesPerGroup: 5,
         spaceBetween: 5
       },
       550: {
         slidesPerView: 6,
+        slidesPerGroup: 6,
         spaceBetween: 5
       },
       650: {
         slidesPerView: 7,
+        slidesPerGroup: 7,
         spaceBetween: 10
       },
       1024: {
         slidesPerView: 5,
+        slidesPerGroup: 5,
         spaceBetween: 10
       },
       1100: {
         slidesPerView: 6,
+        slidesPerGroup: 6,
         spaceBetween: 10
       },
       1200: {
         slidesPerView: 7,
+        slidesPerGroup: 7,
         spaceBetween: 10
       }, 
-    }, 
+    },  
 });
+const btnNextColorSecond =document.querySelector(".swiper-button-next-second");
+     function SlideToStart( ){
+      swiperAlbum.slideTo(0);
+      btnNextColorSecond.removeEventListener('click', SlideToStart)
+    } 
+        swiperAlbum.on('reachEnd', function () { 
+          btnNextColorSecond.addEventListener('click', SlideToStart)
+
+        });
 }
 
   @@include('modules/galery.js')

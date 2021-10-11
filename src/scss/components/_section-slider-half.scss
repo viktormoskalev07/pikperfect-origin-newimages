@@ -135,7 +135,8 @@
         .swiper-container{
             margin: 0 30px;
             @include tablet{
-                margin: 0 50px;
+                margin: 0 35px;
+                padding: 0 10px;
             }
         }
         .swiper-button-next, .swiper-button-prev{
@@ -188,11 +189,13 @@
             @include tablet{
                 content: attr(data-title);
                 position: absolute;
-                left: -13px;
-                right: 0px;
+                left: -15px;
+                right: -15px;
+                text-align: center;
+                font-size: 15px;
+                margin: 0 auto;
                 bottom: -25px;
             }
-            
         }
         img{
             width: 100%;
