@@ -1,13 +1,14 @@
 .section-order{
-    padding: 40px 0;
+    padding: 40px 0 50px;
     @include tablet{
-        padding: 70px 0 35px;
+        padding: 40px 0 35px;
     }
     .container{
         max-width: 1300px !important;
     }
     &_grey{
         background: #EDECEE;
+        padding-top: 55px;
         @include tablet{
             padding-top: 90px;
         }
