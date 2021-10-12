@@ -29,4 +29,15 @@
             width: 100%;
         }
     }
+    &__maintenance{
+        &.header{
+            justify-content: center;
+        }
+        .error__img{
+            max-width: 550px;
+        }
+        .error__container{
+            max-width: 1000px;
+        }
+    }
 }

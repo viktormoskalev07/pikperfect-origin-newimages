@@ -162,15 +162,17 @@ if (document.querySelector('.section-hero__tab-activators')&&!document.querySele
    })
    
 }
+////  BigSlider page 5.0
 if (document.querySelector('.swiperBigSlider')){ 
-    const   BigSlider = new Swiper(".swiperBigSlider", {
+    const  BigSlider = new Swiper(".swiperBigSlider", {
+      allowTouchMove:false,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
       pagination: {
         el: ".swiperDescription-pagination",
-        clickable: true,
+        clickable: false,
       },
     }); 
  
