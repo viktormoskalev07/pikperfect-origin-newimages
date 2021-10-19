@@ -55,8 +55,9 @@
             font-size: 18px;
             margin-bottom: 35px;
         }
-        &_w-720{
-            max-width: 720px;
+        &_bottom{
+            text-align: left;
+            max-width: 550px;
             margin: 32px auto;
         }
        
@@ -82,12 +83,12 @@
         }
     }
     &__button{
-        max-width: 250px;
+        max-width: 350px;
         margin: 30px auto;
         width: 100%;
         &:hover{
             background: #575D6199;
-            color: #FFFFFF80;
+            color: #FFFFFF;
         }
     }
     .tab-content__input{

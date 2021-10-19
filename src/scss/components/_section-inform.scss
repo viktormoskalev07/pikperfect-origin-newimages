@@ -123,4 +123,27 @@
             margin-bottom: 10px;
         }
     }
+    &__select{
+        select{
+            cursor: pointer;
+            background: transparent;
+
+        }
+        position: relative;
+        width: 50%;
+        max-width: 225px;
+        background: #fff;
+        z-index: -2;
+    }
+}
+.arrow-down {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 14px;
+    right: 10px;
+    z-index: -1;
+}
+.custom-checkbox{
+    cursor: pointer;
 }

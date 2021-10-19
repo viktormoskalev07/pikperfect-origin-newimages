@@ -13,6 +13,24 @@
   &_light-grey{
     background: #EDECEE;
   }
+  &_light{
+    background: #fcfcfc;
+    padding-top: 0 !important;
+  }
+  &_light{
+    background-color: #fff;
+    padding: 0 !important;
+    .section-text__container{
+      padding: 48px 23px;
+      max-width: 880px !important;
+      @include tablet{
+        padding: 70px 23px;
+      }
+      @include desktop-md{
+        padding: 80px 23px 112px;
+      }
+    }
+  }
   &_size-s{
     padding: 61px 16px;
     @include desktop-md{
@@ -89,9 +107,6 @@
     @include desktop-md{
       padding: 70px 20px 112px;
     }
-  }
-  &_white{
-    background-color: #fff;
   }
   &_big-container{
     max-width: 1030px;

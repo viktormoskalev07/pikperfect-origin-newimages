@@ -1,4 +1,5 @@
 <section class="section-form section-form_gray">
+  <a name="JoinUsToday"></a>
   <div class="section-form__container">
     <h2 class="section-form__title">Join us Today</h2>
     <p class="section-form__entered">Join the hundreds of photographers who are outsourcing the daunting task of designing client albums, bringing in easy additional revenue. Enjoy special trade pricing and sample discounts.</p>
@@ -6,31 +7,55 @@
       <div class="section-form__form-wrap">
         <div class="tab-content__row50">
           <div class="tab-content__input">
-            <label for="formJoinFirstName">First Name *</label>
+            <label for="formJoinFirstName">First Name</label>
             <input type="text" name="first name" id="formJoinFirstName" required>
           </div>
           <div class="tab-content__input">
-            <label for="formJoinLastName">Last Name *</label>
+            <label for="formJoinLastName">Last Name</label>
             <input type="text" name="last name" id="formJoinLastName" required>
           </div>
         </div>
-        <div class="tab-content__row50">          
+        <div class="tab-content__row50"> 
           <div class="tab-content__input">
-            <label for="formJoinSocialPage">Website or social page *</label>
-            <input type="text" name="website or social page" id="formJoinSocialPage" required>
-          </div>
-          <div class="tab-content__input">
-            <label for="formJoinEmail">Email *</label>
+            <label for="formJoinEmail">Email</label>
             <input type="email" name="email" id="formJoinEmail" required>
+          </div>         
+          <div class="tab-content__input">
+            <label for="formJoinSocialPass">Password</label>
+            <input type="text" name="Password" id="formJoinSocialPass" required>
           </div>
         </div> 
-        <div class="tab-content__input">
-          <label for="formJoinAlbum">How Many Albums Do You Expect To Purchase Annually? *</label>
-          <input type="number" name="How Many Albums" id="formJoinAlbum" required>
-        </div>
-      </div>      
-      <p class="section-form__entered section-form__entered_w-720">By submitting this form, you are requesting communications and/or products and service information to be sent to you by email.</p>
-      <button class="section-form__button button m-auto" type="submit">submit</button>
+        <div class="tab-content__row50"> 
+          <div class="tab-content__input">
+            <label for="formJoinSocialPage">Website or social page</label>
+            <input type="text" name="website or social page" id="formJoinSocialPage" required>
+          </div>        
+          <div class="tab-content__input">
+            <label for="formJoinSocialNumber">Estimated number of annual album purchases</label>
+            <input type="number" name="Estimated number of annual album purchases" id="formJoinSocialNumber" required>
+          </div>
+        </div> 
+      </div>     
+      <div class="section-form__entered section-form__entered_bottom">
+        <label class="custom-checkbox">
+          <input class="custom-checkbox__input" type="checkbox" tabindex="-1">
+          <span class="custom-checkbox__checkmark" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <rect style="fill:transparent;" width="24" height="24"/><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"/>
+            </svg>
+          </span>Receive emails about new products & special offers</label>
+        <label class="custom-checkbox">
+          <input class="custom-checkbox__input" type="checkbox" tabindex="-1"  >
+          <span class="custom-checkbox__checkmark" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <rect style="fill:transparent;" width="24" height="24"/><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"/>
+            </svg>
+          </span>I understand and agree to PikPerfect's <a class="custom-checkbox__link" href="#">Terms</a> & <a class="custom-checkbox__link" href="#">Privacy Policy</a>. 
+        </label>
+      </div>
+      <button class="section-form__button m-auto button" type="submit">create account</button> 
+      <!-- <p class="section-form__entered section-form__entered_w-720">By submitting this form, you are requesting communications and/or products and service information to be sent to you by email.</p>
+      <button class="section-form__button button m-auto" type="submit">submit</button> -->
     </form>
   </div>    
 </section>
