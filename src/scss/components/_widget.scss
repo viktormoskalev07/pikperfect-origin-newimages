@@ -1,9 +1,15 @@
 #carousel-widget{
-    max-width: 1440px;
+    max-width: 1150px;
     margin: 0 auto;
     padding: 50px 0;
     #carousel-widget_frame{
-        max-width: 1440px;
+        max-width: 1150px;
         margin: 0 auto;
+        body{
+            background: red;
+        }
+    }
+    .reviewWrap{
+        padding: 100px;
     }
 }
