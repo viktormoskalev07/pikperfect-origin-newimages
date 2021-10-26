@@ -73,6 +73,10 @@ body.overflow{
     .close-filter{
       top: 95px;
       right: 24px;
+      display: block;
+      @include desktop-md{
+        display: none;
+      }
     }
   }
   &__list{
