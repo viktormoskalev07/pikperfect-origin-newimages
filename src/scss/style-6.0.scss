@@ -1,8 +1,8 @@
 body.price-shipping .header .menu a{
     font-size: 0.875rem !important;
 }
-body.price-shipping .header .btn{
-
+.price-shipping .header{
+    padding: 1.4rem 2rem 1.5rem;
 }
 .header .dropdown-lang .dropdown-toggle{
     padding: 0 !important;
@@ -19,9 +19,19 @@ body.price-shipping .header .btn{
 }
 body.price-shipping .header .btn{
     height: auto;
+    &.dropdown-toggle{
+        padding: 0;
+        margin: 0;
+    }
 }
 .header .right-nav .button__start{
-    display: inline-block;
+    display: none;
+}
+.header .menu>li{
+    a{
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
@@ -30,7 +40,7 @@ body.price-shipping .header .btn{
 
 body.price-shipping .header a{
     display: inline-block; 
-    font-family: "PT Sans", sans-serif; 
+    font-family: "Open Sans", sans-serif !important; 
     font-size: 0.875rem !important;
     margin-right: 10px; 
     padding-right: 10px;
