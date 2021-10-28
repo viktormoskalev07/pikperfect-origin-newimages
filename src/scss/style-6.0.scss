@@ -2,7 +2,7 @@ body.price-shipping .header .menu a{
     font-size: 0.875rem !important;
 }
 .price-shipping .header{
-    padding: 1.4rem 2rem 1.5rem;
+    padding: 1.4rem 2rem 1.5rem !important;
 }
 .header .dropdown-lang .dropdown-toggle{
     padding: 0 !important;
@@ -20,7 +20,7 @@ body.price-shipping .header .menu a{
 body.price-shipping .header .btn{
     height: auto;
     &.dropdown-toggle{
-        padding: 0;
+        padding: 0 !important;
         margin: 0;
     }
 }
@@ -29,19 +29,17 @@ body.price-shipping .header .btn{
 }
 .header .menu>li{
     a{
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
-
-
-
-
-
 body.price-shipping .header a{
     display: inline-block; 
     font-family: "Open Sans", sans-serif !important; 
     font-size: 0.875rem !important;
     margin-right: 10px; 
     padding-right: 10px;
+}
+#new-design-60 .header{
+    justify-content: space-between !important;
 }
