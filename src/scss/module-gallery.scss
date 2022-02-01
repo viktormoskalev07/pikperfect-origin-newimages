@@ -1,4 +1,183 @@
- 
+// <!-- example flip book -->
+
+.container-flip {
+    width: 400px;
+    height: 400px;
+    position: relative;
+
+    perspective: 1300px;
+    backface-visibility: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 50px auto;
+    &.shadow{
+        &::after{
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            top: 0;
+            left: -50%;
+            content: "";
+            background-image: url('../images/large-square/shadow-open.png');   
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        &::before{
+            position: absolute;
+            opacity: .7;
+            width: 205%;
+            height: 112%;
+            top: 0;
+            left: -52%;
+            content: "";
+            background-image: url(../images/large-square/shadow-openbook.png);
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: .7s;
+        }
+    }
+}
+.page {
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: transform;
+    cursor: pointer;
+
+	width: 100%;
+	height: 100%;
+	left: 50%;
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+    transition: transform 1s ease-in-out;
+    &.next{
+        transform: rotateY(-180deg);
+    }
+    &.prev{
+        transform: rotateY(0deg);
+    }
+    &:first-child{
+        width: 103%;
+        height: 103%;
+        top: -1.5%;
+        .front{
+            img{
+                object-fit: fill;
+            }
+        }
+        .back{
+            box-shadow: -4px 6px 7px #b1b1b1;
+        }
+    }
+    &:last-child{
+        width: 102.5%;
+        height: 103%;
+        top: -1.5%;
+        .back{
+            img{
+                object-fit: fill;
+            }
+        }
+        .front{
+            box-shadow: 4px 6px 7px #b1b1b1;
+            position: relative;
+            &::after{
+                position: absolute;
+                width: 100px;
+                height: 100%;
+                content: "";
+                top: 0;
+                left: 0;
+                background-image: url('../images/large-square/front_cover/front_spine_shadow.png');   
+                background-position: top left;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 9999;
+            }
+        }
+    }
+}
+
+.page > div,
+.outer,
+.content,
+.helper-class-to-make-bug-visbile {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.page > div {
+	width: 100%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.back {
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+}
+
+.outer {
+	width: 100%;
+	overflow: hidden;
+    z-index: 999;
+    img{
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: none;
+    }
+}
+
+/* problematic class: `.content` */
+.content {
+    width: 100%;
+}
+
+
+.front .content {
+	left: 0;
+}
+
+
+
+/* controls */
+#prev, #next {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    z-index: 999;
+    background: rebeccapurple;
+}
+#prev:hover, #next:hover {
+    background: rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+#prev {
+    top: 0;
+    left: 0;
+}
+#next {
+    top: 0;
+    left: 50%;
+}
+
+// <!-- example flip book -->
+
+
 @import "media-mixins";
 @import "variables.scss"; 
 .gallery{
@@ -13,9 +192,9 @@
         display: flex;
         justify-content: center;
         align-items: center; 
-         overflow: hidden;
+        overflow: hidden;
     }
-  
+
     &__close{
         border: solid black 1px;
         z-index: 1013;
@@ -63,7 +242,6 @@
         top: 0;bottom: 0;right: 0;left: 0;
     }
     &__content{
-         
         width: calc(100% - 20px); 
         @include mobile-lg{
             width: calc(100% - 150px);  
@@ -88,11 +266,11 @@
         position: relative;
         z-index: 2;
         @include mobile-lg{
-         
+
             position: absolute;
             top:calc(50% - 48px);
         }   
-     
+
     }
     &__next{
         @include mobile-lg{

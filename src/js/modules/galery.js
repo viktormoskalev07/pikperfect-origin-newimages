@@ -1,11 +1,12 @@
 (function(){
    const container = document.querySelector('.gallery__container');
+   const containerFlip = document.querySelector('.container-flip');
    let activator  ;
    let close      ;
    let slidePlace ;
    let fullscreen ;
    let closeGalery;
-   if(container){
+   if(!containerFlip && container){
           activator = document.querySelectorAll('.gallery__activator-js');
           activator.forEach(i => {
             i.classList.add('cursor-pointer');
@@ -24,6 +25,25 @@
             document.body.classList.remove('overflow-h');
         } 
    }
+   if(container && containerFlip){
+    activator = document.querySelectorAll('.gallery__activator-js');
+    activator.forEach(i => {
+      i.classList.add('cursor-pointer');
+    });
+     
+   close = document.querySelector('.gallery__close');
+   slidePlace =container.querySelector('.swiper-wrapper');
+   fullscreen = container.querySelector('.gallery__fullscreen-btn')  
+    closeGalery=()=>{
+      container.classList.add('gallery__fade');
+      setTimeout(() => {
+          container.classList.add('gallery__d-none');
+      }, 400);   
+      // GallerySlider.destroy(true, true);
+      // slidePlace.innerHTML=''; 
+      document.body.classList.remove('overflow-h');
+  } 
+}
  
    let slides;
    let GallerySlider 
@@ -106,9 +126,3 @@
     } 
 }())
 
-
-
-
- 
-
- 
