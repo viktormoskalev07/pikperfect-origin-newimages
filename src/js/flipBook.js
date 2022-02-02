@@ -18,7 +18,7 @@
     'complete-album/wedding-timeless-hochzeit-A+A/page-2.jpg',  // front
     'complete-album/wedding-timeless-hochzeit-A+A/page-3.jpg',  // back
 
-    'yellow-leather/cover/cover.jpg', // first page    
+    'yellow-leather/cover/cover.jpg', // first page
   ]
   const app = document.querySelector('#app');
   if(app){
