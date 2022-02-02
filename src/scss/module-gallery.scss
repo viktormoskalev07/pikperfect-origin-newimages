@@ -1,8 +1,11 @@
+@import "media-mixins";
+@import "variables.scss"; 
+
 // <!-- example flip book -->
 
 .container-flip {
-    width: 400px;
-    height: 400px;
+    width: 150px;
+    height: 150px;
     position: relative;
 
     perspective: 1300px;
@@ -12,6 +15,18 @@
     flex-wrap: wrap;
     flex-direction: column-reverse;
     margin: 50px auto;
+    @include mobile-md{
+        width: 200px;
+        height: 200px;
+    }
+    @include tablet{
+        width: 300px;
+        height: 300px;
+    }
+    @include desktop-sm{
+        width: 400px;
+        height: 400px;
+    }
     &.shadow{
         &::after{
             position: absolute;
@@ -178,8 +193,6 @@
 // <!-- example flip book -->
 
 
-@import "media-mixins";
-@import "variables.scss"; 
 .gallery{
     &__container{
         transition: all 0.4s;
