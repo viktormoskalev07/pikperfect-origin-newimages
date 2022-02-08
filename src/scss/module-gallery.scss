@@ -125,6 +125,9 @@
         @include wide-screen-md{
             height: 102.4%;
         }
+        @include wide-screen-lg{
+            height: 102.3%;
+        }
         .front{
             img{
                 object-fit: fill;
