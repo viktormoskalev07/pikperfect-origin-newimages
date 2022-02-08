@@ -488,6 +488,6 @@ const btnNextColorSecond =document.querySelector(".swiper-button-next-second");
           btnNextColorSecond.addEventListener('click', SlideToStart)
 
         });
-}
+};
 
-  @@include('modules/galery.js')
+  @@include('modules/galery.js');
