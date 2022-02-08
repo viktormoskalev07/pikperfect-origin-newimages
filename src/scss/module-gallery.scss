@@ -7,9 +7,9 @@
     width: 150px;
     height: 150px;
     position: relative;
-
     perspective: 1300px;
     backface-visibility: hidden;
+    // pointer-events: none;
 
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +26,22 @@
     @include desktop-sm{
         width: 400px;
         height: 400px;
+    }
+    @include tabtoslide{
+        width: 450px;
+        height: 450px;
+    }
+    @include wide-screen-sm{
+        width: 500px;
+        height: 500px;
+    }
+    @include wide-screen-md{
+        width: 590px;
+        height: 590px;
+    }
+    @include wide-screen-lg{
+        width: 700px;
+        height: 700px;
     }
     &.shadow{
         &::after{
@@ -44,19 +60,38 @@
         }
         &::before{
             position: absolute;
-            opacity: .7;
             width: 205%;
-            height: 112%;
-            top: 0;
-            left: -52%;
+            height: 100%;
+            bottom: -3px;
+            left: -53%;
             content: "";
-            background-image: url(../images/large-square/shadow-openbook.png);
-            background-position: bottom left;
+            background-image: url(../images/large-square/inner_page_botom_shadow_common.png);
+            background-position: bottom center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             transition: .7s;
+            @include mobile-md{
+                width: 204%;
+                bottom: -5px;
+                left: -52%;
+            }
+            @include tablet{
+                bottom: -7px;
+            }
+            @include desktop-sm{
+                bottom: -9px;
+            }
+            @include tabtoslide{
+                bottom: -11px;
+            }
+            @include wide-screen-md{
+                bottom: -14px;
+            }
         }
     }
+}
+.click{
+    pointer-events: none;
 }
 .page {
 	position: absolute;
@@ -65,6 +100,7 @@
 	-webkit-transition-property: -webkit-transform;
 	transition-property: transform;
     cursor: pointer;
+    
 
 	width: 100%;
 	height: 100%;
@@ -77,11 +113,12 @@
     }
     &.prev{
         transform: rotateY(0deg);
+        
     }
     &:first-child{
-        width: 103%;
-        height: 103%;
-        top: -1.5%;
+        width: 102.5%;
+        height: 102.3%;
+        top: -1.2%;
         .front{
             img{
                 object-fit: fill;
@@ -92,9 +129,9 @@
         }
     }
     &:last-child{
-        width: 102.5%;
-        height: 103%;
-        top: -1.5%;
+        width: 102%;
+        height: 102.3%;
+        top: -1.2%;
         .back{
             img{
                 object-fit: fill;
@@ -143,6 +180,24 @@
 	-webkit-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 }
+.first-page{
+    background-size: cover;
+    .content{
+        width: 97.5% ;
+        height: 97.5% ;
+        top: 1.2%;
+        left: 2.4%;
+    }
+}
+.last-page{
+    background-size: contain;
+    background-repeat: no-repeat;
+    .content{
+        width: 97.5% ;
+        height: 97.5% ;
+        top: 1.2%;
+    }
+}
 
 .outer {
 	width: 100%;
@@ -162,36 +217,12 @@
     width: 100%;
 }
 
-
 .front .content {
 	left: 0;
 }
 
 
-
-/* controls */
-#prev, #next {
-    position: absolute;
-    width: 40px;
-    height: 100%;
-    z-index: 999;
-    background: rebeccapurple;
-}
-#prev:hover, #next:hover {
-    background: rgba(0,0,0,0.05);
-    cursor: pointer;
-}
-#prev {
-    top: 0;
-    left: 0;
-}
-#next {
-    top: 0;
-    left: 50%;
-}
-
 // <!-- example flip book -->
-
 
 .gallery{
     &__container{
@@ -250,7 +281,6 @@
     }
     &__background{
         background-color: white;
-        opacity: 0.9;
         position: absolute;
         top: 0;bottom: 0;right: 0;left: 0;
     }
@@ -259,9 +289,6 @@
         @include mobile-lg{
             width: calc(100% - 150px);  
         }  
-        @include wide-screen-md{
-            width: calc(100% - 400px); 
-        } 
         margin: 0 auto;
         overflow: hidden; 
             img{
@@ -273,13 +300,13 @@
     }
 
     &__next, &__prev{
+        cursor: pointer;
         height: 86px;
         width: 86px;
         display: inline-block;
         position: relative;
         z-index: 2;
         @include mobile-lg{
-
             position: absolute;
             top:calc(50% - 48px);
         }   
@@ -290,7 +317,7 @@
             right: -10px;
         }
         @include wide-screen-md{
-        right: 70px; 
+            right: 10px; 
         }
     }
     &__prev{
@@ -298,7 +325,7 @@
             left: -10px;
         }
         @include wide-screen-md{
-        left:70px;
+            left: 10px; 
         }
     }
     &__fade{
@@ -313,7 +340,6 @@
         height: 0;
         overflow: hidden;
         padding-bottom: calc(540 / 1043 * 100%);
-          
     }
     &__image{
         position: absolute;
@@ -340,12 +366,12 @@
     &__fullscreen-btn{
         z-index: 1013;
         transition: 1s;
-          border:solid rgb(223, 223, 223)    1px;
-         background-color: rgb(255, 255, 255);
+        border:solid rgb(223, 223, 223)    1px;
+        background-color: rgb(255, 255, 255);
         height: 50px;
         width: 50px;
         border-radius: 50%;
-         padding:  10px;
+        padding:  10px;
         position: relative;
         margin-bottom: 8px;
         img{
@@ -356,8 +382,11 @@
         @include mobile-lg{
             left: 3%; 
             font-size: 0;
-             top: 4vh; 
-             position: absolute;
+            top: 4vh; 
+            position: absolute;
+        }
+        @include tablet{
+            display: none;
         }
     }
     &__fullscreen-open{
@@ -365,10 +394,10 @@
         transform-origin: 0% 0%;
         width: 100vh;
         height: 100vw;
-         left: 100vw;
-         top: 0;
-         bottom: 0;
-         .gallery{
+        left: 100vw;
+        top: 0;
+        bottom: 0;
+        .gallery{
             &__next , &__prev{
                 position: absolute;
                 bottom: 0px;
@@ -381,12 +410,12 @@
                 
             }
             &__fullscreen-btn{
-              z-index: 1014;
-              position: absolute;
-              right: 20px;
-              top: 10px; 
-              left: auto;
-              transform: rotate(90deg);
+            z-index: 1014;
+            position: absolute;
+            right: 20px;
+            top: 10px; 
+            left: auto;
+            transform: rotate(90deg);
             }
             &__close{
                 left: 20px;
@@ -395,7 +424,7 @@
             &__content{
                 width: 80%;
             }
-         } 
+        } 
     }
     &__button{
         z-index: 1;
@@ -410,11 +439,13 @@
         }
         .button{
             border-radius: 0;
-            padding: 10px 20px;
+            padding: 7px 15px;
             font-weight: 600;
             @include tablet{
-                font-size: 20px;
-                padding: 15px 20px;
+                font-size: 14px;
+            }
+            @include wide-screen-md{
+                font-size: 16px;
             }
             @media screen and(max-height: 420px){
                 padding: 10px 20px;
@@ -423,5 +454,3 @@
         }
     }
 }
- 
- 
