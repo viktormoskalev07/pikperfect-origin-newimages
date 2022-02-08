@@ -87,6 +87,9 @@
             @include wide-screen-md{
                 bottom: -14px;
             }
+            @include wide-screen-lg{
+                bottom: -17px;
+            }
         }
     }
 }
@@ -119,6 +122,9 @@
         width: 102.5%;
         height: 102.3%;
         top: -1.2%;
+        @include wide-screen-md{
+            height: 102.4%;
+        }
         .front{
             img{
                 object-fit: fill;
