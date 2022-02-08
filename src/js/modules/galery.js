@@ -230,6 +230,20 @@
       containerFlip.classList.remove('shadow');
     }
   };
+
+    
+  // click for every pages
+  page.forEach((elem) =>
+    elem.addEventListener("click", function () {
+      if (this.classList.contains("next")) {
+        this.classList.add('prev');
+        this.classList.remove('next');
+      } else {
+        this.classList.add("next");
+        this.classList.remove('prev');
+      }
+    })
+  );
   
   // add/remove shadow for book
   function clickBackCover(){
@@ -240,33 +254,17 @@
     setTimeout(openBookFront, 600);
     setTimeout(closeBookFront, 200);
   }
-  backCover.addEventListener('click', clickBackCover);
   frontCover.addEventListener('click', clickFrontCover);
-  
-  
-  // click for every pages
-    page.forEach((elem) =>
-      elem.addEventListener("click", function () {
-          if (this.classList.contains("next")) {
-            this.classList.add('prev');
-            this.classList.remove('next');
-          } else {
-            this.classList.add("next");
-            this.classList.remove('prev');
-          }
-      })
-    );
+  backCover.addEventListener('click', clickBackCover);
   
     // click for button "next"
     function nextArrow(){
       if(frontCover.classList.contains('next')){
         const pageNext = document.querySelectorAll('.page.next');
         const thisNextLength = (page.length - pageNext.length);
+        setTimeout(closeBookBack, 600);
         if(page.length = thisNextLength){
           page[page.length - 1 - pageNext.length].click();
-        }
-        if((page.length - pageNext.length)==0){
-          setTimeout(closeBookBack, 600);
         }
       }else{
         page[page.length - 1].click();
