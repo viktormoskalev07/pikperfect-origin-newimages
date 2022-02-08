@@ -92,46 +92,37 @@
     }
 
 /////////// flip book ////////////////
-    // Array cover (3 last pages)
-    const coverBack = [
-      'yellow-leather/inner-page/inner_page_base_leather_yellow_right.png', //last page
-      'complete-album/wedding-timeless-hochzeit-A+A/page-122.jpg',  // last white page
-      'yellow-leather/cover/cover.jpg', //last page cover
-    ]
-
-    // Array cover (3 first pages)
-    const coverFront = [
-      'yellow-leather/cover/cover.jpg', //first page cover
-      'yellow-leather/inner-page/inner_page_base_leather_yellow_left.png', //first page
-      'complete-album/wedding-timeless-hochzeit-A+A/page-122.jpg',  // first white page
-    ]
     const app = document.querySelector('#app');
+
   if(app){
     let result = ' ';
     
     // output last pages (cover)
-    coverBack.forEach((image, i) =>{
+    const albumCoverFolder = this.dataset.coverfolder;
+    const albumBackCover = this.dataset.backcover;
+    const arrImagesBackCover = albumBackCover.split(' , '); 
+    arrImagesBackCover.forEach((image, i) =>{
       if(i===0){
         result+= `
         <div class="page page__back-cover">
-          <div class="front last-page" style="background-image:url(images/large-square/${image})">`
+          <div class="front last-page" style="background-image:url(${albumCoverFolder+image})">`
       }
       if(i ===1){
         result+= `
               <div class="outer">
                   <div class="content">
-                    <img src="images/large-square/${image}">
+                    <img src="${albumCoverFolder+image}">
                   </div>
               </div>
           </div>`
       }
-      if(i ===(coverBack.length - 1) ){
+      if(i ===(arrImagesBackCover.length - 1) ){
         result+= `
           <div class="back">
               <div class="outer">
                   <div class="content">
                       <div class="helper-class-to-make-bug-visbile">
-                        <img src="images/large-square/${image}">
+                        <img src="${albumCoverFolder+image}">
                       </div>
                   </div>
               </div>
@@ -143,8 +134,7 @@
     // output of all main pages
     const albumImages = this.dataset.galleryalbumimages;
     const imgFolder = this.dataset.folder;
-    
-    const arrimages = albumImages.split(','); 
+    const arrimages = albumImages.split(' , '); 
     arrimages.forEach((imgName , i)=>{
         if(i%2){ 
           result+= ` <div class="back">
@@ -168,30 +158,30 @@
       });
 
       // output first pages (cover)
-      coverFront.forEach((image, i) =>{
+      const albumFrontCover = this.dataset.frontcover;
+      const arrImagesFrontCover = albumFrontCover.split(' , '); 
+      arrImagesFrontCover.forEach((image, i) =>{
         if(i ===0){
           result+= `
           <div class="page page__front-cover">
             <div class="front">
                 <div class="outer">
                     <div class="content">
-                      <img src="images/large-square/${image}">
+                      <img src="${albumCoverFolder+image}">
                     </div>
                 </div>
             </div>`
         }
         if(i===1){
           result+= `
-            <div class="back first-page" style="background-image:url(images/large-square/${image})">
-                `
+            <div class="back first-page" style="background-image:url(${albumCoverFolder+image})">`
         }
-        if(i ===(coverFront.length - 1) ){
+        if(i ===(arrImagesFrontCover.length - 1) ){
           result+= `
-            
                 <div class="outer">
                     <div class="content">
                         <div class="helper-class-to-make-bug-visbile">
-                          <img src="images/large-square/${image}">
+                          <img src="${albumCoverFolder+image}">
                         </div>
                     </div>
                 </div>
@@ -314,10 +304,11 @@
     })
     return( Math.max(...arr));
     }
+
     containerFlip.addEventListener('click', (e)=>{
-    const targetCard =e.target.closest('.page');
-    targetCard.style.zIndex = foundMaxZIndex() + 1;
-  });
+      const targetCard =e.target.closest('.page');
+      targetCard.style.zIndex = foundMaxZIndex() + 1;
+    });
   
   // keyboard input click <- -> 
   function keyboardArrows(e){

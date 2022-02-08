@@ -135,6 +135,20 @@
         }
         .back{
             box-shadow: -4px 6px 7px #b1b1b1;
+            position: relative;
+            &::after{
+                position: absolute;
+                width: 100px;
+                height: 100%;
+                content: "";
+                top: 0;
+                right: 0;
+                background-image: url('../images/large-square/back_cover/back_spine_shadow.png');   
+                background-position: top right;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 9999;
+            }
         }
     }
     &:last-child{
