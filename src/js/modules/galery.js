@@ -49,23 +49,23 @@ const openGalery =function(){
 
     const folder = this.dataset.folder;
     const images = this.dataset.galleryimages;
-     if(images){ 
-            const arrimages = images.split(',');  
-            slides='';
-            arrimages.forEach(imgName => { 
-              imgName = imgName.replace(/\s/g, ''); 
-              imgNameWebp = imgName.replace(/(\.png|\.jpg)/gm, ''); 
-                slides+=`
-                <div class="swiper-slide gallery__item">
-                <figure class="gallery__image"> 
-                <img   class="swiper-lazy"
-                data-src="${folder+imgName}"  
-                data-srcset="${folder}${imgNameWebp}-2880.webp 2x ,    ${folder}${imgNameWebp}-1440.webp" 
-                /> 
-                </figure> 
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white "></div>
-                    </div>  
-                `; 
+    if(images){ 
+      const arrimages = images.split(',');  
+      slides='';
+      arrimages.forEach(imgName => { 
+        imgName = imgName.replace(/\s/g, ''); 
+        imgNameWebp = imgName.replace(/(\.png|\.jpg)/gm, ''); 
+          slides+=`
+          <div class="swiper-slide gallery__item">
+          <figure class="gallery__image"> 
+          <img   class="swiper-lazy"
+          data-src="${folder+imgName}"  
+          data-srcset="${folder}${imgNameWebp}-2880.webp 2x ,    ${folder}${imgNameWebp}-1440.webp" 
+          /> 
+          </figure> 
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-white "></div>
+              </div>  
+          `; 
         });
         slidePlace.innerHTML=slides; 
         setTimeout(() => {
@@ -348,21 +348,22 @@ const openGalery =function(){
 // @@include('flipBook.js');
 
 
+//orientation albums
 
-// var img1 = new Image();  
-// var img2 = new Image();     
+// var imgLandscape = new Image();  
+// var imgLargeSquare = new Image();     
 
-//  img1.onload = function() {      
+// imgLandscape.onload = function() {      
 //    var width1 = this.width;
 //    var hight1 = this.height;
 //    var sum1 = width1/hight1;
-//    console.log('img1 ' + sum1);
+//    console.log('imgLandscape ' + sum1);
 //  }  
-//  img2.onload = function() {      
+//  imgLargeSquare.onload = function() {      
 //   var width2 = this.width;
 //   var hight2 = this.height;
 //   var sum2 = width2/hight2;
-//   console.log('img2 '+ sum2);
+//   console.log('imgLargeSquare '+ sum2);
 // }    
-//  img1.src = 'https://uce482264938659638ae6e6feaca.previews.dropboxusercontent.com/p/thumb/ABcHt_u-VRxbxJZm0c9pio2KaW4wTX0qfRkciAucVaNxsfoPsLQxowXdGH7mrdlpadoMUnYZIJsgw_nwh6-sNiXKJWrP7MqvLBqKTxA1xGU3AOsKSDLmHTs2JUR0pwCuiCx_ytv-M9gpkMU-JzlMuuw-G9kHc4aMOPaYHxk7C8cXZ9nbig9jbvZdUsoT_TvXTO_cC3WOlOuH7q2bDjXUNBYGXowE5P7sMY2PDSesj5TEPzPeRRFX1DPUVWUfghDuPg9raSawiBMj9yyaFY3cscHnP2Cnx1lkaxR-BnZ8SNwigoU9XxGXLGigvAD5dpFhOxL7PB1MW5tkCjIaDU0-ReWrPEG1TlV_826_tJegWmGwp6_W0PkNbK0sByIBr0-Ggzg/p.jpeg';
-//  img2.src='https://ucfa9108ad3af3c0d717580f4cd5.previews.dropboxusercontent.com/p/thumb/ABfQQa2YiWELUcp_KI_9zMIDW-QyFMiyjtDpN2O9-isY54DHaT1ZnxVaFytb-TmVO7oJjwKOpznQV2ywpg9QfBSxywmgmJZ3G8eQXsr9LjEZg38N2cwsyAk00ZpIuSwuIlL7C8VEIDGRsT_yq3HM8XZcFI5n5q9nOxBwepaVyhyAQnKeVDhb1tBljUvyTjdtlcnQbSJ7Vw3VusWO1GwgIRbwWwtdxobP-3R3BX0YZ17nRwLIjJ7yUHBYAJmNQ5z2BineX4zgeVoWRIhT0bde3RUXYx-0E8hQXkDESI3aMcgo-_vowcMiRICPIwd1MsFT-abwOd1G5fi8qkg14BoAoX9VujA1NoutPDc3hXL8U3CsPkzJRdzbKPbJtaGqua56Xb4/p.jpeg';
+// imgLandscape.src = 'https://uc9a9ea929f2d838c3518e359039.previews.dropboxusercontent.com/p/thumb/ABdR3Ghg4JExbfLJOEBYePIcF1SsgO6OBNpFN-HHL3Cco3iVlmolLBSkEPScExyziqTJ73bpxyRR8TSq4kZ6qfYryzOhlke2L3y8XKAe3gYUiTgvtlojvoT3qK6Y6Zca8HQdJHE200VxtqeW-0ln8pWkJ2UVVYE8fSnwZ-J5_TgZ-wWMKOwu7m45cM2F__4nXHfX72ekUlROWlBRcEkIWGgXPIBJ8Nczr-Nz-bjFHSCI4LTyaugjDbS2LQXN0_ADJbQNO3l7c94-4VTqLqoog2aPwrRDr9julPwbm8HjX8vow95f4oM8eLujKmDldH-vs4xC4p4aJfDeSdnWql2rxgWbsyLhPp2-xE1kEYWIklFfTmT1ThbrIvlfOJzni-neF7E/p.jpeg';
+// imgLargeSquare.src='https://ucd6c5b9f02f3d34044145d1aad3.previews.dropboxusercontent.com/p/thumb/ABcfL9XapxKmQF5pvTGiTDmP_ecI1s0LStZ16UXUnfUCb7pro0JffMkGRseTnsZO6MucZJ62HbPza6xvbSATA_MukoayhF4pHti1v85WfbJVOJAtkRfsbreVr4yivWD67sLCjZu9hduRkuD5djoJn5U5jSXL67ssXqVgelz-4rrfzCqJBLACKkhrolGrSP89tCJFfzUUbFXeUDwV3A3m_PXgLcnlpuMOl7FT70dTUWmruG69QTDllnh1A7n0WMXEP7LsRzaBToYaj96JfzGT5B9h0RbBCUBwQJkfdyJszG5gcRAC-O-4f-l7ZpNt9_ZounOabEfCofn_QJpgPPe1PBTZQhJW8aUi0MSmKcnnN4C97w2wtEn5ZIR8iLb58cuVceo/p.jpeg';
