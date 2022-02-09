@@ -4,7 +4,6 @@
   let activator  ;
   let close      ;
   let slidePlace ;
-  let fullscreen ;
   let closeGalery;
   if(!containerFlip && container){
           activator = document.querySelectorAll('.gallery__activator-js');
@@ -14,43 +13,39 @@
           
         close = document.querySelector('.gallery__close');
         slidePlace =container.querySelector('.swiper-wrapper');
-        fullscreen = container.querySelector('.gallery__fullscreen-btn')  
-          closeGalery=()=>{
-            container.classList.add('gallery__fade');
-            setTimeout(() => {
-                container.classList.add('gallery__d-none');
-            }, 400);   
-            GallerySlider.destroy(true, true);
-            slidePlace.innerHTML=''; 
-            document.body.classList.remove('overflow-h');
+        closeGalery=()=>{
+          container.classList.add('gallery__fade');
+          setTimeout(() => {
+              container.classList.add('gallery__d-none');
+          }, 400);   
+          GallerySlider.destroy(true, true);
+          slidePlace.innerHTML=''; 
+          document.body.classList.remove('overflow-h');
         } 
-   }
-   if(container && containerFlip){
+  }
+  if(container && containerFlip){
     activator = document.querySelectorAll('.gallery__activator-js');
     activator.forEach(i => {
       i.classList.add('cursor-pointer');
     });
-     
-   close = document.querySelector('.gallery__close');
-   slidePlace =container.querySelector('.swiper-wrapper');
-   fullscreen = container.querySelector('.gallery__fullscreen-btn')  
-    closeGalery=()=>{
-      container.classList.add('gallery__fade');
-      containerFlip.classList.remove('shadow');
-      setTimeout(() => {
-          container.classList.add('gallery__d-none');
-      }, 400);   
-      // GallerySlider.destroy(true, true);
-      // slidePlace.innerHTML=''; 
-      document.body.classList.remove('overflow-h');
-      document.removeEventListener('keydown', keyboardArrows); // keyboard input
+  
+  close = document.querySelector('.gallery__close');
+  slidePlace =container.querySelector('.swiper-wrapper');
+  closeGalery=()=>{
+    container.classList.add('gallery__fade');
+    containerFlip.classList.remove('shadow');
+    setTimeout(() => {
+        container.classList.add('gallery__d-none');
+    }, 400);   
+    document.body.classList.remove('overflow-h');
+    document.removeEventListener('keydown', keyboardArrows); // keyboard input
   } 
 }
- 
-   let slides;
-   let GallerySlider 
+
+  let slides;
+  let GallerySlider 
   
- const openGalery =function(){  
+const openGalery =function(){  
 
     const folder = this.dataset.folder;
     const images = this.dataset.galleryimages;
@@ -346,24 +341,28 @@
         activator.forEach(item => {
             item.addEventListener('click' , openGalery);
         });
-        fullscreen.addEventListener('click', function(){ 
-            if(container.classList.contains('gallery__fullscreen-open')){
-                  
-                    setTimeout(() => { 
-                        GallerySlider.update(); 
-                        GallerySlider.updateSize();
-                    },500);
-            }
-                            container.classList.toggle('gallery__fullscreen-open');
-                            
-                            setTimeout(() => { 
-                                GallerySlider.update(); 
-                                GallerySlider.updateSize()
-                            }, 1);
-                            
-        })
     } 
 
 }());
 
 // @@include('flipBook.js');
+
+
+
+// var img1 = new Image();  
+// var img2 = new Image();     
+
+//  img1.onload = function() {      
+//    var width1 = this.width;
+//    var hight1 = this.height;
+//    var sum1 = width1/hight1;
+//    console.log('img1 ' + sum1);
+//  }  
+//  img2.onload = function() {      
+//   var width2 = this.width;
+//   var hight2 = this.height;
+//   var sum2 = width2/hight2;
+//   console.log('img2 '+ sum2);
+// }    
+//  img1.src = 'https://uce482264938659638ae6e6feaca.previews.dropboxusercontent.com/p/thumb/ABcHt_u-VRxbxJZm0c9pio2KaW4wTX0qfRkciAucVaNxsfoPsLQxowXdGH7mrdlpadoMUnYZIJsgw_nwh6-sNiXKJWrP7MqvLBqKTxA1xGU3AOsKSDLmHTs2JUR0pwCuiCx_ytv-M9gpkMU-JzlMuuw-G9kHc4aMOPaYHxk7C8cXZ9nbig9jbvZdUsoT_TvXTO_cC3WOlOuH7q2bDjXUNBYGXowE5P7sMY2PDSesj5TEPzPeRRFX1DPUVWUfghDuPg9raSawiBMj9yyaFY3cscHnP2Cnx1lkaxR-BnZ8SNwigoU9XxGXLGigvAD5dpFhOxL7PB1MW5tkCjIaDU0-ReWrPEG1TlV_826_tJegWmGwp6_W0PkNbK0sByIBr0-Ggzg/p.jpeg';
+//  img2.src='https://ucfa9108ad3af3c0d717580f4cd5.previews.dropboxusercontent.com/p/thumb/ABfQQa2YiWELUcp_KI_9zMIDW-QyFMiyjtDpN2O9-isY54DHaT1ZnxVaFytb-TmVO7oJjwKOpznQV2ywpg9QfBSxywmgmJZ3G8eQXsr9LjEZg38N2cwsyAk00ZpIuSwuIlL7C8VEIDGRsT_yq3HM8XZcFI5n5q9nOxBwepaVyhyAQnKeVDhb1tBljUvyTjdtlcnQbSJ7Vw3VusWO1GwgIRbwWwtdxobP-3R3BX0YZ17nRwLIjJ7yUHBYAJmNQ5z2BineX4zgeVoWRIhT0bde3RUXYx-0E8hQXkDESI3aMcgo-_vowcMiRICPIwd1MsFT-abwOd1G5fi8qkg14BoAoX9VujA1NoutPDc3hXL8U3CsPkzJRdzbKPbJtaGqua56Xb4/p.jpeg';
