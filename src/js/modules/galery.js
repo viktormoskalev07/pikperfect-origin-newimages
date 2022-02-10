@@ -34,6 +34,7 @@
   closeGalery=()=>{
     container.classList.add('gallery__fade');
     containerFlip.classList.remove('shadow');
+    containerFlip.classList.remove('landscape');
     setTimeout(() => {
         container.classList.add('gallery__d-none');
     }, 400);   
@@ -130,8 +131,28 @@ const openGalery =function(){
     const albumImages = this.dataset.galleryalbumimages;
     const imgFolder = this.dataset.folder;
     const arrimages = albumImages.split(' , '); 
+
+
+    
     arrimages.forEach((imgName , i)=>{
-        if(i%2){ 
+
+      // format album
+      if(i === 0){
+        let thisImg = new Image();
+        thisImg.src=`${imgFolder+arrimages[0]}`; 
+        thisImg.onload = function(){
+          let width = thisImg.width;
+          let height = thisImg.height;
+          let sum = width/height;
+          if(sum > 1){
+            containerFlip.classList.add("landscape");
+          }
+        }
+      }
+        
+      // format album
+      
+        if(i%2){
           result+= ` <div class="back">
                       <div class="outer">
                           <div class="content">
@@ -185,7 +206,7 @@ const openGalery =function(){
       })
     app.innerHTML=result;
   }
-
+ 
   const page = document.querySelectorAll('.page');
   const containerFlip = document.querySelector('.container-flip');
   const frontCover = document.querySelector('.page__front-cover');
@@ -218,18 +239,20 @@ const openGalery =function(){
 
     
   // click for every pages
-  page.forEach((elem) =>
+  page.forEach((elem, index) => {
     elem.addEventListener("click", function () {
-      if (this.classList.contains("next")) {
-        this.classList.add('prev');
-        this.classList.remove('next');
+      if (elem.classList.contains("next")) {
+        elem.classList.remove('next');
+        elem.classList.add('prev');
       } else {
-        this.classList.add("next");
-        this.classList.remove('prev');
+        elem.classList.remove('prev');
+        elem.classList.add("next");
       }
+      console.log(index)
     })
+  }
   );
-  
+
   // add/remove shadow for book
   function clickBackCover(){
     setTimeout(openBookBack, 600);
@@ -326,7 +349,7 @@ const openGalery =function(){
     container.classList.remove('gallery__d-none');
     document.addEventListener('keydown', keyboardArrows); // keyboard input
     setTimeout(() => { 
-        container.classList.remove('gallery__fade');
+      container.classList.remove('gallery__fade');
     }, 1);
   }
     if(container&&activator){ 
@@ -335,35 +358,14 @@ const openGalery =function(){
         document.addEventListener('keydown' , function(event){
             
             if(event.keyCode==27){
-                closeGalery();
+              closeGalery();
             } 
         }) 
         activator.forEach(item => {
-            item.addEventListener('click' , openGalery);
+          item.addEventListener('click' , openGalery);
         });
     } 
 
 }());
 
 // @@include('flipBook.js');
-
-
-//orientation albums
-
-// var imgLandscape = new Image();  
-// var imgLargeSquare = new Image();     
-
-// imgLandscape.onload = function() {      
-//    var width1 = this.width;
-//    var hight1 = this.height;
-//    var sum1 = width1/hight1;
-//    console.log('imgLandscape ' + sum1);
-//  }  
-//  imgLargeSquare.onload = function() {      
-//   var width2 = this.width;
-//   var hight2 = this.height;
-//   var sum2 = width2/hight2;
-//   console.log('imgLargeSquare '+ sum2);
-// }    
-// imgLandscape.src = 'https://uc9a9ea929f2d838c3518e359039.previews.dropboxusercontent.com/p/thumb/ABdR3Ghg4JExbfLJOEBYePIcF1SsgO6OBNpFN-HHL3Cco3iVlmolLBSkEPScExyziqTJ73bpxyRR8TSq4kZ6qfYryzOhlke2L3y8XKAe3gYUiTgvtlojvoT3qK6Y6Zca8HQdJHE200VxtqeW-0ln8pWkJ2UVVYE8fSnwZ-J5_TgZ-wWMKOwu7m45cM2F__4nXHfX72ekUlROWlBRcEkIWGgXPIBJ8Nczr-Nz-bjFHSCI4LTyaugjDbS2LQXN0_ADJbQNO3l7c94-4VTqLqoog2aPwrRDr9julPwbm8HjX8vow95f4oM8eLujKmDldH-vs4xC4p4aJfDeSdnWql2rxgWbsyLhPp2-xE1kEYWIklFfTmT1ThbrIvlfOJzni-neF7E/p.jpeg';
-// imgLargeSquare.src='https://ucd6c5b9f02f3d34044145d1aad3.previews.dropboxusercontent.com/p/thumb/ABcfL9XapxKmQF5pvTGiTDmP_ecI1s0LStZ16UXUnfUCb7pro0JffMkGRseTnsZO6MucZJ62HbPza6xvbSATA_MukoayhF4pHti1v85WfbJVOJAtkRfsbreVr4yivWD67sLCjZu9hduRkuD5djoJn5U5jSXL67ssXqVgelz-4rrfzCqJBLACKkhrolGrSP89tCJFfzUUbFXeUDwV3A3m_PXgLcnlpuMOl7FT70dTUWmruG69QTDllnh1A7n0WMXEP7LsRzaBToYaj96JfzGT5B9h0RbBCUBwQJkfdyJszG5gcRAC-O-4f-l7ZpNt9_ZounOabEfCofn_QJpgPPe1PBTZQhJW8aUi0MSmKcnnN4C97w2wtEn5ZIR8iLb58cuVceo/p.jpeg';
