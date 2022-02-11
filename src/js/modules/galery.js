@@ -237,10 +237,17 @@ const openGalery =function(){
     }
   };
 
+
+  const removeCurrents = () => page.forEach(el => el.classList.remove('current', 'prev'));
     
   // click for every pages
   page.forEach((elem, index) => {
-    elem.addEventListener("click", function () {
+    const prevNode = elem.previousSibling;
+
+    elem.addEventListener("click", function (e) {
+      removeCurrents();
+      containerFlip.classList.remove('end');
+
       if (elem.classList.contains("next")) {
         elem.classList.remove('next');
         elem.classList.add('prev');
@@ -248,10 +255,16 @@ const openGalery =function(){
         elem.classList.remove('prev');
         elem.classList.add("next");
       }
-      console.log(index)
+
+      if (prevNode.classList) prevNode.classList.add('current');
+      if (index === 0 && containerFlip.classList.contains('shadow')) {
+        setTimeout(() => containerFlip.classList.add('end'), 700);
+      }
+
     })
   }
   );
+
 
   // add/remove shadow for book
   function clickBackCover(){
