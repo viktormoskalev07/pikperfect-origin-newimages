@@ -53,7 +53,7 @@
             width: 200%;
             height: 100%;
             top: 0;
-            left: -50.5%;
+            left: -50.25%;
             content: "";
             background-image: url('../images/large-square/shadow-open.png');  
             // background-image: url('../images/large-square/inner-page/inner_page_right_effect.png');   
@@ -110,7 +110,7 @@
         }
         @include tablet{
             width: 300px;
-            height: 212px; ////
+            height: 212px; 
             margin-bottom: 50px;
         }
         @include desktop-sm{
@@ -122,7 +122,7 @@
             height: 318px;
         }
         @include wide-screen-sm{
-            width: 500px; ///
+            width: 500px; 
             height: 355px;
         }
         @include wide-screen-md{
@@ -138,11 +138,13 @@
                 left: -50%;
             }
             &::before{
-                bottom: -2px;
+                width: 200%;
+                left: -50%;
+                bottom: -3px;
                 @include mobile-md{
-                    width: 204%;
-                    bottom: -5px;
-                    left: -52%;
+                    width: 202%;
+                    bottom: -4px;
+                    left: -51%;
                 }
                 @include tablet{
                     bottom: -6px;
@@ -200,7 +202,6 @@
     transition: transform 1s ease-in-out;
     &.next{
         transform: rotateY(-180deg);
-        //pointer-events: auto;
     }
     &.prev{
         transform: rotateY(0deg);
