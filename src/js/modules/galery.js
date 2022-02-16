@@ -173,6 +173,7 @@ const openGalery =function(){
   function closeBookBack(){
     if(backCover.classList.contains('next')){
       containerFlip.classList.remove('shadow');
+      console.log('test');
     }
   };
 
@@ -186,10 +187,10 @@ const openGalery =function(){
     elem.addEventListener("click", function (e) {
       removeCurrents();
       containerFlip.classList.remove('end');
-
       if (elem.classList.contains("next")) {
         elem.classList.remove('next');
         elem.classList.add('prev');
+        
       } else {
         elem.classList.remove('prev');
         elem.classList.add("next");
@@ -222,6 +223,7 @@ const openGalery =function(){
       if(frontCover.classList.contains('next')){
         const pageNext = document.querySelectorAll('.page.next');
         const thisNextLength = (page.length - pageNext.length);
+        clickFrontCover();
         setTimeout(closeBookBack, 600);
         if(page.length = thisNextLength){
           page[page.length - 1 - pageNext.length].click();
