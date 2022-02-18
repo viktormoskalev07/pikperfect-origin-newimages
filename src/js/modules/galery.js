@@ -298,7 +298,6 @@ const openGalery =function(){
     }
   };
   /////////// flip book ////////////////
-
     document.body.classList.add('overflow-h');
     container.classList.remove('gallery__d-none');
     document.addEventListener('keydown', keyboardArrows); // keyboard input
@@ -319,6 +318,18 @@ const openGalery =function(){
           item.addEventListener('click' , openGalery);
         });
     } 
-
 }());
+
+/////// preloader
+const preloader = document.querySelector('.preloader');
+const frontCover = document.querySelector('.page__front-cover');
+function preloaderAnimation(){
+  if(preloader){
+    frontCover.onload = function () {
+      preloader.classList.add('loaded');
+      console.log('wefcdscdsc');
+    }
+  }
+}
+preloaderAnimation();
 
