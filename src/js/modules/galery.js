@@ -144,8 +144,35 @@ const openGalery =function(){
         }  
       })
     app.innerHTML=result;
+
+  /////// preloader
+  function preloaderAnimation(){
+    if(preloader){
+      let imgTempleate = new Image;
+      imgTempleate.src = imgFrontCover.src;
+      imgTempleate.addEventListener('load', function(){
+        
+        //// created array with last 5 img
+        const newArr = new Array();
+        lastImgArr = arrimages.slice(-5 );
+        lastImgArr.forEach((item) => {
+          let thisImg = new Image();
+          srcItemArray = imgFolder+item;
+          thisImg.src = srcItemArray;
+          
+          thisImg.addEventListener('load', function(){
+            newArr.push(thisImg);
+            if(newArr.length == 5){
+              preloader.classList.add('loaded');
+            }
+          });
+        });
+      })
+    }
   }
- 
+  setTimeout(preloaderAnimation, 500);
+  }
+
   const page = document.querySelectorAll('.page');
   const containerFlip = document.querySelector('.container-flip');
   const frontCover = document.querySelector('.page__front-cover');
@@ -161,31 +188,6 @@ const openGalery =function(){
 
 
 
-/////// preloader
-  function preloaderAnimation(){
-    if(preloader){
-      let imgTempleate = new Image;
-      imgTempleate.src = imgFrontCover.src;
-      imgTempleate.addEventListener('load', function(){
-        preloader.classList.add('loaded');
-      })
-    }
-  }
-  setTimeout(preloaderAnimation, 500);
-
-  // function preloaderAnimation(){
-  //   if(preloader){
-  //     console.log(imgPage);
-  //     let imgTempleate = new Image;
-  //     imgPage.forEach(item, function(){
-  //       imgTempleate.src = item.src;
-  //       imgTempleate.addEventListener('load', function(){
-  //         preloader.classList.add('loaded');
-  //       })
-  //     })
-  //   }
-  // }
-  // setTimeout(preloaderAnimation, 500);
 
 
 
@@ -208,7 +210,6 @@ const openGalery =function(){
   function closeBookBack(){
     if(backCover.classList.contains('next')){
       containerFlip.classList.remove('shadow');
-      console.log('test');
     }
   };
 
