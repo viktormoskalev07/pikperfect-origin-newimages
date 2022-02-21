@@ -201,6 +201,9 @@
 	-webkit-transform-origin: left center;
 	transform-origin: left center;
     transition: transform 1s ease-in-out;
+    img{
+        background-color: #fff;
+    }
     &.next{
         transform: rotateY(-180deg);
     }

@@ -155,7 +155,9 @@ const openGalery =function(){
   const prev = document.querySelector(".flip-book__prev");
   const next = document.querySelector(".flip-book__next");
 
+  const imgPage = document.querySelectorAll('.page img')
   const imgFrontCover = document.querySelector('.page__front-cover img')
+
 
 
 
@@ -170,6 +172,21 @@ const openGalery =function(){
     }
   }
   setTimeout(preloaderAnimation, 500);
+
+  // function preloaderAnimation(){
+  //   if(preloader){
+  //     console.log(imgPage);
+  //     let imgTempleate = new Image;
+  //     imgPage.forEach(item, function(){
+  //       imgTempleate.src = item.src;
+  //       imgTempleate.addEventListener('load', function(){
+  //         preloader.classList.add('loaded');
+  //       })
+  //     })
+  //   }
+  // }
+  // setTimeout(preloaderAnimation, 500);
+
 
 
   
