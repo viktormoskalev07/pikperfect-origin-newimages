@@ -182,16 +182,9 @@ const openGalery =function(){
   const prev = document.querySelector(".flip-book__prev");
   const next = document.querySelector(".flip-book__next");
 
-  const imgPage = document.querySelectorAll('.page img')
   const imgFrontCover = document.querySelector('.page__front-cover img')
 
 
-
-
-
-
-
-  
   function openBookFront(){
     if(frontCover.classList.contains('next')){
       containerFlip.classList.add('shadow');
