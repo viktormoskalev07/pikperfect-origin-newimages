@@ -1,6 +1,7 @@
 (function(){
   const container = document.querySelector('.gallery__container');
   const containerFlip = document.querySelector('.container-flip');
+  const preloader = document.querySelector('.preloader');
   let activator  ;
   let close      ;
   let slidePlace ;
@@ -18,6 +19,7 @@
     containerFlip.classList.remove('shadow');
     containerFlip.classList.remove('end');
     containerFlip.classList.remove('landscape');
+    preloader.classList.remove('loaded');
     setTimeout(() => {
         container.classList.add('gallery__d-none');
     }, 400);   
@@ -27,9 +29,7 @@
   
 /////////// flip book ////////////////
 const openGalery =function(){  
-
   const app = document.querySelector('#app');
-
   if(app){
     let result = ' ';
     
@@ -154,6 +154,24 @@ const openGalery =function(){
   const arrows = document.querySelector('.gallery__controls');
   const prev = document.querySelector(".flip-book__prev");
   const next = document.querySelector(".flip-book__next");
+
+  const imgFrontCover = document.querySelector('.page__front-cover img')
+
+
+
+/////// preloader
+  function preloaderAnimation(){
+    if(preloader){
+      let imgTempleate = new Image;
+      imgTempleate.src = imgFrontCover.src;
+      imgTempleate.addEventListener('load', function(){
+        preloader.classList.add('loaded');
+      })
+    }
+  }
+  setTimeout(preloaderAnimation, 500);
+
+
   
   function openBookFront(){
     if(frontCover.classList.contains('next')){
@@ -190,7 +208,6 @@ const openGalery =function(){
       if (elem.classList.contains("next")) {
         elem.classList.remove('next');
         elem.classList.add('prev');
-        
       } else {
         elem.classList.remove('prev');
         elem.classList.add("next");
@@ -200,7 +217,6 @@ const openGalery =function(){
       if (index === 0 && containerFlip.classList.contains('shadow')) {
         setTimeout(() => containerFlip.classList.add('end'), 700);
       }
-
     })
   }
   );
@@ -318,18 +334,5 @@ const openGalery =function(){
           item.addEventListener('click' , openGalery);
         });
     } 
+
 }());
-
-/////// preloader
-const preloader = document.querySelector('.preloader');
-const frontCover = document.querySelector('.page__front-cover');
-function preloaderAnimation(){
-  if(preloader){
-    frontCover.onload = function () {
-      preloader.classList.add('loaded');
-      console.log('wefcdscdsc');
-    }
-  }
-}
-preloaderAnimation();
-
