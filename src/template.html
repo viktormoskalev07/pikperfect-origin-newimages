@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <meta name="color-scheme" content="light only">
+    <meta name="x-apple-disable-message-reformatting">
     <style>
-        :root {
-        color-scheme: light;
-        }
-        </style>
+        @media only screen and (min-width: 320px) and (max-width: 530px) { 
+            .respons_td {
+                width: 100%!important;
+            }
+            .respons_td a{
+                display: block!important;
+                margin: 5px 0!important;
+                font-size: 16px!important;
+                width: 100%!important;
+            }
+            .response_button > * {
+                width: 100%!important;
+            }
+            .response_button > a {
+                margin: 15px auto!important;
+                box-sizing: border-box!important;
+                max-width: 100%!important;
+            }
+            .response_button {
+                padding: 0 5px !important;
+            }
+         }
+    </style>
 </head>
 <body style="margin: 0; position: relative; font-family: 'Open-Sans', sans-serif; font-size: 14px; background-image: linear-gradient(#ffffff, #ffffff);">
     <table border="0" align="center" cellpadding="0" cellspacing="0" width="100%" style="max-width: 640px; margin: 0 auto; padding: 27px 0; background: #ffffff; background-image: linear-gradient(#ffffff, #ffffff);">
@@ -79,27 +99,27 @@
                 </td>
             </tr>
             <tr style="color: #6E777E; font-size: 14px;">
-                <td align="center" style="width: 33.3%; padding-top: 30px;"><a style="text-decoration: none; color: #575d61;;" href="https://www.pikperfect.com/">Earn credit</a></td>
-                <td align="center" colspan="2" style="width: 33.3%; padding-top: 30px;"><a style="text-decoration: none; color: #575d61;;" href="https://www.pikperfect.com/">Share with #MyPikPerfect</a></td>
-                <td align="center" style="width: 33.3%; padding-top: 30px;"><a style="text-decoration: none; color: #575d61;;" href="https://www.pikperfect.com/">Spread the love</a></td>
+                <td class="respons_td" align="center" colspan="4" style="padding-top: 30px;">
+                    <a style="text-decoration: none; display: inline-block; width: 30%; color: #575d61;" href="https://www.pikperfect.com/">Earn credit</a>
+                    <a style="text-decoration: none; display: inline-block; width: 30%;  color: #575d61;" href="https://www.pikperfect.com/">Share with #MyPikPerfect</a>
+                    <a style="text-decoration: none; display: inline-block; width: 30%;  color: #575d61;" href="https://www.pikperfect.com/">Spread the love</a>
+                </td>
             </tr>
             <tr style="color: #6E777E;">
-                <td align="center" style="padding-top: 30px; padding-left: 5px; width: 33%;">
-                  <a class="button" href="https://www.pikperfect.com/" style="font-weight: bold; display: inline-block;border-radius: 5px;padding: 11px 5px;border: 1px solid #575d61; text-decoration: none; color: #575d61; font-size: 12px; width: 115px;">REFER A FRIEND</a>
-                </td>
-                <td align="center" colspan="2" style="padding-top: 30px; width: 33%;">
-                    <a style="text-decoration: none; color: black; display: inline-block; width: 32%; max-width: 45px" href="https://www.facebook.com/">
-                        <img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_facebook.jpg" alt="facebook" style="display: block; width: 100%">
-                    </a>
-                    <a style="text-decoration: none; color: black;display: inline-block; width: 32%; max-width: 45px"  href="https://www.instagram.com/">
-                        <img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_instagram.jpg" alt="instagram" style="display: block; width: 100%">
-                    </a>
-                    <a style="text-decoration: none; color: black;display: inline-block; width: 32%; max-width: 45px"  href="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_pinterest.jpg">
-                        <img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_pinterest.jpg" alt="pinterest" style="display: block; width: 100%">
-                    </a>
-                </td>
-                <td align="center" style="padding-top: 30px; padding-right: 5px; width: 33%;">
-                  <a href="https://www.pikperfect.com/" style="font-weight: bold; display: inline-block;border-radius: 5px;padding: 11px 5px;border: 1px solid #575d61; text-decoration: none; color: #575d61;; font-size: 12px; width: 115px;">GIFT CARDS</a>
+                <td align="center" colspan="4" class="response_button" style="padding-top: 30px; padding-left: 5px;">
+                    <a href="#" style="display: inline-block; width: 30%;"><img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/Screenshot.png" style="display: block; width: 100%; max-width: 115px;" alt="button"></a>
+                    <div style="display: inline-block; white-space: nowrap; width: 30%;">
+                        <a style="text-decoration: none; color: black; display: inline-block; width: 32%; max-width: 45px" href="https://www.facebook.com/">
+                            <img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_facebook.jpg" alt="facebook" style="display: block; width: 100%">
+                        </a>
+                        <a style="text-decoration: none; color: black;display: inline-block; width: 32%; max-width: 45px"  href="https://www.instagram.com/">
+                            <img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_instagram.jpg" alt="instagram" style="display: block; width: 100%">
+                        </a>
+                        <a style="text-decoration: none; color: black;display: inline-block; width: 32%; max-width: 45px"  href="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_pinterest.jpg">
+                            <img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/circle_pinterest.jpg" alt="pinterest" style="display: block; width: 100%">
+                        </a>
+                    </div>
+                    <a href="#" style="display: inline-block; width: 30%;"><img src="https://raw.githubusercontent.com/viktormoskalev07/pikperfect-origin-newimages/main/build/images/mail-template/Screenshots.png" style="display: block; width: 100%; max-width: 115px;" alt="button"></a>
                 </td>
             </tr>
             <tr>
