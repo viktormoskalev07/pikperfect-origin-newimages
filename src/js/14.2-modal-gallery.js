@@ -7,23 +7,23 @@
   let closeGalery;
   let modalContent;
   if(container){
-        activator = document.querySelectorAll('.gallery__activator-js');
-        activator.forEach(i => {
-          i.classList.add('cursor-pointer');
-        });
+    activator = document.querySelectorAll('.gallery__activator-js');
+    activator.forEach(i => {
+      i.classList.add('cursor-pointer');
+    });
 
-        close = document.querySelector('.select-style__close');
-        slidePlace =container.querySelector('.swiper-wrapper');
-        modalContent =container.querySelector('.select-style__modal-content');
-        fullscreen = container.querySelector('.gallery__fullscreen-btn')  
-        closeGalery=()=>{
-          container.classList.add('gallery__fade');
-          container.classList.add('gallery__d-none');  
-          GallerySlider.destroy(true, true);
-          slidePlace.innerHTML=''; 
-          modalContent.innerHTML=''; 
-          document.body.classList.remove('overflow-h');
-      } 
+    close = document.querySelector('.select-style__close');
+    slidePlace =container.querySelector('.swiper-wrapper');
+    modalContent =container.querySelector('.select-style__modal-content');
+    fullscreen = container.querySelector('.gallery__fullscreen-btn')  
+    closeGalery=()=>{
+      container.classList.add('gallery__fade');
+      container.classList.add('gallery__d-none');  
+      GallerySlider.destroy(true, true);
+      slidePlace.innerHTML=''; 
+      modalContent.innerHTML=''; 
+      document.body.classList.remove('overflow-h');
+    } 
   }
 
   let slides;
@@ -97,15 +97,17 @@ const openGalery =function(){
     }) 
     activator.forEach(item => {
       item.addEventListener('click' , openGalery);
+
+      item.addEventListener('click' , ()=>{
+        if(!container.classList.contains('gallery__d-none')){
+          document.addEventListener('click', (e)=>{
+            clickElement=e.target;
+            if(!clickElement.matches('.select-style__modal-wrap *') && clickElement.matches('.select-style__modal')){
+              closeGalery();
+            }
+          })
+        }
+      });
     });
-    fullscreen.addEventListener('click', function(){ 
-      if(container.classList.contains('gallery__fullscreen-open')){
-        GallerySlider.update(); 
-        GallerySlider.updateSize();
-      }
-      container.classList.toggle('gallery__fullscreen-open');
-        GallerySlider.update(); 
-        GallerySlider.updateSize()
-    })
   } 
 }())
