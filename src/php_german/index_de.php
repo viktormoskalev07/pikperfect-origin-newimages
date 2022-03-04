@@ -1,6 +1,6 @@
 <?php
-$this->headTitle($this->translate('Professional Photo Books & Photo Albums Online | PikPerfect'));
-$this->headMeta()->appendName('description', $this->translate('Create professional photo books and photo albums online. Work with our design specialist to craft a photo album you`ll cherish for life.'));
+$this->headTitle('Fotobuch erstellen lassen | Fotoalbum erstellen | PikPerfect');
+$this->headMeta()->appendName('description',('Erstelle hochwertige Fotobücher und Fotoalben. Unser Designteam gestaltet dein persönliches Fotobuch ganz nach deinen Wünschen. Mit Qualitätsgarantie.'));
 $region = $this->region()->getUserRegion();
 ?>
 <section class="section-hero__image-right">
@@ -11,8 +11,6 @@ $region = $this->region()->getUserRegion();
                     <source class="toggle-img--js" srcset="/assets/images/towebp/1.0-homepage/min-professional-photo-albums.webp" type="image/webp">
                     <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/1.0-homepage/professional-photo-albums.jpg" alt="Beispiel Fotobuch für Fotografen auf Holztisch">
                 </picture>
-
-
             </figure>
         </div>
         <div class="section-hero__content-col section-hero__content-col_gray">
