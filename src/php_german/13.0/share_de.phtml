@@ -1,0 +1,38 @@
+<?php $this->headTitle('Erhalte Guthaben für deine Weiterempfehlungen | PikPerfect');
+$this->headMeta()->appendName('description', 'Es lohnt sich, deine Begeisterung zu teilen: erhöhe dein Guthaben durch jede Fotobuchbestellung von Freunden.');
+
+$region = $this->region()->getUserRegion();
+$discount = $region->symbol . $this->format(\User\Model\UserReferral::getCredit($region->iso), $region->iso, 0);
+?>
+
+<section class="discount">
+    <div class="discount__wrap">
+        <div class="discount__img">
+            <figure style="padding-bottom: calc(895% / 688 * 100)" class="figure-webp">
+                <picture data-priority="0" data-name="wedding-photo-book" data-path="13.0-share" class="picture-webp">
+                    <source class="toggle-img--js" srcset="/assets/images/towebp/13.0-share/min-wedding-photo-book.webp" type="image/webp">
+                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/13.0-share/wedding-photo-book.jpg" alt="An open wedding photo book">
+                </picture>
+            </figure>
+        </div>
+        <div class="discount__content">
+            <div class="discount__wrap-content">
+                <h1 class="discount__title">Empfehlung an Freunde</h1>
+                <div class="discount__ad">
+                    <h2>  <?php echo $discount?>schenken,   <?php echo $discount?> verdienen</h2>
+                    <p>Bei jeder ersten Bestellung deiner Freunde!</p>
+                </div>
+                <p>Lade Freunde und Verwandte dazu ein, PikPerfect auszuprobieren: sie erhalten <?php echo $discount?> Rabatt auf ihren ersten Kauf, und du selbst erhältst bei jedem Erstkauf eines Freundes eine Gutschrift von <?php echo $discount?> in deinem Konto. Die Anzahl Weiterempfehlungen ist unbegrenzt!</p>
+                <p class="discount__size-m">Fang gleich mit dem Gutschriften-Sammeln an, indem du den untenstehenden Link mit Freunden und Familie teilst.</p>
+            </div>
+            <div class="discount__form">
+                <input type="text" readonly class="discount__copy-link" id="copyCode" value="<?php if ($this->isLogin()) echo $this->languageUrl('registration-', true, ['referralId' => $this->getUserReferralId()]); else echo ' Logg dich ein, damit der Empfehlungslink angezeigt wird'?>" />
+                <button id="copyLink" class="btn btn-green">copy link</button>
+            </div>
+            <div class="discount__wrap-content">
+                <p class="discount__size-l">Teil deine Begeisterung!</p>
+                <p class="discount__size-s">Bedingungen: Das Angebot gilt nur für neue Konten, die sich über einen Empfehlungslink auf pikperfect.com registrieren. Empfehlungsgutschriften können nicht auf den Versand angerechnet werden und sind nicht rückwirkend anwendbar. Vollständige Details in unseren <a href="https://www.pikperfect.com/terms" class="link" target="_blank">Allgemeinen Geschäftsbedingungen.</a>  </p>
+            </div>
+        </div>
+    </div>
+</section>
