@@ -1,0 +1,352 @@
+<?php
+$this->headTitle('Travel Photo Books & Vacation Photo Albums | PikPerfect');
+$this->headMeta()->appendName('description', 'Relive those incredible holiday moments in a premium travel photo book. Custom designed by our team of specialist, your memories will be well preserved.');
+$region = $this->region()->getUserRegion();
+?>
+<section class="section-hero__image-left">
+    <div class="section-hero__wrap-flex">
+        <div class="section-hero__image-col px-0">
+            <figure class="figure-webp">
+                <picture data-priority="0" data-name="luxury-travel-photo-books" data-path="2.5_travel_photo_books" class="picture-webp">
+                    <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-luxury-travel-photo-books.webp" type="image/webp">
+                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/luxury-travel-photo-books.jpg" alt="Luxury travel photo book on rustic wooden table">
+                </picture>
+
+
+            </figure>
+        </div>
+        <div class="section-hero__content-col section-hero__content-col_blue-gray">
+            <div class="section-hero__bg">
+                <picture data-priority="0" data-name="image_texture" data-path="" class="picture-webp">
+                    <source class="toggle-img--js" srcset="/assets/images/towebp//min-image_texture.webp" type="image/webp">
+                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp//image_texture.jpg" alt="bg-hero">
+                </picture>
+
+
+            </div>
+            <h1 class="section-hero__size-title">Travel Photo Books</h1>
+            <p>Collaborate with our design specialists to create a travel photo album that captures the essence of your adventures.</p>
+            <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'photobook']) ?>?occasion=4" class="button button__blue-gray-opacity">start now</a>
+            <p class="small">No advance payment required</p>
+        </div>
+    </div>
+</section>
+<section class="dignity dignity_blocks">
+    <div class="dignity__container">
+        <div class="dignity__wrap">
+            <div class="dignity__block">
+                <div class="dignity__img">
+                    <img src="/assets/images/circle_the_human_touch.svg" alt="circle_the_human_touch">
+                </div>
+                <div class="dignity__content">
+                    <h3>The Human Touch</h3>
+                    <p>We help choose the best photos and design the album with you.</p>
+                </div>
+            </div>
+            <div class="dignity__block">
+                <div class="dignity__img">
+                    <img src="/assets/images/circle_attention_to_detail.svg" alt="circle_attention_to_detail">
+                </div>
+                <div class="dignity__content">
+                    <h3>Attention to Detail</h3>
+                    <p>Every album is manually checked before print and carefully packaged.</p>
+                </div>
+            </div>
+            <div class="dignity__block">
+                <div class="dignity__img">
+                    <img src="/assets/images/circle_premium_materials.svg" alt="circle_premium_materials">
+                </div>
+                <div class="dignity__content">
+                    <h3>Premium Materials</h3>
+                    <p>Assembled with only the highest quality covers and papers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="description-img">
+    <div class="description-img__container">
+        <div class="description-img__wrap">
+            <div class="description-img__img">
+                <div class="swiper-container swiperDescription">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                                <picture data-priority="1" data-name="travel-photo-book" data-path="2.5_travel_photo_books" class="picture-webp">
+                                    <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-travel-photo-book.webp" type="image/webp">
+                                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/travel-photo-book.jpg" alt="Photo book with vacation photos">
+                                </picture>
+
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                                <picture data-priority="2" data-name="travel-photobooks" data-path="2.5_travel_photo_books" class="picture-webp">
+                                    <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-travel-photobooks.webp" type="image/webp">
+                                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/travel-photobooks.jpg" alt="Photo book with holiday photos">
+                                </picture>
+
+                            </figure>
+
+                        </div>
+                    </div>
+                    <div class="swiperDescription-pagination"></div>
+                </div>
+            </div>
+            <div class="description-img__content description-img__content_padding">
+                <h2 class="description-img__title"><span>Our Everyday Classic</span>Travel Photo Book</h2>
+                <p>Digitally printed and professionally bound, these make for the perfect holiday photo books to display all of your most fond memories for many years to come.</p>
+                <p>With up to 244 pages, these large travel photobooks can hold approximately 1,000 photos.</p>
+                <p class="description-img__price"><?php echo $this->translate('From') . ' ' .
+                                                        $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ) ?></p>
+                <div class="description-img__buttons">
+                    <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'photobook']) ?>?occasion=4" class="button">order</a>
+                    <a href="<?php echo $this->languageUrl('static-custom-photo-books-') ?>" class="button button__gray">explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="description-img description-img__order">
+    <div class="description-img__container">
+        <div class="description-img__wrap">
+            <div class="description-img__img">
+                <div class="swiper-container swiperDescription">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                                <picture data-priority="1" data-name="layflat-travel-photo-album" data-path="2.5_travel_photo_books" class="picture-webp">
+                                    <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-layflat-travel-photo-album.webp" type="image/webp">
+                                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/layflat-travel-photo-album.jpg" alt="Women viewing a travel photo album">
+                                </picture>
+
+                            </figure>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                                <picture data-priority="2" data-name="travel-photo-album" data-path="2.5_travel_photo_books" class="picture-webp">
+                                    <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-travel-photo-album.webp" type="image/webp">
+                                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/travel-photo-album.jpg" alt="Open travel photo album">
+                                </picture>
+
+                            </figure>
+
+                        </div>
+                    </div>
+                    <div class="swiperDescription-pagination"></div>
+                </div>
+            </div>
+            <div class="description-img__content description-img__content_padding">
+                <h2 class="description-img__title"><span>Our Bestseller</span>Layflat Travel <br> Photo Album</h2>
+                <p>Developed on Fuji photo paper offering outstanding color and clarity, our layflat travel photo album books offer gorgeous uninterrupted double page spreads of your favorite holiday photos.</p>
+                <p class="description-img__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                        $this->smallestPrices['layflat'],
+                                                        $region->iso,
+                                                        2,
+                                                        $region->symbol
+                                                    ); ?>.</p>
+                <div class="description-img__buttons">
+                    <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'layflat']) ?>?occasion=4" class="button">order</a>
+                    <a href="<?php echo $this->languageUrl('static-layflat-photo-albums-') ?>" class="button button__gray">explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="description-img">
+    <div class="description-img__container">
+        <div class="description-img__wrap">
+            <div class="description-img__img">
+                <div class="swiper-container swiperDescription">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                                <picture data-priority="1" data-name="premium-travel-photo-album" data-path="2.5_travel_photo_books" class="picture-webp">
+                                    <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-premium-travel-photo-album.webp" type="image/webp">
+                                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/premium-travel-photo-album.jpg" alt="Premium travel photo album with thick pages">
+                                </picture>
+
+                            </figure>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                                <picture data-priority="2" data-name="premium-travel-photo-book" data-path="2.5_travel_photo_books" class="picture-webp">
+                                    <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-premium-travel-photo-book.webp" type="image/webp">
+                                    <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/premium-travel-photo-book.jpg" alt="Travel photo book with thick layflat pages">
+                                </picture>
+
+                            </figure>
+
+                        </div>
+                    </div>
+                    <div class="swiperDescription-pagination"></div>
+                </div>
+            </div>
+            <div class="description-img__content description-img__content_padding">
+                <h2 class="description-img__title"><span>Our Luxury Line</span>Premium Layflat <br> Travel Album</h2>
+                <p>Featuring thick layflat pages developed on archival Fuji photo paper and offering a wide range of premium cover options, these premium travel photo albums are the perfect way to turn those special moments into memories that will last a lifetime.</p>
+                <p class="description-img__price"><?php echo $this->translate('From') . ' ' .
+                                                        $this->format(
+                                                            $this->smallestPrices['premium'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ) ?>.</p>
+                <div class="description-img__buttons">
+                    <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'premium']) ?>?occasion=4" class="button">order</a>
+                    <a href="<?php echo $this->languageUrl('static-premium-layflat-albums-') ?>" class="button button__gray">explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-img">
+    <figure style="padding-bottom: calc(731% / 1440 * 100)" class="figure-webp">
+        <picture data-priority="2" data-name="travel-photo-album-designs" data-path="2.5_travel_photo_books" class="picture-webp">
+            <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-travel-photo-album-designs.webp" type="image/webp">
+            <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/travel-photo-album-designs.jpg" alt="Travel photo album cover designs">
+        </picture>
+
+    </figure>
+
+
+</section>
+<section class="section-service">
+    <h2 class="section-service__title">Holiday Photo Album Design</h2>
+    <p class="section-service__entered">No software, no hassle. Just upload your photos and let our design specialists create a personalized holiday photo album to relive those incredible memories. With unlimited free revisions and an optional photo selection service, making a travel photo book has never been easier.</p>
+    <div class="section-service__cards">
+        <div class="section-service__card">
+            <h3 class="section-service__number">1.</h3>
+            <h4 class="section-service__name-service">You Choose</h4>
+            <p>Select your preferred photobook type and album design style, upload your photos.</p>
+        </div>
+        <div class="section-service__card">
+            <h3 class="section-service__number">2.</h3>
+            <h4 class="section-service__name-service">We Design</h4>
+            <p>Our expert photo book designers bring your album to life. Includes unlimited free revisions.</p>
+        </div>
+        <div class="section-service__card">
+            <h3 class="section-service__number">3.</h3>
+            <h4 class="section-service__name-service">Pay to Print</h4>
+            <p>Only pay when you’re 100% <br> satisfied with the design <br> (no commitment to purchase).</p>
+        </div>
+    </div>
+    <div class="section-service__buttons">
+        <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'photobook']) ?>?occasion=4" class="button">START book</a>
+        <a href="<?php echo $this->languageUrl('static-howItWorks-') ?>" class="button button__light_border">learn more</a>
+    </div>
+</section>
+<section class="section-album section-album_size section-album_gray">
+    <div class="section-album__container">
+        <h2 class="section-album__title">Travel Photo Book Ideas</h2>
+        <p class="section-album__entered">Browse through some of our most popular vacation photo book design styles. <br> Or work with our design team to create one that is entirely unique to your style.</p>
+        <div class="swiper-container swiperalbum ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+                        <picture data-priority="1" data-name="image_travel_book_ideas_1" data-path="2.5_travel_photo_books" class="picture-webp">
+                            <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-image_travel_book_ideas_1.webp" type="image/webp">
+                            <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/image_travel_book_ideas_1.jpg" alt="album travel book ideas">
+                        </picture>
+
+                    </figure>
+
+
+                    <h3 class="section-album__name-title">2021 Adventures<span>Family Album</span></h3>
+                </div>
+                <div class="swiper-slide">
+                    <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+                        <picture data-priority="2" data-name="album_travel_book_ideas_2" data-path="2.5_travel_photo_books" class="picture-webp">
+                            <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-album_travel_book_ideas_2.webp" type="image/webp">
+                            <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/album_travel_book_ideas_2.jpg" alt="album travel book ideas green">
+                        </picture>
+
+                    </figure>
+
+
+                    <h3 class="section-album__name-title">Life in Pictures<span>Family Album</span></h3>
+                </div>
+                <div class="swiper-slide">
+                    <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+                        <picture data-priority="2" data-name="album_travel_book_ideas_1" data-path="2.5_travel_photo_books" class="picture-webp">
+                            <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-album_travel_book_ideas_1.webp" type="image/webp">
+                            <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/album_travel_book_ideas_1.jpg" alt="album travel book ideas">
+                        </picture>
+
+                    </figure>
+
+
+                    <h3 class="section-album__name-title">Love & Joy 2020<span>Family Album</span></h3>
+                </div>
+                <div class="swiper-slide">
+                    <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+                        <picture data-priority="2" data-name="album_travel_book_ideas_4" data-path="2.5_travel_photo_books" class="picture-webp">
+                            <source class="toggle-img--js" srcset="/assets/images/towebp/2.5_travel_photo_books/min-album_travel_book_ideas_4.webp" type="image/webp">
+                            <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.5_travel_photo_books/album_travel_book_ideas_4.jpg" alt="album travel book adventure">
+                        </picture>
+
+                    </figure>
+
+
+                    <h3 class="section-album__name-title">Hello, Adventures!<span>Family Album</span></h3>
+                </div>
+            </div>
+            <div class="swiper-pagination swiperalbum-pagination"></div>
+        </div>
+        <div class="section-album__button">
+            <a href="<?php echo $this->languageUrl('static-photo-book-samples-') ?>" class="button button__light_border">view more</a>
+        </div>
+    </div>
+</section>
+<section class="section-video-content">
+    <div class="section-video-content__container">
+        <div class="section-video-content__video">
+            <div class="lazy-video">
+                <div class="lazy-video__preloader">
+                    <svg class="lazy-video__preloader-svg" width="60" height="60" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#8ba4b4">
+                        <g fill="none" fill-rule="evenodd">
+                            <g transform="translate(1 1)" stroke-width="2">
+                                <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                                <path d="M36 18c0-9.94-8.06-18-18-18">
+                                    <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" />
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="lazy-video__item "><iframe frameborder="0" class="lazy-video__activator-js" data-src="https://player.vimeo.com/video/574906654?background=1 " allow="autoplay; fullscreen; picture-in-picture" title="Travel Photo Books"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="section-video-content__content">
+            <h2 class="section-video-content__title">Our Quality Guarantee</h2>
+            <p>We stand by our products and take great pride in producing high-end photo books that stand the test of time.. If you are not entirely satisfied with the quality of your album, please let us know and we’ll be sure to make things right.</p>
+        </div>
+    </div>
+</section>
+<section class="section-reviews">
+    <div class="container">
+        <h2 class="d-none"> reviews</h2>
+        <?php echo $this->partial('application/partial/reviews') ?>
+        <?php echo $this->partial('application/partial/reviews-box') ?>
+    </div>
+</section>
+<section class="section-text">
+    <div class="section-text__container">
+        <h2 class="section-text__title">Making a Travel Photo Album Online</h2>
+        <div class="section-text__content">
+            <p>Our vacation photo albums are the perfect way to transform those once-in-a-lifetime travel moments into memories that will last a lifetime. Let our talented holiday photobook designers bring your visions to life and create a treasured keepsake to share with family and friends.</p>
+            <p>Crafted using archival photo paper and your choice of image wrap, elegant linen or <a target="_blank" href="<?php echo $this->languageUrl('static-leather-photo-albums-') ?>">leather photo album</a> cover, these albums are made to impress. Share your travel photo album ideas with our design specialist and then sit back and relax while they put the album together for you. If you’re struggling to decide which photos to include, our optional Photo Selection Service can assist in making the process as easy as possible.</p>
+            <p>Each of our travel <a target="_blank" href="<?php echo $this->languageUrl('static-photo-books-') ?>">photo album books</a> is designed completely from scratch to create a unique memento that’s guided by your vision. PikPerfect’s obligation-free service means you won’t pay a cent until you’re 100% satisfied with the design of your holiday photo album, and are ready to have it printed.</p>
+        </div>
+    </div>
+</section>
+
+<?php echo $this->render('partial/quick_chat.phtml'); ?>

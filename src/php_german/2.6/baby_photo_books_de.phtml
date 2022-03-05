@@ -1,0 +1,423 @@
+<?php
+$this->headTitle('Baby Photo Book | Personalized Baby Photo Album| PikPerfect');
+$this->headMeta()->appendName('description', 'Preserve memories of those first moments for years to come in a beautiful baby photo book.');
+$region = $this->region()->getUserRegion();
+?>
+<section class="section-hero__image-left">
+  <div class="section-hero__wrap-flex">
+    <div class="section-hero__image-col px-0">
+      <figure class="figure-webp">
+        <picture data-priority="0" data-name="baby-photo-books" data-path="2.6_baby_photo_books" class="picture-webp">
+          <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-baby-photo-books.webp" type="image/webp">
+          <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/baby-photo-books.jpg" alt="Premium baby photo book with thick pages">
+        </picture>
+
+
+      </figure>
+    </div>
+    <div class="section-hero__content-col section-hero__content-col_blue">
+      <div class="section-hero__bg">
+        <picture data-priority="0" data-name="image_texture" data-path=" class=" picture-webp">
+          <source class="toggle-img--js" srcset="/assets/images/towebp//min-image_texture.webp" type="image/webp">
+          <img loading="lazy" class="nowebp-img" src="/assets/images/towebp//image_texture.jpg" alt="bg-hero">
+        </picture>
+
+
+      </div>
+      <div class="section-hero__picture section-hero__picture_baby">
+        <picture>
+          <source media="(max-width: 500px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=">
+          <img src="/assets/images/towebp/2.6_baby_photo_books/illustration_hero_baby_photo_books.png" alt="picture hero fox">
+        </picture>
+      </div>
+      <h1 class="section-hero__size-title">Baby Photo Books</h1>
+      <p style="max-width: 330px;" class="m-auto">Collaborate with our design specialists to create the perfect Baby Photo Album.</p>
+      <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'photobook']) ?>?occasion=2" class="button button__blue-opacity">start now</a>
+      <p class="small">No advance payment required</p>
+    </div>
+  </div>
+</section>
+<section class="dignity dignity_blocks">
+  <div class="dignity__container">
+    <div class="dignity__wrap">
+      <div class="dignity__block">
+        <div class="dignity__img">
+          <img src="/assets/images/circle_the_human_touch.svg" alt="circle_the_human_touch">
+        </div>
+        <div class="dignity__content">
+          <h3>The Human Touch</h3>
+          <p>We help choose the best photos and design the album with you.</p>
+        </div>
+      </div>
+      <div class="dignity__block">
+        <div class="dignity__img">
+          <img src="/assets/images/circle_attention_to_detail.svg" alt="circle_attention_to_detail">
+        </div>
+        <div class="dignity__content">
+          <h3>Attention to Detail</h3>
+          <p>Every album is manually checked before print and carefully packaged.</p>
+        </div>
+      </div>
+      <div class="dignity__block">
+        <div class="dignity__img">
+          <img src="/assets/images/circle_premium_materials.svg" alt="circle_premium_materials">
+        </div>
+        <div class="dignity__content">
+          <h3>Premium Materials</h3>
+          <p>Assembled with only the highest quality covers and papers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="description-img">
+  <div class="description-img__container">
+    <div class="description-img__wrap">
+      <div class="description-img__img">
+        <div class="swiper-container swiperDescription">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                <picture data-priority="1" data-name="baby-photo-album-book" data-path="2.6_baby_photo_books" class="picture-webp">
+                  <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-baby-photo-album-book.webp" type="image/webp">
+                  <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/baby-photo-album-book.jpg" alt="Women viewing baby photo book on carpet">
+                </picture>
+
+              </figure>
+
+            </div>
+            <div class="swiper-slide">
+              <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                <picture data-priority="2" data-name="photo-book" data-path="2.6_baby_photo_books" class="picture-webp">
+                  <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-photo-book.webp" type="image/webp">
+                  <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/photo-book.jpg" alt="Open photo book">
+                </picture>
+
+              </figure>
+
+            </div>
+          </div>
+          <div class="swiperDescription-pagination"></div>
+        </div>
+      </div>
+      <div class="description-img__content description-img__content_padding">
+        <h2 class="description-img__title"><span>Our Everyday Classic</span>Baby Photo Book</h2>
+        <p>Digitally printed on premium photo paper with up to 244 pages, these large baby photo books can display as many as 1,000 photos.</p>
+        <p>Ideal for parents who have documented each and every moment of their child’s first months, PikPerfect's baby photo album books make a proud centerpiece on any coffee table.</p>
+        <p class="description-img__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                            $this->smallestPrices['photobook'],
+                                            $region->iso,
+                                            2,
+                                            $region->symbol
+                                          ); ?>.</p>
+        <div class="description-img__buttons">
+          <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'photobook']) ?>?occasion=2" class="button">order</a>
+          <a href="<?php echo $this->languageUrl('static-custom-photo-books-') ?>" class="button button__gray">explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="description-img description-img__order">
+  <div class="description-img__container">
+    <div class="description-img__wrap">
+      <div class="description-img__img">
+        <div class="swiper-container swiperDescription">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                <picture data-priority="1" data-name="baby-photo-album" data-path="2.6_baby_photo_books" class="picture-webp">
+                  <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-baby-photo-album.webp" type="image/webp">
+                  <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/baby-photo-album.jpg" alt="Baby photo album on coffee table">
+                </picture>
+
+              </figure>
+
+            </div>
+            <div class="swiper-slide">
+              <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                <picture data-priority="2" data-name="layflat-baby-book" data-path="2.6_baby_photo_books" class="picture-webp">
+                  <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-layflat-baby-book.webp" type="image/webp">
+                  <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/layflat-baby-book.jpg" alt="Layflat baby photo album binding details">
+                </picture>
+
+              </figure>
+
+            </div>
+          </div>
+          <div class="swiperDescription-pagination"></div>
+        </div>
+      </div>
+      <div class="description-img__content description-img__content_padding">
+        <h2 class="description-img__title"><span>Our Bestseller</span>Layflat Baby <br> Photo Album</h2>
+        <p>With an almost invisible crease when opened out flat, these personalized baby photo albums allow you to display favorite images across gorgeous panoramic spreads.</p>
+        <p>Developed on high-quality Fuji photo paper with your choice of either a Pearl Matte or Gloss finish, these baby album books are a popular choice with a lot of new parents.</p>
+        <p class="description-img__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                            $this->smallestPrices['layflat'],
+                                            $region->iso,
+                                            2,
+                                            $region->symbol
+                                          ); ?>.</p>
+        <div class="description-img__buttons">
+          <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'layflat']) ?>?occasion=2" class="button">order</a>
+          <a href="<?php echo $this->languageUrl('static-layflat-photo-albums-') ?>" class="button button__gray">explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="description-img">
+  <div class="description-img__container">
+    <div class="description-img__wrap">
+      <div class="description-img__img">
+        <div class="swiper-container swiperDescription">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                <picture data-priority="1" data-name="baby-boy-photo-book" data-path="2.6_baby_photo_books" class="picture-webp">
+                  <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-baby-boy-photo-book.webp" type="image/webp">
+                  <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/baby-boy-photo-book.jpg" alt="Photo book with baby boy">
+                </picture>
+
+              </figure>
+
+            </div>
+            <div class="swiper-slide">
+              <figure style="padding-bottom: calc(713% / 788 * 100)" class="figure-webp">
+                <picture data-priority="2" data-name="premium-photo-album" data-path="2.6_baby_photo_books" class="picture-webp">
+                  <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-premium-photo-album.webp" type="image/webp">
+                  <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/premium-photo-album.jpg" alt="Premium photo album with thick pages">
+                </picture>
+
+              </figure>
+
+            </div>
+          </div>
+          <div class="swiperDescription-pagination"></div>
+        </div>
+      </div>
+      <div class="description-img__content description-img__content_padding">
+        <h2 class="description-img__title"><span>Our Luxury Line</span> Premium Layflat Baby Album</h2>
+        <p>Handcrafted for a bespoke finish with thick layflat pages and your choice of genuine leather, elegant linen or a printed album cover, these make for one of the best baby photo albums on the market.</p>
+        <p>Printed on archival quality photo papers, our baby albums are an ideal way to transform their first months into enduring memories.</p>
+        <p class="description-img__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                            $this->smallestPrices['premium'],
+                                            $region->iso,
+                                            2,
+                                            $region->symbol
+                                          ); ?>.</p>
+        <div class="description-img__buttons">
+          <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'premium']) ?>?occasion=2" class="button">order</a>
+          <a href="<?php echo $this->languageUrl('static-premium-layflat-albums-') ?>" class="button button__gray">explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-img">
+  <figure style="padding-bottom: calc(724% / 1440 * 100)" class="figure-webp">
+    <picture data-priority="2" data-name="baby-album-designs" data-path="2.6_baby_photo_books" class="picture-webp">
+      <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-baby-album-designs.webp" type="image/webp">
+      <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/baby-album-designs.jpg" alt="Baby photo book design examples">
+    </picture>
+
+  </figure>
+
+
+</section>
+<section class="section-service">
+  <h2 class="section-service__title">Baby album design - done for you!</h2>
+  <p class="section-service__entered">We’re sure you have enough on your hands already. Make life a little easier by working with one of our design specialists to create your first baby photo book. We’ll help sort through thousands of photos and then design the album based on your instructions. With unlimited free revisions, we work with you to ensure your baby memory book is perfect before it’s sent to print.</p>
+  <div class="section-service__cards">
+    <div class="section-service__card">
+      <h3 class="section-service__number">1.</h3>
+      <h4 class="section-service__name-service">You Choose</h4>
+      <p>Select your preferred photobook type and album design style, upload your photos.</p>
+    </div>
+    <div class="section-service__card">
+      <h3 class="section-service__number">2.</h3>
+      <h4 class="section-service__name-service">We Design</h4>
+      <p>Our expert photo book designers bring your album to life. Includes unlimited free revisions.</p>
+    </div>
+    <div class="section-service__card">
+      <h3 class="section-service__number">3.</h3>
+      <h4 class="section-service__name-service">Pay to Print</h4>
+      <p>Only pay when you’re 100% <br> satisfied with the design <br> (no commitment to purchase).</p>
+    </div>
+  </div>
+  <div class="section-service__buttons">
+    <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'photobook']) ?>?occasion=2" class="button">START book</a>
+    <a href="<?php echo $this->languageUrl('static-howItWorks-') ?>" class="button button__light_border">learn more</a>
+  </div>
+</section>
+<section class="section-album section-album_size-t">
+  <div class="section-album__container">
+    <h2 class="section-album__title">Baby Photo Book Ideas</h2>
+    <p class="section-album__entered">Work with our design team to create an album that is entirely unique to your style. <br> Or browse through some of our most popular baby photobook design styles for inspiration.</p>
+    <div class="swiper-container swiperalbum ">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+            <picture data-priority="1" data-name="image_photobook_idea_1" data-path="2.6_baby_photo_books" class="picture-webp">
+              <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-image_photobook_idea_1.webp" type="image/webp">
+              <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/image_photobook_idea_1.jpg" alt="album with baby green">
+            </picture>
+
+          </figure>
+
+
+          <h3 class="section-album__name-title">Emma<span>Baby Book</span></h3>
+        </div>
+        <div class="swiper-slide">
+          <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+            <picture data-priority="2" data-name="image_photobook_idea_2" data-path="2.6_baby_photo_books" class="picture-webp">
+              <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-image_photobook_idea_2.webp" type="image/webp">
+              <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/image_photobook_idea_2.jpg" alt="album with baby boy light">
+            </picture>
+
+          </figure>
+
+
+          <h3 class="section-album__name-title">Ronan Cage<span>Baby Book</span></h3>
+        </div>
+        <div class="swiper-slide">
+          <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+            <picture data-priority="2" data-name="image_photobook_idea_3" data-path="2.6_baby_photo_books" class="picture-webp">
+              <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-image_photobook_idea_3.webp" type="image/webp">
+              <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/image_photobook_idea_3.jpg" alt="album with small baby light">
+            </picture>
+
+          </figure>
+
+
+          <h3 class="section-album__name-title">Christian<span>Baby Book</span></h3>
+        </div>
+        <div class="swiper-slide">
+          <figure style="padding-bottom: calc(330% / 330 * 100)" class="figure-webp">
+            <picture data-priority="2" data-name="image_photobook_idea_4" data-path="2.6_baby_photo_books" class="picture-webp">
+              <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-image_photobook_idea_4.webp" type="image/webp">
+              <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/image_photobook_idea_4.jpg" alt="album with sleepy baby">
+            </picture>
+
+          </figure>
+
+
+          <h3 class="section-album__name-title">Chloe<span>Baby Book</span></h3>
+        </div>
+      </div>
+      <div class="swiper-pagination swiperalbum-pagination"></div>
+    </div>
+    <div class="section-album__button">
+      <a href="<?php echo $this->languageUrl('static-photo-book-samples-') ?>" class="button button__light_border">view more</a>
+    </div>
+  </div>
+</section>
+<section class="description-img description-img__order">
+  <div class="container">
+    <div class="description-img__wrap">
+      <div class="description-img__img">
+        <figure style="padding-bottom: calc(631% / 788 * 100)" class="figure-webp">
+          <picture data-priority="2" data-name="baby-album-gift" data-path="2.6_baby_photo_books" class="picture-webp">
+            <source class="toggle-img--js" srcset="/assets/images/towebp/2.6_baby_photo_books/min-baby-album-gift.webp" type="image/webp">
+            <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.6_baby_photo_books/baby-album-gift.jpg" alt="Baby album gift for grandparents">
+          </picture>
+
+        </figure>
+
+
+      </div>
+      <div class="description-img__content">
+        <h2 class="description-img__title">The Perfect Gift</h2>
+        <p>Proud grandparents don’t want to miss a moment, so why not gift a memento of your baby’s first months with a personalized baby boy or baby girl photo album book.</p>
+        <p>You can select between a smaller version of your main album or customize your kids photo album for each set of grandparents and extended family in your choice of size and designs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section-video-content">
+  <div class="section-video-content__container">
+    <div class="section-video-content__video">
+      <div class="lazy-video">
+        <div class="lazy-video__preloader">
+          <svg class="lazy-video__preloader-svg" width="60" height="60" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#8ba4b4">
+            <g fill="none" fill-rule="evenodd">
+              <g transform="translate(1 1)" stroke-width="2">
+                <circle stroke-opacity=".5" cx="18" cy="18" r="18" />
+                <path d="M36 18c0-9.94-8.06-18-18-18">
+                  <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite" />
+                </path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="lazy-video__item "><iframe frameborder="0" class="lazy-video__activator-js" data-src="https://player.vimeo.com/video/574914550?background=1 " allow="autoplay; fullscreen; picture-in-picture" title="Premium Photo Books"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="section-video-content__content">
+      <h2 class="section-video-content__title">Our Quality Guarantee</h2>
+      <p>We stand by our products and take great pride in creating baby photo albums your family will cherish for the years to come. If you are not entirely satisfied with the quality of the album you receive, please let us know and we’ll be sure to make things right.</p>
+    </div>
+  </div>
+</section>
+<section class="section-reviews">
+  <div class="container">
+    <h2 class="d-none"> reviews</h2>
+    <?php echo $this->partial('application/partial/reviews') ?>
+    <?php echo $this->partial('application/partial/reviews-box') ?>
+  </div>
+</section>
+<div class="swiper-slide">
+  <div class="section-reviews__slide">
+    <div class="section-reviews__title">
+      <strong>Kelly E</strong>
+      <span>
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/badge_verified.png" alt="✓">
+      </span>
+    </div>
+    <p class="section-reviews__text">Our album (lay flat, LG square, printed cover, padded + presentation box) as well as 6* pocket books all arrived VERY quickly, and were of excellent finish and quality. The entire process was hassle free, and the final album is exactly as we...</p>
+    <time class="section-reviews__time">Posted 21h ago</time>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="section-reviews__slide">
+    <div class="section-reviews__title">
+      <strong>Dede B</strong>
+      <span>
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/icon-star.svg" alt="icon-star">
+        <img src="/assets/images/badge_verified.png" alt="✓">
+      </span>
+    </div>
+    <p class="section-reviews__text">Always a pleasure working with the team at PikPerfect. They are fast, friendly and very professional. I am always pleased with their services and my clients love their wedding albums.</p>
+    <time class="section-reviews__time">Posted 2 days ago</time>
+  </div>
+</div>
+</div>
+</div>
+<div class="swiper-button-next section-reviews__button-next"></div>
+<div class="swiper-button-prev section-reviews__button-prev"></div>
+</div>
+</div>
+</section>
+<section class="section-text">
+  <div class="section-text__container">
+    <h2 class="section-text__title">Making a Baby Photo Book online</h2>
+    <div class="section-text__content">
+      <p>From those treasured newborn photos to capturing their first wobbly steps, a baby memory album is the perfect way to document every moment of your little one's development. Our professional baby book designer can bring your ideas to life in crafting a completely unique first year baby album.</p>
+      <p>Utilising high-end archival photo papers, our <a target="_blank" href="<?php echo $this->languageUrl('static-photo-books-') ?>">photo book printing</a> service allows you to customise the best baby memory book to suit your budget. Select between gorgeous linen, soft and supple leather or a printed cover with personalized text in a range of colors and textures. </p>
+      <p>Drowning in photos? Share your visions for your baby’s first year photo book with us, our talented designers will help bring the album to life. Whether it’s helping you sift through thousands of photographs or designing an artistic layout, we make it easy to create a <a target="_blank" href="<?php echo $this->languageUrl('static-custom-photo-books-') ?>">custom photo album</a>.</p>
+      <p>Take advantage of unlimited free revisions to ensure your baby first year photo album, <a target="_blank" href="<?php echo $this->languageUrl('static-family-photo-albums-') ?>">family photo book</a> or <a target="_blank" href="<?php echo $this->languageUrl('static-travel-photo-books-') ?>">travel photo book</a> is tweaked to perfection and these fleeting moments get the attention they deserve.</p>
+    </div>
+  </div>
+</section>
+
+<?php echo $this->render('partial/quick_chat.phtml'); ?>
