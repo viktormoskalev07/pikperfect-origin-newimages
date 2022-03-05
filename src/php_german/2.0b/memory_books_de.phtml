@@ -1,0 +1,332 @@
+<?php
+$this->headTitle('Ein Fotoalbum online erstellen & gestalten | PikPerfect');
+$this->headMeta()->appendName('description', 'Ganz einfach ein Fotoalbum online erstellen. Wunderschöne Einbandoptionen und Papiersorten für das perfekte Fotoalbum. Mit Qualitätsgarantie.');
+$region = $this->region()->getUserRegion();
+?>
+<section class="section-img m-auto">
+    <figure style="padding-bottom: calc(505% / 1440 * 100)" class="figure-webp">
+        <picture data-priority="0" data-name="pikperfect-photo-books" data-path="2.0b-memory-books" class="picture-webp">
+            <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-pikperfect-photo-books.webp" type="image/webp">
+            <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/pikperfect-photo-books.jpg" alt="Hochwertiges Fotoalbum auf Couchtisch">
+        </picture>
+
+    </figure>
+
+
+</section>
+<section class="section-text section-text_entered">
+    <div class="section-text__container">
+        <h1 class="section-text__title">Fotoalbum</h1>
+        <div class="section-text__content">
+            <p>Unsere personalisierten Fotoalben sind perfekt, um die wertvollsten Momente des Lebens festzuhalten. Individuell gestaltet mit deinen Texten und Bildern, um ein wirklich unvergessliches Andenken zu schaffen, das professionell gedruckt und mit den besten Materialien gebunden wird.</p>
+        </div>
+    </div>
+</section>
+<section class="section-photobooks">
+    <div class="section-photobooks__wrap">
+        <div class="section-photobooks__sidebar">
+            <h2 class="section-photobooks__title">Photobooks & Albums</h2>
+            <ul class="section-photobooks__list">
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-baby-photo-books-') ?>">Babyfotoalbum</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-travel-photo-books-') ?>">Reisefotoalbum</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-family-photo-albums-') ?>">Familienfotoalbum</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-cookbook-recipe-photobooks-') ?>">Cookbooks</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-pet-photo-books-') ?>">Pet Photo Books</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-premium-layflat-albums-') ?>">Premium Layflatalbum</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-leather-photo-albums-') ?>">Leather Photo Albums</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-layflat-photo-albums-') ?>">Layflat Echtfotobuch</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-custom-photo-books-') ?>">Custom Photo Book</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-wedding-photo-books-') ?>">Hochzeitsfotobuch</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-premium-layflat-wedding-albums-') ?>">Premiumhochzeitsalbum</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-layflat-wedding-photo-albums-') ?>">Hochzeitsechtfotobuch</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-engagement-photo-book-') ?>">Verlobungsfotoalbum</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-wedding-guest-books-') ?>">Hochzeitsgästebuch</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-parent-albums-') ?>">Parent Albums</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-photo-album-boxes-') ?>">Photo Album Boxes</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('static-howItWorks-') ?>">Fotobuch-Designservice</a></li>
+                <li class="section-photobooks__item"><a href="<?php echo $this->languageUrl('gift-vouchers-') ?>">Geschenkgutschein</a></li>
+            </ul>
+        </div>
+        <div class="section-photobooks__blocks">
+            <a href="<?php echo $this->languageUrl('static-baby-photo-books-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="baby-photo-book" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-baby-photo-book.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/baby-photo-book.jpg" alt="Frau hält Baby Fotoalbum Leinen Pink">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Babyfotoalbum</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-travel-photo-books-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="travel-photo-album" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-travel-photo-album.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/travel-photo-album.jpg" alt="Reisefotobuch mit Bildern von Berlin">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Reisefotoalbum</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-family-photo-albums-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="family-photo-book" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-family-photo-book.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/family-photo-book.jpg" alt="Kinder schauen Fotos in Familienfotoalbum an">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Familienfotoalbum</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-cookbook-recipe-photobooks-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="custom-cookbook" data-path="2.0a-photo-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="images/towebp/2.0a-photo-books/min-custom-cookbook.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="images/towebp/2.0a-photo-books/custom-cookbook.jpg" alt="Photo book cookbooks">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Cookbooks</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-pet-photo-books-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="pet-photo-albums" data-path="2.0a-photo-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="images/towebp/2.0a-photo-books/min-pet-photo-albums.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="images/towebp/2.0a-photo-books/pet-photo-albums.jpg" alt="Photo book pet photo books">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Pet Photo Books</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-premium-layflat-albums-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="1" data-name="premium-photo-albums" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-premium-photo-albums.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/premium-photo-albums.jpg" alt="Premium Fotoalbum mit individuell gestaltetem Titel Lasergravur">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Premium Layflatalbum</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['premium'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-leather-photo-albums-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="genuine-leather-photo-albums" data-path="2.0a-photo-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="images/towebp/2.0a-photo-books/min-genuine-leather-photo-albums.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="images/towebp/2.0a-photo-books/genuine-leather-photo-albums.jpg" alt="Photo book leather photo albums">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Leather Photo Albums</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-layflat-photo-albums-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="1" data-name="layflat-photo-book" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-layflat-photo-book.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/layflat-photo-book.jpg" alt="Echtfotoalbum mit Familienfotos">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Layflat Echtfotobuch</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['layflat'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-custom-photo-books-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="1" data-name="custom-photo-book" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-custom-photo-book.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/custom-photo-book.jpg" alt="Individuell gestaltetes Fotoalbum auf Marmortisch">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Custom Photo Book</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-wedding-photo-books-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="wedding-photo-book" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-wedding-photo-book.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/wedding-photo-book.jpg" alt="Grosses Hochzeitsalbum mit Fotos der Braut">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Hochzeitsfotobuch</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-premium-layflat-wedding-albums-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="premium-wedding-albums" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-premium-wedding-albums.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/premium-wedding-albums.jpg" alt="Hochwertiges Hochzeitsalbum mit Fotofenster">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Premiumhochzeitsalbum</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['premium'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-layflat-wedding-photo-albums-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="wedding-photo-albums" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-wedding-photo-albums.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/wedding-photo-albums.jpg" alt="Offenes Hochzeitsalbum mit Layflat Seiten auf Tisch">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Hochzeitsechtfotobuch</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['layflat'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-engagement-photo-book-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="engagement-photo-book" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-engagement-photo-book.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/engagement-photo-book.jpg" alt="Einband Beispiele Verlobungsalbum auf Tisch">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Verlobungsfotoalbum</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-wedding-guest-books-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="wedding-guest-book" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-wedding-guest-book.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/wedding-guest-book.jpg" alt="Offenes Gästebuch für Hochzeit mit Nachrichten und Unterschriften">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Hochzeitsgästebuch</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+
+            <a href="<?php echo $this->languageUrl('static-parent-albums-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="parent-copy-wedding-album" data-path="2.0a-photo-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="images/towebp/2.0a-photo-books/min-parent-copy-wedding-album.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="images/towebp/2.0a-photo-books/parent-copy-wedding-album.jpg" alt="Photo book parent albums">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Parent Albums</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-photo-album-boxes-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="premium-wedding-albums" data-path="2.0a-photo-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="images/towebp/2.0a-photo-books/min-premium-wedding-albums.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="images/towebp/2.0a-photo-books/premium-wedding-albums.jpg" alt="Photo book photo album boxes">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Photo Album Boxes</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            $this->smallestPrices['photobook'],
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+            <a href="<?php echo $this->languageUrl('static-howItWorks-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="photobook-design-service" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-photobook-design-service.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/photobook-design-service.jpg" alt="Beispiele Fotobuch Designservice">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Fotobuch-Designservice</h3>
+                <p class="section-photobooks__price"> </p>
+            </a>
+
+            <a href="<?php echo $this->languageUrl('gift-vouchers-') ?>" class="section-photobooks__block">
+                <figure style="padding-bottom: calc(310% / 290 * 100)" class="figure-webp">
+                    <picture data-priority="2" data-name="photo-book-gift-cards" data-path="2.0b-memory-books" class="picture-webp">
+                        <source class="toggle-img--js" srcset="/assets/images/towebp/2.0b-memory-books/min-photo-book-gift-cards.webp" type="image/webp">
+                        <img loading="lazy" class="nowebp-img" src="/assets/images/towebp/2.0b-memory-books/photo-book-gift-cards.jpg" alt="Beispiel Fotobalbum Geschenkgutschein">
+                    </picture>
+                </figure>
+                <h3 class="section-photobooks__name-album">Geschenkgutschein</h3>
+                <p class="section-photobooks__price"><?php echo $this->translate('From') . ' ' . $this->format(
+                                                            25,
+                                                            $region->iso,
+                                                            2,
+                                                            $region->symbol
+                                                        ); ?></p>
+            </a>
+        </div>
+    </div>
+</section>
+<?php echo $this->partial('application/partial/reviews_widget', ['product' => 'photo-book']) ?>
+<?php echo $this->partial('application/partial/why_choose_us') ?>
+<section class="section-text">
+    <div class="section-text__container">
+        <h2 class="section-text__title">Ein Fotoalbum online erstellen</h2>
+        <div class="section-text__content">
+            <p>Wenn du mit PikPerfect online ein Fotoalbum erstellst, erhältst du nicht nur die besten Materialien sondern auch die Gestaltung durch unser erfahrenes Fotoalbum-Designteam. So bekommst du ein individuelles Foto Album, das ein Herzstück in jedem Zuhause sein wird. </p>
+            <p>Gedruckt auf professionellem Fotopapier und ergänzt durch luxuriöse Fotoalbumeinbände, sind die <a target="_blank" href="<?php echo $this->languageUrl('static-custom-photo-books-') ?>"> individuellen Fotoalben</a> von PikPerfect der ideale Weg, um die wichtigsten Momente festzuhalten. Unser <a target="_blank" href="<?php echo $this->languageUrl('static-baby-photo-books-') ?>">Baby-Fotoalbum</a> ist perfekt für Babys erstes Fotoalbum, in dem du jeden Fortschritt der Kleinen festhältst, oder erstelle ein <a target="_blank" href="<?php echo $this->languageUrl('static-family-photo-albums-') ?>">Familien-Jahresalbum  </a>in dem du all die lustigen Momente, die ihr zusammen erlebt, leicht wieder erleben kannst.</p>
+            <p>Bei PikPerfect lässt du dein Fotoalbum über unseren unverbindlichen Designservice erstellen, d.h. du zahlst erst, wenn du mit dem Design 100% zufrieden bist und dein Fotoalbum drucken lassen willst.</p>
+        </div>
+    </div>
+</section>
