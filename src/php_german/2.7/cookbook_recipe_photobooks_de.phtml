@@ -28,7 +28,7 @@ $region = $this->region()->getUserRegion();
       <h1 class="section-hero__size-title">Kochbuch Fotobuch</h1>
       <p>Ein Rezeptbuch selber machen verbindet über Generationen.</p>
       <a href="<?php echo $this->languageUrl('upload-photos-', false, ['product' => 'photobook']) ?>?occasion=5" class="button button__orange">JETZT ANFANGEN</a>
-      <p class="price"><?php echo $this->translate('Ab') . ' ' . $this->format(
+      <p class="price"><?php echo $this->translate('From') . ' ' . $this->format(
                           $this->smallestPrices['photobook'],
                           $region->iso,
                           2,
