@@ -490,4 +490,4 @@ const btnNextColorSecond =document.querySelector(".swiper-button-next-second");
         });
 };
 
-  @@include('modules/galery.js');
+@@include('modules/galery.js');
