@@ -1,3 +1,5 @@
+/////////// flip book ////////////////
+
 (function(){
   const container = document.querySelector('.gallery__container');
   const containerFlip = document.querySelector('.container-flip');
@@ -27,7 +29,7 @@
   } 
 }
   
-/////////// flip book ////////////////
+
 const openGalery =function(){  
   const app = document.querySelector('#app');
   if(app){
