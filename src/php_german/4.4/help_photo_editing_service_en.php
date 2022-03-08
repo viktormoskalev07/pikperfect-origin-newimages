@@ -1,10 +1,10 @@
 <?php
-$this->headTitle('Photo Editing Service | PikPerfect');
-$this->headMeta()->appendName('description', 'Need help editing your photos for your wedding album or photo book? Our trained specialists are here to help.');
+$this->headTitle('Fotobearbeitung Service: Wir optimieren Fotos | PikPerfect');
+$this->headMeta()->appendName('description', 'Möchtest du deine Fotos für ein Hochzeitsalbum oder Fotobuch bearbeiten? Unsere geschulten Spezialisten helfen dir gerne weiter.');
 ?>
 <section class="section-title">
     <div class="section-title__container">
-        <h1 class="section-title__title"><span>help</span>Photo Editing Service</h1>
+        <h1 class="section-title__title"><span>help</span>Fotobearbeitungsservice</h1>
     </div>
 </section>
 <section class="section-content">
@@ -14,10 +14,10 @@ $this->headMeta()->appendName('description', 'Need help editing your photos for 
             <?php echo $this->partial('application/static/help_menu') ?>
         </div>
         <div class="section-content__context">
-            <p class="section-content__text-strong">Do you edit my photos?</p>
-            <p class="section-content__text-answer">Standard photo editing is included with all album designs. This includes optimizing your images for print, straighten, cropping and red-eye removal. If you have already applied a special filter on the photos you send us and you would prefer these are not edited in any way, please make note of this when you start your album and we’ll be happy to use your photos as-is.</p>
-            <p class="section-content__text-strong">Can you do more detailed photoshopping?</p>
-            <p class="section-content__text-answer">If you would like detailed photoshopping done to remove background etc, we offer this as an additional service. The cost depends on the amount of editing you need done, as well as the number of photos you’d like us to work on. It is almost always easier if you first upload your complete set of photos and then discuss with your designer which ones you would like edited. This way, we can respond with more concrete answers after having seen your photos.</p>
+            <p class="section-content__text-strong">Bearbeitet ihr meine Fotos?</p>
+            <p class="section-content__text-answer">Eine Standard-Fotobearbeitung ist in jeder Fotobuch Gestaltung enthalten. Dazu gehört die Optimierung deiner Bilder für den Druck, gerade ausrichten, zuschneiden und Rote-Augen-Korrektur. Falls du einen Filter angewendet hast und nicht möchtest, dass die Fotos bearbeitet werden, vermerke es einfach bei der Auftragsanlage.</p>
+            <p class="section-content__text-strong">Macht ihr auch Photoshopping?</p>
+            <p class="section-content__text-answer">Eine detaillierte Bearbeitung der Fotos zum Entfernen von Hintergrund usw. bieten wir als zusätzlichen Service an. Die Kosten hängen vom Arbeitsaufwand ab sowie der Anzahl Fotos. Es ist am besten, wenn du erst einmal deinen kompletten Fotosatz hochlädst und dann mit deinem Designer besprichst, was du bearbeiten möchtest. So können wir konkrete Antworten und Kostenvoranschläge geben, nachdem wir die Fotos gesehen haben.</p>
         </div>
     </div>
 </section>
