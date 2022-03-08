@@ -59,9 +59,9 @@ $region = $this->region()->getUserRegion();
 <section class="section-transition section-transition_gray">
     <div class="container">
         <div class="section-transition__content">
-            <h2 class="section-transition__title">Ready to make your photobook?</h2>
+            <h2 class="section-transition__title">Bereit, dein Fotobuch zu erstellen?</h2>
         </div>
-        <a href="<?php echo $this->languageUrl('upload-photos-') ?>" class="button section-transition__button">start now</a>
+        <a href="<?php echo $this->languageUrl('upload-photos-') ?>" class="button section-transition__button">JETZT STARTEN</a>
     </div>
 </section>
 
