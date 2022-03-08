@@ -1,10 +1,10 @@
 <?php
-$this->headTitle('Photo Selection Service | PikPerfect');
-$this->headMeta()->appendName('description', 'Our trained specialists help choose the best ones for your photo album or photo book. You only need to do the final review and approval.');
+$this->headTitle('Fotoauswahlservice: Wir helfen Fotos sortieren | PikPerfect');
+$this->headMeta()->appendName('description', 'Unsere geschulten Spezialisten helfen dir bei der Auswahl der besten Fotos für dein Fotobuch. Du brauchst diese nur noch zu prüfen und freizugeben.');
 ?>
 <section class="section-title">
     <div class="section-title__container">
-        <h1 class="section-title__title"><span>help</span>Photo Selection Service</h1>
+        <h1 class="section-title__title"><span>help</span>Fotoauswahl Service</h1>
     </div>
 </section>
 <section class="section-content">
@@ -14,16 +14,16 @@ $this->headMeta()->appendName('description', 'Our trained specialists help choos
             <?php echo $this->partial('application/static/help_menu') ?>
         </div>
         <div class="section-content__context">
-            <p class="section-content__text-strong">What is the photo selection service?</p>
-            <p class="section-content__text-answer">With hundreds, and often thousands of photos to sort through, choosing the best images for your photo book can be a daunting task. Instead of letting this paralyze you, our photo selection service allows you to upload ALL your photos, we then meticulously sort through and choose the ones that best tell your story.<br><br>You’ll get to review and approve the selection (or make changes) before we start working on the album design. You can still add or remove photos from the album once the design has started, just speak to your designer about this.</p>
-            <p class="section-content__text-strong">How do you know which photos to select?</p>
-            <p class="section-content__text-answer">Keeping in mind the album type and size you’re looking to have made, we sort through the entire photo set, narrowing it down to the images that best tell your story, and are of the best quality. We also try to ensure we cover all sections of the photo set, so may choose some images that are not perfect quality, but which we feel are part of the memory you’re trying to preserve. If there are multiple photos from a similar setting, we choose the ones that have the best quality, are well composed, have good facial expressions, and which would give us the most options while designing the albums.</p>
-            <p class="section-content__text-strong">What if I don’t like the photos you select?</p>
-            <p class="section-content__text-answer">We know there are always going to be those special images that you would like to include, even if they may not be the best quality. To allow for this, and to give you the opportunity to review and make any other needed changes, we’ll send you a photo selection review link and only start with the album design once you have approved the selection. On the odd chance we are not able to make a selection that you like, you will not be charged for the service.</p>
-            <p class="section-content__text-strong">Can I make changes after I approve the selection?</p>
-            <p class="section-content__text-answer">While it helps to have the photo selection approved before we start with the album design, we’re always happy to add or remove photos during the design process too.</p>
-            <p class="section-content__text-strong">Why do you charge per image uploaded and not per image selected?</p>
-            <p class="section-content__text-answer">To select the best images, we have to go through all photos a number of times before making the final selection. The more photos you send us, the longer it takes which is why we charge per photo uploaded and not per photo selected.</p>
+            <p class="section-content__text-strong">Was ist der Fotoauswahlservice?</p>
+            <p class="section-content__text-answer">Bei Hunderten und oft Tausenden Fotos, die es zu sortieren gilt, kann die Auswahl der besten Bilder für ein Fotobuch eine entmutigende Aufgabe sein. Anstatt sich davon lähmen zu lassen, ermöglicht dir unser Fotoauswahlservice, ALLE deine Fotos hochzuladen. Wir sortieren sie sorgfältig und wählen die aus, die deine Geschichte am besten erzählen.<br><br>Du brauchst nur noch die Auswahl zu überprüfen und freizugeben (oder letzte Änderungen vorzunehmen), bevor wir mit der Gestaltung beginnen. Auch danach lassen sich noch Fotos zum Album hinzufügen oder entfernen, sprich einfach mit deinem Designer darüber.</p>
+            <p class="section-content__text-strong">Woher wisst ihr, welche Fotos ihr auswählen sollen?</p>
+            <p class="section-content__text-answer">Unter Berücksichtigung der Art und Grösse des gewünschten Albums sortieren wir das gesamte Fotoset und grenzen es auf die Bilder ein, die deine Geschichte am besten erzählen und die beste Qualität haben. Wir versuchen, alle Abschnitte des Fotosets abzudecken, wählen also auch einige Bilder, die nicht die perfekte Qualität haben, unserer Meinung nach aber Teil der Erinnerung sind, die du bewahren möchtest. Wenn es mehrere Fotos in einer ähnlichen Situation gibt, wählen wir die aus, die die beste Qualität haben, gut komponiert sind, einen guten Gesichtsausdruck haben und die bei der Gestaltung die meisten Möglichkeiten geben.</p>
+            <p class="section-content__text-strong">Was ist, wenn mir die ausgewählten Fotos nicht gefallen?</p>
+            <p class="section-content__text-answer">Es gibt immer Bilder, die du hinzufügen möchtest, auch wenn sie möglicherweise nicht die beste Qualität haben. Um dir die Möglichkeit für individuelle Anpassungen zu geben, senden wir dir einen Überprüfungslink zur Fotoauswahl und beginnen erst mit dem Albumdesign, wenn du die Auswahl freigegeben hast. Im seltenen Fall, dass wir für dich keine grundsätzlich passende Auswahl treffen können, wird der Service nicht berechnet.</p>
+            <p class="section-content__text-strong">Kann ich Änderungen vornehmen, nachdem ich die Auswahl genehmigt habe?</p>
+            <p class="section-content__text-answer">Ja, sicher. Gerne fügen wir auch während des Designprozesses noch Fotos hinzu oder entfernen sie, kein Problem.</p>
+            <p class="section-content__text-strong">Warum berechnet ihr pro hochgeladenem Bild und nicht pro ausgewähltem Bild?</p>
+            <p class="section-content__text-answer">Um die besten Bilder auszuwählen, müssen wir alle Fotos einige Male durchgehen, bevor wir die endgültige Auswahl treffen. Je mehr Fotos du uns schickst, desto länger dauert es, weshalb wir pro hochgeladenem Foto und nicht pro ausgewähltem Foto berechnen.</p>
         </div>
     </div>
 </section>
