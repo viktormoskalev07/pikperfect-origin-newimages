@@ -1,10 +1,10 @@
 <?php
-$this->headTitle('Personalized Photo Album Cover Designs | PikPerfect');
-$this->headMeta()->appendName('description', 'Looking for wedding album or photobook cover design ideas? Browse the different options we offer, or work with our design specialist to create your own.');
+$this->headTitle('Kreative Ideen für Fotobuch Covergestaltung | PikPerfect');
+$this->headMeta()->appendName('description', 'Gestalte deinen Hochzeitsalbum Fotobuch Einband individuell, mit Fotocover, Leinen- oder Ledereinband, Fotofenster, Acrylglascover, Prägung oder Lasergravur.');
 ?>
 <section class="section-title">
     <div class="section-title__container">
-        <h1 class="section-title__title"><span>help</span>Photo Album Cover Designs</h1>
+        <h1 class="section-title__title"><span>help</span>Fotobuch Einbandgestaltung</h1>
     </div>
 </section>
 <section class="section-content">
@@ -14,9 +14,9 @@ $this->headMeta()->appendName('description', 'Looking for wedding album or photo
             <?php echo $this->partial('application/static/help_menu') ?>
         </div>
         <div class="section-content__context tac">
-            <p class="description-text">Every photo album tells a story, but no two stories are told quite the same. Choose between our leather, linen or a custom photo album cover design that will allow you to tell your story, your way.</p>
-            <h2 class="section-content__title">Standard Embossed Titles</h2>
-            <p class="section-content__sub-title">Standard embossed titles are available in either Folio or Bodoni fonts. Both fonts are offered in two different sizes, and in either CAPS or lowercase letters. These titles can have a maximum of 25 characters and can be positioned as shown below.</p>
+            <p class="description-text">Jedes Fotoalbum erzählt seine ganz eigene Geschichte. Wähle aus unserem Einbanddesign mit Leder, Leinen oder einem Foto-Einband, um deine Geschichte auf deine Art zu erzählen.</p>
+            <h2 class="section-content__title">Titelprägung in Standardschrift</h2>
+            <p class="section-content__sub-title">Eine Prägung des Fotobuchtitels ist standardmässig in den Schriftarten Folio oder Bodoni erhältlich. Beide Schriftarten werden in zwei verschiedenen Grössen und in GROSS- und Kleinbuchstaben angeboten. Der Titel ist maximal 25 Zeichen lang und kann wie unten gezeigt positioniert werden.</p>
             <div class="section-content__img-text">
                 <img src="/assets/images/towebp/4.5-photo-album-cover-designs/image_outlined_text.svg" alt="image_outlined_text">
             </div>
@@ -98,8 +98,8 @@ $this->headMeta()->appendName('description', 'Looking for wedding album or photo
             </div>
             <div class="line"></div>
             <div class="section-content__wrap-section">
-                <h2 class="section-content__title-mini">Designer Embossed Titles</h2>
-                <p class="section-content__sub-title">These pre-designed photo album title designs can be used in conjunction with a single line of standard embossed text of maximum 20 characters.</p>
+                <h2 class="section-content__title-mini">Titelprägung mit Design</h2>
+                <p class="section-content__sub-title">Diese stilvollen Titelgestaltungen für Fotobücher können in Verbindung mit einer einzelnen Zeile Standard-Prägetext mit maximal 20 Zeichen verwendet werden.</p>
                 <div class="section-content__gallery">
                     <div class="section-content__img">
                         <figure style="padding-bottom: calc(390% / 390 * 100)" class="figure-webp">
@@ -179,8 +179,8 @@ $this->headMeta()->appendName('description', 'Looking for wedding album or photo
             </div>
             <div class="line"></div>
             <div class="section-content__wrap-section">
-                <h2 class="section-content__title-mini">Custom Embossed Titles and Logos</h2>
-                <p class="section-content__sub-title">Personalize your photo book or wedding album cover with a custom foil title. Send us your design or work with our team to create your own custom photo album title, from scratch. The same die can be used to emboss multiple album covers, so this is a great option when ordering many copies of the same book.</p>
+                <h2 class="section-content__title-mini">Individuell geprägte Titel und Logos</h2>
+                <p class="section-content__sub-title">Personalisiere deinen Fotobuch- oder Hochzeitsalbum-Einband mit einer individuellen Folienprägung. Schick uns dein Design oder arbeite mit unserem Team zusammen, um deinen ganz persönlichen Fotoalbumtitel zu gestalten. Derselbe Stempel kann zum Prägen mehrerer Albumcover verwendet werden: optimal für die Bestellung mehrerer Exemplare.</p>
                 <div class="section-content__gallery">
                     <div class="section-content__img">
                         <figure style="padding-bottom: calc(390% / 390 * 100)" class="figure-webp">
@@ -293,7 +293,7 @@ $this->headMeta()->appendName('description', 'Looking for wedding album or photo
             </div>
             <div class="line"></div>
             <div class="section-content__wrap-section">
-                <h2 class="section-content__title-mini">Laser Etched Titles</h2>
+                <h2 class="section-content__title-mini">Titel als Lasergravur</h2>
                 <p class="section-content__sub-title">Laser engraved photo album covers offer the flexibility to use virtually any design and font combination to create your custom photo book cover design. With laser etching, the heat from the laser is used to create the desired pattern on the linen or <a href="https://www.pikperfect.com/photo-books/leather-photo-albums" target="_blank" class="link">leather photo album</a> cover by removing a thin layer from the fabric top to create the desired photo book cover design.</p>
                 <div class="section-content__gallery">
                     <div class="section-content__img">
@@ -401,8 +401,8 @@ $this->headMeta()->appendName('description', 'Looking for wedding album or photo
             </div>
             <div class="line"></div>
             <div class="section-content__wrap-section">
-                <h2 class="section-content__title-mini">Cameo Windows</h2>
-                <p class="section-content__sub-title">Adding a cameo window or photo indent window allows you to enjoy the benefits of a luxurious leather or fabric album cover, while being able to also personalize it with your favorite photo. Cameo windows are available in either square or rectangular, and can be positioned on the cover as shown.</p>
+                <h2 class="section-content__title-mini">Foto-Fenster</h2>
+                <p class="section-content__sub-title">Durch das Hinzufügen eines Fotofensters oder einer Fotovertiefung lässt sich ein luxuriöser Albumeinband aus Leder oder Leinen mit deinem Lieblingsfoto personalisieren. Die Fotos sind quadratisch oder rechteckig und können wie abgebildet auf dem Einband positioniert werden.</p>
                 <div class="section-content__gallery">
                     <div class="section-content__img">
                         <figure style="padding-bottom: calc(390% / 390 * 100)" class="figure-webp">
@@ -475,7 +475,7 @@ $this->headMeta()->appendName('description', 'Looking for wedding album or photo
             </div>
             <div class="line"></div>
             <div class="section-content__wrap-section">
-                <h2 class="section-content__title-mini">Glass Photo Albums</h2>
+                <h2 class="section-content__title-mini">Fotoalbum aus Glas</h2>
                 <p class="section-content__sub-title">Increasingly popular with newlyweds, our <a href="https://www.pikperfect.com/wedding-albums/premium-layflat-wedding-albums" target="_blank" class="link">acrylic glass wedding albums</a> feature a glass album cover, paired with your choice of leather or fabric wrapped stylishly around the back. These sophisticated photo books allow you to admire your favourite images while maintaining the luxurious touch of a fabric photo album cover.</p>
                 <div class="section-container__img">
                     <figure style="padding-bottom: calc(537% / 930 * 100)" class="figure-webp">
@@ -491,7 +491,7 @@ $this->headMeta()->appendName('description', 'Looking for wedding album or photo
             </div>
             <div class="line"></div>
             <div class="section-content__wrap-section">
-                <h2 class="section-content__title-mini">Imagewrap Photo Covers</h2>
+                <h2 class="section-content__title-mini">Fotodruck-Fotobucheinband</h2>
                 <p class="section-content__sub-title">A favorite for every occasion, our Imagewrap <a href="https://www.pikperfect.com/photo-books/custom-photo-books" target="_blank" class="link">hardcover photo books</a> wrap your photos across the front cover, back cover, and spine. Printed with full-bleed on a single sheet of photo paper which is laminated with a matte finish, these contemporary covers can be designed with any combination of photos and text.</p>
                 <div class="section-content__gallery section-content__gallery_shadow">
                     <div class="section-content__img">
