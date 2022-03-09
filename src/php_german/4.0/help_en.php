@@ -1,6 +1,6 @@
 <?php
-$this->headTitle('Frequently Asked Questions | PikPerfect');
-$this->headMeta()->appendName('description', 'We cover the options and answers to some commonly asked questions about making wedding albums and photo books.');
+$this->headTitle('Häufige Fragen (FAQ) | Hilfe | PikPerfect');
+$this->headMeta()->appendName('description', 'Optionen und Antworten auf einige häufig gestellte Fragen zum Erstellen von Hochzeitsalben und Fotobüchern.');
 ?>
 <section class="section-img section-img_size-m m-auto">
     <figure class="figure-webp">
@@ -13,8 +13,8 @@ $this->headMeta()->appendName('description', 'We cover the options and answers t
     </figure>
     <div class="section-img__block-wrap">
         <div class="section-img__block">
-            <h1 class="section-img__title">Help Center</h1>
-            <p class="section-img__text">Answers to some commonly asked questions</p>
+            <h1 class="section-img__title">Hilfe-Center</h1>
+            <p class="section-img__text">Antworten auf einige häufig gestellte Fragen</p>
         </div>
     </div>
 </section>
@@ -22,43 +22,43 @@ $this->headMeta()->appendName('description', 'We cover the options and answers t
     <div class="section-card__container">
         <div class="section-card__wrap">
             <a href="<?php echo $this->languageUrl('static-help-book-vs-photo-album-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Product Comparison</h3>
+                <h3 class="section-card__title">Produktvergleich</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-photo-book-design-service-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Design Service</h3>
+                <h3 class="section-card__title">Gestaltungsservice</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-photo-selection-service-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Photo Selection Service</h3>
+                <h3 class="section-card__title">Fotoauswahlservice</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-photo-editing-service-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Photo Editing Service</h3>
+                <h3 class="section-card__title">Fotobearbeitungsservice</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-photo-album-cover-designs-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Photo Album Cover Designs</h3>
+                <h3 class="section-card__title">Fotobuch Einbandgestaltung</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-photo-book-printing-papers-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Paper Types & Printing</h3>
+                <h3 class="section-card__title">Druck & Papiere</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-uploading-photos-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Uploading Photos</h3>
+                <h3 class="section-card__title">Fotos hochladen</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-prices-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Prices & Delivery Times</h3>
+                <h3 class="section-card__title">Preise & Lieferzeiten</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-payment-shipping-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Payment & Shipping</h3>
+                <h3 class="section-card__title">Zahlung & Versand</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-my-account-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Orders & Account</h3>
+                <h3 class="section-card__title">Bestellungen & Konto</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-quality-guarantee-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Quality Guarantee</h3>
+                <h3 class="section-card__title">Qualitätsgarantie</h3>
             </a>
             <a href="<?php echo $this->languageUrl('static-help-pikperfect-discounts-') ?>" class="section-card__card">
-                <h3 class="section-card__title">Volume Discounts</h3>
+                <h3 class="section-card__title">Mengenrabatt</h3>
             </a>
         </div>
-        <p class="section-card__button-text">If you're not able to find answers to your questions here, <a href="<?php echo $this->languageUrl('contact-') ?>" class="link" target="_blank">contact us</a> and we'll be happy to help.</p>
+        <p class="section-card__button-text">Falls du hier keine Antworten auf deine Fragen findest, <a href="<?php echo $this->languageUrl('contact-') ?>" class="link" target="_blank">kontaktiere uns</a> einfach. Wir helfen gerne weiter.</p>
     </div>
 </section>
 
