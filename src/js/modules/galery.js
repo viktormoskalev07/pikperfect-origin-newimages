@@ -32,7 +32,6 @@ const openGalery =function(){
   const app = document.querySelector('#app');
   if(app){
     let result = ' ';
-    
     // output last pages (cover)
     const albumCoverFolder = this.dataset.coverfolder;
     const albumBackCover = this.dataset.backcover;
@@ -68,18 +67,27 @@ const openGalery =function(){
     });
 
     // output of all main pages
-    const albumImages = this.dataset.galleryalbumimages;
+    let pages =Number(this.dataset.pages) ;
+
+    if ( pages<4 ||   isNaN(pages)){
+      console.error('unsupported data-pages' );
+      pages=4;
+    }
     const imgFolder = this.dataset.folder;
-    const arrimages = albumImages.split(' , '); 
+    let arrImages = [];
+    for( let i = 1 ; i<pages+1  ; i++){
+
+      const add = i%2 >0 ? 1:3;
+      arrImages.push(`page-${pages-i+add}.jpg`);
+    }
 
 
-    
-    arrimages.forEach((imgName , i)=>{
+    arrImages.forEach((imgName , i)=>{
 
       // format album
       if(i === 0){
         let thisImg = new Image();
-        thisImg.src=`${imgFolder+arrimages[0]}`; 
+        thisImg.src=`${imgFolder+arrImages[0]}`;
         thisImg.onload = function(){
           let width = thisImg.width;
           let height = thisImg.height;
@@ -148,21 +156,21 @@ const openGalery =function(){
   /////// preloader
   function preloaderAnimation(){
     if(preloader){
-      let imgTempleate = new Image;
+      let imgTempleate = new Image();
       imgTempleate.src = imgFrontCover.src;
       imgTempleate.addEventListener('load', function(){
-        
+
         //// created array with last 5 img
-        const newArr = new Array();
-        lastImgArr = arrimages.slice(-5 );
+        const newArr =[];
+        const len = arrImages.length>5?5 : arrImages.length;
+        lastImgArr = arrImages.slice(-len );
         lastImgArr.forEach((item) => {
           let thisImg = new Image();
           srcItemArray = imgFolder+item;
           thisImg.src = srcItemArray;
-          
           thisImg.addEventListener('load', function(){
             newArr.push(thisImg);
-            if(newArr.length == 5){
+            if(newArr.length == len){
               preloader.classList.add('loaded');
             }
           });
