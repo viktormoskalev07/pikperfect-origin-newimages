@@ -1,15 +1,15 @@
 <?php
 $this->placeholder('bodyClass')->set('main-content');
-$this->headTitle('Page not Found | PikPerfect');
+$this->headTitle('Seite nicht gefunden | PikPerfect');
 ?>
 <section class="error">
     <div class="error__container">
         <div class="error__img">
             <img src="/assets/images/Illustration_404.svg" alt="Illustration_404">
         </div>
-        <h1 class="title">Page not found</h1>
-        <p>Sorry, the page you're looking for cannot be found. Please check to make sure the URL entered is correct. Or start again from our Homepage.</p>
-        <a href="<?php echo $this->url('home', array("language" => $this->getLanguage())) ?>" class="button">BACK TO HOMEPAGE</a>
+        <h1 class="title">Seite nicht gefunden</h1>
+        <p>Die von dir gesuchte Seite kann leider nicht gefunden werden. Bitte überprüfe, ob die eingegebene URL korrekt ist. Oder starte von unserer Homepage aus.</p>
+        <a href="<?php echo $this->url('home', array("language" => $this->getLanguage())) ?>" class="button">ZUR HOMEPAGE</a>
     </div>
 </section>
 
