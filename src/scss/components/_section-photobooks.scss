@@ -123,13 +123,14 @@ body.overflow{
         margin: 0 auto;
       }
     }
-  }
+  } 
   &__block{
     display: block;
     margin-bottom: 40px;
     text-align: center;
     font-size: 18px;
     margin: 0 15px 40px;
+    // background: red;
     &:hover{
       .section-photobooks__name-album{
         color: #567C8B;
