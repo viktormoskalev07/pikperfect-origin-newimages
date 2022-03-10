@@ -602,26 +602,26 @@ $this->headMeta()->appendName('description', 'Gestalte deinen Hochzeitsalbum Fot
 </section>
 <section class="section-accordion">
     <div class="container">
-        <h2 class="section-accordion__title">More about our photo album title options</h2>
+        <h2 class="section-accordion__title">Mehr zu Fotobuch Titelseite gestalten</h2>
         <div class="accordion">
             <div class="accordion__item">
-                <h3 class="accordion__title">Can I choose the exact position of my custom photo album title?</h3>
-                <p class="accordion__text">Yes. Our photo albums & books are debossed by hand, which allows us to place your album title exactly as you’d like it to appear.</p>
+                <h3 class="accordion__title">Kann ich die Position meines Fotoalbumtitels auswählen?</h3>
+                <p class="accordion__text">Ja. Unsere Fotoalben und -bücher werden von Hand geprägt, so dass wir deinen Albumtitel genau so platzieren können, wie du möchtest.</p>
             </div>
 
             <div class="accordion__item">
-                <h3 class="accordion__title">Can I combine a cameo window with a custom album title?</h3>
-                <p class="accordion__text">Absolutely! But please keep in mind that the title cannot be placed right on the edge of the album cover, so we will recommend a design that allows for this.</p>
+                <h3 class="accordion__title">Kann ich ein Foto Fenster mit einem individuellen Titel kombinieren?</h3>
+                <p class="accordion__text">Absolut! Bitte beachte, dass der Titel nicht am Rand des Einbands platziert werden kann; wir gestalten ein entsprechendes Design.</p>
             </div>
 
             <div class="accordion__item">
-                <h3 class="accordion__title">Which covers can have a laser etched or embossed title?</h3>
-                <p class="accordion__text">Laser etched or embossed photo album titles are possible on all fabric photo album covers, including genuine leather, vegan leather and linen covers. These are not available on Imagewrap or glass photo album covers.</p>
+                <h3 class="accordion__title">Welche Einbände können einen gravierten oder geprägten Titel haben?</h3>
+                <p class="accordion__text">Lasergravur oder Prägung des Titels ist auf allen Fotobuch-Einbänden aus Stoff möglich, d.h. echtem oder veganem Leder sowie Leineneinbänden. Sie sind auf Foto- oder Glas-Cover nicht möglich.</p>
             </div>
 
             <div class="accordion__item">
-                <h3 class="accordion__title">Do I have to choose one of your title designs or can I use my own?</h3>
-                <p class="accordion__text">We offer a wide range of laser etched or custom embossed photo book title styles, and if you have some specific wedding album title ideas, please share these with us and we’ll be happy to incorporate them into your cover design.</p>
+                <h3 class="accordion__title">Muss ich euer Titeldesign nehmen oder ist mein eigenes möglich?</h3>
+                <p class="accordion__text">Wir bieten eine grosse Auswahl an lasergravierten oder individuell geprägten Fotobuch-Titelstilen an. Falls du bestimmte Ideen für Hochzeitsalbum-Titel hast, teil uns das einfach mit und wir integrieren sie gerne in dein Cover-Design.</p>
             </div>
 
         </div>
