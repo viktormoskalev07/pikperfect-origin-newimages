@@ -294,7 +294,7 @@ $this->headMeta()->appendName('description', 'Gestalte deinen Hochzeitsalbum Fot
             <div class="line"></div>
             <div class="section-content__wrap-section">
                 <h2 class="section-content__title-mini">Titel als Lasergravur</h2>
-                <p class="section-content__sub-title">Laser engraved photo album covers offer the flexibility to use virtually any design and font combination to create your custom photo book cover design. With laser etching, the heat from the laser is used to create the desired pattern on the linen or <a href="https://www.pikperfect.com/photo-books/leather-photo-albums" target="_blank" class="link">leather photo album</a> cover by removing a thin layer from the fabric top to create the desired photo book cover design.</p>
+                <p class="section-content__sub-title">Mit einer Lasergravur auf dem Fotoalbum-Cover kann praktisch jedes Design und jede Schriftartkombination verwendet werden. Beim Gravieren wird durch die Wärme des Lasers das gewünschte Muster auf dem <a href="https://www.pikperfect.com/photo-books/leather-photo-albums" target="_blank" class="link">Fotoalbumeinband aus Leder</a> oder Leinen erzeugt, indem eine dünne Schicht von der Oberfläche des Stoffeinband entfernt wird.</p>
                 <div class="section-content__gallery">
                     <div class="section-content__img">
                         <figure style="padding-bottom: calc(390% / 390 * 100)" class="figure-webp">
@@ -476,7 +476,7 @@ $this->headMeta()->appendName('description', 'Gestalte deinen Hochzeitsalbum Fot
             <div class="line"></div>
             <div class="section-content__wrap-section">
                 <h2 class="section-content__title-mini">Fotoalbum aus Glas</h2>
-                <p class="section-content__sub-title">Increasingly popular with newlyweds, our <a href="https://www.pikperfect.com/wedding-albums/premium-layflat-wedding-albums" target="_blank" class="link">acrylic glass wedding albums</a> feature a glass album cover, paired with your choice of leather or fabric wrapped stylishly around the back. These sophisticated photo books allow you to admire your favourite images while maintaining the luxurious touch of a fabric photo album cover.</p>
+                <p class="section-content__sub-title">Unser <a href="https://www.pikperfect.com/wedding-albums/premium-layflat-wedding-albums" target="_blank" class="link">acrylic glass wedding albums</a> ist bei Frischvermählten beliebt, da es einen Albumeinband aus Glas mit Leder oder Leinen nach Wahl kombiniert. Mit diesen raffinierten Fotobüchern lässt sich dein Lieblingsbild bewundern und gleichzeitig die luxuriöse Haptik eines Fotobuch-Einbands aus Stoff bewahren.</p>
                 <div class="section-container__img">
                     <figure style="padding-bottom: calc(537% / 930 * 100)" class="figure-webp">
                         <picture data-priority="0" data-name="glass-wedding-album-cover" data-path="4.5-photo-album-cover-designs" class="picture-webp">
@@ -492,7 +492,7 @@ $this->headMeta()->appendName('description', 'Gestalte deinen Hochzeitsalbum Fot
             <div class="line"></div>
             <div class="section-content__wrap-section">
                 <h2 class="section-content__title-mini">Fotodruck-Fotobucheinband</h2>
-                <p class="section-content__sub-title">A favorite for every occasion, our Imagewrap <a href="https://www.pikperfect.com/photo-books/custom-photo-books" target="_blank" class="link">hardcover photo books</a> wrap your photos across the front cover, back cover, and spine. Printed with full-bleed on a single sheet of photo paper which is laminated with a matte finish, these contemporary covers can be designed with any combination of photos and text.</p>
+                <p class="section-content__sub-title">Unsere <a href="https://www.pikperfect.com/photo-books/custom-photo-books" target="_blank" class="link">Hardcover-Fotobücher</a> mit Fotoeinband sind ein Favorit für jede Gelegenheit und zeigen eine Kombination aus Bildern und Text auf der Vorder- und Rückseite sowie dem Buchrücken deines Covers. Diese Einbände werden randlos auf einem einzigen Blatt Fotopapier gedruckt und sind mit einer matten Oberfläche laminiert.</p>
                 <div class="section-content__gallery section-content__gallery_shadow">
                     <div class="section-content__img">
                         <figure style="padding-bottom: calc(390% / 390 * 100)" class="figure-webp">
