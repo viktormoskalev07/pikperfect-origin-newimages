@@ -6,7 +6,7 @@
   const preloader = document.querySelector('.preloader');
   let activator  ;
   let close      ;
-  let slidePlace ;
+
   let closeGalery;
   if(container && containerFlip){
     activator = document.querySelectorAll('.gallery__activator-js');
@@ -15,7 +15,7 @@
     });
   
   close = document.querySelector('.gallery__close');
-  slidePlace =container.querySelector('.swiper-wrapper');
+
   closeGalery=()=>{
     container.classList.add('gallery__fade');
     containerFlip.classList.remove('shadow');
@@ -26,7 +26,7 @@
         container.classList.add('gallery__d-none');
     }, 400);   
     document.body.classList.remove('overflow-h');
-  } 
+  };
 }
   
 
@@ -35,23 +35,32 @@ const openGalery =function(){
   if(app){
     let result = ' ';
     // output last pages (cover)
-    const albumCoverFolder = this.dataset.coverfolder;
-    const albumBackCover = this.dataset.backcover;
+    // frontcover:"cover.jpg , inner_page_base_leather_yellow_left.png , page-1.jpg",
+    // backcover:"inner_page_base_leather_yellow_right.png , page-122.jpg , cover.jpg",
+    const imgFolder = this.dataset.folder;
+    let pages =Number(this.dataset.pages) ;
+    if ( pages<4 ||   isNaN(pages)){
+      console.error('unsupported data-pages' );
+      pages=4;
+    }
+    const albumCoverFolder = imgFolder;
+    const albumFrontCover =  'front-cover.jpg , base-left.jpg , page-1.jpg';
+    const albumBackCover =  `base-right.jpg , page-${pages}.jpg , back-cover.jpg`;
     const arrImagesBackCover = albumBackCover.split(' , '); 
     arrImagesBackCover.forEach((image, i) =>{
       if(i===0){
         result+= `
         <div class="page page__back-cover">
-          <div class="front last-page" style="background-image:url(${albumCoverFolder+image})">`
+          <div class="front last-page" style="background-image:url(${albumCoverFolder+image})">`;
       }
       if(i ===1){
         result+= `
               <div class="outer">
                   <div class="content">
-                    <img src="${albumCoverFolder+image}">
+                    <img src="${albumCoverFolder+image}" alt="cover">
                   </div>
               </div>
-          </div>`
+          </div>`;
       }
       if(i ===(arrImagesBackCover.length - 1) ){
         result+= `
@@ -64,25 +73,21 @@ const openGalery =function(){
                   </div>
               </div>
           </div>
-        </div>`
+        </div>`;
       }
     });
 
     // output of all main pages
-    let pages =Number(this.dataset.pages) ;
 
-    if ( pages<4 ||   isNaN(pages)){
-      console.error('unsupported data-pages' );
-      pages=4;
-    }
-    const imgFolder = this.dataset.folder;
+
+
     let arrImages = [];
-    for( let i = 1 ; i<pages+1  ; i++){
+    for( let i = 2 ; i<pages  ; i++){
 
-      const add = i%2 >0 ? 1:3;
+      const add = i%2 >0 ? 2:0;
       arrImages.push(`page-${pages-i+add}.jpg`);
     }
-
+    console.log(arrImages)
 
     arrImages.forEach((imgName , i)=>{
 
@@ -97,7 +102,7 @@ const openGalery =function(){
           if(sum > 1){
             containerFlip.classList.add("landscape");
           }
-        }
+        };
       }
         
       // format album
@@ -110,7 +115,7 @@ const openGalery =function(){
                               </div>
                           </div>
                       </div>
-                    </div> </div>`
+                    </div> </div>`;
         } else {
           result+= `<div class="page"> <div class="front">
                       <div class="outer">
@@ -118,12 +123,12 @@ const openGalery =function(){
                             <img src="${imgFolder+imgName}">
                           </div>
                       </div>
-                    </div>`
+                    </div>`;
         }  
       });
 
       // output first pages (cover)
-      const albumFrontCover = this.dataset.frontcover;
+
       const arrImagesFrontCover = albumFrontCover.split(' , '); 
       arrImagesFrontCover.forEach((image, i) =>{
         if(i ===0){
@@ -135,11 +140,11 @@ const openGalery =function(){
                       <img src="${albumCoverFolder+image}">
                     </div>
                 </div>
-            </div>`
+            </div>`;
         }
         if(i===1){
           result+= `
-            <div class="back first-page" style="background-image:url(${albumCoverFolder+image})">`
+            <div class="back first-page" style="background-image:url(${albumCoverFolder+image})">`;
         }
         if(i ===(arrImagesFrontCover.length - 1) ){
           result+= `
@@ -150,9 +155,9 @@ const openGalery =function(){
                         </div>
                     </div>
                 </div>
-            </div></div>`
+            </div></div>`;
         }  
-      })
+      });
     app.innerHTML=result;
 
   /////// preloader
@@ -165,10 +170,10 @@ const openGalery =function(){
         //// created array with last 5 img
         const newArr =[];
         const len = arrImages.length>5?5 : arrImages.length;
-        lastImgArr = arrImages.slice(-len );
+        let lastImgArr = arrImages.slice(-len);
         lastImgArr.forEach((item) => {
           let thisImg = new Image();
-          srcItemArray = imgFolder+item;
+          let srcItemArray = imgFolder + item;
           thisImg.src = srcItemArray;
           thisImg.addEventListener('load', function(){
             newArr.push(thisImg);
@@ -177,7 +182,7 @@ const openGalery =function(){
             }
           });
         });
-      })
+      });
     }
   }
   setTimeout(preloaderAnimation, 500);
@@ -187,34 +192,34 @@ const openGalery =function(){
   const containerFlip = document.querySelector('.container-flip');
   const frontCover = document.querySelector('.page__front-cover');
   const backCover = document.querySelector('.page__back-cover');
-  const shadow = document.querySelector(".box-shadow");
+
   const arrows = document.querySelector('.gallery__controls');
   const prev = document.querySelector(".flip-book__prev");
   const next = document.querySelector(".flip-book__next");
 
-  const imgFrontCover = document.querySelector('.page__front-cover img')
+  const imgFrontCover = document.querySelector('.page__front-cover img');
 
 
   function openBookFront(){
     if(frontCover.classList.contains('next')){
       containerFlip.classList.add('shadow');
     }
-  };
+  }
   function closeBookFront(){
     if(frontCover.classList.contains('prev')){
       containerFlip.classList.remove('shadow');
     }
-  };
+  }
   function openBookBack(){
     if(backCover.classList.contains('prev')){
       containerFlip.classList.add('shadow');
     }
-  };
+  }
   function closeBookBack(){
     if(backCover.classList.contains('next')){
       containerFlip.classList.remove('shadow');
     }
-  };
+  }
 
 
   const removeCurrents = () => page.forEach(el => el.classList.remove('current', 'prev'));
@@ -223,7 +228,7 @@ const openGalery =function(){
   page.forEach((elem, index) => {
     const prevNode = elem.previousSibling;
 
-    elem.addEventListener("click", function (e) {
+    elem.addEventListener("click", function ( ) {
       removeCurrents();
       containerFlip.classList.remove('end');
       if (elem.classList.contains("next")) {
@@ -238,7 +243,7 @@ const openGalery =function(){
       if (index === 0 && containerFlip.classList.contains('shadow')) {
         setTimeout(() => containerFlip.classList.add('end'), 700);
       }
-    })
+    });
   }
   );
 
@@ -259,34 +264,28 @@ const openGalery =function(){
     function nextArrow(){
       if(frontCover.classList.contains('next')){
         const pageNext = document.querySelectorAll('.page.next');
-        const thisNextLength = (page.length - pageNext.length);
+
         clickFrontCover();
         setTimeout(closeBookBack, 600);
-        if(page.length = thisNextLength){
           page[page.length - 1 - pageNext.length].click();
-        }
       }else{
         page[page.length - 1].click();
       }
-    };
+    }
     next.addEventListener('click', nextArrow);
   
     // click for button "prev"
     function prevArrow(){
       if(frontCover.classList.contains('next')){
         const pageNext = document.querySelectorAll('.page.next');
-        const thisNextLength = (page.length - pageNext.length);
-  
         if((page.length - pageNext.length)==0){
           page[page.length - pageNext.length].click();
         }
         else{
-          if(page.length = thisNextLength){
             page[page.length - pageNext.length].click();
-          }
         }
       }
-    };
+    }
     prev.addEventListener('click', prevArrow);
     
   // add class click
@@ -296,7 +295,7 @@ const openGalery =function(){
       parent.classList.add('click');
       arrows.classList.add('click');
       setTimeout(removeClick, 1000);
-    })
+    });
   }
   function removeClick(){
     containerFlip.classList.remove('click');
@@ -307,12 +306,12 @@ const openGalery =function(){
     
   // add zIndex for pages
     const foundMaxZIndex = ()=>{
-      const arr = []
+      const arr = [];
       page.forEach((item)=>{
       arr.push(Number(item.style.zIndex)); 
-    })
+    });
     return( Math.max(...arr));
-    }
+    };
 
     containerFlip.addEventListener('click', (e)=>{
       const targetCard =e.target.closest('.page');
@@ -333,7 +332,7 @@ const openGalery =function(){
         nextArrow();
       }
     }
-  };
+  }
   /////////// flip book ////////////////
     document.body.classList.add('overflow-h');
     container.classList.remove('gallery__d-none');
@@ -341,7 +340,7 @@ const openGalery =function(){
     setTimeout(() => { 
       container.classList.remove('gallery__fade');
     }, 1);
-  }
+  };
     if(container&&activator){ 
       
         close.addEventListener('click' ,closeGalery); 
@@ -350,7 +349,7 @@ const openGalery =function(){
             if(event.keyCode==27){
               closeGalery();
             } 
-        }) 
+        }) ;
         activator.forEach(item => {
           item.addEventListener('click' , openGalery);
         });
