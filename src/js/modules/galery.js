@@ -34,15 +34,13 @@ const openGalery =function(){
   const app = document.querySelector('#app');
   if(app){
     let result = ' ';
-    // output last pages (cover)
-    // frontcover:"cover.jpg , inner_page_base_leather_yellow_left.png , page-1.jpg",
-    // backcover:"inner_page_base_leather_yellow_right.png , page-122.jpg , cover.jpg",
     const imgFolder = this.dataset.folder;
     let pages =Number(this.dataset.pages) ;
     if ( pages<4 ||   isNaN(pages)){
       console.error('unsupported data-pages' );
       pages=4;
     }
+     pages = pages%2>0? pages-1:pages;
     const albumCoverFolder = imgFolder;
     const albumFrontCover =  'front-cover.jpg , base-left.jpg , page-1.jpg';
     const albumBackCover =  `base-right.jpg , page-${pages}.jpg , back-cover.jpg`;
@@ -87,7 +85,7 @@ const openGalery =function(){
       const add = i%2 >0 ? 2:0;
       arrImages.push(`page-${pages-i+add}.jpg`);
     }
-    console.log(arrImages)
+
 
     arrImages.forEach((imgName , i)=>{
 
