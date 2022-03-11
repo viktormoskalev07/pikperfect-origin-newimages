@@ -130,7 +130,6 @@ body.overflow{
     text-align: center;
     font-size: 18px;
     margin: 0 15px 40px;
-    // background: red;
     &:hover{
       .section-photobooks__name-album{
         color: #567C8B;
@@ -161,6 +160,9 @@ body.overflow{
         width: 22%;
       }
     }
+  }
+  &__img-album{
+    background: #999;
   }
   &__name-album{
     font-weight: 600;
