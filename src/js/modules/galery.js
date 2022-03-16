@@ -21,6 +21,7 @@
     containerFlip.classList.remove('shadow');
     containerFlip.classList.remove('end');
     containerFlip.classList.remove('landscape');
+    containerFlip.classList.remove('portrait');
     preloader.classList.remove('loaded');
     setTimeout(() => {
         container.classList.add('gallery__d-none');
@@ -99,6 +100,18 @@ const openGalery =function(){
           let sum = width/height;
           if(sum > 1){
             containerFlip.classList.add("landscape");
+          }
+        };
+      }
+      if(i === 0){
+        let thisImg = new Image();
+        thisImg.src=`${imgFolder+arrImages[0]}`;
+        thisImg.onload = function(){
+          let width = thisImg.width;
+          let height = thisImg.height;
+          let sum = width/height;
+          if(sum < 1){
+            containerFlip.classList.add("portrait");
           }
         };
       }

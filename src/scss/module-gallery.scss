@@ -164,6 +164,74 @@
             }
         }
     }
+    &.portrait{
+        width: 106px;
+        height: 150px;
+        @include mobile-md{
+            width: 142.5px;
+            height: 200px;
+        }
+        @include mobile-lg{
+            width: 178px;
+            height: 250px;
+        }
+        @include tablet{
+            width: 212px;
+            height: 300px; 
+            margin-bottom: 50px;
+        }
+        @include desktop-sm{
+            width: 283px;
+            height: 400px;
+        }
+        @include tabtoslide{
+            width: 318px;
+            height: 450px;
+        }
+        @include wide-screen-sm{
+            width: 355px; 
+            height: 500px;
+        }
+        @include wide-screen-md{
+            width: 424px;
+            height: 600px; 
+        }
+        @include wide-screen-lg{
+            width: 494px;
+            height: 700px;
+        }
+        &.shadow{
+            &::after{
+                left: -50%;
+                background-position: top center;
+            }
+            &::before{
+                width: 200%;
+                left: -50%;
+                bottom: -3px;
+                @include mobile-md{
+                    width: 202%;
+                    bottom: -4px;
+                    left: -51%;
+                }
+                @include tablet{
+                    bottom: -6px;
+                }
+                @include desktop-sm{
+                    bottom: -8px;
+                }
+                @include tabtoslide{
+                    bottom: -9px;
+                }
+                @include wide-screen-md{
+                    bottom: -12px;
+                }
+                @include wide-screen-lg{
+                    bottom: -14px;
+                }
+            }
+        }
+    }
     &.end {
         .page__back-cover {
             ~ div {
