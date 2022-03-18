@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="description" 
-		content="Looking for a little inspiration for your photo book? We`ve collected a few of our favorite photo book examples to help get you started. "> 
+		content="Upload your photos and let our design team create a stunning wedding album or photo book for you."> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Photo Book Samples | Photo Album Examples | PikPerfect</title>  
+	<title>Start Project | PikPerfect</title>  
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="icon" href="./images/favicon.png" sizes="32x32">
 	<style>
@@ -23,16 +23,13 @@
 		})
 	</script> 
  
-	  <div class="pre-header">
-    <div class="container">
-      <div class="promobar"> 
-        <span id="promo-place-text" class="promobar-hide">  </span> 
-        <strong id="promo-place-code" class="promobar-hide">  </strong>
-      </div>
-    </div>
-  </div> 
-<!-- xhr in main js -->
-<header class="header">
+	<!-- xhr in main js -->
+<style>
+  #onlyStatic{
+    position: static;
+  }
+</style>
+<header id="onlyStatic" class="header">
   <a href="index.html" class="logo">
     <img loading="lazy" src="images/logo.svg" alt="logo" width="195" height="40">
   </a>
@@ -241,347 +238,395 @@
       <a href="#" class="btn btn-blue">start now</a>
     </div>
   </div>
-</header>
-
-  <main class="main-content">
-    <link rel="stylesheet" href="css/module-gallery.css">
-    
-
-
-
-  <section class="section-img m-auto">
-    <figure style="padding-bottom: calc(505% / 1440 * 100)" class="figure-webp">   <picture data-priority="0" data-name="wedding-photo-book-sample" data-path="8.0-photobook-sample-gallery" class="picture-webp">
-      <source class="toggle-img--js" srcset="images/towebp/8.0-photobook-sample-gallery/min-wedding-photo-book-sample.webp"  type="image/webp"> 
-      <img loading="lazy" class="nowebp-img" src="images/towebp/8.0-photobook-sample-gallery/wedding-photo-book-sample.jpg" alt="Flip book of wedding photo book sample">
-   </picture>   
-
-  </figure>
-
+</header> 
+  <link rel="stylesheet" href="css/upload.css">
+  <link rel="stylesheet" href="css/module-photo-selection.css">
   
-</section>
+  <main>
+  
+    <section class="section-album-title">
+      <div class="section-album-title__wrapper">
+        <h1>Album Title</h1>
+        <form action="">
+          <input type="text" placeholder="maximum 20 characters">
+        </form>
+      </div>
+      <div class="section-album-title__wrapper section-album-title__summary">
+        <div class="summary">Summary: 12x12 Latflat Album, Photo Cover, 60 pages, Pearl Matte</div>
+        <a href="#" class="link">(change)</a>
+      </div>
+    </section>
+  
+    <section class="section-upload-choice">
+      <form action="" class="section-upload-choice__wrapper">
+        <input type="radio" name="photo" id="all_photo" checked>
+        <label for="all_photo" class="item">
+          <p class="title">USE ALL PHOTOS</p>
+          <div class="text">
+            Only upload photos you'd like included.
+          </div>
+        </label>
+        <input type="radio" name="photo" id="use_service">
+        <label for="use_service" class="item">
+          <p class="title">PHOTO SELECTION SERVICE</p>
+          <p class="sub">(US $ 0.03/photo uploaded)</p>
+          <div class="text">
+            Upload all your photos, we'll help select the ones that best tell your story. You'll review the selection
+            before we start with the album design.
+          </div>
+        </label>
+      </form>
+    </section>
+  
+    <section class="section-upload-photo">
+      <div class="section-upload-photo__head">
+        <h2>Upload Photos</h2>
+        <a href="" class="link">Upload FAQ's</a>
+      </div>
+      <div class="section-upload-photo__text">Add your photos from one or more of the following:</div>
+      <div class="alert alert__error" style="display: none;">
+        <div class="alert-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect class="a" width="24" height="24" style="fill:none; " />
+            <g transform="translate(-0.662 -0.662)">
+              <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
+                style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+              <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
+                style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+            </g>
+          </svg>
+        </div>
+        <div class="alert-text">
+          <p class="alert-name">Network Error</p>
+          <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your connection
+            resumes.</p>
+        </div>
+      </div>
+      <div class="section-upload-photo__wrapper">
+        <div class="column"> 
+          <form action="" class="section-upload-photo__device" style="display: none;">
+            <div>
+              <img src="./images/current_device.png" alt="">
+              <p class="text">Current Device</p>
+            </div>
+            <button type="button" class="button">ADD PHOTOS</button>
+          </form>
+       
+          <div id="photoUpload" class="">
+            <div id="uploaderId" class="listMode"><div class="plupload_wrapper"><div class="ui-widget-content plupload_container ui-resizable plupload_view_list" id="uploaderId_container"><div class="ui-state-default ui-widget-header plupload_header"><div class="plupload_header_content"><div class="plupload_logo"> </div><div class="plupload_header_title">Select files</div><div class="plupload_header_text">Add files to the upload queue and click the start button.</div><div class="plupload_view_switch" style="display: none;"><input type="radio" id="uploaderId_view_list" name="view_mode_uploaderId" checked="checked" class="ui-helper-hidden-accessible"><label class="plupload_button ui-state-active ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only" for="uploaderId_view_list" data-view="list" role="button" title="List"><span class="ui-button-text">List</span><span class="ui-button-icon-secondary ui-icon ui-icon-grip-dotted-horizontal"></span></label></div></div></div><table class="plupload_filelist plupload_filelist_header ui-widget-header"><tbody><tr><td class="plupload_cell plupload_file_name">Filename</td><td class="plupload_cell plupload_file_status">Status</td><td class="plupload_cell plupload_file_size">Size</td><td class="plupload_cell plupload_file_action">&nbsp;</td></tr></tbody></table><div class="plupload_content plupload_dropbox" id="uploaderId_dropbox" style="position: relative;"><div class="plupload_droptext">Only .JPG or .JPEG files, 30 MB maximum per photo. <br> Color Profile: sRGB at 300 DPI. <br><p class="message">Photos are saved based on the date-taken, they are not saved in the order in which you upload them. <br>Please make sure your computer is not set to go into "sleep" mode as this will interrupt your upload.</p></div><ul class="plupload_filelist_content" id="uploaderId_filelist" unselectable="on"> </ul><div class="plupload_clearer">&nbsp;</div></div><table class="plupload_filelist plupload_filelist_footer ui-widget-header"><tbody><tr><td class="plupload_cell plupload_file_name"><div class="plupload_buttons" id="uploaderId_buttons" style="position: relative;"><!-- Visible --><a class="plupload_button plupload_add ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" id="uploaderId_browse" role="button" style="position: relative; z-index: 1; display: inline;"><span class="ui-button-icon-primary ui-icon ui-icon-circle-plus"></span><span class="ui-button-text">Add photos</span></a><a class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" id="fakePbNameButton" role="button" style="position: relative; z-index: 1; display: none;"><span class="ui-button-icon-primary ui-icon ui-icon-circle-plus"></span><span class="ui-button-text">Add photos</span></a>&nbsp;<a class="plupload_button plupload_start ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-icon-primary" id="uploaderId_start" role="button" style="display: none;"><span class="ui-button-icon-primary ui-icon ui-icon-circle-arrow-e"></span><span class="ui-button-text">Start Upload</span></a>&nbsp;<a class="plupload_button plupload_stop plupload_hidden ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary ui-button-disabled ui-state-disabled" id="uploaderId_stop" role="button" style="display: none;"><span class="ui-button-icon-primary ui-icon ui-icon-circle-close"></span><span class="ui-button-text">Stop Upload</span></a>&nbsp;<div id="html5_1fgc6h2m1iot1g54qs01ms2e1l4_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; overflow: hidden; z-index: 0;"><input id="html5_1fgc6h2m1iot1g54qs01ms2e1l4" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept=".jpg,.jpg,.jpeg,.jpeg" tabindex="-1"></div></div><div class="plupload_started plupload_hidden"><!-- Hidden --><div class="plupload_progress plupload_right"><div class="plupload_progress_container ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="ui-progressbar-value ui-widget-header ui-corner-left" style="display: none; width: 0%;"></div></div></div><div class="plupload_cell plupload_upload_status"></div><div class="plupload_clearer">&nbsp;</div></div></td><td class="plupload_file_status"><span class="plupload_total_status">0%</span></td><td class="plupload_file_size"><span class="plupload_total_file_size">0 kb</span></td><td class="plupload_file_action"></td></tr></tbody></table><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div></div><input class="plupload_count" value="0" type="hidden" id="uploaderId_count" name="uploaderId_count"></div></div>
+        </div>
 
-  <section class="section-text section-text_entered">
-  <div class="section-text__container">
-    <h1 class="section-text__title">Photobook Sample Gallery</h1>
-    <div class="section-text__content">        
-      <p>Our passion is designing beautiful photobooks for people around the world. With their permissions, we’d like to share a few of our favorite photo book examples with you.</p>
-    </div>
-  </div>  
-</section>
-  <section class="section-photobooks">
-  <div class="section-photobooks__wrap">
-    <div class="section-photobooks__sidebar">
-      <button class="popup__close close-filter">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect fill="transparent" width="24" height="24"></rect>
-          <g style="stroke:#2f353a;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" transform="translate(-0.662 -0.662)">
-          <line x1="14" y2="14" transform="translate(5.662 5.662)"></line>
-          <line x2="14" y2="14" transform="translate(5.662 5.662)"></line>
-          </g>
+
+
+
+
+
+
+
+        </div>
+        <div class="separator"></div>
+        <div class="column">
+          <form action="" class="section-upload-photo__link">
+            <div class="services">
+              <button type="button" name="service" class="service-button">
+                <img src="./images/logo_google_photos.svg" alt="">
+                Google Photos
+              </button>
+              <button type="button" name="service" class="service-button">
+                <img src="./images/logo_dropbox.svg" alt="">
+                Dropbox
+              </button>
+              <button type="button" name="service" class="service-button">
+                <img src="./images/logo_google_drive.svg" alt="">
+                Google Drive
+              </button>
+              <button type="button" name="service" class="service-button">
+                <img src="./images/logo_one_drive.svg" alt="">
+                One Drive
+              </button>
+            </div>
+            <div class="upload-link">
+              <img src="./images/ic_link.svg" alt="">
+              <input type="text" placeholder="You can also copy & paste a link to a 3rd party photo gallery here">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="alert alert__error">
+        <div class="alert-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect class="a" width="24" height="24" style="fill:none; " />
+            <g transform="translate(-0.662 -0.662)">
+              <line class="b" x1="14" y2="14" transform="translate(5.662 5.662)"
+                style="fill:none; stroke:#fff;stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+              <line class="b" x2="14" y2="14" transform="translate(5.662 5.662)"
+                style="fill:none; stroke:#fff; stroke-linecap:round; stroke-linejoin:round; stroke-width:2px;" />
+            </g>
+          </svg>
+        </div>
+        <div class="alert-text">
+          <p class="alert-name">Network Error</p>
+          <p class="alert-descr">You seem to have lost internet connection. Your upload will continue when your
+            connection resumes.</p>
+        </div>
+      </div>
+      <div class="section-upload-photo__wrapper">
+        <div class="section-upload-photo__footer">
+          <ul class="specification">
+            <li>We only work with JPEG images. 30 MB maximum per photo</li>
+            <li>Photos save based on image name or date, not in the order you upload them</li>
+          </ul>
+          <a href="#design-styles" class="button">NEXT: CHOOSE DESIGN STYLES</a>
+        </div>
+      </div>
+    </section>
+    <section class="select-style">
+      <a href="" name="design-styles"></a>
+      <div class="select-style__container">      
+        <h2 class="title">Design Styles</h2>
+        <p class="description">Select the style you like best. If you’re looking for something different, please detail it out in the section below.</p>
+        <div class="select-style__wrapper">
+          <div class="select-style__select select-style__select_mobile">
+            <label for="occasionAlbum">Occasion</label>
+            <select name="occasion" class="form-control" id="occasionAlbum">
+              <option value="Wedding">Wedding</option>
+            </select>
+            <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
+          </div>
+          <div class="select-style__slider">
+            <div class="swiper-container select-style__swiper">
+              <div class="swiper-wrapper"> 
+                <div class="swiper-slide">
+                  <div class="select-style__slide-item">
+                      <div class="select-style__img">
+                        <img src="./images/towebp/14.3/image_5.jpg" alt="">
+                      </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="select-style__slide-item">
+                    <div class="select-style__img">
+                      <img src="./images/towebp/14.3/image_5.jpg" alt="">
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div> 
+            <span class="button button__light_border">
+              <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+                    <circle class="a" cx="15" cy="15" r="15"></circle>
+                    <g transform="translate(3 4)"> 
+                        <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+                    </g>
+                </svg>
+            </button>
+              like</span>
+            <div class="select-style__button-slide select-style__button-next">
+              <img src="./images/ic_arrow_right.svg" alt="ic_arrow_right"></div>
+            <div class="select-style__button-slide select-style__button-prev">
+              <img src="./images/ic_arrow_left.svg" alt="ic_arrow_left"></div> 
+          </div>
+          <div class="select-style__occasion">
+            <div class="select-style__select">
+              <label for="occasionAlbum">Occasion</label>
+              <select name="occasion" class="form-control" id="occasionAlbum">
+                <option value="Wedding">Wedding</option>
+                <option value="Wedding">Baby</option>
+                <option value="Wedding">Family</option>
+                <option value="Wedding">Travel</option>
+                <option value="Wedding">Cookbook</option>
+                <option value="Wedding">Milestone</option>
+                <option value="Wedding">Guest Book</option>
+                <option value="Wedding">Others</option>
+              </select>
+              <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
+            </div>
+            <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
+            <p class="add-styles">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="margin-right:5px" fill="grey" viewBox="0 0 16 16">
+              <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+            </svg>Attach additional instructions.</p>
+          </div>
+        </div>
+        <div class="select-style__type-album">
+          <div class="select-style__block">
+    <p class="select-style__name-type ">Classic</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite checked"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
         </svg>
-      </button>
-      <div class="section-photobooks__sidebar-wrap">
-        <h3 class="section-photobooks__title--radio">By occasion</h3>
-        <div class="photobook__radio__container">
-          <label class="photobook__radio__label" for="radioWedding"> 
-    <input class="photobook__radio__input" type="radio" id="radioWedding" name="bookshort" value="Wedding"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Wedding</span> 
-</label><label class="photobook__radio__label" for="radioBaby"> 
-    <input class="photobook__radio__input" type="radio" id="radioBaby" name="bookshort" value="Baby"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Baby</span> 
-</label><label class="photobook__radio__label" for="radioFamily"> 
-    <input class="photobook__radio__input" type="radio" id="radioFamily" name="bookshort" value="Family"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Family</span> 
-</label><label class="photobook__radio__label" for="radioTravel"> 
-    <input class="photobook__radio__input" type="radio" id="radioTravel" name="bookshort" value="Travel"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Travel</span> 
-</label><label class="photobook__radio__label" for="radioOther"> 
-    <input class="photobook__radio__input" type="radio" id="radioOther" name="bookshort" value="Other"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Other</span> 
-</label> 
-          <label class="photobook__radio__label" for="radioAll"> 
-            <input class="photobook__radio__input" checked type="radio" id="radioAll" name="bookshort" value="All"> 
-            <span class="photobook__radio__checker"></span> 
-            <span class="photobook__radio__text">All</span> 
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type active">The Minimalist</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type ">Floral Dreams</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type ">Eucalyptus</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type ">Metallic Accents</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type ">Linen Love</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div><div class="select-style__block">
+    <p class="select-style__name-type ">Victorian Charm</p>
+    <button data-type="favorite" title="favorite" class="photoselect__favorite "> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"> 
+            <circle class="a" cx="15" cy="15" r="15"></circle>
+            <g transform="translate(3 4)"> 
+                <path class="c" d="M9,3.5C7.508-.428,0,.155,0,6.093,0,9.052,2.3,12.988,9,17c6.7-4.012,9-7.948,9-10.907C18,.189,10.5-.452,9,3.5Z" transform="translate(3 3)"></path>
+            </g>
+        </svg>
+    </button>
+</div>
+        </div>
+        <div class="select-style__occasion select-style__occasion_mobile">
+          <div class="select-style__select">
+            <label for="occasionAlbum">Occasion</label>
+            <select name="occasion" class="form-control" id="occasionAlbum">
+              <option value="Wedding">Wedding</option>
+            </select>
+            <img class="arrow-down" src="./images/ic_chevron_down.svg" alt="ic_chevron_down">
+          </div>
+          <textarea class="form-control" name="textStyles" id="textStyles" placeholder="All albums are designed from scratch. So feel free to add any special instructions for your designer here, or attach examples of a style you like." cols="30" rows="10"></textarea>
+          <p class="add-styles"><img src="./images/icon_link.svg" alt="icon_link">Attach additional instructions or examples of design styles you like</p>
+        </div>
+        <div class="select-style__checkbox">
+          <label class="custom-checkbox">
+            <input class="custom-checkbox__input" type="checkbox" tabindex="-1">
+            <span class="custom-checkbox__checkmark" tabindex="0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect style="fill:transparent;" width="24" height="24"></rect><path style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;" d="M20,6,9,17,4,12" transform="translate(0.5 0.5)"></path>
+              </svg>
+            </span>Not sure, please recommend
           </label>
         </div>
-      </div>
-      <div class="section-photobooks__sidebar-wrap">
-        <h3 class="section-photobooks__title--radio">By design</h3>
-        <div class="photobook__radio__container">
-          <label class="photobook__radio__label" for="radioClassic"> 
-    <input class="photobook__radio__input" type="radio" id="radioClassic" name="byDesign" value="Classic"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Classic</span> 
-</label><label class="photobook__radio__label" for="radioMinimilistic"> 
-    <input class="photobook__radio__input" type="radio" id="radioMinimilistic" name="byDesign" value="Minimilistic"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Minimilistic</span> 
-</label><label class="photobook__radio__label" for="radioFloral Dreams"> 
-    <input class="photobook__radio__input" type="radio" id="radioFloral Dreams" name="byDesign" value="Floral Dreams"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Floral Dreams</span> 
-</label><label class="photobook__radio__label" for="radioMetalic Accents"> 
-    <input class="photobook__radio__input" type="radio" id="radioMetalic Accents" name="byDesign" value="Metalic Accents"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Metalic Accents</span> 
-</label><label class="photobook__radio__label" for="radioVintage"> 
-    <input class="photobook__radio__input" type="radio" id="radioVintage" name="byDesign" value="Vintage"> 
-    <span class="photobook__radio__checker"></span> 
-    <span class="photobook__radio__text">Vintage</span> 
-</label> 
-          <label class="photobook__radio__label" for="radioAllDesing"> 
-            <input class="photobook__radio__input" checked type="radio" id="radioAllDesing" name="byDesign" value="All"> 
-            <span class="photobook__radio__checker"></span> 
-            <span class="photobook__radio__text">All</span> 
-          </label>
+        <div class="select-style__button">
+          <a href="#" class="button">START DESIGN</a>
         </div>
       </div>
-      <div class="section-photobooks__button section-photobooks__button_apply">
-        <button class="button" id="filtrsBtnApply">Apply</button>
-      </div>
-    </div>
-    <div class="section-photobooks__button">
-      <button class="button" id="filtrsBtn">Filters</button>
-    </div>
-    <style>
-      .light-italic {
-        font-weight: 300;
-        font-style: italic;
-      }
-      .cursor-pointer {
-        cursor: pointer;
-      }
-    </style>
-    <div  class="section-photobooks__blocks">
-      <div data-type="Travel" data-folder="images/8.0/wedding-classic-1/" data-pages="5"  class="gallery__activator-js filtered-card-js section-photobooks__block ">
-        <div  class=" thumb__place">
-        <div class="thumb__place__frame">
-        <div class="thumb__place__figure">
-            <img class="thumb__img"  loading="lazy" src="images/8.0/wedding-classic-1/cover-thumb.jpg" alt=" cover  thumb ">
-            <div class="thumb__place__line">
-                <img  src="images/8.0/front_spine_shadow.png" alt="line ">
-            </div> 
-        </div>
-        </div>
-            <div class="line">
-
-            </div>
-        </div>
-
-    <h4 class="section-photobooks__name-album">Our Summer Adventures</h4>
-    <p class="section-photobooks__price light-italic">Travel</p>
-  </div><div data-type="Wedding" data-folder="images/8.0/wedding-timeless-1/" data-pages="122"  class="gallery__activator-js filtered-card-js section-photobooks__block ">
-        <div  class=" thumb__place">
-        <div class="thumb__place__frame">
-        <div class="thumb__place__figure">
-            <img class="thumb__img"  loading="lazy" src="images/8.0/wedding-timeless-1/cover-thumb.jpg" alt=" cover  thumb ">
-            <div class="thumb__place__line">
-                <img  src="images/8.0/front_spine_shadow.png" alt="line ">
-            </div> 
-        </div>
-        </div>
-            <div class="line">
-
-            </div>
-        </div>
-
-    <h4 class="section-photobooks__name-album">Our Summer Adventures</h4>
-    <p class="section-photobooks__price light-italic">Wedding</p>
-  </div><div data-type="Travel" data-folder="images/8.0/portrait/" data-pages="10"  class="gallery__activator-js filtered-card-js section-photobooks__block ">
-        <div  class=" thumb__place">
-        <div class="thumb__place__frame">
-        <div class="thumb__place__figure">
-            <img class="thumb__img"  loading="lazy" src="images/8.0/portrait/cover-thumb.jpg" alt=" cover  thumb ">
-            <div class="thumb__place__line">
-                <img  src="images/8.0/front_spine_shadow.png" alt="line ">
-            </div> 
-        </div>
-        </div>
-            <div class="line">
-
-            </div>
-        </div>
-
-    <h4 class="section-photobooks__name-album">Our Summer Adventures</h4>
-    <p class="section-photobooks__price light-italic">Travel</p>
-  </div><div data-type="Travel" data-folder="images/8.0/yellow-leather/" data-pages="10"  class="gallery__activator-js filtered-card-js section-photobooks__block ">
-        <div  class=" thumb__place">
-        <div class="thumb__place__frame">
-        <div class="thumb__place__figure">
-            <img class="thumb__img"  loading="lazy" src="images/8.0/yellow-leather/cover-thumb.jpg" alt=" cover  thumb ">
-            <div class="thumb__place__line">
-                <img  src="images/8.0/front_spine_shadow.png" alt="line ">
-            </div> 
-        </div>
-        </div>
-            <div class="line">
-
-            </div>
-        </div>
-
-    <h4 class="section-photobooks__name-album">Our Summer Adventures</h4>
-    <p class="section-photobooks__price light-italic">Travel</p>
-  </div><div data-type="Travel" data-folder="images/8.0/green-leather/" data-pages="12"  class="gallery__activator-js filtered-card-js section-photobooks__block ">
-        <div  class=" thumb__place">
-        <div class="thumb__place__frame">
-        <div class="thumb__place__figure">
-            <img class="thumb__img"  loading="lazy" src="images/8.0/green-leather/cover-thumb.jpg" alt=" cover  thumb ">
-            <div class="thumb__place__line">
-                <img  src="images/8.0/front_spine_shadow.png" alt="line ">
-            </div> 
-        </div>
-        </div>
-            <div class="line">
-
-            </div>
-        </div>
-
-    <h4 class="section-photobooks__name-album">Our Summer Adventures</h4>
-    <p class="section-photobooks__price light-italic">Travel</p>
-  </div><div data-type="Travel" data-folder="images/8.0/wedding-classic-1/" data-pages="24"  class="gallery__activator-js filtered-card-js section-photobooks__block ">
-        <div  class=" thumb__place">
-        <div class="thumb__place__frame">
-        <div class="thumb__place__figure">
-            <img class="thumb__img"  loading="lazy" src="images/8.0/wedding-classic-1/cover-thumb.jpg" alt=" cover  thumb ">
-            <div class="thumb__place__line">
-                <img  src="images/8.0/front_spine_shadow.png" alt="line ">
-            </div> 
-        </div>
-        </div>
-            <div class="line">
-
-            </div>
-        </div>
-
-    <h4 class="section-photobooks__name-album">Our Summer Adventures</h4>
-    <p class="section-photobooks__price light-italic">Travel</p>
-  </div><div data-type="Travel" data-folder="images/8.0/wedding-classic-1/" data-pages="14"  class="gallery__activator-js filtered-card-js section-photobooks__block ">
-        <div  class=" thumb__place">
-        <div class="thumb__place__frame">
-        <div class="thumb__place__figure">
-            <img class="thumb__img"  loading="lazy" src="images/8.0/wedding-classic-1/cover-thumb.jpg" alt=" cover  thumb ">
-            <div class="thumb__place__line">
-                <img  src="images/8.0/front_spine_shadow.png" alt="line ">
-            </div> 
-        </div>
-        </div>
-            <div class="line">
-
-            </div>
-        </div>
-
-    <h4 class="section-photobooks__name-album">Our Summer Adventures</h4>
-    <p class="section-photobooks__price light-italic">Travel</p>
-  </div>
-    </div>
-  </div>
-</section>
-  <section class="dignity m-auto">
+    </section>
+    <section class="dignity">
   <div class="dignity__container">
-    <h2 class="dignity__title">Why Choose Us?</h2>
+    <h2 class="dignity__title">The PikPerfect Advantage</h2>
     <div class="dignity__wrap">
       <div class="dignity__block">
         <div class="dignity__img">
-          <img src="./images/circle_quality_guarantee.svg" alt="circle_quality_guarantee">
+          <img src="./images/circle_the_human_touch.svg" alt="circle_the_human_touch">
         </div>
         <div class="dignity__content">
-          <h3>Quality Guarantee</h3>
-          <p>We make sure you love your book. Or we'll make it right.</p>
+          <h3>We do the Work</h3>
+          <p>We help select the best photos and carefully design your album. Unlimited revisions included.</p>
         </div>
       </div>
       <div class="dignity__block">
         <div class="dignity__img">
-          <img src="./images/circle_happy_customers.svg" alt="circle_happy_customers">
+          <img src="./images/circle_attention_to_detail.svg" alt="circle_attention_to_detail">
         </div>
         <div class="dignity__content">
-          <h3>Happy Customers</h3>
-          <p>Rated 5 stars by thousands of happy customers.</p>
+          <h3>Quality Matters</h3>
+          <p>Handcrafted using only professional grade materials. Designed to last a lifetime.</p>
         </div>
       </div>
       <div class="dignity__block">
         <div class="dignity__img">
-          <img src="./images/circle_worldwide_shipping.svg" alt="circle_worldwide_shipping">
+          <img src="./images/circle_premium_materials.svg" alt="circle_premium_materials">
         </div>
         <div class="dignity__content">
-          <h3>Worldwide Shipping</h3>
-          <p>Affordable flat rate shipping to most countries.</p>
+          <h3>Happiness Guaranteed</h3>
+          <p>Pay only when you love your photo album design. Quality guaranteed.</p>
         </div>
       </div>    
     </div>
   </div>
 </section>
-  <script src="https://widget.reviews.co.uk/rich-snippet-reviews-widgets/dist.js" type="text/javascript"></script>
-  <div id="carousel-widget"></div>
-  <script>
-  richSnippetReviewsWidgets("carousel-widget", {
-  store: "pikperfect-ag",
-  primaryClr: "#f47e27",
-  neutralClr: "#cccccc",
-  reviewTextClr: "#333333",
-  widgetName: "carousel",
-  layout: "fullWidth",
-  numReviews: 40,
-  contentMode: "company",
-  hideDates: false,
-  Enable_rich_snippets: true,
-  product_name: "photo-book",
-  keyword: "photo-book"
-  });
-  </script>
-  <section class="section-subscribe">
-  <div class="section-subscribe__container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 col-xl-7">
-        <h4>Be the first to know when it comes to <br> exclusive offers, new products and photo tips</h4>
-      </div>
-      <div class="col-lg-6 col-xl-5">
-        <form action="#" class="subscribe">
-          <input type="email" class="form-control" placeholder="Enter your email">
-          <button type="submit" class="btn btn-green">Sign up</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-  <section class="gallery__container gallery__fade gallery__d-none">
-
-  <div class="gallery__background"></div>
-  <div class="gallery__content">
-
-    
-    <!-- flip book -->
-    <div id="app" class="container-flip">
-    </div>
-    <!-- flip book -->
   
-    <div class="gallery__button">
-      <a href="#" class="button">Make album in this style</a>
-    </div>
-    
-    <div class="gallery__controls">
-      <div class="gallery__prev flip-book__prev"><img src="images/icons/circle_arrow_left.svg" alt="slide to previous image"></div>
-      <div class="gallery__next flip-book__next"> <img src="images/icons/circle_arrow_right.svg" alt="slide to next image"></div>
-    </div> 
-  </div>
-  <button type="button" class="gallery__close">close gallery</button>
-
-  <div class="preloader">
-    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-    <div class="progressBar">
-      <span class="progressBar-text"> 100% </span>
-      <progress id="galleryProgres" max="100" value="0"> </progress>
-    </div>
-  </div>
-
-</section>
+  
+    <script defer>
+      function progressCircle(item, progress) {
+  
+        let deg = 360 * (progress / 100);
+  
+        if (progress >= 50) {
+          item.classList.add('gt-50');
+        } else {
+          item.classList.remove('gt-50');
+        }
+        let fill = item.querySelector('.progress');
+        fill.style.transform = `rotate(${deg}deg)`;
+      }
+  
+  
+      // progressCircle(item, 49)   this function show progres 
+  
+      //demo
+      const demovProgress = document.querySelectorAll('.progress-chart');
+      demovProgress.forEach((item, counter) => {
+        const testText = document.createElement('div');
+        if (counter) {
+          testText.innerHTML = "0";
+          testText.style = 'position:absolute ; transform:translate(40px, -30px)';
+          item.append(testText);
+        }
+        const rendomSpeed = Math.random() * 10;
+  
+        let i = 1;
+        let u = 0.33;
+        setInterval(() => {
+          if (i >= 100 || i <= 0) {
+            u = u * -1;
+          }
+          i = i + u;
+          testText.innerHTML = Math.round(i) + '% (demo )';
+          progressCircle(item, i)
+        }, rendomSpeed);
+  
+      })
+      //demo
+    </script>
   </main>
-  <div class="swiper-delay" data-time="4000"></div>
   <footer class="footer">
   <div class="container">
     <div class="row">
@@ -792,12 +837,10 @@
     <li><a style="color:rgb(0, 255, 55)" href="./14.1.html">14.1</a></li>
     <li><a style="color:rgb(0, 255, 55)" href="./14.2.html">14.2</a></li>
     <li><a style="color:rgb(255, 166, 0)" href="./14.3.html">14.3</a></li>
+    <li><a style="color:rgb(255, 166, 0)" href="./14.4.html">14.4</a></li>
     <li><a style="color:rgb(174, 0, 255)" href="./15.0-myprofile.html">15.0</a></li>   
-    <li><a style="color:rgb(255, 0, 140)" href="./15.1-my-orders.html">15.1</a></li>   
     <li><a style="color:rgb(255, 166, 0)" href="./16.0-photo-album-boxes.html">16.0</a></li>   
-    <li><a style="color:rgb(255, 166, 0)" href="./16.1-parent-albums.html">16.1</a></li>  
-    <li><a style="color:rgb(255, 0, 140)" href="./404-error.html">404</a></li>  
-    <li><a style="color:rgb(255, 0, 140)" href="./maintenance.html">maintenance</a></li>  
+    <li><a style="color:rgb(255, 166, 0)" href="./16.1-parent-albums.html">16.1</a></li>   
 </ul>
 
 </div>
@@ -1011,4 +1054,4 @@
 </div>
   <script src="js/main.js"></script>  
 </body>
-</html> 
+</html>

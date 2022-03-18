@@ -17,12 +17,12 @@ ncp.limit = 16;
           return console.error(err);
         }
        });
-       console.log(chalk.green(' wait a second ..'));
+ console.log('one more second...');
        console.log(chalk.red(imageErrors));
  } 
   
- 
- console.log('one more second...');
+ console.log(chalk.green(' wait a second ..'));
+
  setTimeout(() => {
     
     copyToBuild();

@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     flex-direction: column-reverse;
     margin: 50px auto 20px;
+    max-height: 80vh;
     @include mobile-md{
         width: 200px;
         height: 200px;
@@ -56,7 +57,7 @@
             top: 0;
             left: -50.25%;
             content: "";
-            background-image: url(../images/large-square/shadow-open.png);  
+            background-image: url(../images/8.0/shadow-open.png);  
             background-position: top left;
             background-repeat: no-repeat;
             background-size: cover;
@@ -70,7 +71,7 @@
             bottom: -3px;
             left: -53%;
             content: "";
-            background-image: url(../images/large-square/inner_page_botom_shadow_common.png);
+            background-image: url(../images/8.0/inner_page_botom_shadow_common.png);
             background-position: bottom center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -335,7 +336,7 @@
                 content: "";
                 top: 0;
                 left: 0;
-                background-image: url('../images/large-square/front_cover/front_spine_shadow.png');   
+                background-image: url('../images/8.0/front_spine_shadow.png');   
                 background-position: top left;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -651,12 +652,17 @@
         padding: 0;
         box-shadow:8px 6px 15px #c4c3c3;
         position: relative;
-
+        transition: 1s;
+        opacity: 0;
+        &.portrait{ 
+                height: 100%;
+        }
+        
         img{
             width: 100%; 
             height: 100%;
             object-fit: contain;
-
+        
         }
     }
     &__line{
@@ -664,10 +670,47 @@
         top: 0;
         bottom: 0;
         left: 0;
-        img{
+        img{ 
             width: auto;
             object-fit: cover;
         }
     }
 
+}
+.progressBar{
+   position: fixed;
+   left: 20%;
+   right: 20%;
+   top: 50%;
+   margin-top: 60px;
+   text-align: center;
+   @include tablet{
+        margin-top: 100px;
+   }
+}
+
+  progress {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    margin-top: 10px;
+    background: #eee;
+    border: 0;
+    width: 100%;
+    height: 15px;
+    border-radius: 9px;
+    color: #567c8b;
+}
+  progress::-webkit-progress-bar {
+    background: #eeeeee;
+    border-radius: 9px;
+}
+  progress::-webkit-progress-value {
+    background: #567c8b;
+    border-radius: 9px;
+}
+  progress::-moz-progress-bar {
+    background: #567c8b;
+    border-radius: 9px;
 }
