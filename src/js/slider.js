@@ -141,7 +141,7 @@ if (document.querySelector('.section-hero__tab-activators')&&!document.querySele
     spaceBetween: 15,
     allowTouchMove:false, 
     touchStartForcePreventDefault:true,
-    updateOnWindowResize=false,
+    updateOnWindowResize:false,
   });
   
   var swiperTabs = new Swiper(".section-hero__swiper", { 

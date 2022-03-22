@@ -1,5 +1,5 @@
 const container = document.querySelector('.gallery__container');
-const containerFlip = document.querySelector('.container-flip');
+
 if(!container || !containerFlip){  return      } 
 const preloader = document.querySelector('.preloader');
 const activator = document.querySelectorAll('.gallery__activator-js');

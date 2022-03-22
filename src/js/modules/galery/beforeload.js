@@ -1,5 +1,4 @@
 
-    const containerFlip = document.querySelector('.container-flip');
     const arrows = document.querySelector('.gallery__controls');
 
   /////////// flip book ////////////////

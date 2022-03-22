@@ -1,24 +1,24 @@
-function afterload (){
-    const lazy = document.getElementsByClassName('lazypage');
- 
+function afterLoad (){
+    let lazy = document.querySelectorAll('.lazypage');
+
   
     let i = lazy.length;
     const loading =()=>{
       if(closedChecker){
         lazy=[];
         i=0;
-        return 
+        return ;
       }
       const img = lazy[i-1]; 
-      if(!img){return}  
+      if(!img){return;}
       img.src=img.dataset.src;
       img.addEventListener('load' , ()=>{ 
          i--;
        
-         if(i<1||closedChecker) {return false};
-         loading()
-      })
-    }
+         if(i<1||closedChecker) {return false;}
+         loading();
+      });
+    };
     loading();
 
     const page = document.querySelectorAll('.page');
@@ -68,7 +68,7 @@ function afterload (){
           });
         }
       );
-   
+
 
               // add/remove shadow for book
         function clickBackCover(){
@@ -83,45 +83,63 @@ function afterload (){
         backCover.addEventListener('click', clickBackCover); 
 
         // click for button "next"
-      function nextArrow(){
-        if(debounce()){ return false} 
+        nextArrow =()=>{
+
+        if(debounce()){ return false;}
+
           if(frontCover.classList.contains('next')){
             const pageNext = document.querySelectorAll('.page.next');
 
             clickFrontCover();
             setTimeout(closeBookBack, 600);
-              page[page.length - 1 - pageNext.length].click();
-          }else{
-            page[page.length - 1].click();
-          }
-        }
-        next.addEventListener('click', nextArrow);
+           const  calculatedTarget =   page[page.length - 1 - pageNext.length];
+           if(calculatedTarget){
+             calculatedTarget.click();
+           }
 
+          }else{
+           if(page[page.length - 1]) page[page.length - 1].click();
+          }
+        };
+
+
+
+        next.addEventListener('click', nextArrow);
     // click for button "prev"
     function prevArrow(){
-      
-      if(debounce()){ return false} 
+
+      if(debounce()){ return false;}
       if(frontCover.classList.contains('next')){
-        const pageNext = document.querySelectorAll('.page.next'); 
-          page[page.length - pageNext.length].click(); 
+        const pageNext = document.querySelectorAll('.page.next');
+        const calculatedTarget=  page[page.length - pageNext.length];
+          if(calculatedTarget){
+            calculatedTarget.click();
+          }
       }
     }
-    prev.addEventListener('click', prevArrow);
- 
+
+     prev.removeEventListener('click', prevArrow);
+     prev.addEventListener('click', prevArrow);
+  const  removeClick=()=>{
+    containerFlip.classList.remove('click');
+    arrows.classList.remove('click');
+  };
   // add class click
-  function clickContainer(){
-    containerFlip.addEventListener('click', function(e){
-      const parent = e.target.closest('.container-flip');
+    clickContainer = (event)=>{
+      event = event || window.event;
+
+      const parent = event.target.closest('.container-flip');
+      if(!parent) return;
       parent.classList.add('click');
       arrows.classList.add('click');
       setTimeout(removeClick, 1000);
-    });
-  }
-  function removeClick(){
-    containerFlip.classList.remove('click');
-    arrows.classList.remove('click');
-  }
-  clickContainer();
+
+  };
+
+  containerFlip.addEventListener('click',clickContainer);
+
+
+   clickContainer();
   // add zIndex for pages
   const foundMaxZIndex = ()=>{
     const arr = [];
@@ -130,28 +148,29 @@ function afterload (){
   });
   return( Math.max(...arr));
   };
-
-  containerFlip.addEventListener('click', (e)=>{
+  zChange = (e)=>{
     const targetCard =e.target.closest('.page');
     targetCard.style.zIndex = foundMaxZIndex() + 1;
-  });
+  };
 
-      // keyboard input click <- -> 
-      function keyboardArrows(e){
-        e = e || window.event;
-      
-        if (e.keyCode == '37') {
+  containerFlip.addEventListener('click',zChange );
+
+      // keyboard input click <- ->
+        keyboardArrows =(e)=>{
+
+        if (e.code === 'ArrowLeft') {
           if(!(containerFlip.classList.contains('click'))){
-        
+
             prevArrow();
           }
         }
-        else if (e.keyCode == '39') {
+        else if (e.code === 'ArrowRight') {
           if(!(containerFlip.classList.contains('click'))){
             nextArrow();
           }
         }
-      }
+      };
+
       document.addEventListener('keydown', keyboardArrows); // keyboard input
 
   }
