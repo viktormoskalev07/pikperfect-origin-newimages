@@ -21,7 +21,7 @@
           { type:"Other" }, 
           ]) 
           <label class="photobook__radio__label" for="radioAll"> 
-            <input class="photobook__radio__input" checked type="radio" id="radioAll" name="bookshort" value="All"> 
+            <input class="photobook__radio__input" checked type="radio" id="radioAll" name="byOccasion" value="All">
             <span class="photobook__radio__checker"></span> 
             <span class="photobook__radio__text">All</span> 
           </label>
@@ -62,31 +62,38 @@
     </style>
     <div  class="section-photobooks__blocks">
       @@loop('photobooks/card.html', [
-      { type:"Travel",
+      {  occasion:"Travel",
+         design:"Minimilistic",
         folderImg:"images/8.0/wedding-classic-1/",
         pages:"5",
       },
-      { type:"Wedding",
+      { occasion:"Wedding",
+      design:"Classic",
         folderImg:"images/8.0/wedding-timeless-1/",
         pages:"122",
       },
-      { type:"Travel",
+      { occasion:"      Other",
+      design:"      Vintage",
       folderImg:"images/8.0/portrait/",
       pages:"10",
       },
-      { type:"Travel",
+      { occasion:"    ",
+      design:"  ",
       folderImg:"images/8.0/yellow-leather/",
       pages:"10",
       },
-      { type:"Travel",
+      { occasion:"Travel",
+      design:"Minimilistic",
       folderImg:"images/8.0/green-leather/",
       pages:"12",
       },
-      { type:"Travel",
+      { occasion:"Travel",
+      design:" ",
       folderImg:"images/8.0/wedding-classic-1/",
       pages:"24",
       },
-      { type:"Travel",
+      { occasion:" ",
+      design:"Floral Dreams",
       folderImg:"images/8.0/wedding-classic-1/",
       pages:"14",
       },

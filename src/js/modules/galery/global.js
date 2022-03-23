@@ -3,6 +3,7 @@
         let keyboardArrows = ()=>{  };
         let zChange = ()=>{};
         let clickContainer = ()=>{};
+        let prevArrow =()=>{};
         let nextArrow =()=>{};
         const prev = document.querySelector(".flip-book__prev");
         const next = document.querySelector(".flip-book__next");
@@ -49,6 +50,7 @@ const closeGallery =()=>{
     containerFlip.removeEventListener('click',clickContainer);
     closedChecker=true;
     next.removeEventListener('click', nextArrow);
+    prev.removeEventListener('click', prevArrow);
     firstOpen=false;
     animationContinue.status=false;
     setTimeout(() => {
