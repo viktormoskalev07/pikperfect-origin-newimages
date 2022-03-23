@@ -66,7 +66,10 @@ arrImages.forEach((imgName , i)=>{
         containerFlip.style.aspectRatio= width+ '/'+height ;
         containerFlip.style.height='auto';
         containerFlip.style.width='40%';
-       containerFlip.classList.add( width/height<1 ?"portrait":'landscape')   ;
+        containerFlip.classList.add( width/height<1 ?"portrait":'landscape');
+        if(width === height){
+          containerFlip.classList.remove('landscape');
+        }
        
     };
   } 

@@ -16,39 +16,6 @@
     flex-direction: column-reverse;
     margin: 50px auto 20px;
     max-height: 80vh;
-    @include mobile-md{
-        width: 200px;
-        height: 200px;
-    }
-    @include mobile-lg{
-        width: 250px;
-        height: 250px;
-    }
-    @include tablet{
-        width: 300px;
-        height: 300px;
-        margin-bottom: 50px;
-    }
-    @include desktop-sm{
-        width: 400px;
-        height: 400px;
-    }
-    @include tabtoslide{
-        width: 450px;
-        height: 450px;
-    }
-    @include wide-screen-sm{
-        width: 500px;
-        height: 500px;
-    }
-    @include wide-screen-md{
-        width: 600px;
-        height: 600px;
-    }
-    @include wide-screen-lg{
-        width: 700px;
-        height: 700px;
-    }
     &.shadow{
         &::after{
             position: absolute;
@@ -68,7 +35,7 @@
             position: absolute;
             width: 205%;
             height: 100%;
-            bottom: -3px;
+            bottom: -2.3%;
             left: -53%;
             content: "";
             background-image: url(../images/8.0/inner_page_botom_shadow_common.png);
@@ -78,62 +45,11 @@
             transition: .7s;
             @include mobile-md{
                 width: 204%;
-                bottom: -5px;
                 left: -52%;
-            }
-            @include tablet{
-                bottom: -7px;
-            }
-            @include desktop-sm{
-                bottom: -9px;
-            }
-            @include tabtoslide{
-                bottom: -11px;
-            }
-            @include wide-screen-md{
-                bottom: -13px;
-            }
-            @include wide-screen-lg{
-                bottom: -16px;
             }
         }
     }
     &.landscape{
-        width: 150px;
-        height: 106px;
-        @include mobile-md{
-            width: 200px;
-            height: 142.5px;
-        }
-        @include mobile-lg{
-            width: 250px;
-            height: 178px;
-        }
-        @include tablet{
-            width: 300px;
-            height: 212px; 
-            margin-bottom: 50px;
-        }
-        @include desktop-sm{
-            width: 400px;
-            height: 283px;
-        }
-        @include tabtoslide{
-            width: 450px;
-            height: 318px;
-        }
-        @include wide-screen-sm{
-            width: 500px; 
-            height: 355px;
-        }
-        @include wide-screen-md{
-            width: 600px;
-            height: 424px; 
-        }
-        @include wide-screen-lg{
-            width: 700px;
-            height: 494px;
-        }
         &.shadow{
             &::after{
                 left: -50%;
@@ -141,66 +57,15 @@
             &::before{
                 width: 200%;
                 left: -50%;
-                bottom: -3px;
+                bottom: -2.7%;
                 @include mobile-md{
                     width: 202%;
-                    bottom: -4px;
                     left: -51%;
-                }
-                @include tablet{
-                    bottom: -6px;
-                }
-                @include desktop-sm{
-                    bottom: -8px;
-                }
-                @include tabtoslide{
-                    bottom: -9px;
-                }
-                @include wide-screen-md{
-                    bottom: -12px;
-                }
-                @include wide-screen-lg{
-                    bottom: -14px;
                 }
             }
         }
     }
     &.portrait{
-        width: 106px;
-        height: 150px;
-        @include mobile-md{
-            width: 142.5px;
-            height: 200px;
-        }
-        @include mobile-lg{
-            width: 178px;
-            height: 250px;
-        }
-        @include tablet{
-            width: 212px;
-            height: 300px; 
-            margin-bottom: 50px;
-        }
-        @include desktop-sm{
-            width: 283px;
-            height: 400px;
-        }
-        @include tabtoslide{
-            width: 318px;
-            height: 450px;
-        }
-        @include wide-screen-sm{
-            width: 355px; 
-            height: 500px;
-        }
-        @include wide-screen-md{
-            width: 424px;
-            height: 600px; 
-        }
-        @include wide-screen-lg{
-            width: 494px;
-            height: 700px;
-        }
         &.shadow{
             &::after{
                 left: -50%;
@@ -209,26 +74,10 @@
             &::before{
                 width: 200%;
                 left: -50%;
-                bottom: -3px;
+                bottom: -1.9%;
                 @include mobile-md{
-                    width: 202%;
-                    bottom: -4px;
-                    left: -51%;
-                }
-                @include tablet{
-                    bottom: -6px;
-                }
-                @include desktop-sm{
-                    bottom: -8px;
-                }
-                @include tabtoslide{
-                    bottom: -9px;
-                }
-                @include wide-screen-md{
-                    bottom: -12px;
-                }
-                @include wide-screen-lg{
-                    bottom: -14px;
+                    width: 204%;
+                    left: -52%;
                 }
             }
         }
@@ -713,4 +562,4 @@
   progress::-moz-progress-bar {
     background: #567c8b;
     border-radius: 9px;
-}
+} 

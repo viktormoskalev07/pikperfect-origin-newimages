@@ -106,8 +106,7 @@ function afterLoad (){
 
         next.addEventListener('click', nextArrow);
     // click for button "prev"
-    prevArrow =()=>{
-      console.log()
+       prevArrow =()=>{
       if(debounce()){ return false;}
       if(frontCover.classList.contains('next')){
         const pageNext = document.querySelectorAll('.page.next');
@@ -116,9 +115,9 @@ function afterLoad (){
             calculatedTarget.click();
           }
       }
-    }
+    };
 
-    //  prev.removeEventListener('click', prevArrow);
+
     prev.addEventListener('click', prevArrow);
   const  removeClick=()=>{
     containerFlip.classList.remove('click');
