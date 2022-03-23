@@ -106,8 +106,8 @@ function afterLoad (){
 
         next.addEventListener('click', nextArrow);
     // click for button "prev"
-    function prevArrow(){
-
+    prevArrow =()=>{
+      console.log()
       if(debounce()){ return false;}
       if(frontCover.classList.contains('next')){
         const pageNext = document.querySelectorAll('.page.next');
@@ -118,8 +118,8 @@ function afterLoad (){
       }
     }
 
-     prev.removeEventListener('click', prevArrow);
-     prev.addEventListener('click', prevArrow);
+    //  prev.removeEventListener('click', prevArrow);
+    prev.addEventListener('click', prevArrow);
   const  removeClick=()=>{
     containerFlip.classList.remove('click');
     arrows.classList.remove('click');
@@ -160,7 +160,6 @@ function afterLoad (){
 
         if (e.code === 'ArrowLeft') {
           if(!(containerFlip.classList.contains('click'))){
-
             prevArrow();
           }
         }

@@ -37,7 +37,7 @@
     "gulp-terser": "^1.2.0"
   },
   "scripts": {
-    "build": "node builder.js", 
-    "push" : "git add . && git commit -m 'autocommmit'&&  git push origin main"
+    "build": "node builder.js",
+    "push": "git add . && git commit -m 'autocommmit'&&  git push origin main"
   }
 }
