@@ -1183,8 +1183,12 @@ label {
 	}
 
 	.header .logo {
-		width: 8.4rem;
-		height: auto;
+		width: auto;
+		height: 2.3rem;
+		 img{
+			 height: 100%;
+			 object-fit: contain;
+		 }
 	}
 
 	.header .menu-btn {
