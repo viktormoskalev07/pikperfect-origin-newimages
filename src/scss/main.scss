@@ -7,8 +7,7 @@
 @import "components/bootstrap/btn";
 @import "button";
 @import "modules/img-min";
-@import "modules/accordion";
-@import "modules/swiper.min.css";
+@import "modules/accordion"; 
 @import "components/section-accordion";
 @import "components/section-reviews";
 @import "components/section-transition";
@@ -47,15 +46,12 @@
 
 
 @import "components/default";
-@import "components/section-hero";
- 
+@import "components/section-hero"; 
 @import 'header-sticky'; 
 @import 'promobar';
-@import "components/description-img"; 
-
+@import "components/description-img";  
 @import 'menu-fix.scss';
-@import 'modules/lazy-video';
-
+@import 'modules/lazy-video'; 
 @import 'components/popup-log-reg/popup';
 @import 'components/popup-log-reg/popup-help';
 @import 'components/photobooks/photobooks';
@@ -63,4 +59,4 @@
 
  
 
- 
+@import "modules/swiper.min.css";
